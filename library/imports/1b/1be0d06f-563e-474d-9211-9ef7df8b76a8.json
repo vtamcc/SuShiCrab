@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "hamberger_2",
+    "texture": "227df08d-c4f1-4036-b142-cddd6e798077",
+    "atlas": "",
+    "rect": [
+      15,
+      2,
+      239,
+      279
+    ],
+    "offset": [
+      0.5,
+      0.5
+    ],
+    "originalSize": [
+      268,
+      284
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

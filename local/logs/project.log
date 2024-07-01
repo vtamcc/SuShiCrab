@@ -1,0 +1,80 @@
+2024-07-01T04:06:52.888Z - success: protocol editor-framework registered
+2024-07-01T04:06:52.890Z - success: protocol app registered
+2024-07-01T04:06:52.891Z - success: protocol theme registered
+2024-07-01T04:06:52.891Z - success: protocol packages registered
+2024-07-01T04:06:52.920Z - normal: Load ~/.CocosCreator/settings.json
+2024-07-01T04:06:52.967Z - success: protocol uuid registerred
+2024-07-01T04:06:52.967Z - success: protocol db registerred
+2024-07-01T04:06:52.967Z - success: protocol thumbnail registerred
+2024-07-01T04:06:53.052Z - normal: Initializing Asset Database
+2024-07-01T04:06:53.054Z - normal: checking language setting...
+2024-07-01T04:06:53.054Z - normal: Language: en
+2024-07-01T04:06:53.056Z - success: protocol unpack registerred
+2024-07-01T04:06:53.056Z - success: protocol disable-commonjs registerred
+2024-07-01T04:06:56.282Z - normal: failed to connect login server due to request timeout
+2024-07-01T04:06:56.306Z - normal: Check project /Users/mac/Documents/WORK/SuShiCarb
+2024-07-01T04:06:56.323Z - normal: Initializing project /Users/mac/Documents/WORK/SuShiCarb
+2024-07-01T04:06:56.545Z - success: adapters loaded
+2024-07-01T04:06:56.550Z - success: asset-db-debugger loaded
+2024-07-01T04:06:56.623Z - success: fb-audience-network loaded
+2024-07-01T04:06:56.671Z - success: fb-live-stream loaded
+2024-07-01T04:06:56.675Z - success: google-play-instant loaded
+2024-07-01T04:06:56.675Z - success: jsb-adapter loaded
+2024-07-01T04:06:56.697Z - success: package-manager loaded
+2024-07-01T04:06:56.698Z - success: runtime-adapters loaded
+2024-07-01T04:06:56.703Z - success: runtime-dev-tools loaded
+2024-07-01T04:06:56.706Z - success: ui-kit-preview-extra loaded
+2024-07-01T04:06:56.709Z - success: ui-kit-preview loaded
+2024-07-01T04:06:57.552Z - success: alipay-minigame loaded
+2024-07-01T04:06:57.570Z - success: assets loaded
+2024-07-01T04:06:57.574Z - success: baidugame-opendata loaded
+2024-07-01T04:06:57.575Z - success: baidugame loaded
+2024-07-01T04:06:57.579Z - success: builder loaded
+2024-07-01T04:06:57.585Z - success: bytedance-opendata loaded
+2024-07-01T04:06:57.587Z - success: bytedance loaded
+2024-07-01T04:06:57.592Z - success: channel-upload-tools loaded
+2024-07-01T04:06:57.761Z - success: cloud-function loaded
+2024-07-01T04:06:57.994Z - success: cocos-services loaded
+2024-07-01T04:06:58.001Z - success: console loaded
+2024-07-01T04:06:58.003Z - success: curve-editor loaded
+2024-07-01T04:06:58.012Z - success: fb-instant-games loaded
+2024-07-01T04:06:58.015Z - success: game-window loaded
+2024-07-01T04:06:58.016Z - success: google-instant-games loaded
+2024-07-01T04:06:58.021Z - success: hierarchy loaded
+2024-07-01T04:06:58.023Z - success: huawei-agc loaded
+2024-07-01T04:06:58.027Z - success: huawei-runtime loaded
+2024-07-01T04:06:58.030Z - success: inspector loaded
+2024-07-01T04:06:58.052Z - success: cpk-publish loaded
+2024-07-01T04:06:58.054Z - success: keystore loaded
+2024-07-01T04:06:58.074Z - success: link-sure-runtime loaded
+2024-07-01T04:06:58.094Z - success: node-library loaded
+2024-07-01T04:06:58.095Z - success: open-recent-items loaded
+2024-07-01T04:06:58.098Z - success: oppo-runtime loaded
+2024-07-01T04:06:58.100Z - success: package-asset loaded
+2024-07-01T04:06:58.100Z - success: preferences loaded
+2024-07-01T04:06:58.104Z - success: project-importer loaded
+2024-07-01T04:06:58.107Z - success: project-settings loaded
+2024-07-01T04:06:58.121Z - success: qtt-runtime loaded
+2024-07-01T04:06:58.125Z - success: scene loaded
+2024-07-01T04:06:58.126Z - success: simulator-debugger loaded
+2024-07-01T04:06:58.126Z - success: sprite-editor loaded
+2024-07-01T04:06:58.194Z - success: store loaded
+2024-07-01T04:06:58.196Z - success: taobao-creativeapp loaded
+2024-07-01T04:06:58.199Z - success: timeline loaded
+2024-07-01T04:06:58.204Z - success: vivo-runtime loaded
+2024-07-01T04:06:58.206Z - success: wechatgame-opendata loaded
+2024-07-01T04:06:58.210Z - success: wechatgame loaded
+2024-07-01T04:06:58.214Z - success: xiaomi-runtime loaded
+2024-07-01T04:06:58.272Z - success: im-plugin loaded
+2024-07-01T04:06:58.273Z - success: preview server running at http://localhost:7456
+2024-07-01T04:07:00.453Z - normal: Initializing Cocos2d
+2024-07-01T04:07:00.741Z - normal: Initializing engine extends
+2024-07-01T04:07:05.009Z - normal: Loading packages
+2024-07-01T04:07:05.014Z - normal: Watching packages
+2024-07-01T04:07:05.244Z - normal: Run Application
+2024-07-01T04:07:10.509Z - success: cloud-function unloaded
+2024-07-01T08:20:48.756Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@main:123650
+2024-07-01T10:12:57.009Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Conveyor1/Food copy"
+Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
+

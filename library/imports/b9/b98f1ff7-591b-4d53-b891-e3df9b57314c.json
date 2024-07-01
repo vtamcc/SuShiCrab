@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "nuoc_2",
+    "texture": "308a83db-40c7-4c39-ad69-16d6388bdcf5",
+    "atlas": "",
+    "rect": [
+      2,
+      1,
+      195,
+      221
+    ],
+    "offset": [
+      -0.5,
+      0.5
+    ],
+    "originalSize": [
+      200,
+      224
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "banhngotmauhong_2",
+    "texture": "0e17e9b3-b0f1-4073-88c8-17d67f8fd694",
+    "atlas": "",
+    "rect": [
+      3,
+      2,
+      245,
+      255
+    ],
+    "offset": [
+      -0.5,
+      0.5
+    ],
+    "originalSize": [
+      252,
+      260
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

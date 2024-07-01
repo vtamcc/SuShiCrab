@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "dabao_2",
+    "texture": "9657b48d-2210-4cd9-abdd-68ee14ce7d81",
+    "atlas": "",
+    "rect": [
+      2,
+      4,
+      196,
+      224
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      200,
+      232
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
