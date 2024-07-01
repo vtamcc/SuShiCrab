@@ -6,6 +6,7 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import ShuShiCarbConveyor from "./ShuShiCarb.Conveyor";
+import ShuShiCarbFood from "./ShuShiCarb.Food";
 
 const {ccclass, property} = cc._decorator;
 
@@ -44,9 +45,13 @@ export default class ShuShiCarbGolal extends cc.Component {
     }
 
     conveyor() {
+        let randomFood = this.randomIdFood(this.data,2);
         for(let i = 0; i < this.listConveyor.length; i++) {
-            console.log("Node ", this.listConveyor[i]);
+           
             let dt = this.listConveyor[i].getComponent(ShuShiCarbConveyor)
+            console.log("Node ", dt);
+            let item = dt.itemFood[i].getComponent(ShuShiCarbFood)
+
         }
     }
     start () {

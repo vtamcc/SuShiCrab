@@ -1,6 +1,6 @@
 
 (function () {
-var scripts = [{"deps":{"./assets/SuShiCarb/scripts/ShuShiCarb.Conveyor":1,"./assets/SuShiCarb/scripts/ShuShiCarb.Food":3,"./assets/SuShiCarb/scripts/ShuShiCarb.Global":2},"path":"preview-scripts/__qc_index__.js"},{"deps":{},"path":"preview-scripts/assets/SuShiCarb/scripts/ShuShiCarb.Conveyor.js"},{"deps":{"./ShuShiCarb.Conveyor":1},"path":"preview-scripts/assets/SuShiCarb/scripts/ShuShiCarb.Global.js"},{"deps":{"./ShuShiCarb.Global":2},"path":"preview-scripts/assets/SuShiCarb/scripts/ShuShiCarb.Food.js"}];
+var scripts = [{"deps":{"./assets/SuShiCarb/scripts/ShuShiCarb.Conveyor":2,"./assets/SuShiCarb/scripts/ShuShiCarb.Food":1,"./assets/SuShiCarb/scripts/ShuShiCarb.Global":3},"path":"preview-scripts/__qc_index__.js"},{"deps":{"./ShuShiCarb.Global":3},"path":"preview-scripts/assets/SuShiCarb/scripts/ShuShiCarb.Food.js"},{"deps":{"./ShuShiCarb.Food":1},"path":"preview-scripts/assets/SuShiCarb/scripts/ShuShiCarb.Conveyor.js"},{"deps":{"./ShuShiCarb.Conveyor":2,"./ShuShiCarb.Food":1},"path":"preview-scripts/assets/SuShiCarb/scripts/ShuShiCarb.Global.js"}];
 var entries = ["preview-scripts/__qc_index__.js"];
 var bundleScript = 'preview-scripts/__qc_bundle__.js';
 

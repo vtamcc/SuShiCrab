@@ -30,6 +30,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ShuShiCarb_Conveyor_1 = require("./ShuShiCarb.Conveyor");
+var ShuShiCarb_Food_1 = require("./ShuShiCarb.Food");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbGolal = /** @class */ (function (_super) {
     __extends(ShuShiCarbGolal, _super);
@@ -62,9 +63,11 @@ var ShuShiCarbGolal = /** @class */ (function (_super) {
         return arr;
     };
     ShuShiCarbGolal.prototype.conveyor = function () {
+        var randomFood = this.randomIdFood(this.data, 2);
         for (var i = 0; i < this.listConveyor.length; i++) {
-            console.log("Node ", this.listConveyor[i]);
             var dt = this.listConveyor[i].getComponent(ShuShiCarb_Conveyor_1.default);
+            console.log("Node ", dt);
+            var item = dt.itemFood[i].getComponent(ShuShiCarb_Food_1.default);
         }
     };
     ShuShiCarbGolal.prototype.start = function () {

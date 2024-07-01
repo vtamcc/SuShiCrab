@@ -15,7 +15,8 @@ export default class ShuShiCarbConveyor extends cc.Component {
   @property
   idConveyor: number = 0;
 
-
+   @property(ShuShiCarbFood)
+   itemFood: ShuShiCarbFood[] = [];
    update (dt) {
         if(this.idConveyor == 0 || this.idConveyor == 2) {
            if(this.node.x > 650) {
