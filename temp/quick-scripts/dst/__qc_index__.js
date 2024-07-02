@@ -10,9 +10,10 @@
                     };
                     function __define (exports, require, module) {
                         if (!nodeEnv) {__quick_compile_project__.registerModule(__filename, module);}
-require('./assets/SuShiCarb/scripts/ShuShiCarb.Conveyor');
-require('./assets/SuShiCarb/scripts/ShuShiCarb.Food');
-require('./assets/SuShiCarb/scripts/ShuShiCarb.Global');
+require('./assets/SuShiCarb/scripts/Game/ShuShiCarb.Conveyor');
+require('./assets/SuShiCarb/scripts/Game/ShuShiCarb.Food');
+require('./assets/SuShiCarb/scripts/Game/ShuShiCarb.Player');
+require('./assets/SuShiCarb/scripts/ShuShiCarb.Game');
 
                     }
                     if (nodeEnv) {

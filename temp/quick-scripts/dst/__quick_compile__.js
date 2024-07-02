@@ -1,6 +1,6 @@
 
 (function () {
-var scripts = [{"deps":{"./assets/SuShiCarb/scripts/ShuShiCarb.Conveyor":2,"./assets/SuShiCarb/scripts/ShuShiCarb.Food":1,"./assets/SuShiCarb/scripts/ShuShiCarb.Global":3},"path":"preview-scripts/__qc_index__.js"},{"deps":{"./ShuShiCarb.Global":3},"path":"preview-scripts/assets/SuShiCarb/scripts/ShuShiCarb.Food.js"},{"deps":{"./ShuShiCarb.Food":1},"path":"preview-scripts/assets/SuShiCarb/scripts/ShuShiCarb.Conveyor.js"},{"deps":{"./ShuShiCarb.Conveyor":2,"./ShuShiCarb.Food":1},"path":"preview-scripts/assets/SuShiCarb/scripts/ShuShiCarb.Global.js"}];
+var scripts = [{"deps":{"./assets/SuShiCarb/scripts/Game/ShuShiCarb.Conveyor":2,"./assets/SuShiCarb/scripts/ShuShiCarb.Game":1,"./assets/SuShiCarb/scripts/Game/ShuShiCarb.Food":3,"./assets/SuShiCarb/scripts/Game/ShuShiCarb.Player":4},"path":"preview-scripts/__qc_index__.js"},{"deps":{"./Game/ShuShiCarb.Food":3,"./Game/ShuShiCarb.Player":4,"./Game/ShuShiCarb.Conveyor":2},"path":"preview-scripts/assets/SuShiCarb/scripts/ShuShiCarb.Game.js"},{"deps":{"./ShuShiCarb.Food":3},"path":"preview-scripts/assets/SuShiCarb/scripts/Game/ShuShiCarb.Conveyor.js"},{"deps":{"../ShuShiCarb.Game":1},"path":"preview-scripts/assets/SuShiCarb/scripts/Game/ShuShiCarb.Food.js"},{"deps":{"./ShuShiCarb.Food":3},"path":"preview-scripts/assets/SuShiCarb/scripts/Game/ShuShiCarb.Player.js"}];
 var entries = ["preview-scripts/__qc_index__.js"];
 var bundleScript = 'preview-scripts/__qc_bundle__.js';
 
