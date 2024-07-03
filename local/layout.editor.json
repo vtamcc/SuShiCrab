@@ -81,12 +81,12 @@
         "hierarchy",
         "assets",
         "scene",
-        "node-library",
         "console",
         "timeline",
         "game-window",
         "inspector",
-        "cocos-services"
+        "cocos-services",
+        "node-library"
       ]
     },
     " common-asset-worker-worker": {}

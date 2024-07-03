@@ -14,25 +14,22 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ShuShiCarbConveyor extends cc.Component {
 
-  @property
-  idConveyor: number = 0;
+//    @property(cc.Node)
+//    listNodeConveyor_1: cc.Node[] = [];
+//    nextFoodIndex1: 0;
+//    beltSpeed: cc.Vec2 = cc.v2(100, 0);
+   @property(cc.Node)
+   itemFood_1: cc.Node;
+   @property(cc.Prefab)
+   prfFood: cc.Prefab = null;
+   
+   onLoad() {
+        
+   }
 
-   @property(ShuShiCarbFood)
-   itemFood: ShuShiCarbFood[] = [];
+//     }
    update (dt) {
-        if(this.idConveyor == 0 || this.idConveyor == 2) {
-           if(this.node.x > 650) {
-            this.node.x = -650;
-           }
-           this.node.x += 5;
-        }else if(this.idConveyor == 1) {
-            if(this.node.x < -650) {
-                this.node.x = 650;
-                
-            }
-            this.node.x -= 5;
-        }
-
+   
 
    }
 }

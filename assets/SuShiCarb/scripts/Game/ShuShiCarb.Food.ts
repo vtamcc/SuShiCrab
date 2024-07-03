@@ -19,7 +19,9 @@ export default class ShuShiCarbFood extends cc.Component {
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {}
+    onLoad () {
+        this.effectShow()
+    }
 
     start () {
 
@@ -27,6 +29,18 @@ export default class ShuShiCarbFood extends cc.Component {
 
     setData(idFood) {
         this.nFood.getComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[idFood];
+    }
+
+    effectShow() {
+        cc.tween(this.node)
+        .to(2, {x: 500})
+        .call(()=>{
+            if (this.node.x >= 500) {
+                this.node.x = -750
+            }
+        })
+        // .repeatForever()
+        .start()
     }
     // update (dt) {}
 }

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "banh my mu tat copy",
+    "texture": "71643b2c-ae53-4309-8a64-1e145a67afe6",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      261,
+      185
+    ],
+    "offset": [
+      0.5,
+      -0.5
+    ],
+    "originalSize": [
+      262,
+      186
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

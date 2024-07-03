@@ -51,7 +51,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        -691.092,
+        -730,
         0,
         0,
         0,
@@ -116,7 +116,9 @@
       "__id__": 1
     },
     "_enabled": true,
-    "nFood": null,
+    "nFood": {
+      "__id__": 1
+    },
     "_id": ""
   },
   {

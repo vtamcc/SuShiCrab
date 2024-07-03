@@ -29,7 +29,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ShuShiCarb_Conveyor_1 = require("./Game/ShuShiCarb.Conveyor");
 var ShuShiCarb_Food_1 = require("./Game/ShuShiCarb.Food");
 var ShuShiCarb_Player_1 = require("./Game/ShuShiCarb.Player");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
@@ -42,9 +41,16 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         _this.nFood3 = null;
         _this.listConveyor = [];
         _this.prfOrder = null;
+        _this.lbCountDown = null;
         _this.listSpfFood = [];
+        _this.conveyor_1 = null;
+        _this.prfFood = null;
         // LIFE-CYCLE CALLBACKS:
-        _this.data = [0, 1, 2, 3, 4];
+        _this.data = [0, 1, 2, 3, 4, 5];
+        _this.playOrders = [];
+        _this.indexData = -1;
+        _this.numberCountdown = 7;
+        _this.countdownInterval = null;
         _this.isMove = false;
         return _this;
         // update (dt) {}
@@ -52,36 +58,83 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     ShuShiCarbGame_1 = ShuShiCarbGame;
     ShuShiCarbGame.prototype.onLoad = function () {
         ShuShiCarbGame_1.instance = this;
-        this.conveyor();
-        this.renderFoodOder();
+        // this.renderFoodOder();
+        this.randomOrderFood();
+        console.log(this.playOrders);
+        this.renderOrderFood();
+        this.renderFood();
+        //this.conveyor();
     };
-    ShuShiCarbGame.prototype.randomIdFood = function (arr, count) {
-        var idFood = [];
-        for (var i = 0; i < count; i++) {
-            var randomIndex = Math.floor(Math.random() * arr.length);
-            idFood.push(randomIndex);
-            arr.splice(randomIndex, 1);
-        }
-        return arr;
-    };
-    ShuShiCarbGame.prototype.renderFoodOder = function () {
-        var randomFood = this.randomIdFood(this.data, 3);
-        console.log(randomFood);
-        var pOrder = cc.instantiate(this.prfOrder).getComponent(ShuShiCarb_Player_1.default);
-        pOrder.setData(randomFood, 2);
-        this.node.addChild(pOrder.node);
-    };
-    ShuShiCarbGame.prototype.conveyor = function () {
-        var randomFood = this.randomIdFood(this.data, 3);
-        console.log(randomFood);
-        for (var i = 0; i < this.listConveyor.length; i++) {
-            var dt = this.listConveyor[i].getComponent(ShuShiCarb_Conveyor_1.default).itemFood;
-            for (var j = 0; j < dt.length; j++) {
-                var item = dt[j].getComponent(ShuShiCarb_Food_1.default);
-                item.setData(randomFood[j]);
-            }
+    // randomIdFood(arr,count) {
+    //     let idFood = [];
+    //     for(let i = 0; i < count; i++) {
+    //         let randomIndex = Math.floor(Math.random() * arr.length);
+    //         idFood.push(randomIndex);
+    //         arr.splice(randomIndex,1);
+    //     }
+    //     return arr;
+    // }
+    ShuShiCarbGame.prototype.randomOrderFood = function () {
+        for (var i = 0; i < 3; i++) {
+            var randomIndex = Math.floor(Math.random() * this.data.length);
+            var foodId = this.data[randomIndex];
+            this.playOrders.push(foodId);
         }
     };
+    ShuShiCarbGame.prototype.renderOrderFood = function () {
+        this.indexData++;
+        for (var i = 0; i < this.playOrders.length; i++) {
+            var prfPlayOrder = cc.instantiate(this.prfOrder).getComponent(ShuShiCarb_Player_1.default);
+            prfPlayOrder.setData(this.playOrders[0], this.playOrders[1], this.playOrders[2], this.indexData);
+            this.node.addChild(prfPlayOrder.node);
+        }
+    };
+    ShuShiCarbGame.prototype.renderFood = function () {
+        var itemFood = cc.instantiate(this.prfFood).getComponent(ShuShiCarb_Food_1.default);
+        itemFood.setData(1);
+        this.conveyor_1.addChild(itemFood.node);
+    };
+    // startCountDown() {
+    //     this.updateCountDown();
+    //     this.countdownInterval = setInterval(() => {
+    //         this.numberCountdown--;
+    //         this.updateCountDown();
+    //         if (this.numberCountdown <= 0) {
+    //             this.stopCountDown();
+    //             this.onCountDownEndGame();
+    //         }
+    //     }, 1000)
+    // }
+    // stopCountDown() {
+    //     if (this.countdownInterval) {
+    //         clearInterval(this.countdownInterval);
+    //         this.countdownInterval = null;
+    //     }
+    // }
+    // onCountDownEndGame() {
+    //     console.log("You Lost")
+    // }
+    // updateCountDown() {
+    //     this.lbCountDown.string = this.numberCountdown + " ";
+    // }
+    // renderFoodOder() {
+    //     console.log(this.idOderFood);
+    //     for(let i = 0; i < 3; i++) {
+    //         let pOrder = cc.instantiate(this.prfOrder).getComponent(ShuShiCarbPlayer)
+    //         pOrder.setData(this.idOderFood[i],1);
+    //         this.node.addChild(pOrder.node)
+    //     }
+    // }
+    // conveyor() {
+    //    for(let i = 0; i < this.listConveyor.length; i++) {
+    //         let dt = this.listConveyor[i];
+    //         let item = dt.getComponent(ShuShiCarbConveyor).listNodeConveyor_1;
+    //         for(let j = 0; j < item.length; j++) {
+    //             let food = item[j];
+    //             food.getComponent(cc.Sprite).spriteFrame = this.listSpfFood[this.playOrders[j]];
+    //         }
+    //    }
+    // }
     ShuShiCarbGame.prototype.start = function () {
     };
     var ShuShiCarbGame_1;
@@ -102,8 +155,17 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         property(cc.Prefab)
     ], ShuShiCarbGame.prototype, "prfOrder", void 0);
     __decorate([
+        property(cc.Label)
+    ], ShuShiCarbGame.prototype, "lbCountDown", void 0);
+    __decorate([
         property(cc.SpriteFrame)
     ], ShuShiCarbGame.prototype, "listSpfFood", void 0);
+    __decorate([
+        property(cc.Node)
+    ], ShuShiCarbGame.prototype, "conveyor_1", void 0);
+    __decorate([
+        property(cc.Prefab)
+    ], ShuShiCarbGame.prototype, "prfFood", void 0);
     ShuShiCarbGame = ShuShiCarbGame_1 = __decorate([
         ccclass
     ], ShuShiCarbGame);

@@ -29,36 +29,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ShuShiCarb_Food_1 = require("./ShuShiCarb.Food");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbConveyor = /** @class */ (function (_super) {
     __extends(ShuShiCarbConveyor, _super);
     function ShuShiCarbConveyor() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.idConveyor = 0;
-        _this.itemFood = [];
+        _this.prfFood = null;
         return _this;
     }
+    ShuShiCarbConveyor.prototype.onLoad = function () {
+    };
+    //     }
     ShuShiCarbConveyor.prototype.update = function (dt) {
-        if (this.idConveyor == 0 || this.idConveyor == 2) {
-            if (this.node.x > 650) {
-                this.node.x = -650;
-            }
-            this.node.x += 5;
-        }
-        else if (this.idConveyor == 1) {
-            if (this.node.x < -650) {
-                this.node.x = 650;
-            }
-            this.node.x -= 5;
-        }
     };
     __decorate([
-        property
-    ], ShuShiCarbConveyor.prototype, "idConveyor", void 0);
+        property(cc.Node)
+    ], ShuShiCarbConveyor.prototype, "itemFood_1", void 0);
     __decorate([
-        property(ShuShiCarb_Food_1.default)
-    ], ShuShiCarbConveyor.prototype, "itemFood", void 0);
+        property(cc.Prefab)
+    ], ShuShiCarbConveyor.prototype, "prfFood", void 0);
     ShuShiCarbConveyor = __decorate([
         ccclass
     ], ShuShiCarbConveyor);
