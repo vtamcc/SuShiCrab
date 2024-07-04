@@ -92,5 +92,7 @@
     " common-asset-worker-worker": {}
   },
   "panels": {},
-  "panelLabelWidth": {}
+  "panelLabelWidth": {
+    "inspector": "35.6818%"
+  }
 }

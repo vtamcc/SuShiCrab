@@ -1,6 +1,6 @@
 "use strict";
-cc._RF.push(module, '1814d5TiQlDEohqTgqXx2zV', 'ShuShiCarb.Food');
-// SuShiCarb/scripts/Game/ShuShiCarb.Food.ts
+cc._RF.push(module, '07571YrTBpHQZ4RW7KNcoYv', 'ShuShiCard.CollierManager');
+// SuShiCarb/scripts/Game/ShuShiCard.CollierManager.ts
 
 "use strict";
 // Learn TypeScript:
@@ -30,33 +30,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ShuShiCarb_Game_1 = require("../ShuShiCarb.Game");
+var ShuShiCarb_Food_1 = require("./ShuShiCarb.Food");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
-var ShuShiCarbFood = /** @class */ (function (_super) {
-    __extends(ShuShiCarbFood, _super);
-    function ShuShiCarbFood() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.nFood = null;
-        _this.id = 0;
-        return _this;
-        // update (dt) {}
+var Collier = /** @class */ (function (_super) {
+    __extends(Collier, _super);
+    function Collier() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
+    Collier.prototype.onCollisionEnter = function (other, self) {
+        var food = this.node.getComponent(ShuShiCarb_Food_1.default).id;
+        console.log(food);
+        if (other.tag == 1) {
+            console.log("va cham");
+            ShuShiCarb_Game_1.default.instance.arrResult.push(food);
+            console.log("sdasd", ShuShiCarb_Game_1.default.instance.arrResult);
+        }
+    };
     // LIFE-CYCLE CALLBACKS:
-    ShuShiCarbFood.prototype.onLoad = function () {
+    Collier.prototype.onLoad = function () {
+        var node = cc.director.getCollisionManager();
+        node.enabled = true;
+        node.enabledDebugDraw = true;
     };
-    ShuShiCarbFood.prototype.start = function () {
+    Collier.prototype.start = function () {
     };
-    ShuShiCarbFood.prototype.setData = function (idFood) {
-        this.id = idFood;
-        this.nFood.getComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[idFood];
-    };
-    __decorate([
-        property(cc.Node)
-    ], ShuShiCarbFood.prototype, "nFood", void 0);
-    ShuShiCarbFood = __decorate([
+    Collier = __decorate([
         ccclass
-    ], ShuShiCarbFood);
-    return ShuShiCarbFood;
+    ], Collier);
+    return Collier;
 }(cc.Component));
-exports.default = ShuShiCarbFood;
+exports.default = Collier;
 
 cc._RF.pop();

@@ -16,14 +16,6 @@ const {ccclass, property} = cc._decorator;
 export default class ShuShiCarbGame extends cc.Component {
 
     public static instance: ShuShiCarbGame = null;
-    @property(cc.Node)
-    nFood1: cc.Node = null;
-    @property(cc.Node)
-    nFood2: cc.Node = null;
-    @property(cc.Node)
-    nFood3: cc.Node = null;
-    @property(cc.Node)
-    listConveyor: cc.Node[] = [];
     @property(cc.Prefab)
     prfOrder: cc.Prefab = null;
     @property(cc.Label)
@@ -33,14 +25,21 @@ export default class ShuShiCarbGame extends cc.Component {
 
     @property(cc.Node)
     conveyor_1: cc.Node = null;
+
+    @property(cc.Node)
+    conveyor_2: cc.Node = null;
+
+    @property(cc.Node)
+    conveyor_3: cc.Node = null;
+
     @property(cc.Prefab)
     prfFood: cc.Prefab = null;
 
     // LIFE-CYCLE CALLBACKS:
     data = [0,1,2,3,4,5];
     playOrders = [];
-
-    indexData = -1;
+    arrResult = [];
+    indexData = 0;
 
     numberCountdown = 7;
     countdownInterval: any = null;
@@ -52,9 +51,12 @@ export default class ShuShiCarbGame extends cc.Component {
         this.randomOrderFood();
         console.log(this.playOrders);
         this.renderOrderFood();
-        this.renderFood();
-        //this.conveyor();
+        //this.renderFood();
+        this.conveyor(this.conveyor_1);
+        this.conveyor(this.conveyor_2);
+        this.conveyor(this.conveyor_3);
 
+        console.log("asdasdasd",this.arrResult);
     }
 
     // randomIdFood(arr,count) {
@@ -84,56 +86,14 @@ export default class ShuShiCarbGame extends cc.Component {
         }
     }
 
-    renderFood() {
-        let itemFood = cc.instantiate(this.prfFood).getComponent(ShuShiCarbFood)
-        itemFood.setData(1);
-        this.conveyor_1.addChild(itemFood.node);
-    }
-    // startCountDown() {
-    //     this.updateCountDown();
-    //     this.countdownInterval = setInterval(() => {
-    //         this.numberCountdown--;
-    //         this.updateCountDown();
-    //         if (this.numberCountdown <= 0) {
-    //             this.stopCountDown();
-    //             this.onCountDownEndGame();
-    //         }
-    //     }, 1000)
-    // }
+   
 
-    // stopCountDown() {
-    //     if (this.countdownInterval) {
-    //         clearInterval(this.countdownInterval);
-    //         this.countdownInterval = null;
-    //     }
-    // }
-
-    // onCountDownEndGame() {
-    //     console.log("You Lost")
-    // }
-    // updateCountDown() {
-    //     this.lbCountDown.string = this.numberCountdown + " ";
-    // }
-    // renderFoodOder() {
-    //     console.log(this.idOderFood);
-    //     for(let i = 0; i < 3; i++) {
-    //         let pOrder = cc.instantiate(this.prfOrder).getComponent(ShuShiCarbPlayer)
-    //         pOrder.setData(this.idOderFood[i],1);
-    //         this.node.addChild(pOrder.node)
-    //     }
-        
-    // }
-
-    // conveyor() {
-    //    for(let i = 0; i < this.listConveyor.length; i++) {
-    //         let dt = this.listConveyor[i];
-    //         let item = dt.getComponent(ShuShiCarbConveyor).listNodeConveyor_1;
-    //         for(let j = 0; j < item.length; j++) {
-    //             let food = item[j];
-    //             food.getComponent(cc.Sprite).spriteFrame = this.listSpfFood[this.playOrders[j]];
-    //         }
-    //    }
-    // }
+    conveyor(node: cc.Node) {
+       for(let i = 0; i < node.childrenCount; i++) {
+            let item = node.children[i].getComponent(ShuShiCarbFood);
+            item.setData(this.data[i]);
+       }
+    } 
     start () {
         
     }

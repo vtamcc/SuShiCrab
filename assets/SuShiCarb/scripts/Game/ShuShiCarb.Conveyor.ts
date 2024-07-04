@@ -5,31 +5,45 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+import ShuShiCarbGame from "../ShuShiCarb.Game";
 import ShuShiCarbFood from "./ShuShiCarb.Food";
-
-
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class ShuShiCarbConveyor extends cc.Component {
 
-//    @property(cc.Node)
-//    listNodeConveyor_1: cc.Node[] = [];
-//    nextFoodIndex1: 0;
-//    beltSpeed: cc.Vec2 = cc.v2(100, 0);
-   @property(cc.Node)
-   itemFood_1: cc.Node;
-   @property(cc.Prefab)
-   prfFood: cc.Prefab = null;
+  @property(ShuShiCarbFood)
+  itemFood_1: ShuShiCarbFood[] = [];
+  @property
+  idFood: number = 0;
+  isMove = false;
    
-   onLoad() {
-        
+   update() {
+   if(this.isMove) {
+      return;
    }
-
-//     }
-   update (dt) {
-   
-
+   if(this.idFood == 0) {
+      if(this.node.x >= 1200) {
+         this.resetPos();
+      }
+      this.node.x += 4;
+   }else if(this.idFood == 1) {
+      if(this.node.x <= -1200) {
+         this.node.x = 600
+      }
+      this.node.x -= 3;
    }
+   else if(this.idFood == 2) {
+      if(this.node.x >= 1200) {
+         this.resetPos();
+      }
+      this.node.x += 3;
+   }
+  
+  }
+
+  resetPos() {
+   this.node.x = -900;
+  }
 }

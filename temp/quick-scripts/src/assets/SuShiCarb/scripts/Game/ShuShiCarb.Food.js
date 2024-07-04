@@ -36,29 +36,18 @@ var ShuShiCarbFood = /** @class */ (function (_super) {
     function ShuShiCarbFood() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.nFood = null;
+        _this.id = 0;
         return _this;
         // update (dt) {}
     }
     // LIFE-CYCLE CALLBACKS:
     ShuShiCarbFood.prototype.onLoad = function () {
-        this.effectShow();
     };
     ShuShiCarbFood.prototype.start = function () {
     };
     ShuShiCarbFood.prototype.setData = function (idFood) {
+        this.id = idFood;
         this.nFood.getComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[idFood];
-    };
-    ShuShiCarbFood.prototype.effectShow = function () {
-        var _this = this;
-        cc.tween(this.node)
-            .to(2, { x: 500 })
-            .call(function () {
-            if (_this.node.x >= 500) {
-                _this.node.x = -750;
-            }
-        })
-            // .repeatForever()
-            .start();
     };
     __decorate([
         property(cc.Node)
