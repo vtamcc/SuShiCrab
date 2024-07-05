@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "hook_rope",
+    "texture": "21660401-4863-4961-b37b-9ecefabf2c97",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      191,
+      10
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      191,
+      10
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

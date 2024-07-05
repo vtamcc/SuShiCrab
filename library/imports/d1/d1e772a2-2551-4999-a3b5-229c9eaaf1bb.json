@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "hook_close",
+    "texture": "301f0b7f-df29-4951-9358-d203328365e7",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      308,
+      323
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      308,
+      323
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
