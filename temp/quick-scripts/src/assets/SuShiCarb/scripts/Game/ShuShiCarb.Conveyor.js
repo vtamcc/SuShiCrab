@@ -51,7 +51,7 @@ var ShuShiCarbConveyor = /** @class */ (function (_super) {
             this.node.x += 4;
         }
         else if (this.idFood == 1) {
-            if (this.node.x <= -1200) {
+            if (this.node.x <= -1800) {
                 this.node.x = 600;
             }
             this.node.x -= 3;

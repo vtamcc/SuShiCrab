@@ -67,8 +67,7 @@ export default class ShuShiCarbPlayer extends cc.Component {
 
     updateProgressBar() {
         if(this.prgBarCountDown) {
-            this.prgBarCountDown.progress -= 0.1;  
-            console.log(this.prgBarCountDown.progress);
+            this.prgBarCountDown.progress -= 0.1;
         }
     }
     // LIFE-CYCLE CALLBACKS:

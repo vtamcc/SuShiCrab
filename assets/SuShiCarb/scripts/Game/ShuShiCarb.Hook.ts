@@ -11,6 +11,7 @@ const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class ShuShiCarbHook extends cc.Component {
+    public static instance: ShuShiCarbHook = null;
     @property(cc.Node)
     hookRope: cc.Node = null;
 
@@ -29,12 +30,15 @@ export default class ShuShiCarbHook extends cc.Component {
     hookHeadBaseY: number = 80;
     hookRopeBaseWidth: number = 0;
     hookObjects: cc.Node[] = [];
-
+    mousePos
     // initialLength: number = 100;  
     // maxLength: number = 750;      
     // growing: boolean = false;
     onLoad() {
-         cc.Canvas.instance.node.on(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
+        ShuShiCarbHook.instance = this;
+        cc.Canvas.instance.node.on(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);  
+        //  this.hookHeadBaseY = this.hookHeadBaseY || this.hookHead.y;
+        //  this.hookRopeBaseWidth = this.hookRopeBaseWidth || this.hookRope.width;
     }
 
 
@@ -59,20 +63,23 @@ export default class ShuShiCarbHook extends cc.Component {
  
 
     onMouseDown(event: cc.Event.EventMouse) {
+        if(this.hookState !== 0) {
+            return;
+        }
         this.hookState = 1;
-        let mousePos = this.node.parent.convertToNodeSpaceAR(cc.v2(event.getLocationX()));
-        console.log(mousePos);
-        this.node.setPosition(mousePos);
+        this.mousePos = this.node.parent.convertToNodeSpaceAR(cc.v2(event.getLocationX()));
+
+        console.log(this.mousePos);
+        this.node.setPosition(this.mousePos);
     }
 
- 
     moveHookHead(dt) {
         this.hookHead.y += dt * 30;
-        this.hookRope.width -= dt * 30;
+        this.hookRope.width -= dt * 40;
+      
     }
 
    
-
     moveHookPack() {
         // Di chuyển các đối tượng được móc theo đầu móc
         for (let object of this.hookObjects) {
@@ -81,7 +88,7 @@ export default class ShuShiCarbHook extends cc.Component {
     }
 
     getHookHeadGlobalPos(): cc.Vec2 {
-        return this.node.convertToWorldSpaceAR(cc.v2(this.hookHead.x, this.hookHead.y - 25));
+        return this.node.convertToWorldSpaceAR(cc.v2(this.mousePos, this.hookHead.y - 25));
     }
     onDestroy() {
         cc.Canvas.instance.node.off(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
@@ -92,21 +99,27 @@ export default class ShuShiCarbHook extends cc.Component {
             case 1:
                 if(this.hookHead.y) {
                     this.moveHookHead(50 * dt);
-                    if(this.hookHead.y >= 600) {
+                    if(this.hookHead.y >= 1000) {
                         this.hookState = 2;
-                        console.log("state",this.hookState)
+                     
                     }
                 }
                 break;
             case 2:
-                this.moveHookHead(-30 * dt);
-                this.scheduleOnce(()=> {
-                    this.hookState = 0;
-                },0.8)
+                if(this.hookHead.y) {
+                    this.moveHookHead(-50  * dt);
+                    if(this.hookHead.y  < 0) {
+                        this.hookHead.y = 100;
+                        this.hookRope.width = 50;
+                        this.hookState = 0;
+                    }
+                }
+               
                 this.setHookSprite(false);
-            case 0:
-            default:
                 break;
+            case 0:
+                default:
+                    break;
         }
     }
 

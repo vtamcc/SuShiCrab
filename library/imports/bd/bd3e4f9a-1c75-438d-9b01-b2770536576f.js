@@ -45,11 +45,15 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         _this.hookObjects = [];
         return _this;
     }
+    ShuShiCarbHook_1 = ShuShiCarbHook;
     // initialLength: number = 100;  
     // maxLength: number = 750;      
     // growing: boolean = false;
     ShuShiCarbHook.prototype.onLoad = function () {
+        ShuShiCarbHook_1.instance = this;
         cc.Canvas.instance.node.on(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
+        //  this.hookHeadBaseY = this.hookHeadBaseY || this.hookHead.y;
+        //  this.hookRopeBaseWidth = this.hookRopeBaseWidth || this.hookRope.width;
     };
     ShuShiCarbHook.prototype.initHook = function () {
         this.hookObjects = [];
@@ -68,14 +72,17 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         this.hookSpriteOpen.active = isOpen;
     };
     ShuShiCarbHook.prototype.onMouseDown = function (event) {
+        if (this.hookState !== 0) {
+            return;
+        }
         this.hookState = 1;
-        var mousePos = this.node.parent.convertToNodeSpaceAR(cc.v2(event.getLocationX()));
-        console.log(mousePos);
-        this.node.setPosition(mousePos);
+        this.mousePos = this.node.parent.convertToNodeSpaceAR(cc.v2(event.getLocationX()));
+        console.log(this.mousePos);
+        this.node.setPosition(this.mousePos);
     };
     ShuShiCarbHook.prototype.moveHookHead = function (dt) {
         this.hookHead.y += dt * 30;
-        this.hookRope.width -= dt * 30;
+        this.hookRope.width -= dt * 40;
     };
     ShuShiCarbHook.prototype.moveHookPack = function () {
         // Di chuyển các đối tượng được móc theo đầu móc
@@ -85,30 +92,33 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         }
     };
     ShuShiCarbHook.prototype.getHookHeadGlobalPos = function () {
-        return this.node.convertToWorldSpaceAR(cc.v2(this.hookHead.x, this.hookHead.y - 25));
+        return this.node.convertToWorldSpaceAR(cc.v2(this.mousePos, this.hookHead.y - 25));
     };
     ShuShiCarbHook.prototype.onDestroy = function () {
         cc.Canvas.instance.node.off(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
     };
     ShuShiCarbHook.prototype.update = function (dt) {
-        var _this = this;
         this.setHookSprite(true);
         switch (this.hookState) {
             case 1:
                 if (this.hookHead.y) {
                     this.moveHookHead(50 * dt);
-                    if (this.hookHead.y >= 600) {
+                    if (this.hookHead.y >= 1000) {
                         this.hookState = 2;
-                        console.log("state", this.hookState);
                     }
                 }
                 break;
             case 2:
-                this.moveHookHead(-30 * dt);
-                this.scheduleOnce(function () {
-                    _this.hookState = 0;
-                }, 0.8);
+                if (this.hookHead.y) {
+                    this.moveHookHead(-50 * dt);
+                    if (this.hookHead.y < 0) {
+                        this.hookHead.y = 100;
+                        this.hookRope.width = 50;
+                        this.hookState = 0;
+                    }
+                }
                 this.setHookSprite(false);
+                break;
             case 0:
             default:
                 break;
@@ -140,6 +150,8 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         //     }
         // }
     };
+    var ShuShiCarbHook_1;
+    ShuShiCarbHook.instance = null;
     __decorate([
         property(cc.Node)
     ], ShuShiCarbHook.prototype, "hookRope", void 0);
@@ -152,7 +164,7 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], ShuShiCarbHook.prototype, "hookHead", void 0);
-    ShuShiCarbHook = __decorate([
+    ShuShiCarbHook = ShuShiCarbHook_1 = __decorate([
         ccclass
     ], ShuShiCarbHook);
     return ShuShiCarbHook;

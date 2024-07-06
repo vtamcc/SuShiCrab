@@ -423,7 +423,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        0,
+        -44.24,
         0,
         0,
         0,
@@ -1550,7 +1550,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        639.054,
+        1182.578,
         -135.862,
         0,
         0,
@@ -1626,7 +1626,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        0,
+        -676.244,
         0,
         0,
         0,
@@ -1801,7 +1801,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        300,
+        -376.244,
         0,
         0,
         0,
@@ -1976,7 +1976,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        600,
+        -76.244,
         0,
         0,
         0,
@@ -2151,7 +2151,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        900,
+        223.756,
         0,
         0,
         0,
@@ -2326,7 +2326,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        1200,
+        523.756,
         0,
         0,
         0,
@@ -2501,7 +2501,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        1500,
+        823.756,
         0,
         0,
         0,
@@ -2677,7 +2677,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        0,
+        -50.56,
         -480.132,
         0,
         0,
@@ -2832,7 +2832,7 @@
     },
     "_enabled": true,
     "itemFood_1": [],
-    "idFood": 2,
+    "idFood": 0,
     "_id": "2a2yJPqGRCEZAhSUBreIyR"
   },
   {
@@ -3007,7 +3007,7 @@
     },
     "_enabled": true,
     "itemFood_1": [],
-    "idFood": 2,
+    "idFood": 0,
     "_id": "b6yc5ypBVNX7j5ovx31raP"
   },
   {
@@ -3182,7 +3182,7 @@
     },
     "_enabled": true,
     "itemFood_1": [],
-    "idFood": 2,
+    "idFood": 0,
     "_id": "7eLiUYWD9CNJVMQoNvNsop"
   },
   {
@@ -3357,7 +3357,7 @@
     },
     "_enabled": true,
     "itemFood_1": [],
-    "idFood": 2,
+    "idFood": 0,
     "_id": "c4zoEEI8xPMZkuLC4oJHKi"
   },
   {
@@ -3532,7 +3532,7 @@
     },
     "_enabled": true,
     "itemFood_1": [],
-    "idFood": 2,
+    "idFood": 0,
     "_id": "92gP5/241LlLJ+V/UhoSUZ"
   },
   {
@@ -3707,7 +3707,7 @@
     },
     "_enabled": true,
     "itemFood_1": [],
-    "idFood": 2,
+    "idFood": 0,
     "_id": "4eRjK72TlKAYFFYD9teWGX"
   },
   {

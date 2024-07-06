@@ -29,8 +29,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ShuShiCarb_Game_1 = require("../ShuShiCarb.Game");
 var ShuShiCarb_Food_1 = require("./ShuShiCarb.Food");
+var ShuShiCarb_Hook_1 = require("./ShuShiCarb.Hook");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var Collier = /** @class */ (function (_super) {
     __extends(Collier, _super);
@@ -38,12 +38,14 @@ var Collier = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Collier.prototype.onCollisionEnter = function (other, self) {
-        var food = this.node.getComponent(ShuShiCarb_Food_1.default).id;
+        var food = this.node.getComponent(ShuShiCarb_Food_1.default);
         console.log(food);
         if (other.tag == 1) {
             console.log("va cham");
-            ShuShiCarb_Game_1.default.instance.arrResult.push(food);
-            console.log("sdasd", ShuShiCarb_Game_1.default.instance.arrResult);
+            ShuShiCarb_Hook_1.default.instance.hookObjects.push(food.node);
+            ShuShiCarb_Hook_1.default.instance.hookState = 2;
+            console.log("Thu ve luoon ne ");
+            food.isCheck = 1;
         }
     };
     // LIFE-CYCLE CALLBACKS:

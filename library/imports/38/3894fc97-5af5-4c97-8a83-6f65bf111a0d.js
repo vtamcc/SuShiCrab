@@ -79,7 +79,6 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
     ShuShiCarbPlayer.prototype.updateProgressBar = function () {
         if (this.prgBarCountDown) {
             this.prgBarCountDown.progress -= 0.1;
-            console.log(this.prgBarCountDown.progress);
         }
     };
     // LIFE-CYCLE CALLBACKS:

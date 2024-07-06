@@ -7,6 +7,7 @@
 
 import ShuShiCarbGame from "../ShuShiCarb.Game";
 import ShuShiCarbFood from "./ShuShiCarb.Food";
+import ShuShiCarbHook from "./ShuShiCarb.Hook";
 
 const {ccclass, property} = cc._decorator;
 
@@ -14,13 +15,16 @@ const {ccclass, property} = cc._decorator;
 export default class Collier extends cc.Component {
 
     onCollisionEnter(other, self) {
-        let food = this.node.getComponent(ShuShiCarbFood).id;
+        let food = this.node.getComponent(ShuShiCarbFood);
         console.log(food);
         
         if (other.tag == 1) {
             console.log("va cham")
-            ShuShiCarbGame.instance.arrResult.push(food);
-            console.log("sdasd", ShuShiCarbGame.instance.arrResult);
+            ShuShiCarbHook.instance.hookObjects.push(food.node)
+            ShuShiCarbHook.instance.hookState = 2;
+            console.log("Thu ve luoon ne ")
+
+            food.isCheck = 1;
         }
 
     }

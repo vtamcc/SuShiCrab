@@ -6,6 +6,7 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import ShuShiCarbGame from "../ShuShiCarb.Game";
+import ShuShiCarbHook from "./ShuShiCarb.Hook";
 
 
 
@@ -18,7 +19,8 @@ export default class ShuShiCarbFood extends cc.Component {
     nFood: cc.Node = null;
     id = 0 
     // LIFE-CYCLE CALLBACKS:
-
+    isCheck = 0;
+    
     onLoad () {
     }
 
@@ -31,5 +33,9 @@ export default class ShuShiCarbFood extends cc.Component {
         this.nFood.getComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[idFood];
     }
 
-    // update (dt) {}
+    update(dt) {
+    //    if(this.isCheck == 1) {
+    //         this.node.setPosition(ShuShiCarbHook.instance.hookHead.x,ShuShiCarbHook.instance.hookHead.y);
+    //    }
+    }
 }

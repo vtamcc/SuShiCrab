@@ -1,80 +1,217 @@
-2024-07-05T01:49:01.281Z - success: protocol editor-framework registered
-2024-07-05T01:49:01.283Z - success: protocol app registered
-2024-07-05T01:49:01.283Z - success: protocol theme registered
-2024-07-05T01:49:01.283Z - success: protocol packages registered
-2024-07-05T01:49:01.304Z - normal: Load ~/.CocosCreator/settings.json
-2024-07-05T01:49:01.334Z - success: protocol uuid registerred
-2024-07-05T01:49:01.334Z - success: protocol db registerred
-2024-07-05T01:49:01.335Z - success: protocol thumbnail registerred
-2024-07-05T01:49:01.416Z - normal: Initializing Asset Database
-2024-07-05T01:49:01.418Z - normal: checking language setting...
-2024-07-05T01:49:01.418Z - normal: Language: en
-2024-07-05T01:49:01.421Z - success: protocol unpack registerred
-2024-07-05T01:49:01.421Z - success: protocol disable-commonjs registerred
-2024-07-05T01:49:02.969Z - normal: connected!
-2024-07-05T01:49:03.311Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
-2024-07-05T01:49:03.316Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
-2024-07-05T01:49:03.538Z - success: adapters loaded
-2024-07-05T01:49:03.543Z - success: asset-db-debugger loaded
-2024-07-05T01:49:03.613Z - success: fb-audience-network loaded
-2024-07-05T01:49:03.661Z - success: fb-live-stream loaded
-2024-07-05T01:49:03.666Z - success: google-play-instant loaded
-2024-07-05T01:49:03.666Z - success: jsb-adapter loaded
-2024-07-05T01:49:03.688Z - success: package-manager loaded
-2024-07-05T01:49:03.689Z - success: runtime-adapters loaded
-2024-07-05T01:49:03.693Z - success: runtime-dev-tools loaded
-2024-07-05T01:49:03.696Z - success: ui-kit-preview-extra loaded
-2024-07-05T01:49:03.698Z - success: ui-kit-preview loaded
-2024-07-05T01:49:04.528Z - success: alipay-minigame loaded
-2024-07-05T01:49:04.547Z - success: assets loaded
-2024-07-05T01:49:04.550Z - success: baidugame-opendata loaded
-2024-07-05T01:49:04.552Z - success: baidugame loaded
-2024-07-05T01:49:04.556Z - success: builder loaded
-2024-07-05T01:49:04.561Z - success: bytedance-opendata loaded
-2024-07-05T01:49:04.564Z - success: bytedance loaded
-2024-07-05T01:49:04.569Z - success: channel-upload-tools loaded
-2024-07-05T01:49:04.725Z - success: cloud-function loaded
-2024-07-05T01:49:04.954Z - success: cocos-services loaded
-2024-07-05T01:49:04.960Z - success: console loaded
-2024-07-05T01:49:04.963Z - success: curve-editor loaded
-2024-07-05T01:49:04.971Z - success: fb-instant-games loaded
-2024-07-05T01:49:04.974Z - success: game-window loaded
-2024-07-05T01:49:04.975Z - success: google-instant-games loaded
-2024-07-05T01:49:04.979Z - success: hierarchy loaded
-2024-07-05T01:49:04.982Z - success: huawei-agc loaded
-2024-07-05T01:49:04.985Z - success: huawei-runtime loaded
-2024-07-05T01:49:04.989Z - success: inspector loaded
-2024-07-05T01:49:05.008Z - success: cpk-publish loaded
-2024-07-05T01:49:05.009Z - success: keystore loaded
-2024-07-05T01:49:05.029Z - success: link-sure-runtime loaded
-2024-07-05T01:49:05.050Z - success: node-library loaded
-2024-07-05T01:49:05.051Z - success: open-recent-items loaded
-2024-07-05T01:49:05.054Z - success: oppo-runtime loaded
-2024-07-05T01:49:05.056Z - success: package-asset loaded
-2024-07-05T01:49:05.057Z - success: preferences loaded
-2024-07-05T01:49:05.060Z - success: project-importer loaded
-2024-07-05T01:49:05.064Z - success: project-settings loaded
-2024-07-05T01:49:05.077Z - success: qtt-runtime loaded
-2024-07-05T01:49:05.081Z - success: scene loaded
-2024-07-05T01:49:05.082Z - success: simulator-debugger loaded
-2024-07-05T01:49:05.083Z - success: sprite-editor loaded
-2024-07-05T01:49:05.153Z - success: store loaded
-2024-07-05T01:49:05.155Z - success: taobao-creativeapp loaded
-2024-07-05T01:49:05.159Z - success: timeline loaded
-2024-07-05T01:49:05.165Z - success: vivo-runtime loaded
-2024-07-05T01:49:05.167Z - success: wechatgame-opendata loaded
-2024-07-05T01:49:05.173Z - success: wechatgame loaded
-2024-07-05T01:49:05.177Z - success: xiaomi-runtime loaded
-2024-07-05T01:49:05.232Z - success: im-plugin loaded
-2024-07-05T01:49:05.234Z - success: preview server running at http://localhost:7456
-2024-07-05T01:49:07.288Z - normal: Initializing Cocos2d
-2024-07-05T01:49:07.570Z - normal: Initializing engine extends
-2024-07-05T01:49:08.024Z - info: Cocos Service load base data!
-2024-07-05T01:49:08.854Z - normal: Loading packages
-2024-07-05T01:49:08.859Z - normal: Watching packages
-2024-07-05T01:49:09.086Z - normal: Run Application
-2024-07-05T01:49:14.609Z - success: cloud-function unloaded
-2024-07-05T03:11:42.227Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
+2024-07-06T01:49:12.446Z - success: protocol editor-framework registered
+2024-07-06T01:49:12.448Z - success: protocol app registered
+2024-07-06T01:49:12.448Z - success: protocol theme registered
+2024-07-06T01:49:12.448Z - success: protocol packages registered
+2024-07-06T01:49:12.474Z - normal: Load ~/.CocosCreator/settings.json
+2024-07-06T01:49:12.500Z - success: protocol uuid registerred
+2024-07-06T01:49:12.500Z - success: protocol db registerred
+2024-07-06T01:49:12.500Z - success: protocol thumbnail registerred
+2024-07-06T01:49:12.582Z - normal: Initializing Asset Database
+2024-07-06T01:49:12.585Z - normal: checking language setting...
+2024-07-06T01:49:12.585Z - normal: Language: en
+2024-07-06T01:49:12.588Z - success: protocol unpack registerred
+2024-07-06T01:49:12.588Z - success: protocol disable-commonjs registerred
+2024-07-06T01:49:14.120Z - normal: connected!
+2024-07-06T01:49:14.576Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
+2024-07-06T01:49:14.578Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
+2024-07-06T01:49:14.798Z - success: adapters loaded
+2024-07-06T01:49:14.803Z - success: asset-db-debugger loaded
+2024-07-06T01:49:14.889Z - success: fb-audience-network loaded
+2024-07-06T01:49:14.943Z - success: fb-live-stream loaded
+2024-07-06T01:49:14.946Z - success: google-play-instant loaded
+2024-07-06T01:49:14.947Z - success: jsb-adapter loaded
+2024-07-06T01:49:14.976Z - success: package-manager loaded
+2024-07-06T01:49:14.977Z - success: runtime-adapters loaded
+2024-07-06T01:49:14.979Z - success: runtime-dev-tools loaded
+2024-07-06T01:49:14.982Z - success: ui-kit-preview-extra loaded
+2024-07-06T01:49:14.984Z - success: ui-kit-preview loaded
+2024-07-06T01:49:15.844Z - success: alipay-minigame loaded
+2024-07-06T01:49:15.860Z - success: assets loaded
+2024-07-06T01:49:15.864Z - success: baidugame-opendata loaded
+2024-07-06T01:49:15.866Z - success: baidugame loaded
+2024-07-06T01:49:15.870Z - success: builder loaded
+2024-07-06T01:49:15.876Z - success: bytedance-opendata loaded
+2024-07-06T01:49:15.879Z - success: bytedance loaded
+2024-07-06T01:49:15.885Z - success: channel-upload-tools loaded
+2024-07-06T01:49:16.048Z - success: cloud-function loaded
+2024-07-06T01:49:16.283Z - success: cocos-services loaded
+2024-07-06T01:49:16.290Z - success: console loaded
+2024-07-06T01:49:16.293Z - success: curve-editor loaded
+2024-07-06T01:49:16.301Z - success: fb-instant-games loaded
+2024-07-06T01:49:16.304Z - success: game-window loaded
+2024-07-06T01:49:16.305Z - success: google-instant-games loaded
+2024-07-06T01:49:16.310Z - success: hierarchy loaded
+2024-07-06T01:49:16.313Z - success: huawei-agc loaded
+2024-07-06T01:49:16.316Z - success: huawei-runtime loaded
+2024-07-06T01:49:16.320Z - success: inspector loaded
+2024-07-06T01:49:16.343Z - success: cpk-publish loaded
+2024-07-06T01:49:16.345Z - success: keystore loaded
+2024-07-06T01:49:16.373Z - success: link-sure-runtime loaded
+2024-07-06T01:49:16.386Z - success: node-library loaded
+2024-07-06T01:49:16.387Z - success: open-recent-items loaded
+2024-07-06T01:49:16.390Z - success: oppo-runtime loaded
+2024-07-06T01:49:16.392Z - success: package-asset loaded
+2024-07-06T01:49:16.393Z - success: preferences loaded
+2024-07-06T01:49:16.397Z - success: project-importer loaded
+2024-07-06T01:49:16.400Z - success: project-settings loaded
+2024-07-06T01:49:16.413Z - success: qtt-runtime loaded
+2024-07-06T01:49:16.418Z - success: scene loaded
+2024-07-06T01:49:16.419Z - success: simulator-debugger loaded
+2024-07-06T01:49:16.419Z - success: sprite-editor loaded
+2024-07-06T01:49:16.500Z - success: store loaded
+2024-07-06T01:49:16.502Z - success: taobao-creativeapp loaded
+2024-07-06T01:49:16.506Z - success: timeline loaded
+2024-07-06T01:49:16.513Z - success: vivo-runtime loaded
+2024-07-06T01:49:16.516Z - success: wechatgame-opendata loaded
+2024-07-06T01:49:16.521Z - success: wechatgame loaded
+2024-07-06T01:49:16.525Z - success: xiaomi-runtime loaded
+2024-07-06T01:49:16.581Z - success: im-plugin loaded
+2024-07-06T01:49:16.582Z - warn: The current '7456' preview port is already occupied, the port is automatically incremented
+2024-07-06T01:49:16.583Z - success: preview server running at http://localhost:7457
+2024-07-06T01:49:18.495Z - info: Cocos Service load base data!
+2024-07-06T01:49:18.775Z - normal: Initializing Cocos2d
+2024-07-06T01:49:19.025Z - normal: Initializing engine extends
+2024-07-06T01:49:23.681Z - normal: Loading packages
+2024-07-06T01:49:23.686Z - normal: Watching packages
+2024-07-06T01:49:24.107Z - normal: Run Application
+2024-07-06T01:49:29.394Z - success: cloud-function unloaded
+2024-07-06T02:14:34.236Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.237Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
 Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
 Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
 
+2024-07-06T02:14:34.237Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.237Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.239Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.239Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.239Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.239Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.239Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.242Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.242Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.242Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.242Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food copy"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.242Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/HookBase/HookHead/hook_open"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.243Z - warn: The Material used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/HookBase/HookHead/hook_close"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.243Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/HookBase/hook_rope"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.243Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/HookBase"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:14:34.243Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main"
+Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+
+2024-07-06T02:17:22.972Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
+Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
+
+2024-07-06T02:30:12.849Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
+Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
+
+2024-07-06T02:32:28.835Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
+Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
+
+2024-07-06T02:40:19.269Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
+Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
+
+2024-07-06T02:47:26.814Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
+Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
+
+2024-07-06T03:10:41.153Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
+Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
+
+2024-07-06T04:39:52.227Z - error: Failed to `new ShuShiCarbFood()` under the hood, TypeError: Cannot read property 'x' of null
+It is used for getting default values declared in TypeScript in the first place.
+Please ensure the constructor can be called during the script's initialization.
+    at Object.errorID (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:257:6)
+    at extractActualDefaultValues (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:157:10)
+    at genProperty (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:222:73)
+    at normalized (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:446:7)
+    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/polyfill/typescript.js:81:56
+    at /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCarb.Food.js:70:5
+    at __define (/Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCarb.Food.js:77:2)
+    at /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCarb.Food.js:83:25
+    at Object.<anonymous> (/Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCarb.Food.js:90:19)
+2024-07-06T04:39:52.229Z - warn: Please specifiy a default value for "ShuShiCarbFood.nFood" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
