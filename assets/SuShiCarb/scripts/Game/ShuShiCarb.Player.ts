@@ -50,6 +50,7 @@ export default class ShuShiCarbPlayer extends cc.Component {
         this.schedule(this.updateCountDown,1);
     }
 
+    
     updateCountDown() {
         if(this.numberCountDown > 0) {
             this.numberCountDown--;
@@ -67,34 +68,6 @@ export default class ShuShiCarbPlayer extends cc.Component {
             this.prgBarCountDown.progress -= 0.1;
         }
     }
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {}
-    // setItemFood(foodIDs: number[]) {
-    //     for(let i = 0; i < foodIDs.length; i++) {
-    //        let foodID = foodIDs[i];
-    //        let foodItemNode = null;
-    //        switch(i) {
-    //             case 0: 
-    //                 foodItemNode = this.foodItem1;
-    //                 break;
-    //             case 1: 
-    //                 foodItemNode = this.foodItem2;
-    //                 break;
-    //             case 2: 
-    //                 foodItemNode = this.foodItem3;
-    //                 break;
-    //             default:
-    //                 break;
-    //        } 
-
-    //        if(foodItemNode) {
-    //             foodItemNode.getComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[foodID];
-    //        }
-    //     }
-
-        
-    // }
     effectShow() {
         this.char.animation = 'move';
         this.nchat.active = false;
@@ -109,6 +82,20 @@ export default class ShuShiCarbPlayer extends cc.Component {
         })
         .start()
     }
+
+    showEffectPlayerMoveOut(callbacks: Function) {
+        // this.char.setAnimation(0,"happy_out",active);
+        // this.char.setAnimation(0,"discomfort",!active);
+        this.char.animation = "happy"
+        cc.tween(this.char.node)
+        .to(0.8,{x: 600})
+        .call(() => {
+            this.node.destroy();
+            callbacks();
+        }).start();
+    }
+
+
     start () {  
         this.effectShow();
     }

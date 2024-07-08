@@ -48,6 +48,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         _this.playOrders = [];
         _this.hookObjects = [];
         _this.indexData = 0;
+        _this.countCorrect = 0;
         _this.numberCountdown = 7;
         _this.countdownInterval = null;
         _this.isMove = false;
@@ -77,6 +78,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     //     return arr;
     // }
     ShuShiCarbGame.prototype.randomOrderFood = function () {
+        this.playOrders = [];
         for (var i = 0; i < 3; i++) {
             var randomIndex = Math.floor(Math.random() * this.data.length);
             var foodId = this.data[randomIndex];
@@ -84,33 +86,68 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         }
     };
     ShuShiCarbGame.prototype.renderOrderFood = function () {
-        this.indexData++;
+        // if (this.player) {
+        //     this.player.node.destroy(); // Destroy previous player node
+        // }
         this.player = cc.instantiate(this.prfOrder).getComponent(ShuShiCarb_Player_1.default);
         for (var i = 0; i < this.player.listFood.length; i++) {
             var food = this.player.listFood[i];
             food.getComponent(cc.Sprite).spriteFrame = this.listSpfFood[this.playOrders[i]];
         }
+        this.indexData++;
         this.player.setData(this.indexData);
         this.node.addChild(this.player.node);
     };
     ShuShiCarbGame.prototype.checkCorrect = function () {
-        var check = this.playOrders.indexOf(this.hookObjects[0].id);
-        console.log("check", check);
-        if (check > -1) {
-            console.log("Chuan con me no luon");
-            this.player.listFood[check].getChildByName("tick").active = true;
-            console.log(this.player.listFood[check]);
+        if (this.hookObjects.length === 0) {
+            console.log("hut het me roi");
+            return;
         }
-        else {
+        var hookFoodId = this.hookObjects[0].id;
+        var foundMatch = false;
+        for (var i = 0; i < this.playOrders.length; i++) {
+            if (this.playOrders[i] === hookFoodId) {
+                if (!this.player.listFood[i].getChildByName("tick").active) {
+                    this.player.listFood[i].getChildByName("tick").active = true;
+                    foundMatch = true;
+                    this.countCorrect++;
+                    break;
+                }
+            }
+        }
+        console.log("Keo dung ne ", this.countCorrect);
+        if (!foundMatch) {
             console.log("sai me may roi");
         }
-        console.log("Player ", this.player);
+        if (this.countCorrect >= 3) {
+            this.resetGame();
+        }
     };
     ShuShiCarbGame.prototype.conveyor = function (node) {
         for (var i = 0; i < node.childrenCount; i++) {
             var item = node.children[i].getComponent(ShuShiCarb_Food_1.default);
             item.setData(this.data[i]);
         }
+    };
+    ShuShiCarbGame.prototype.removeNode = function (node, id) {
+        node.destroy();
+        for (var i = 0; i < this.hookObjects.length; i++) {
+            if (this.hookObjects[i].node == node && this.hookObjects[i].id == id) {
+                this.hookObjects.splice(i, 1);
+            }
+        }
+    };
+    ShuShiCarbGame.prototype.resetGame = function () {
+        var _this = this;
+        console.log("Resetting game...");
+        this.countCorrect = 0;
+        this.player.showEffectPlayerMoveOut(function () {
+            _this.randomOrderFood();
+            _this.renderOrderFood();
+            _this.conveyor(_this.conveyor_1);
+            _this.conveyor(_this.conveyor_2);
+            _this.conveyor(_this.conveyor_3);
+        });
     };
     ShuShiCarbGame.prototype.start = function () {
     };

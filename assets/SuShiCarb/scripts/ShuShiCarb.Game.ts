@@ -40,11 +40,10 @@ export default class ShuShiCarbGame extends cc.Component {
     playOrders = [];
     hookObjects: {node:cc.Node, id: number} [] = [];
     indexData = 0;
-
+    countCorrect = 0;
     numberCountdown = 7;
     countdownInterval: any = null;
     isMove  = false;
-
     player = null;
 
     onLoad () {
@@ -71,6 +70,7 @@ export default class ShuShiCarbGame extends cc.Component {
     //     return arr;
     // }
     randomOrderFood() {
+        this.playOrders = []; 
         for(let i = 0; i < 3; i++) {
             let randomIndex = Math.floor(Math.random() * this.data.length);
             let foodId = this.data[randomIndex];
@@ -79,37 +79,78 @@ export default class ShuShiCarbGame extends cc.Component {
     }
 
     renderOrderFood() {
-        this.indexData++;
+        // if (this.player) {
+        //     this.player.node.destroy(); // Destroy previous player node
+        // }
+       
         this.player = cc.instantiate(this.prfOrder).getComponent(ShuShiCarbPlayer);
         for(let i = 0; i < this.player.listFood.length; i++) {
             let food = this.player.listFood[i]
             food.getComponent(cc.Sprite).spriteFrame = this.listSpfFood[this.playOrders[i]];
         }
+        this.indexData++;
         this.player.setData(this.indexData);
         this.node.addChild(this.player.node);
     }
 
     checkCorrect() {
-        let check = this.playOrders.indexOf(this.hookObjects[0].id)
-        console.log("check", check);
-        if(check > - 1) {
-            console.log("Chuan con me no luon");
-            this.player.listFood[check].getChildByName("tick").active = true;
-            console.log(this.player.listFood[check]);
-
-        }else {
-            console.log("sai me may roi")
+        if (this.hookObjects.length === 0) {
+            console.log("hut het me roi");
+            return;
+        }
+        let hookFoodId = this.hookObjects[0].id;
+        let foundMatch = false;
+        for (let i = 0; i < this.playOrders.length; i++) {
+            if (this.playOrders[i] === hookFoodId) {
+                if (!this.player.listFood[i].getChildByName("tick").active) {
+                    this.player.listFood[i].getChildByName("tick").active = true;
+                    foundMatch = true;
+                    this.countCorrect++;
+                    break;
+                }
+            }
         }
 
-        console.log("Player ", this.player);
+       
+        console.log("Keo dung ne ",this.countCorrect);
+        if (!foundMatch) {
+            console.log("sai me may roi");
+        }
+        
+        if(this.countCorrect >=3) {
+            this.resetGame();
+        }
     }
 
+    
     conveyor(node: cc.Node) {
        for(let i = 0; i < node.childrenCount; i++) {
             let item = node.children[i].getComponent(ShuShiCarbFood);
             item.setData(this.data[i]);
        }
-    } 
+    }
+
+    removeNode(node: cc.Node, id) {
+        node.destroy();
+        for(let i = 0; i < this.hookObjects.length; i++) {
+            if(this.hookObjects[i].node == node && this.hookObjects[i].id == id) {
+                this.hookObjects.splice(i,1);
+            }
+        }
+
+    }
+
+    resetGame() {
+        console.log("Resetting game...");
+        this.countCorrect = 0;
+        this.player.showEffectPlayerMoveOut(() => {
+            this.randomOrderFood(); 
+            this.renderOrderFood(); 
+            this.conveyor(this.conveyor_1);
+            this.conveyor(this.conveyor_2); 
+            this.conveyor(this.conveyor_3);
+        })
+    }
     start () {
     }
 

@@ -48,19 +48,22 @@ var Collier = /** @class */ (function (_super) {
             // ShuShiCarbHook.instance.hookObjects.push(food.node)
             // ShuShiCarbHook.instance.hookState = 2;
             // console.log("Thu ve luoon ne ")
-            var nodeNew = new cc.Node();
-            nodeNew.parent = this.node.parent;
-            nodeNew.position = this.node.position;
-            nodeNew.scale = 0.5;
-            nodeNew.addComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[id];
-            nodeNew.setParent(ShuShiCarb_Hook_1.default.instance.hookHead);
-            nodeNew.setPosition(cc.v2(0, -25));
-            ShuShiCarb_Game_1.default.instance.hookObjects.push({ node: nodeNew, id: id });
+            var nodeNew_1 = new cc.Node();
+            nodeNew_1.parent = this.node.parent;
+            nodeNew_1.position = this.node.position;
+            nodeNew_1.scale = 0.5;
+            nodeNew_1.addComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[id];
+            nodeNew_1.setParent(ShuShiCarb_Hook_1.default.instance.hookHead);
+            nodeNew_1.setPosition(cc.v2(0, -25));
+            ShuShiCarb_Game_1.default.instance.hookObjects.push({ node: nodeNew_1, id: id });
             console.log("obj ", ShuShiCarb_Game_1.default.instance.hookObjects);
             ShuShiCarb_Hook_1.default.instance.setHookState(2);
             this.node.active = false;
             food.isCheck = 1;
             ShuShiCarb_Game_1.default.instance.checkCorrect();
+            this.scheduleOnce(function () {
+                ShuShiCarb_Game_1.default.instance.removeNode(nodeNew_1, id);
+            }, 0.5);
         }
     };
     // LIFE-CYCLE CALLBACKS:

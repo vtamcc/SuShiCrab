@@ -38,6 +38,9 @@ export default class Collier extends cc.Component {
             this.node.active = false;
             food.isCheck = 1;
             ShuShiCarbGame.instance.checkCorrect();
+            this.scheduleOnce(()=> {
+                ShuShiCarbGame.instance.removeNode(nodeNew, id);
+            },0.5)
         }
 
     }

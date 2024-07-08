@@ -78,30 +78,6 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
             this.prgBarCountDown.progress -= 0.1;
         }
     };
-    // LIFE-CYCLE CALLBACKS:
-    // onLoad () {}
-    // setItemFood(foodIDs: number[]) {
-    //     for(let i = 0; i < foodIDs.length; i++) {
-    //        let foodID = foodIDs[i];
-    //        let foodItemNode = null;
-    //        switch(i) {
-    //             case 0: 
-    //                 foodItemNode = this.foodItem1;
-    //                 break;
-    //             case 1: 
-    //                 foodItemNode = this.foodItem2;
-    //                 break;
-    //             case 2: 
-    //                 foodItemNode = this.foodItem3;
-    //                 break;
-    //             default:
-    //                 break;
-    //        } 
-    //        if(foodItemNode) {
-    //             foodItemNode.getComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[foodID];
-    //        }
-    //     }
-    // }
     ShuShiCarbPlayer.prototype.effectShow = function () {
         var _this = this;
         this.char.animation = 'move';
@@ -116,6 +92,18 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
             _this.startCountDown();
         })
             .start();
+    };
+    ShuShiCarbPlayer.prototype.showEffectPlayerMoveOut = function (callbacks) {
+        var _this = this;
+        // this.char.setAnimation(0,"happy_out",active);
+        // this.char.setAnimation(0,"discomfort",!active);
+        this.char.animation = "happy";
+        cc.tween(this.char.node)
+            .to(0.8, { x: 600 })
+            .call(function () {
+            _this.node.destroy();
+            callbacks();
+        }).start();
     };
     ShuShiCarbPlayer.prototype.start = function () {
         this.effectShow();
