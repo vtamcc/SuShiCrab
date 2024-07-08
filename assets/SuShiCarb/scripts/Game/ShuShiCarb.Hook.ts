@@ -29,8 +29,8 @@ export default class ShuShiCarbHook extends cc.Component {
 
     hookHeadBaseY: number = 80;
     hookRopeBaseWidth: number = 0;
-    hookObjects: cc.Node[] = [];
-    mousePos
+    
+    mousePos;
     // initialLength: number = 100;  
     // maxLength: number = 750;      
     // growing: boolean = false;
@@ -43,7 +43,6 @@ export default class ShuShiCarbHook extends cc.Component {
 
 
     initHook()  {
-        this.hookObjects = [];
         this.hookHead.y  = this.hookHeadBaseY;
         this.hookRope.width = this.hookRopeBaseWidth;
     }
@@ -80,12 +79,7 @@ export default class ShuShiCarbHook extends cc.Component {
     }
 
    
-    moveHookPack() {
-        // Di chuyển các đối tượng được móc theo đầu móc
-        for (let object of this.hookObjects) {
-            object.setPosition(this.getHookHeadGlobalPos());
-        }
-    }
+   
 
     getHookHeadGlobalPos(): cc.Vec2 {
         return this.node.convertToWorldSpaceAR(cc.v2(this.mousePos, this.hookHead.y - 25));
@@ -108,10 +102,12 @@ export default class ShuShiCarbHook extends cc.Component {
             case 2:
                 if(this.hookHead.y) {
                     this.moveHookHead(-50  * dt);
+                    this.hookHead.getComponent(cc.BoxCollider).enabled = false;
                     if(this.hookHead.y  < 0) {
                         this.hookHead.y = 100;
                         this.hookRope.width = 50;
                         this.hookState = 0;
+                        this.hookHead.getComponent(cc.BoxCollider).enabled = true;
                     }
                 }
                

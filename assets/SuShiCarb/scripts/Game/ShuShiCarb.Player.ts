@@ -25,12 +25,13 @@ export default class ShuShiCarbPlayer extends cc.Component {
     prgBarCountDown: cc.ProgressBar = null;
     @property(cc.Label)
     lbCountDown: cc.Label = null;
-
+    @property(cc.Node)
+    nTime: cc.Node = null;
     duration = 10;
     numberCountDown = 0;
     isCountDown = false;
-
     isMove = false;
+
     // @property(cc.Node)
     // foodItem1: cc.Node = null;
     // @property(cc.Node)
@@ -39,12 +40,8 @@ export default class ShuShiCarbPlayer extends cc.Component {
     // foodItem3: cc.Node = null;
 
 
-    setData(food_1,food_2,food_3, index) {
-        this.char.skeletonData = this.listCharacter[index];
-        this.listFood[0].getComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[food_1];
-        this.listFood[1].getComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[food_2];
-        this.listFood[2].getComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[food_3];
-
+    setData(index) {
+        this.char.skeletonData = this.listCharacter[index]; // listChar [0] = con ao vang
     }
 
     startCountDown() {
@@ -101,11 +98,13 @@ export default class ShuShiCarbPlayer extends cc.Component {
     effectShow() {
         this.char.animation = 'move';
         this.nchat.active = false;
+        this.nTime.active = false;
         cc.tween(this.char.node)
         .to(2, {x: 0})
         .call(() => {
             this.char.animation = 'discomfort';
             this.nchat.active = true;
+            this.nTime.active = true;
             this.startCountDown();
         })
         .start()

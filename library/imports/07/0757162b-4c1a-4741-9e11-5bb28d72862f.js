@@ -29,6 +29,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var ShuShiCarb_Game_1 = require("../ShuShiCarb.Game");
 var ShuShiCarb_Food_1 = require("./ShuShiCarb.Food");
 var ShuShiCarb_Hook_1 = require("./ShuShiCarb.Hook");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
@@ -39,13 +40,27 @@ var Collier = /** @class */ (function (_super) {
     }
     Collier.prototype.onCollisionEnter = function (other, self) {
         var food = this.node.getComponent(ShuShiCarb_Food_1.default);
+        var id = food.id;
         console.log(food);
         if (other.tag == 1) {
             console.log("va cham");
-            ShuShiCarb_Hook_1.default.instance.hookObjects.push(food.node);
-            ShuShiCarb_Hook_1.default.instance.hookState = 2;
-            console.log("Thu ve luoon ne ");
+            console.log("idd ", id);
+            // ShuShiCarbHook.instance.hookObjects.push(food.node)
+            // ShuShiCarbHook.instance.hookState = 2;
+            // console.log("Thu ve luoon ne ")
+            var nodeNew = new cc.Node();
+            nodeNew.parent = this.node.parent;
+            nodeNew.position = this.node.position;
+            nodeNew.scale = 0.5;
+            nodeNew.addComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[id];
+            nodeNew.setParent(ShuShiCarb_Hook_1.default.instance.hookHead);
+            nodeNew.setPosition(cc.v2(0, -25));
+            ShuShiCarb_Game_1.default.instance.hookObjects.push({ node: nodeNew, id: id });
+            console.log("obj ", ShuShiCarb_Game_1.default.instance.hookObjects);
+            ShuShiCarb_Hook_1.default.instance.setHookState(2);
+            this.node.active = false;
             food.isCheck = 1;
+            ShuShiCarb_Game_1.default.instance.checkCorrect();
         }
     };
     // LIFE-CYCLE CALLBACKS:

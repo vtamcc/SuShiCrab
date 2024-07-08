@@ -1,217 +1,156 @@
-2024-07-06T01:49:12.446Z - success: protocol editor-framework registered
-2024-07-06T01:49:12.448Z - success: protocol app registered
-2024-07-06T01:49:12.448Z - success: protocol theme registered
-2024-07-06T01:49:12.448Z - success: protocol packages registered
-2024-07-06T01:49:12.474Z - normal: Load ~/.CocosCreator/settings.json
-2024-07-06T01:49:12.500Z - success: protocol uuid registerred
-2024-07-06T01:49:12.500Z - success: protocol db registerred
-2024-07-06T01:49:12.500Z - success: protocol thumbnail registerred
-2024-07-06T01:49:12.582Z - normal: Initializing Asset Database
-2024-07-06T01:49:12.585Z - normal: checking language setting...
-2024-07-06T01:49:12.585Z - normal: Language: en
-2024-07-06T01:49:12.588Z - success: protocol unpack registerred
-2024-07-06T01:49:12.588Z - success: protocol disable-commonjs registerred
-2024-07-06T01:49:14.120Z - normal: connected!
-2024-07-06T01:49:14.576Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
-2024-07-06T01:49:14.578Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
-2024-07-06T01:49:14.798Z - success: adapters loaded
-2024-07-06T01:49:14.803Z - success: asset-db-debugger loaded
-2024-07-06T01:49:14.889Z - success: fb-audience-network loaded
-2024-07-06T01:49:14.943Z - success: fb-live-stream loaded
-2024-07-06T01:49:14.946Z - success: google-play-instant loaded
-2024-07-06T01:49:14.947Z - success: jsb-adapter loaded
-2024-07-06T01:49:14.976Z - success: package-manager loaded
-2024-07-06T01:49:14.977Z - success: runtime-adapters loaded
-2024-07-06T01:49:14.979Z - success: runtime-dev-tools loaded
-2024-07-06T01:49:14.982Z - success: ui-kit-preview-extra loaded
-2024-07-06T01:49:14.984Z - success: ui-kit-preview loaded
-2024-07-06T01:49:15.844Z - success: alipay-minigame loaded
-2024-07-06T01:49:15.860Z - success: assets loaded
-2024-07-06T01:49:15.864Z - success: baidugame-opendata loaded
-2024-07-06T01:49:15.866Z - success: baidugame loaded
-2024-07-06T01:49:15.870Z - success: builder loaded
-2024-07-06T01:49:15.876Z - success: bytedance-opendata loaded
-2024-07-06T01:49:15.879Z - success: bytedance loaded
-2024-07-06T01:49:15.885Z - success: channel-upload-tools loaded
-2024-07-06T01:49:16.048Z - success: cloud-function loaded
-2024-07-06T01:49:16.283Z - success: cocos-services loaded
-2024-07-06T01:49:16.290Z - success: console loaded
-2024-07-06T01:49:16.293Z - success: curve-editor loaded
-2024-07-06T01:49:16.301Z - success: fb-instant-games loaded
-2024-07-06T01:49:16.304Z - success: game-window loaded
-2024-07-06T01:49:16.305Z - success: google-instant-games loaded
-2024-07-06T01:49:16.310Z - success: hierarchy loaded
-2024-07-06T01:49:16.313Z - success: huawei-agc loaded
-2024-07-06T01:49:16.316Z - success: huawei-runtime loaded
-2024-07-06T01:49:16.320Z - success: inspector loaded
-2024-07-06T01:49:16.343Z - success: cpk-publish loaded
-2024-07-06T01:49:16.345Z - success: keystore loaded
-2024-07-06T01:49:16.373Z - success: link-sure-runtime loaded
-2024-07-06T01:49:16.386Z - success: node-library loaded
-2024-07-06T01:49:16.387Z - success: open-recent-items loaded
-2024-07-06T01:49:16.390Z - success: oppo-runtime loaded
-2024-07-06T01:49:16.392Z - success: package-asset loaded
-2024-07-06T01:49:16.393Z - success: preferences loaded
-2024-07-06T01:49:16.397Z - success: project-importer loaded
-2024-07-06T01:49:16.400Z - success: project-settings loaded
-2024-07-06T01:49:16.413Z - success: qtt-runtime loaded
-2024-07-06T01:49:16.418Z - success: scene loaded
-2024-07-06T01:49:16.419Z - success: simulator-debugger loaded
-2024-07-06T01:49:16.419Z - success: sprite-editor loaded
-2024-07-06T01:49:16.500Z - success: store loaded
-2024-07-06T01:49:16.502Z - success: taobao-creativeapp loaded
-2024-07-06T01:49:16.506Z - success: timeline loaded
-2024-07-06T01:49:16.513Z - success: vivo-runtime loaded
-2024-07-06T01:49:16.516Z - success: wechatgame-opendata loaded
-2024-07-06T01:49:16.521Z - success: wechatgame loaded
-2024-07-06T01:49:16.525Z - success: xiaomi-runtime loaded
-2024-07-06T01:49:16.581Z - success: im-plugin loaded
-2024-07-06T01:49:16.582Z - warn: The current '7456' preview port is already occupied, the port is automatically incremented
-2024-07-06T01:49:16.583Z - success: preview server running at http://localhost:7457
-2024-07-06T01:49:18.495Z - info: Cocos Service load base data!
-2024-07-06T01:49:18.775Z - normal: Initializing Cocos2d
-2024-07-06T01:49:19.025Z - normal: Initializing engine extends
-2024-07-06T01:49:23.681Z - normal: Loading packages
-2024-07-06T01:49:23.686Z - normal: Watching packages
-2024-07-06T01:49:24.107Z - normal: Run Application
-2024-07-06T01:49:29.394Z - success: cloud-function unloaded
-2024-07-06T02:14:34.236Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.237Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
+2024-07-08T06:34:18.923Z - success: protocol editor-framework registered
+2024-07-08T06:34:18.925Z - success: protocol app registered
+2024-07-08T06:34:18.925Z - success: protocol theme registered
+2024-07-08T06:34:18.925Z - success: protocol packages registered
+2024-07-08T06:34:18.949Z - normal: Load ~/.CocosCreator/settings.json
+2024-07-08T06:34:18.985Z - success: protocol uuid registerred
+2024-07-08T06:34:18.985Z - success: protocol db registerred
+2024-07-08T06:34:18.985Z - success: protocol thumbnail registerred
+2024-07-08T06:34:19.068Z - normal: Initializing Asset Database
+2024-07-08T06:34:19.070Z - normal: checking language setting...
+2024-07-08T06:34:19.070Z - normal: Language: en
+2024-07-08T06:34:19.073Z - success: protocol unpack registerred
+2024-07-08T06:34:19.073Z - success: protocol disable-commonjs registerred
+2024-07-08T06:34:21.725Z - normal: connected!
+2024-07-08T06:34:21.939Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
+2024-07-08T06:34:21.944Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
+2024-07-08T06:34:22.174Z - success: adapters loaded
+2024-07-08T06:34:22.179Z - success: asset-db-debugger loaded
+2024-07-08T06:34:22.254Z - success: fb-audience-network loaded
+2024-07-08T06:34:22.303Z - success: fb-live-stream loaded
+2024-07-08T06:34:22.306Z - success: google-play-instant loaded
+2024-07-08T06:34:22.307Z - success: jsb-adapter loaded
+2024-07-08T06:34:22.331Z - success: package-manager loaded
+2024-07-08T06:34:22.332Z - success: runtime-adapters loaded
+2024-07-08T06:34:22.334Z - success: runtime-dev-tools loaded
+2024-07-08T06:34:22.336Z - success: ui-kit-preview-extra loaded
+2024-07-08T06:34:22.338Z - success: ui-kit-preview loaded
+2024-07-08T06:34:23.181Z - success: alipay-minigame loaded
+2024-07-08T06:34:23.200Z - success: assets loaded
+2024-07-08T06:34:23.204Z - success: baidugame-opendata loaded
+2024-07-08T06:34:23.205Z - success: baidugame loaded
+2024-07-08T06:34:23.209Z - success: builder loaded
+2024-07-08T06:34:23.215Z - success: bytedance-opendata loaded
+2024-07-08T06:34:23.217Z - success: bytedance loaded
+2024-07-08T06:34:23.222Z - success: channel-upload-tools loaded
+2024-07-08T06:34:23.382Z - success: cloud-function loaded
+2024-07-08T06:34:23.612Z - success: cocos-services loaded
+2024-07-08T06:34:23.619Z - success: console loaded
+2024-07-08T06:34:23.622Z - success: curve-editor loaded
+2024-07-08T06:34:23.631Z - success: fb-instant-games loaded
+2024-07-08T06:34:23.633Z - success: game-window loaded
+2024-07-08T06:34:23.634Z - success: google-instant-games loaded
+2024-07-08T06:34:23.639Z - success: hierarchy loaded
+2024-07-08T06:34:23.642Z - success: huawei-agc loaded
+2024-07-08T06:34:23.645Z - success: huawei-runtime loaded
+2024-07-08T06:34:23.649Z - success: inspector loaded
+2024-07-08T06:34:23.672Z - success: cpk-publish loaded
+2024-07-08T06:34:23.674Z - success: keystore loaded
+2024-07-08T06:34:23.700Z - success: link-sure-runtime loaded
+2024-07-08T06:34:23.712Z - success: node-library loaded
+2024-07-08T06:34:23.713Z - success: open-recent-items loaded
+2024-07-08T06:34:23.716Z - success: oppo-runtime loaded
+2024-07-08T06:34:23.718Z - success: package-asset loaded
+2024-07-08T06:34:23.719Z - success: preferences loaded
+2024-07-08T06:34:23.723Z - success: project-importer loaded
+2024-07-08T06:34:23.726Z - success: project-settings loaded
+2024-07-08T06:34:23.739Z - success: qtt-runtime loaded
+2024-07-08T06:34:23.744Z - success: scene loaded
+2024-07-08T06:34:23.745Z - success: simulator-debugger loaded
+2024-07-08T06:34:23.745Z - success: sprite-editor loaded
+2024-07-08T06:34:23.816Z - success: store loaded
+2024-07-08T06:34:23.818Z - success: taobao-creativeapp loaded
+2024-07-08T06:34:23.821Z - success: timeline loaded
+2024-07-08T06:34:23.828Z - success: vivo-runtime loaded
+2024-07-08T06:34:23.831Z - success: wechatgame-opendata loaded
+2024-07-08T06:34:23.837Z - success: wechatgame loaded
+2024-07-08T06:34:23.841Z - success: xiaomi-runtime loaded
+2024-07-08T06:34:23.895Z - success: im-plugin loaded
+2024-07-08T06:34:23.896Z - success: preview server running at http://localhost:7456
+2024-07-08T06:34:25.531Z - info: Cocos Service load base data!
+2024-07-08T06:34:26.000Z - normal: Initializing Cocos2d
+2024-07-08T06:34:26.273Z - normal: Initializing engine extends
+2024-07-08T06:34:27.276Z - normal: Loading packages
+2024-07-08T06:34:27.279Z - normal: Watching packages
+2024-07-08T06:34:27.513Z - normal: Run Application
+2024-07-08T06:34:32.980Z - success: cloud-function unloaded
+2024-07-08T06:49:46.746Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
 Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
 Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
 
-2024-07-06T02:14:34.237Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.237Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.238Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.239Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.239Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.239Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Conveyor2/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.239Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.239Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.242Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.242Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.242Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.242Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor3/Food copy"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.242Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/HookBase/HookHead/hook_open"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.243Z - warn: The Material used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/HookBase/HookHead/hook_close"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.243Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/HookBase/hook_rope"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.243Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/HookBase"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:14:34.243Z - warn: The MaterialVariant used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main"
-Missing uuid: "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
-
-2024-07-06T02:17:22.972Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
+2024-07-08T07:58:40.606Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
 Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
 Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
 
-2024-07-06T02:30:12.849Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
-Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
+2024-07-08T08:56:09.737Z - failed: load script [./assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager] failed : ReferenceError: onLoad is not defined
+    at __define (/Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager.js:82:1)
+    at /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager.js:95:25
+    at Object.<anonymous> (/Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager.js:102:19)
+    at Object.<anonymous> (/Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager.js:104:3)
+    at Module._compile (internal/modules/cjs/loader.js:1152:30)
+    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
+    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
+2024-07-08T10:39:37.000Z - error: Error: Parsing file /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/src/assets/SuShiCarb/scripts/ShuShiCarb.Game.js: Unexpected token (113:12)
+    at Deps.parseDeps (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/module-deps/index.js:481:28)
+    at getDeps (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/module-deps/index.js:414:40)
+    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/module-deps/index.js:398:32
+    at ConcatStream.<anonymous> (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/index.js:36:43)
+    at ConcatStream.emit (events.js:327:22)
+    at ConcatStream.emit (domain.js:483:12)
+    at finishMaybe (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:475:14)
+    at endWritable (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:485:3)
+    at ConcatStream.end (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:455:41)
+    at DestroyableTransform.onend (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/readable-stream/lib/_stream_readable.js:577:10)
+    at m._parseEntry (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/share/quick-compile/index.ccc:1:6393)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async Promise.all (index 0)
+    at async m._compileScripts (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/share/quick-compile/index.ccc:1:3491)
+2024-07-08T10:39:37.364Z - failed: load script [../ShuShiCarb.Game] failed : /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/ShuShiCarb.Game.js:113
+            ;
+            ^
 
-2024-07-06T02:32:28.835Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
-Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
+SyntaxError: Unexpected token ';'
+    at new Script (vm.js:88:7)
+    at createScript (vm.js:261:10)
+    at Object.runInThisContext (vm.js:309:10)
+    at wrapSafe (internal/modules/cjs/loader.js:1047:15)
+    at Module._compile (internal/modules/cjs/loader.js:1108:27)
+    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
+    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
+2024-07-08T10:39:37.369Z - failed: load script [../ShuShiCarb.Game] failed : /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/ShuShiCarb.Game.js:113
+            ;
+            ^
 
-2024-07-06T02:40:19.269Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
-Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
+SyntaxError: Unexpected token ';'
+    at new Script (vm.js:88:7)
+    at createScript (vm.js:261:10)
+    at Object.runInThisContext (vm.js:309:10)
+    at wrapSafe (internal/modules/cjs/loader.js:1047:15)
+    at Module._compile (internal/modules/cjs/loader.js:1108:27)
+    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
+    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
+2024-07-08T10:39:37.369Z - failed: load script [./assets/SuShiCarb/scripts/ShuShiCarb.Game] failed : /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/ShuShiCarb.Game.js:113
+            ;
+            ^
 
-2024-07-06T02:47:26.814Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
-Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
-
-2024-07-06T03:10:41.153Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
-Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
-
-2024-07-06T04:39:52.227Z - error: Failed to `new ShuShiCarbFood()` under the hood, TypeError: Cannot read property 'x' of null
-It is used for getting default values declared in TypeScript in the first place.
-Please ensure the constructor can be called during the script's initialization.
-    at Object.errorID (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/CCDebug.js:257:6)
-    at extractActualDefaultValues (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:157:10)
-    at genProperty (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:222:73)
-    at normalized (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/cocos2d/core/platform/CCClassDecorator.js:446:7)
-    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/engine/bin/.cache/dev/polyfill/typescript.js:81:56
-    at /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCarb.Food.js:70:5
-    at __define (/Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCarb.Food.js:77:2)
-    at /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCarb.Food.js:83:25
-    at Object.<anonymous> (/Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCarb.Food.js:90:19)
-2024-07-06T04:39:52.229Z - warn: Please specifiy a default value for "ShuShiCarbFood.nFood" at its declaration:
- 
-// Before:
-@property(...)
-myProp;
-// After:
-@property(...)
-myProp = 0;
+SyntaxError: Unexpected token ';'
+    at new Script (vm.js:88:7)
+    at createScript (vm.js:261:10)
+    at Object.runInThisContext (vm.js:309:10)
+    at wrapSafe (internal/modules/cjs/loader.js:1047:15)
+    at Module._compile (internal/modules/cjs/loader.js:1108:27)
+    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
+    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)

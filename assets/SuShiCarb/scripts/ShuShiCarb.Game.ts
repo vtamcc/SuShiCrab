@@ -38,27 +38,29 @@ export default class ShuShiCarbGame extends cc.Component {
     // LIFE-CYCLE CALLBACKS:
     data = [0,1,2,3,4,5];
     playOrders = [];
-    arrResult = [];
+    hookObjects: {node:cc.Node, id: number} [] = [];
     indexData = 0;
 
     numberCountdown = 7;
     countdownInterval: any = null;
     isMove  = false;
+
+    player = null;
+
     onLoad () {
         ShuShiCarbGame.instance = this;
        
         // this.renderFoodOder();
         this.randomOrderFood();
         console.log(this.playOrders);
-        this.renderOrderFood();
-        //this.renderFood();
         this.conveyor(this.conveyor_1);
         this.conveyor(this.conveyor_2);
         this.conveyor(this.conveyor_3);
-
-        console.log("asdasdasd",this.arrResult);
+        this.renderOrderFood();
+        //this.renderFood();      
     }
 
+   
     // randomIdFood(arr,count) {
     //     let idFood = [];
     //     for(let i = 0; i < count; i++) {
@@ -77,16 +79,30 @@ export default class ShuShiCarbGame extends cc.Component {
     }
 
     renderOrderFood() {
-        this.indexData++
-        for(let i = 0; i < this.playOrders.length; i++) {
-            let prfPlayOrder = cc.instantiate(this.prfOrder).getComponent(ShuShiCarbPlayer)
-
-            prfPlayOrder.setData(this.playOrders[0],this.playOrders[1],this.playOrders[2],this.indexData);
-            this.node.addChild(prfPlayOrder.node);
+        this.indexData++;
+        this.player = cc.instantiate(this.prfOrder).getComponent(ShuShiCarbPlayer);
+        for(let i = 0; i < this.player.listFood.length; i++) {
+            let food = this.player.listFood[i]
+            food.getComponent(cc.Sprite).spriteFrame = this.listSpfFood[this.playOrders[i]];
         }
+        this.player.setData(this.indexData);
+        this.node.addChild(this.player.node);
     }
 
-   
+    checkCorrect() {
+        let check = this.playOrders.indexOf(this.hookObjects[0].id)
+        console.log("check", check);
+        if(check > - 1) {
+            console.log("Chuan con me no luon");
+            this.player.listFood[check].getChildByName("tick").active = true;
+            console.log(this.player.listFood[check]);
+
+        }else {
+            console.log("sai me may roi")
+        }
+
+        console.log("Player ", this.player);
+    }
 
     conveyor(node: cc.Node) {
        for(let i = 0; i < node.childrenCount; i++) {
@@ -95,7 +111,6 @@ export default class ShuShiCarbGame extends cc.Component {
        }
     } 
     start () {
-        
     }
 
     // update (dt) {}

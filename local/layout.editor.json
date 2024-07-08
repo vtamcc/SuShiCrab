@@ -8,13 +8,13 @@
       "x": 0,
       "y": 25,
       "width": 1920,
-      "height": 997,
+      "height": 996,
       "layout": {
         "type": "dock-h",
         "children": [
           {
             "width": 457,
-            "height": 912,
+            "height": 911,
             "type": "dock-v",
             "children": [
               {
@@ -28,7 +28,7 @@
               },
               {
                 "width": 457,
-                "height": 593.984375,
+                "height": 592.984375,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -39,12 +39,12 @@
           },
           {
             "width": 1000,
-            "height": 912,
+            "height": 911,
             "type": "dock-v",
             "children": [
               {
                 "width": 1000,
-                "height": 477.984375,
+                "height": 477,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -66,7 +66,7 @@
           },
           {
             "width": 457,
-            "height": 912,
+            "height": 911,
             "type": "panel",
             "active": 0,
             "children": [
@@ -88,8 +88,7 @@
         "cocos-services",
         "node-library"
       ]
-    },
-    " common-asset-worker-worker": {}
+    }
   },
   "panels": {},
   "panelLabelWidth": {

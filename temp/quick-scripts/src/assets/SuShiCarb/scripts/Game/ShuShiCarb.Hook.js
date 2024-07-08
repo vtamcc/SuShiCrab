@@ -42,7 +42,6 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         _this.hookState = 0;
         _this.hookHeadBaseY = 80;
         _this.hookRopeBaseWidth = 0;
-        _this.hookObjects = [];
         return _this;
     }
     ShuShiCarbHook_1 = ShuShiCarbHook;
@@ -56,7 +55,6 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         //  this.hookRopeBaseWidth = this.hookRopeBaseWidth || this.hookRope.width;
     };
     ShuShiCarbHook.prototype.initHook = function () {
-        this.hookObjects = [];
         this.hookHead.y = this.hookHeadBaseY;
         this.hookRope.width = this.hookRopeBaseWidth;
     };
@@ -84,13 +82,6 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         this.hookHead.y += dt * 30;
         this.hookRope.width -= dt * 40;
     };
-    ShuShiCarbHook.prototype.moveHookPack = function () {
-        // Di chuyển các đối tượng được móc theo đầu móc
-        for (var _i = 0, _a = this.hookObjects; _i < _a.length; _i++) {
-            var object = _a[_i];
-            object.setPosition(this.getHookHeadGlobalPos());
-        }
-    };
     ShuShiCarbHook.prototype.getHookHeadGlobalPos = function () {
         return this.node.convertToWorldSpaceAR(cc.v2(this.mousePos, this.hookHead.y - 25));
     };
@@ -111,10 +102,12 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
             case 2:
                 if (this.hookHead.y) {
                     this.moveHookHead(-50 * dt);
+                    this.hookHead.getComponent(cc.BoxCollider).enabled = false;
                     if (this.hookHead.y < 0) {
                         this.hookHead.y = 100;
                         this.hookRope.width = 50;
                         this.hookState = 0;
+                        this.hookHead.getComponent(cc.BoxCollider).enabled = true;
                     }
                 }
                 this.setHookSprite(false);

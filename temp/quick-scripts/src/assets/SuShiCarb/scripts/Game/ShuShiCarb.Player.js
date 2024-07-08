@@ -29,7 +29,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ShuShiCarb_Game_1 = require("../ShuShiCarb.Game");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbPlayer = /** @class */ (function (_super) {
     __extends(ShuShiCarbPlayer, _super);
@@ -41,6 +40,7 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
         _this.listCharacter = [];
         _this.prgBarCountDown = null;
         _this.lbCountDown = null;
+        _this.nTime = null;
         _this.duration = 10;
         _this.numberCountDown = 0;
         _this.isCountDown = false;
@@ -54,11 +54,8 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
     // foodItem2: cc.Node = null;
     // @property(cc.Node)
     // foodItem3: cc.Node = null;
-    ShuShiCarbPlayer.prototype.setData = function (food_1, food_2, food_3, index) {
-        this.char.skeletonData = this.listCharacter[index];
-        this.listFood[0].getComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[food_1];
-        this.listFood[1].getComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[food_2];
-        this.listFood[2].getComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[food_3];
+    ShuShiCarbPlayer.prototype.setData = function (index) {
+        this.char.skeletonData = this.listCharacter[index]; // listChar [0] = con ao vang
     };
     ShuShiCarbPlayer.prototype.startCountDown = function () {
         this.isCountDown = true;
@@ -109,11 +106,13 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
         var _this = this;
         this.char.animation = 'move';
         this.nchat.active = false;
+        this.nTime.active = false;
         cc.tween(this.char.node)
             .to(2, { x: 0 })
             .call(function () {
             _this.char.animation = 'discomfort';
             _this.nchat.active = true;
+            _this.nTime.active = true;
             _this.startCountDown();
         })
             .start();
@@ -139,6 +138,9 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
     __decorate([
         property(cc.Label)
     ], ShuShiCarbPlayer.prototype, "lbCountDown", void 0);
+    __decorate([
+        property(cc.Node)
+    ], ShuShiCarbPlayer.prototype, "nTime", void 0);
     ShuShiCarbPlayer = __decorate([
         ccclass
     ], ShuShiCarbPlayer);

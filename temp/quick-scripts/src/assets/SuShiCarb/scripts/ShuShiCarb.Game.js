@@ -46,11 +46,12 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         // LIFE-CYCLE CALLBACKS:
         _this.data = [0, 1, 2, 3, 4, 5];
         _this.playOrders = [];
-        _this.arrResult = [];
+        _this.hookObjects = [];
         _this.indexData = 0;
         _this.numberCountdown = 7;
         _this.countdownInterval = null;
         _this.isMove = false;
+        _this.player = null;
         return _this;
         // update (dt) {}
     }
@@ -60,12 +61,11 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         // this.renderFoodOder();
         this.randomOrderFood();
         console.log(this.playOrders);
-        this.renderOrderFood();
-        //this.renderFood();
         this.conveyor(this.conveyor_1);
         this.conveyor(this.conveyor_2);
         this.conveyor(this.conveyor_3);
-        console.log("asdasdasd", this.arrResult);
+        this.renderOrderFood();
+        //this.renderFood();      
     };
     // randomIdFood(arr,count) {
     //     let idFood = [];
@@ -85,11 +85,26 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     };
     ShuShiCarbGame.prototype.renderOrderFood = function () {
         this.indexData++;
-        for (var i = 0; i < this.playOrders.length; i++) {
-            var prfPlayOrder = cc.instantiate(this.prfOrder).getComponent(ShuShiCarb_Player_1.default);
-            prfPlayOrder.setData(this.playOrders[0], this.playOrders[1], this.playOrders[2], this.indexData);
-            this.node.addChild(prfPlayOrder.node);
+        this.player = cc.instantiate(this.prfOrder).getComponent(ShuShiCarb_Player_1.default);
+        for (var i = 0; i < this.player.listFood.length; i++) {
+            var food = this.player.listFood[i];
+            food.getComponent(cc.Sprite).spriteFrame = this.listSpfFood[this.playOrders[i]];
         }
+        this.player.setData(this.indexData);
+        this.node.addChild(this.player.node);
+    };
+    ShuShiCarbGame.prototype.checkCorrect = function () {
+        var check = this.playOrders.indexOf(this.hookObjects[0].id);
+        console.log("check", check);
+        if (check > -1) {
+            console.log("Chuan con me no luon");
+            this.player.listFood[check].getChildByName("tick").active = true;
+            console.log(this.player.listFood[check]);
+        }
+        else {
+            console.log("sai me may roi");
+        }
+        console.log("Player ", this.player);
     };
     ShuShiCarbGame.prototype.conveyor = function (node) {
         for (var i = 0; i < node.childrenCount; i++) {
