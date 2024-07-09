@@ -24,7 +24,7 @@ export default class ShuShiCarbHook extends cc.Component {
     @property(cc.Node)
     hookHead: cc.Node = null;
     
-    hookSpeed = 400;
+    hookSpeed = 30;
     hookState = 0;
 
     hookHeadBaseY: number = 80;
@@ -92,8 +92,8 @@ export default class ShuShiCarbHook extends cc.Component {
         switch(this.hookState) {
             case 1:
                 if(this.hookHead.y) {
-                    this.moveHookHead(50 * dt);
-                    if(this.hookHead.y >= 1000) {
+                    this.moveHookHead(this.hookSpeed * dt);
+                    if(this.hookHead.y >= 600) {
                         this.hookState = 2;
                      
                     }
@@ -101,7 +101,7 @@ export default class ShuShiCarbHook extends cc.Component {
                 break;
             case 2:
                 if(this.hookHead.y) {
-                    this.moveHookHead(-50  * dt);
+                    this.moveHookHead(-this.hookSpeed  * dt);
                     this.hookHead.getComponent(cc.BoxCollider).enabled = false;
                     if(this.hookHead.y  < 0) {
                         this.hookHead.y = 100;

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "khay",
+    "texture": "692ea535-b34a-45a5-bbf3-5507cc4a8852",
+    "atlas": "",
+    "rect": [
+      6,
+      0,
+      563,
+      287
+    ],
+    "offset": [
+      1.5,
+      38
+    ],
+    "originalSize": [
+      572,
+      363
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

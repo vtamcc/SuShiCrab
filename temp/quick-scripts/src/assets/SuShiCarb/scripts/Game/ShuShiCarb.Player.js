@@ -29,6 +29,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var ShuShiCarb_Game_1 = require("../ShuShiCarb.Game");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbPlayer = /** @class */ (function (_super) {
     __extends(ShuShiCarbPlayer, _super);
@@ -70,6 +71,8 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
         }
         else {
             this.isCountDown = false;
+            ShuShiCarb_Game_1.default.instance.resetGame(false);
+            console.log("Thua");
             //this.effectShow();
         }
     };
@@ -86,20 +89,32 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
         cc.tween(this.char.node)
             .to(2, { x: 0 })
             .call(function () {
-            _this.char.animation = 'discomfort';
+            _this.char.animation = 'idle';
             _this.nchat.active = true;
             _this.nTime.active = true;
             _this.startCountDown();
         })
             .start();
     };
-    ShuShiCarbPlayer.prototype.showEffectPlayerMoveOut = function (callbacks) {
+    ShuShiCarbPlayer.prototype.happyEffectPlayerMoveOut = function (callbacks) {
         var _this = this;
         // this.char.setAnimation(0,"happy_out",active);
         // this.char.setAnimation(0,"discomfort",!active);
         this.char.animation = "happy";
         cc.tween(this.char.node)
-            .to(0.8, { x: 600 })
+            .to(1.5, { x: 600 })
+            .call(function () {
+            _this.node.destroy();
+            callbacks();
+        }).start();
+    };
+    ShuShiCarbPlayer.prototype.sadEffectPlayerMoveOut = function (callbacks) {
+        var _this = this;
+        // this.char.setAnimation(0,"happy_out",active);
+        // this.char.setAnimation(0,"discomfort",!active);
+        this.char.animation = "discomfort";
+        cc.tween(this.char.node)
+            .to(1.5, { x: 600 })
             .call(function () {
             _this.node.destroy();
             callbacks();

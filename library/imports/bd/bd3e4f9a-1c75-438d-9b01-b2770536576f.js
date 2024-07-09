@@ -38,7 +38,7 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         _this.hookSpriteOpen = null;
         _this.hookSpriteClose = null;
         _this.hookHead = null;
-        _this.hookSpeed = 400;
+        _this.hookSpeed = 30;
         _this.hookState = 0;
         _this.hookHeadBaseY = 80;
         _this.hookRopeBaseWidth = 0;
@@ -93,15 +93,15 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         switch (this.hookState) {
             case 1:
                 if (this.hookHead.y) {
-                    this.moveHookHead(50 * dt);
-                    if (this.hookHead.y >= 1000) {
+                    this.moveHookHead(this.hookSpeed * dt);
+                    if (this.hookHead.y >= 600) {
                         this.hookState = 2;
                     }
                 }
                 break;
             case 2:
                 if (this.hookHead.y) {
-                    this.moveHookHead(-50 * dt);
+                    this.moveHookHead(-this.hookSpeed * dt);
                     this.hookHead.getComponent(cc.BoxCollider).enabled = false;
                     if (this.hookHead.y < 0) {
                         this.hookHead.y = 100;

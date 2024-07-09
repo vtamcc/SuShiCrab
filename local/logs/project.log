@@ -1,156 +1,76 @@
-2024-07-08T06:34:18.923Z - success: protocol editor-framework registered
-2024-07-08T06:34:18.925Z - success: protocol app registered
-2024-07-08T06:34:18.925Z - success: protocol theme registered
-2024-07-08T06:34:18.925Z - success: protocol packages registered
-2024-07-08T06:34:18.949Z - normal: Load ~/.CocosCreator/settings.json
-2024-07-08T06:34:18.985Z - success: protocol uuid registerred
-2024-07-08T06:34:18.985Z - success: protocol db registerred
-2024-07-08T06:34:18.985Z - success: protocol thumbnail registerred
-2024-07-08T06:34:19.068Z - normal: Initializing Asset Database
-2024-07-08T06:34:19.070Z - normal: checking language setting...
-2024-07-08T06:34:19.070Z - normal: Language: en
-2024-07-08T06:34:19.073Z - success: protocol unpack registerred
-2024-07-08T06:34:19.073Z - success: protocol disable-commonjs registerred
-2024-07-08T06:34:21.725Z - normal: connected!
-2024-07-08T06:34:21.939Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
-2024-07-08T06:34:21.944Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
-2024-07-08T06:34:22.174Z - success: adapters loaded
-2024-07-08T06:34:22.179Z - success: asset-db-debugger loaded
-2024-07-08T06:34:22.254Z - success: fb-audience-network loaded
-2024-07-08T06:34:22.303Z - success: fb-live-stream loaded
-2024-07-08T06:34:22.306Z - success: google-play-instant loaded
-2024-07-08T06:34:22.307Z - success: jsb-adapter loaded
-2024-07-08T06:34:22.331Z - success: package-manager loaded
-2024-07-08T06:34:22.332Z - success: runtime-adapters loaded
-2024-07-08T06:34:22.334Z - success: runtime-dev-tools loaded
-2024-07-08T06:34:22.336Z - success: ui-kit-preview-extra loaded
-2024-07-08T06:34:22.338Z - success: ui-kit-preview loaded
-2024-07-08T06:34:23.181Z - success: alipay-minigame loaded
-2024-07-08T06:34:23.200Z - success: assets loaded
-2024-07-08T06:34:23.204Z - success: baidugame-opendata loaded
-2024-07-08T06:34:23.205Z - success: baidugame loaded
-2024-07-08T06:34:23.209Z - success: builder loaded
-2024-07-08T06:34:23.215Z - success: bytedance-opendata loaded
-2024-07-08T06:34:23.217Z - success: bytedance loaded
-2024-07-08T06:34:23.222Z - success: channel-upload-tools loaded
-2024-07-08T06:34:23.382Z - success: cloud-function loaded
-2024-07-08T06:34:23.612Z - success: cocos-services loaded
-2024-07-08T06:34:23.619Z - success: console loaded
-2024-07-08T06:34:23.622Z - success: curve-editor loaded
-2024-07-08T06:34:23.631Z - success: fb-instant-games loaded
-2024-07-08T06:34:23.633Z - success: game-window loaded
-2024-07-08T06:34:23.634Z - success: google-instant-games loaded
-2024-07-08T06:34:23.639Z - success: hierarchy loaded
-2024-07-08T06:34:23.642Z - success: huawei-agc loaded
-2024-07-08T06:34:23.645Z - success: huawei-runtime loaded
-2024-07-08T06:34:23.649Z - success: inspector loaded
-2024-07-08T06:34:23.672Z - success: cpk-publish loaded
-2024-07-08T06:34:23.674Z - success: keystore loaded
-2024-07-08T06:34:23.700Z - success: link-sure-runtime loaded
-2024-07-08T06:34:23.712Z - success: node-library loaded
-2024-07-08T06:34:23.713Z - success: open-recent-items loaded
-2024-07-08T06:34:23.716Z - success: oppo-runtime loaded
-2024-07-08T06:34:23.718Z - success: package-asset loaded
-2024-07-08T06:34:23.719Z - success: preferences loaded
-2024-07-08T06:34:23.723Z - success: project-importer loaded
-2024-07-08T06:34:23.726Z - success: project-settings loaded
-2024-07-08T06:34:23.739Z - success: qtt-runtime loaded
-2024-07-08T06:34:23.744Z - success: scene loaded
-2024-07-08T06:34:23.745Z - success: simulator-debugger loaded
-2024-07-08T06:34:23.745Z - success: sprite-editor loaded
-2024-07-08T06:34:23.816Z - success: store loaded
-2024-07-08T06:34:23.818Z - success: taobao-creativeapp loaded
-2024-07-08T06:34:23.821Z - success: timeline loaded
-2024-07-08T06:34:23.828Z - success: vivo-runtime loaded
-2024-07-08T06:34:23.831Z - success: wechatgame-opendata loaded
-2024-07-08T06:34:23.837Z - success: wechatgame loaded
-2024-07-08T06:34:23.841Z - success: xiaomi-runtime loaded
-2024-07-08T06:34:23.895Z - success: im-plugin loaded
-2024-07-08T06:34:23.896Z - success: preview server running at http://localhost:7456
-2024-07-08T06:34:25.531Z - info: Cocos Service load base data!
-2024-07-08T06:34:26.000Z - normal: Initializing Cocos2d
-2024-07-08T06:34:26.273Z - normal: Initializing engine extends
-2024-07-08T06:34:27.276Z - normal: Loading packages
-2024-07-08T06:34:27.279Z - normal: Watching packages
-2024-07-08T06:34:27.513Z - normal: Run Application
-2024-07-08T06:34:32.980Z - success: cloud-function unloaded
-2024-07-08T06:49:46.746Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
-Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
-
-2024-07-08T07:58:40.606Z - warn: The SpriteFrame used by component "cc.Sprite" is missing. Detailed information:
-Node path: "Canvas/Main/nlistConveyor/Convenyor1/Food"
-Missing uuid: "a23235d1-15db-4b95-8439-a2e005bfff91"
-
-2024-07-08T08:56:09.737Z - failed: load script [./assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager] failed : ReferenceError: onLoad is not defined
-    at __define (/Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager.js:82:1)
-    at /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager.js:95:25
-    at Object.<anonymous> (/Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager.js:102:19)
-    at Object.<anonymous> (/Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager.js:104:3)
-    at Module._compile (internal/modules/cjs/loader.js:1152:30)
-    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
-    at Module.load (internal/modules/cjs/loader.js:992:32)
-    at Module._load (internal/modules/cjs/loader.js:885:14)
-    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
-    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
-2024-07-08T10:39:37.000Z - error: Error: Parsing file /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/src/assets/SuShiCarb/scripts/ShuShiCarb.Game.js: Unexpected token (113:12)
-    at Deps.parseDeps (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/module-deps/index.js:481:28)
-    at getDeps (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/module-deps/index.js:414:40)
-    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/module-deps/index.js:398:32
-    at ConcatStream.<anonymous> (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/index.js:36:43)
-    at ConcatStream.emit (events.js:327:22)
-    at ConcatStream.emit (domain.js:483:12)
-    at finishMaybe (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:475:14)
-    at endWritable (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:485:3)
-    at ConcatStream.end (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:455:41)
-    at DestroyableTransform.onend (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/readable-stream/lib/_stream_readable.js:577:10)
-    at m._parseEntry (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/share/quick-compile/index.ccc:1:6393)
-    at runMicrotasks (<anonymous>)
-    at processTicksAndRejections (internal/process/task_queues.js:97:5)
-    at async Promise.all (index 0)
-    at async m._compileScripts (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/share/quick-compile/index.ccc:1:3491)
-2024-07-08T10:39:37.364Z - failed: load script [../ShuShiCarb.Game] failed : /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/ShuShiCarb.Game.js:113
-            ;
-            ^
-
-SyntaxError: Unexpected token ';'
-    at new Script (vm.js:88:7)
-    at createScript (vm.js:261:10)
-    at Object.runInThisContext (vm.js:309:10)
-    at wrapSafe (internal/modules/cjs/loader.js:1047:15)
-    at Module._compile (internal/modules/cjs/loader.js:1108:27)
-    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
-    at Module.load (internal/modules/cjs/loader.js:992:32)
-    at Module._load (internal/modules/cjs/loader.js:885:14)
-    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
-    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
-2024-07-08T10:39:37.369Z - failed: load script [../ShuShiCarb.Game] failed : /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/ShuShiCarb.Game.js:113
-            ;
-            ^
-
-SyntaxError: Unexpected token ';'
-    at new Script (vm.js:88:7)
-    at createScript (vm.js:261:10)
-    at Object.runInThisContext (vm.js:309:10)
-    at wrapSafe (internal/modules/cjs/loader.js:1047:15)
-    at Module._compile (internal/modules/cjs/loader.js:1108:27)
-    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
-    at Module.load (internal/modules/cjs/loader.js:992:32)
-    at Module._load (internal/modules/cjs/loader.js:885:14)
-    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
-    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
-2024-07-08T10:39:37.369Z - failed: load script [./assets/SuShiCarb/scripts/ShuShiCarb.Game] failed : /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/ShuShiCarb.Game.js:113
-            ;
-            ^
-
-SyntaxError: Unexpected token ';'
-    at new Script (vm.js:88:7)
-    at createScript (vm.js:261:10)
-    at Object.runInThisContext (vm.js:309:10)
-    at wrapSafe (internal/modules/cjs/loader.js:1047:15)
-    at Module._compile (internal/modules/cjs/loader.js:1108:27)
-    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
-    at Module.load (internal/modules/cjs/loader.js:992:32)
-    at Module._load (internal/modules/cjs/loader.js:885:14)
-    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
-    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
+2024-07-09T01:50:24.709Z - success: protocol editor-framework registered
+2024-07-09T01:50:24.710Z - success: protocol app registered
+2024-07-09T01:50:24.711Z - success: protocol theme registered
+2024-07-09T01:50:24.711Z - success: protocol packages registered
+2024-07-09T01:50:24.733Z - normal: Load ~/.CocosCreator/settings.json
+2024-07-09T01:50:24.771Z - success: protocol uuid registerred
+2024-07-09T01:50:24.771Z - success: protocol db registerred
+2024-07-09T01:50:24.771Z - success: protocol thumbnail registerred
+2024-07-09T01:50:24.854Z - normal: Initializing Asset Database
+2024-07-09T01:50:24.856Z - normal: checking language setting...
+2024-07-09T01:50:24.856Z - normal: Language: en
+2024-07-09T01:50:24.859Z - success: protocol unpack registerred
+2024-07-09T01:50:24.859Z - success: protocol disable-commonjs registerred
+2024-07-09T01:50:26.570Z - normal: connected!
+2024-07-09T01:50:26.798Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
+2024-07-09T01:50:26.802Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
+2024-07-09T01:50:27.036Z - success: adapters loaded
+2024-07-09T01:50:27.041Z - success: asset-db-debugger loaded
+2024-07-09T01:50:27.116Z - success: fb-audience-network loaded
+2024-07-09T01:50:27.166Z - success: fb-live-stream loaded
+2024-07-09T01:50:27.170Z - success: google-play-instant loaded
+2024-07-09T01:50:27.170Z - success: jsb-adapter loaded
+2024-07-09T01:50:27.193Z - success: package-manager loaded
+2024-07-09T01:50:27.195Z - success: runtime-adapters loaded
+2024-07-09T01:50:27.198Z - success: runtime-dev-tools loaded
+2024-07-09T01:50:27.201Z - success: ui-kit-preview-extra loaded
+2024-07-09T01:50:27.204Z - success: ui-kit-preview loaded
+2024-07-09T01:50:28.041Z - success: alipay-minigame loaded
+2024-07-09T01:50:28.060Z - success: assets loaded
+2024-07-09T01:50:28.063Z - success: baidugame-opendata loaded
+2024-07-09T01:50:28.065Z - success: baidugame loaded
+2024-07-09T01:50:28.069Z - success: builder loaded
+2024-07-09T01:50:28.075Z - success: bytedance-opendata loaded
+2024-07-09T01:50:28.077Z - success: bytedance loaded
+2024-07-09T01:50:28.082Z - success: channel-upload-tools loaded
+2024-07-09T01:50:28.242Z - success: cloud-function loaded
+2024-07-09T01:50:28.477Z - success: cocos-services loaded
+2024-07-09T01:50:28.483Z - success: console loaded
+2024-07-09T01:50:28.486Z - success: curve-editor loaded
+2024-07-09T01:50:28.495Z - success: fb-instant-games loaded
+2024-07-09T01:50:28.497Z - success: game-window loaded
+2024-07-09T01:50:28.498Z - success: google-instant-games loaded
+2024-07-09T01:50:28.503Z - success: hierarchy loaded
+2024-07-09T01:50:28.506Z - success: huawei-agc loaded
+2024-07-09T01:50:28.509Z - success: huawei-runtime loaded
+2024-07-09T01:50:28.513Z - success: inspector loaded
+2024-07-09T01:50:28.534Z - success: cpk-publish loaded
+2024-07-09T01:50:28.536Z - success: keystore loaded
+2024-07-09T01:50:28.557Z - success: link-sure-runtime loaded
+2024-07-09T01:50:28.577Z - success: node-library loaded
+2024-07-09T01:50:28.578Z - success: open-recent-items loaded
+2024-07-09T01:50:28.581Z - success: oppo-runtime loaded
+2024-07-09T01:50:28.583Z - success: package-asset loaded
+2024-07-09T01:50:28.584Z - success: preferences loaded
+2024-07-09T01:50:28.588Z - success: project-importer loaded
+2024-07-09T01:50:28.591Z - success: project-settings loaded
+2024-07-09T01:50:28.605Z - success: qtt-runtime loaded
+2024-07-09T01:50:28.609Z - success: scene loaded
+2024-07-09T01:50:28.610Z - success: simulator-debugger loaded
+2024-07-09T01:50:28.611Z - success: sprite-editor loaded
+2024-07-09T01:50:28.681Z - success: store loaded
+2024-07-09T01:50:28.683Z - success: taobao-creativeapp loaded
+2024-07-09T01:50:28.687Z - success: timeline loaded
+2024-07-09T01:50:28.694Z - success: vivo-runtime loaded
+2024-07-09T01:50:28.697Z - success: wechatgame-opendata loaded
+2024-07-09T01:50:28.702Z - success: wechatgame loaded
+2024-07-09T01:50:28.706Z - success: xiaomi-runtime loaded
+2024-07-09T01:50:28.761Z - success: im-plugin loaded
+2024-07-09T01:50:28.762Z - success: preview server running at http://localhost:7456
+2024-07-09T01:50:30.848Z - normal: Initializing Cocos2d
+2024-07-09T01:50:31.135Z - normal: Initializing engine extends
+2024-07-09T01:50:31.611Z - info: Cocos Service load base data!
+2024-07-09T01:50:36.040Z - normal: Loading packages
+2024-07-09T01:50:36.043Z - normal: Watching packages
+2024-07-09T01:50:36.268Z - normal: Run Application
+2024-07-09T01:50:40.839Z - success: cloud-function unloaded

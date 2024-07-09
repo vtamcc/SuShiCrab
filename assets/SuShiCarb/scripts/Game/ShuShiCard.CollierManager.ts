@@ -18,7 +18,6 @@ export default class Collier extends cc.Component {
         let food = this.node.getComponent(ShuShiCarbFood);
         let id = food.id;
         console.log(food);
-        
         if (other.tag == 1) {
             console.log("va cham")
             console.log("idd ", id);

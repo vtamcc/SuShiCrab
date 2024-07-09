@@ -58,6 +58,8 @@ export default class ShuShiCarbPlayer extends cc.Component {
             this.lbCountDown.string = this.numberCountDown + '';
         }else {
             this.isCountDown = false;
+            ShuShiCarbGame.instance.resetGame(false);
+            console.log("Thua")
             //this.effectShow();
 
         }
@@ -75,7 +77,7 @@ export default class ShuShiCarbPlayer extends cc.Component {
         cc.tween(this.char.node)
         .to(2, {x: 0})
         .call(() => {
-            this.char.animation = 'discomfort';
+            this.char.animation = 'idle';
             this.nchat.active = true;
             this.nTime.active = true;
             this.startCountDown();
@@ -83,17 +85,31 @@ export default class ShuShiCarbPlayer extends cc.Component {
         .start()
     }
 
-    showEffectPlayerMoveOut(callbacks: Function) {
+    happyEffectPlayerMoveOut(callbacks: Function) {
         // this.char.setAnimation(0,"happy_out",active);
         // this.char.setAnimation(0,"discomfort",!active);
         this.char.animation = "happy"
         cc.tween(this.char.node)
-        .to(0.8,{x: 600})
+        .to(1.5,{x: 600})
         .call(() => {
             this.node.destroy();
             callbacks();
         }).start();
     }
+
+    sadEffectPlayerMoveOut(callbacks: Function) {
+        // this.char.setAnimation(0,"happy_out",active);
+        // this.char.setAnimation(0,"discomfort",!active);
+        this.char.animation = "discomfort"
+        cc.tween(this.char.node)
+        .to(1.5,{x: 600})
+        .call(() => {
+            this.node.destroy();
+            callbacks();
+        }).start();
+    }
+
+    
 
 
     start () {  

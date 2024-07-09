@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "texture_gameplay_1 copy",
+    "texture": "426bfee1-1355-408f-94ad-449096ef5e5f",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      879,
+      136
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      879,
+      136
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
