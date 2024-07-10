@@ -13,13 +13,13 @@
         "type": "dock-h",
         "children": [
           {
-            "width": 368.8125,
-            "height": 755,
+            "width": 456.828125,
+            "height": 911,
             "type": "dock-v",
             "children": [
               {
-                "width": 368.8125,
-                "height": 260.390625,
+                "width": 456.828125,
+                "height": 313.9375,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -27,8 +27,8 @@
                 ]
               },
               {
-                "width": 368.8125,
-                "height": 491.609375,
+                "width": 456.828125,
+                "height": 594.0625,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -38,13 +38,13 @@
             ]
           },
           {
-            "width": 808.359375,
-            "height": 755,
+            "width": 1000.328125,
+            "height": 911,
             "type": "dock-v",
             "children": [
               {
-                "width": 808.359375,
-                "height": 394.75,
+                "width": 1000.328125,
+                "height": 476.9375,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -52,8 +52,8 @@
                 ]
               },
               {
-                "width": 808.359375,
-                "height": 357.25,
+                "width": 1000.328125,
+                "height": 431.046875,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -65,8 +65,8 @@
             ]
           },
           {
-            "width": 368.8125,
-            "height": 755,
+            "width": 456.828125,
+            "height": 911,
             "type": "panel",
             "active": 0,
             "children": [
@@ -89,8 +89,7 @@
         "node-library"
       ]
     },
-    " common-asset-worker-worker": {},
-    "window-1720497835900": {}
+    " common-asset-worker-worker": {}
   },
   "panels": {
     "project-settings": {

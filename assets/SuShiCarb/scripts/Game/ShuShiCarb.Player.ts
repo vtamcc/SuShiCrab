@@ -32,6 +32,7 @@ export default class ShuShiCarbPlayer extends cc.Component {
     isCountDown = false;
     isMove = false;
 
+    
     // @property(cc.Node)
     // foodItem1: cc.Node = null;
     // @property(cc.Node)

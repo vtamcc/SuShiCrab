@@ -7,6 +7,5 @@
 
 
 export default class Global {
-    static score: number = 0;
-   
+    static totalGold: number = 0;
 }

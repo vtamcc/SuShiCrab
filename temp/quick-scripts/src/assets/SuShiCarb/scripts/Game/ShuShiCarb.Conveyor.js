@@ -29,13 +29,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ShuShiCarb_Food_1 = require("./ShuShiCarb.Food");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbConveyor = /** @class */ (function (_super) {
     __extends(ShuShiCarbConveyor, _super);
     function ShuShiCarbConveyor() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.itemFood_1 = [];
         _this.idFood = 0;
         _this.isMove = false;
         return _this;
@@ -45,30 +43,34 @@ var ShuShiCarbConveyor = /** @class */ (function (_super) {
             return;
         }
         if (this.idFood == 0) {
-            if (this.node.x >= 1200) {
+            if (this.node.x >= 1200 || !this.node.active) {
                 this.resetPos();
+                this.resetSate(true);
             }
             this.node.x += 4;
         }
-        else if (this.idFood == 1) {
+        else if (this.idFood == 1 || !this.node.active) {
             if (this.node.x <= -1800) {
-                this.node.x = 600;
+                this.node.x = 50;
+                this.resetSate(true);
             }
             this.node.x -= 3;
         }
-        else if (this.idFood == 2) {
+        else if (this.idFood == 2 || !this.node.active) {
             if (this.node.x >= 1200) {
                 this.resetPos();
+                this.resetSate(true);
             }
             this.node.x += 3;
         }
     };
     ShuShiCarbConveyor.prototype.resetPos = function () {
-        this.node.x = -900;
+        this.node.x = -700;
     };
-    __decorate([
-        property(ShuShiCarb_Food_1.default)
-    ], ShuShiCarbConveyor.prototype, "itemFood_1", void 0);
+    ShuShiCarbConveyor.prototype.resetSate = function (isActive) {
+        this.node.getComponent(cc.Sprite).enabled = isActive;
+        this.node.getComponent(cc.BoxCollider).enabled = isActive;
+    };
     __decorate([
         property
     ], ShuShiCarbConveyor.prototype, "idFood", void 0);

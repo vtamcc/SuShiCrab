@@ -18,10 +18,9 @@ export default class ShuShiCarbGame extends cc.Component {
     public static instance: ShuShiCarbGame = null;
     @property(cc.Prefab)
     prfOrder: cc.Prefab = null;
-    @property(cc.Label)
-    lbCountDown: cc.Label = null;
+    @property(cc.Node)
+    nHome: cc.Node = null;
     @property(cc.SpriteFrame)
-
     listSpfFood: cc.SpriteFrame [] = [];
     @property(cc.Node)
     nPlayer: cc.Node = null;
@@ -39,6 +38,14 @@ export default class ShuShiCarbGame extends cc.Component {
 
     @property(cc.Node)
     lsFoodTable: cc.Node[]= [];
+
+    @property(cc.Label)
+    lbGold
+
+    @property(cc.ProgressBar)
+    prgTime: cc.ProgressBar = null;
+    @property(cc.Label)
+    lbCountDown: cc.Label = null
     // LIFE-CYCLE CALLBACKS:
     data = [0,1,2,3,4,5];
     playOrders = [];
@@ -49,6 +56,11 @@ export default class ShuShiCarbGame extends cc.Component {
     countdownInterval: any = null;
     isMove  = false;
     player = null;
+    gold = 0;
+
+    duration = 60;
+    numberCountDown = 0;
+    isCountDown = false;
 
     onLoad () {
         ShuShiCarbGame.instance = this;
@@ -60,6 +72,7 @@ export default class ShuShiCarbGame extends cc.Component {
         this.conveyor(this.conveyor_2);
         this.conveyor(this.conveyor_3);
         this.renderOrderFood();
+        this.startCountDown();
         //this.renderFood();      
     }
 
@@ -82,6 +95,29 @@ export default class ShuShiCarbGame extends cc.Component {
         }
     }
 
+    startCountDown() {
+        this.isCountDown = true;
+        this.numberCountDown = this.duration;
+        this.schedule(this.updateCountDown,1);
+    }
+
+    updateCountDown() {
+        if(this.numberCountDown > 0) {
+            this.numberCountDown--;
+            this.updatePrgressTime();
+            this.lbCountDown.string = "00: " + this.numberCountDown + " " ;
+        }else {
+            this.isCountDown = false;
+            this.lbCountDown.string = "00:00"
+        }
+    }
+
+
+    updatePrgressTime() {
+        if(this.prgTime) {
+            this.prgTime.progress -= 1 / this.duration;
+        }
+    }
     renderOrderFood() {
         // if (this.player) {
         //     this.player.node.destroy(); // Destroy previous player node
@@ -111,8 +147,9 @@ export default class ShuShiCarbGame extends cc.Component {
                     this.scheduleOnce(() => {
                         this.lsFoodTable[i].getComponent(cc.Sprite).spriteFrame = this.listSpfFood[hookFoodId];
                         this.lsFoodTable[i].active = true;
+                        
                     },0.2);
-                   
+                    this.gold += 5;
                     foundMatch = true;
                     this.countCorrect++;
                     break;
@@ -120,7 +157,7 @@ export default class ShuShiCarbGame extends cc.Component {
             }
         }
 
-       
+        this.lbGold.string = this.gold + ' ';
         console.log("Keo dung ne ",this.countCorrect);
         if (!foundMatch) {
             console.log("sai me may roi");
@@ -130,6 +167,8 @@ export default class ShuShiCarbGame extends cc.Component {
             this.resetGame(true);
         }
     }
+
+
 
     
     conveyor(node: cc.Node) {
@@ -161,9 +200,9 @@ export default class ShuShiCarbGame extends cc.Component {
         let resetCallback = () => {
             this.randomOrderFood(); 
             this.renderOrderFood(); 
-            this.conveyor(this.conveyor_1);
-            this.conveyor(this.conveyor_2); 
-            this.conveyor(this.conveyor_3);
+            // this.conveyor(this.conveyor_1);
+            // this.conveyor(this.conveyor_2); 
+            // this.conveyor(this.conveyor_3);
             this.resetFoodTable();
         }
 
@@ -172,6 +211,10 @@ export default class ShuShiCarbGame extends cc.Component {
         }else {
             this.player.sadEffectPlayerMoveOut(resetCallback);
         }
+    }
+
+    onclickBack() {
+        this.node.destroy();
     }
     start () {
     }

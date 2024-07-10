@@ -1,76 +1,1281 @@
-2024-07-09T01:50:24.709Z - success: protocol editor-framework registered
-2024-07-09T01:50:24.710Z - success: protocol app registered
-2024-07-09T01:50:24.711Z - success: protocol theme registered
-2024-07-09T01:50:24.711Z - success: protocol packages registered
-2024-07-09T01:50:24.733Z - normal: Load ~/.CocosCreator/settings.json
-2024-07-09T01:50:24.771Z - success: protocol uuid registerred
-2024-07-09T01:50:24.771Z - success: protocol db registerred
-2024-07-09T01:50:24.771Z - success: protocol thumbnail registerred
-2024-07-09T01:50:24.854Z - normal: Initializing Asset Database
-2024-07-09T01:50:24.856Z - normal: checking language setting...
-2024-07-09T01:50:24.856Z - normal: Language: en
-2024-07-09T01:50:24.859Z - success: protocol unpack registerred
-2024-07-09T01:50:24.859Z - success: protocol disable-commonjs registerred
-2024-07-09T01:50:26.570Z - normal: connected!
-2024-07-09T01:50:26.798Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
-2024-07-09T01:50:26.802Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
-2024-07-09T01:50:27.036Z - success: adapters loaded
-2024-07-09T01:50:27.041Z - success: asset-db-debugger loaded
-2024-07-09T01:50:27.116Z - success: fb-audience-network loaded
-2024-07-09T01:50:27.166Z - success: fb-live-stream loaded
-2024-07-09T01:50:27.170Z - success: google-play-instant loaded
-2024-07-09T01:50:27.170Z - success: jsb-adapter loaded
-2024-07-09T01:50:27.193Z - success: package-manager loaded
-2024-07-09T01:50:27.195Z - success: runtime-adapters loaded
-2024-07-09T01:50:27.198Z - success: runtime-dev-tools loaded
-2024-07-09T01:50:27.201Z - success: ui-kit-preview-extra loaded
-2024-07-09T01:50:27.204Z - success: ui-kit-preview loaded
-2024-07-09T01:50:28.041Z - success: alipay-minigame loaded
-2024-07-09T01:50:28.060Z - success: assets loaded
-2024-07-09T01:50:28.063Z - success: baidugame-opendata loaded
-2024-07-09T01:50:28.065Z - success: baidugame loaded
-2024-07-09T01:50:28.069Z - success: builder loaded
-2024-07-09T01:50:28.075Z - success: bytedance-opendata loaded
-2024-07-09T01:50:28.077Z - success: bytedance loaded
-2024-07-09T01:50:28.082Z - success: channel-upload-tools loaded
-2024-07-09T01:50:28.242Z - success: cloud-function loaded
-2024-07-09T01:50:28.477Z - success: cocos-services loaded
-2024-07-09T01:50:28.483Z - success: console loaded
-2024-07-09T01:50:28.486Z - success: curve-editor loaded
-2024-07-09T01:50:28.495Z - success: fb-instant-games loaded
-2024-07-09T01:50:28.497Z - success: game-window loaded
-2024-07-09T01:50:28.498Z - success: google-instant-games loaded
-2024-07-09T01:50:28.503Z - success: hierarchy loaded
-2024-07-09T01:50:28.506Z - success: huawei-agc loaded
-2024-07-09T01:50:28.509Z - success: huawei-runtime loaded
-2024-07-09T01:50:28.513Z - success: inspector loaded
-2024-07-09T01:50:28.534Z - success: cpk-publish loaded
-2024-07-09T01:50:28.536Z - success: keystore loaded
-2024-07-09T01:50:28.557Z - success: link-sure-runtime loaded
-2024-07-09T01:50:28.577Z - success: node-library loaded
-2024-07-09T01:50:28.578Z - success: open-recent-items loaded
-2024-07-09T01:50:28.581Z - success: oppo-runtime loaded
-2024-07-09T01:50:28.583Z - success: package-asset loaded
-2024-07-09T01:50:28.584Z - success: preferences loaded
-2024-07-09T01:50:28.588Z - success: project-importer loaded
-2024-07-09T01:50:28.591Z - success: project-settings loaded
-2024-07-09T01:50:28.605Z - success: qtt-runtime loaded
-2024-07-09T01:50:28.609Z - success: scene loaded
-2024-07-09T01:50:28.610Z - success: simulator-debugger loaded
-2024-07-09T01:50:28.611Z - success: sprite-editor loaded
-2024-07-09T01:50:28.681Z - success: store loaded
-2024-07-09T01:50:28.683Z - success: taobao-creativeapp loaded
-2024-07-09T01:50:28.687Z - success: timeline loaded
-2024-07-09T01:50:28.694Z - success: vivo-runtime loaded
-2024-07-09T01:50:28.697Z - success: wechatgame-opendata loaded
-2024-07-09T01:50:28.702Z - success: wechatgame loaded
-2024-07-09T01:50:28.706Z - success: xiaomi-runtime loaded
-2024-07-09T01:50:28.761Z - success: im-plugin loaded
-2024-07-09T01:50:28.762Z - success: preview server running at http://localhost:7456
-2024-07-09T01:50:30.848Z - normal: Initializing Cocos2d
-2024-07-09T01:50:31.135Z - normal: Initializing engine extends
-2024-07-09T01:50:31.611Z - info: Cocos Service load base data!
-2024-07-09T01:50:36.040Z - normal: Loading packages
-2024-07-09T01:50:36.043Z - normal: Watching packages
-2024-07-09T01:50:36.268Z - normal: Run Application
-2024-07-09T01:50:40.839Z - success: cloud-function unloaded
+2024-07-10T01:46:14.955Z - success: protocol editor-framework registered
+2024-07-10T01:46:14.957Z - success: protocol app registered
+2024-07-10T01:46:14.957Z - success: protocol theme registered
+2024-07-10T01:46:14.957Z - success: protocol packages registered
+2024-07-10T01:46:14.988Z - normal: Load ~/.CocosCreator/settings.json
+2024-07-10T01:46:15.030Z - success: protocol uuid registerred
+2024-07-10T01:46:15.030Z - success: protocol db registerred
+2024-07-10T01:46:15.030Z - success: protocol thumbnail registerred
+2024-07-10T01:46:15.112Z - normal: Initializing Asset Database
+2024-07-10T01:46:15.115Z - normal: checking language setting...
+2024-07-10T01:46:15.115Z - normal: Language: en
+2024-07-10T01:46:15.118Z - success: protocol unpack registerred
+2024-07-10T01:46:15.118Z - success: protocol disable-commonjs registerred
+2024-07-10T01:46:18.339Z - normal: failed to connect login server due to request timeout
+2024-07-10T01:46:18.358Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
+2024-07-10T01:46:18.362Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
+2024-07-10T01:46:18.594Z - success: adapters loaded
+2024-07-10T01:46:18.600Z - success: asset-db-debugger loaded
+2024-07-10T01:46:18.673Z - success: fb-audience-network loaded
+2024-07-10T01:46:18.724Z - success: fb-live-stream loaded
+2024-07-10T01:46:18.728Z - success: google-play-instant loaded
+2024-07-10T01:46:18.728Z - success: jsb-adapter loaded
+2024-07-10T01:46:18.749Z - success: package-manager loaded
+2024-07-10T01:46:18.750Z - success: runtime-adapters loaded
+2024-07-10T01:46:18.752Z - success: runtime-dev-tools loaded
+2024-07-10T01:46:18.757Z - success: ui-kit-preview-extra loaded
+2024-07-10T01:46:18.760Z - success: ui-kit-preview loaded
+2024-07-10T01:46:19.601Z - success: alipay-minigame loaded
+2024-07-10T01:46:19.624Z - success: assets loaded
+2024-07-10T01:46:19.628Z - success: baidugame-opendata loaded
+2024-07-10T01:46:19.630Z - success: baidugame loaded
+2024-07-10T01:46:19.633Z - success: builder loaded
+2024-07-10T01:46:19.636Z - success: bytedance-opendata loaded
+2024-07-10T01:46:19.639Z - success: bytedance loaded
+2024-07-10T01:46:19.643Z - success: channel-upload-tools loaded
+2024-07-10T01:46:19.785Z - success: cloud-function loaded
+2024-07-10T01:46:19.989Z - success: cocos-services loaded
+2024-07-10T01:46:19.995Z - success: console loaded
+2024-07-10T01:46:19.998Z - success: curve-editor loaded
+2024-07-10T01:46:20.006Z - success: fb-instant-games loaded
+2024-07-10T01:46:20.009Z - success: game-window loaded
+2024-07-10T01:46:20.010Z - success: google-instant-games loaded
+2024-07-10T01:46:20.014Z - success: hierarchy loaded
+2024-07-10T01:46:20.017Z - success: huawei-agc loaded
+2024-07-10T01:46:20.020Z - success: huawei-runtime loaded
+2024-07-10T01:46:20.023Z - success: inspector loaded
+2024-07-10T01:46:20.048Z - success: cpk-publish loaded
+2024-07-10T01:46:20.050Z - success: keystore loaded
+2024-07-10T01:46:20.078Z - success: link-sure-runtime loaded
+2024-07-10T01:46:20.091Z - success: node-library loaded
+2024-07-10T01:46:20.092Z - success: open-recent-items loaded
+2024-07-10T01:46:20.095Z - success: oppo-runtime loaded
+2024-07-10T01:46:20.096Z - success: package-asset loaded
+2024-07-10T01:46:20.097Z - success: preferences loaded
+2024-07-10T01:46:20.101Z - success: project-importer loaded
+2024-07-10T01:46:20.104Z - success: project-settings loaded
+2024-07-10T01:46:20.117Z - success: qtt-runtime loaded
+2024-07-10T01:46:20.121Z - success: scene loaded
+2024-07-10T01:46:20.121Z - success: simulator-debugger loaded
+2024-07-10T01:46:20.122Z - success: sprite-editor loaded
+2024-07-10T01:46:20.191Z - success: store loaded
+2024-07-10T01:46:20.192Z - success: taobao-creativeapp loaded
+2024-07-10T01:46:20.196Z - success: timeline loaded
+2024-07-10T01:46:20.200Z - success: vivo-runtime loaded
+2024-07-10T01:46:20.203Z - success: wechatgame-opendata loaded
+2024-07-10T01:46:20.207Z - success: wechatgame loaded
+2024-07-10T01:46:20.210Z - success: xiaomi-runtime loaded
+2024-07-10T01:46:20.266Z - success: im-plugin loaded
+2024-07-10T01:46:20.267Z - success: preview server running at http://localhost:7456
+2024-07-10T01:46:22.485Z - normal: Initializing Cocos2d
+2024-07-10T01:46:22.756Z - normal: Initializing engine extends
+2024-07-10T01:46:23.205Z - info: Cocos Service load base data!
+2024-07-10T01:46:23.732Z - normal: Loading packages
+2024-07-10T01:46:23.735Z - normal: Watching packages
+2024-07-10T01:46:23.962Z - normal: Run Application
+2024-07-10T01:46:29.407Z - success: cloud-function unloaded
+2024-07-10T01:55:08.276Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:12:10.749Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:13:41.804Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:18:43.354Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:20:20.458Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:21:51.659Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:23:19.057Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:23:52.007Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:24:20.832Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:28:43.675Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:30:50.036Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:35:08.596Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:46:00.824Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:49:42.839Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:51:40.758Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:53:55.463Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T02:54:52.289Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:06:28.694Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:11:12.429Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:12:14.300Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:14:06.412Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:14:57.413Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:16:40.206Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:20:42.709Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:22:08.545Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:23:43.332Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:24:06.452Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:24:36.255Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:25:46.646Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:30:05.992Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:30:27.081Z - error: Error: Parsing file /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/src/assets/SuShiCarb/scripts/ShuShiCarb.Game.js: Unexpected token (185:17)
+    at Deps.parseDeps (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/module-deps/index.js:481:28)
+    at getDeps (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/module-deps/index.js:414:40)
+    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/module-deps/index.js:398:32
+    at ConcatStream.<anonymous> (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/index.js:36:43)
+    at ConcatStream.emit (events.js:327:22)
+    at ConcatStream.emit (domain.js:483:12)
+    at finishMaybe (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:475:14)
+    at endWritable (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:485:3)
+    at ConcatStream.end (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/concat-stream/node_modules/readable-stream/lib/_stream_writable.js:455:41)
+    at DestroyableTransform.onend (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/readable-stream/lib/_stream_readable.js:577:10)
+    at m._parseEntry (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/share/quick-compile/index.ccc:1:6393)
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async Promise.all (index 0)
+    at async m._compileScripts (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/share/quick-compile/index.ccc:1:3491)
+2024-07-10T03:30:27.460Z - failed: load script [../ShuShiCarb.Game] failed : /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/ShuShiCarb.Game.js:185
+                 = false;
+                 ^
+
+SyntaxError: Unexpected token '='
+    at new Script (vm.js:88:7)
+    at createScript (vm.js:261:10)
+    at Object.runInThisContext (vm.js:309:10)
+    at wrapSafe (internal/modules/cjs/loader.js:1047:15)
+    at Module._compile (internal/modules/cjs/loader.js:1108:27)
+    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
+    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
+2024-07-10T03:30:27.463Z - failed: load script [../ShuShiCarb.Game] failed : /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/ShuShiCarb.Game.js:185
+                 = false;
+                 ^
+
+SyntaxError: Unexpected token '='
+    at new Script (vm.js:88:7)
+    at createScript (vm.js:261:10)
+    at Object.runInThisContext (vm.js:309:10)
+    at wrapSafe (internal/modules/cjs/loader.js:1047:15)
+    at Module._compile (internal/modules/cjs/loader.js:1108:27)
+    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
+    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
+2024-07-10T03:30:27.464Z - failed: load script [../ShuShiCarb.Game] failed : /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/ShuShiCarb.Game.js:185
+                 = false;
+                 ^
+
+SyntaxError: Unexpected token '='
+    at new Script (vm.js:88:7)
+    at createScript (vm.js:261:10)
+    at Object.runInThisContext (vm.js:309:10)
+    at wrapSafe (internal/modules/cjs/loader.js:1047:15)
+    at Module._compile (internal/modules/cjs/loader.js:1108:27)
+    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
+    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
+2024-07-10T03:30:27.465Z - failed: load script [./assets/SuShiCarb/scripts/ShuShiCarb.Game] failed : /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/ShuShiCarb.Game.js:185
+                 = false;
+                 ^
+
+SyntaxError: Unexpected token '='
+    at new Script (vm.js:88:7)
+    at createScript (vm.js:261:10)
+    at Object.runInThisContext (vm.js:309:10)
+    at wrapSafe (internal/modules/cjs/loader.js:1047:15)
+    at Module._compile (internal/modules/cjs/loader.js:1108:27)
+    at Object.f (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:1993)
+    at Module.load (internal/modules/cjs/loader.js:992:32)
+    at Module._load (internal/modules/cjs/loader.js:885:14)
+    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
+    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
+2024-07-10T03:30:39.562Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:38:59.497Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:40:08.065Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:42:02.682Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:47:57.039Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:48:23.809Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T03:52:05.006Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:01:09.994Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:05:39.174Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:08:15.452Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:10:30.572Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:10:53.033Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:22:12.841Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:23:35.925Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:29:27.039Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:32:26.804Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:33:57.424Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:35:42.536Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:46:17.623Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:48:14.479Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:50:07.924Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:50:52.423Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:51:32.034Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:53:43.383Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:55:10.592Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:55:37.160Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:57:27.652Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:57:44.112Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T04:58:16.823Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T05:02:06.415Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T05:03:22.982Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T05:03:58.951Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T05:04:49.018Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T05:33:24.653Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@main:156471
+2024-07-10T06:34:51.107Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T06:35:45.001Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T06:43:51.013Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T06:44:19.560Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T06:50:09.612Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T06:50:58.953Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T06:53:27.829Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T06:57:23.689Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:05:59.411Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:06:44.668Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:06:57.829Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:07:16.177Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:08:46.530Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:10:26.744Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:10:38.687Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:11:37.903Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:14:07.479Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:14:45.532Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:18:38.906Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:19:00.136Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:47:20.772Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:48:12.555Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:48:37.430Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:49:15.399Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:49:46.441Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:50:35.566Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T07:51:12.068Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T08:33:40.950Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T08:33:43.017Z - warn: The Asset used by component "cc.Sprite" is missing. Detailed information:
+Node path: "Canvas/Home"
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.019Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.020Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.020Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.020Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.020Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.021Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.021Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.021Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.021Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.021Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.021Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.021Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.021Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.022Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.022Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.022Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.022Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.022Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.022Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.022Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.022Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.023Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.023Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.023Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.023Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.023Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.023Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.023Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.024Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.024Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.024Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.024Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.024Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.024Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.024Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.024Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.025Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.025Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.025Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.025Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.025Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.026Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.026Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.026Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.026Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.026Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.026Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.026Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.026Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.027Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.027Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.027Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.027Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.027Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.027Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.027Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.027Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.028Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.028Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.028Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.028Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.028Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.028Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.029Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.029Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.029Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "4b928d5f-89fe-4c19-99c9-d19bda4760b5"
+
+2024-07-10T08:33:43.030Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "f61c32a8-d166-4e0c-a050-a960140536fb"
+
+2024-07-10T08:33:43.030Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "f61c32a8-d166-4e0c-a050-a960140536fb"
+
+2024-07-10T08:33:43.030Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "f61c32a8-d166-4e0c-a050-a960140536fb"
+
+2024-07-10T08:33:43.030Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "f61c32a8-d166-4e0c-a050-a960140536fb"
+
+2024-07-10T08:33:43.031Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "f61c32a8-d166-4e0c-a050-a960140536fb"
+
+2024-07-10T08:33:43.031Z - warn: The Asset used is missing. Detailed information:
+Missing uuid: "f61c32a8-d166-4e0c-a050-a960140536fb"
+
+2024-07-10T08:34:15.391Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T08:43:56.708Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T08:44:15.632Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T08:46:24.543Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T08:49:26.055Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:02:05.436Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:04:05.791Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:05:08.823Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:06:42.971Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:07:10.078Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:07:32.827Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:07:48.016Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:08:57.950Z - warn: Please specifiy a default value for "ShuShiCarbGame." at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:08:57.952Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:09:03.134Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:09:55.760Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:12:49.954Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:14:11.258Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:19:25.640Z - error: Reference "nHome" of "Main<Game>" to external scene object "Home" can not be saved in prefab asset.
+    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.ccc:1:4814
+    at t (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.ccc:1:4516)
+    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.ccc:1:4592
+    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.ccc:1:4599
+    at _ (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.ccc:1:952)
+    at Object.getDumpableNode (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.ccc:1:4211)
+    at Object.createPrefabFrom (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/utils/prefab.ccc:1:5168)
+    at Object.createPrefab (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.ccc:1:4811)
+    at HTMLElement.create-prefab (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/builtin/scene/panel/messages/scene-operation.ccc:1:3931)
+2024-07-10T09:21:49.542Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T09:29:12.225Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T10:04:24.454Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@main:336405
+2024-07-10T10:31:44.320Z - warn: Please specifiy a default value for "ShuShiCarbGame.lbGold" at its declaration:
+ 
+// Before:
+@property(...)
+myProp;
+// After:
+@property(...)
+myProp = 0;
+2024-07-10T10:55:11.275Z - info: shutdown preview server

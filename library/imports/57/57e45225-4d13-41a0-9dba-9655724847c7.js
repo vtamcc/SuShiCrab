@@ -37,7 +37,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     function ShuShiCarbGame() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.prfOrder = null;
-        _this.lbCountDown = null;
+        _this.nHome = null;
         _this.listSpfFood = [];
         _this.nPlayer = null;
         _this.conveyor_1 = null;
@@ -45,6 +45,8 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         _this.conveyor_3 = null;
         _this.prfFood = null;
         _this.lsFoodTable = [];
+        _this.prgTime = null;
+        _this.lbCountDown = null;
         // LIFE-CYCLE CALLBACKS:
         _this.data = [0, 1, 2, 3, 4, 5];
         _this.playOrders = [];
@@ -55,6 +57,10 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         _this.countdownInterval = null;
         _this.isMove = false;
         _this.player = null;
+        _this.gold = 0;
+        _this.duration = 60;
+        _this.numberCountDown = 0;
+        _this.isCountDown = false;
         return _this;
         // update (dt) {}
     }
@@ -68,6 +74,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         this.conveyor(this.conveyor_2);
         this.conveyor(this.conveyor_3);
         this.renderOrderFood();
+        this.startCountDown();
         //this.renderFood();      
     };
     // randomIdFood(arr,count) {
@@ -85,6 +92,27 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
             var randomIndex = Math.floor(Math.random() * this.data.length);
             var foodId = this.data[randomIndex];
             this.playOrders.push(foodId);
+        }
+    };
+    ShuShiCarbGame.prototype.startCountDown = function () {
+        this.isCountDown = true;
+        this.numberCountDown = this.duration;
+        this.schedule(this.updateCountDown, 1);
+    };
+    ShuShiCarbGame.prototype.updateCountDown = function () {
+        if (this.numberCountDown > 0) {
+            this.numberCountDown--;
+            this.updatePrgressTime();
+            this.lbCountDown.string = "00: " + this.numberCountDown + " ";
+        }
+        else {
+            this.isCountDown = false;
+            this.lbCountDown.string = "00:00";
+        }
+    };
+    ShuShiCarbGame.prototype.updatePrgressTime = function () {
+        if (this.prgTime) {
+            this.prgTime.progress -= 1 / this.duration;
         }
     };
     ShuShiCarbGame.prototype.renderOrderFood = function () {
@@ -116,6 +144,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
                         _this.lsFoodTable[i].getComponent(cc.Sprite).spriteFrame = _this.listSpfFood[hookFoodId];
                         _this.lsFoodTable[i].active = true;
                     }, 0.2);
+                    this_1.gold += 5;
                     foundMatch = true;
                     this_1.countCorrect++;
                     return "break";
@@ -128,6 +157,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
             if (state_1 === "break")
                 break;
         }
+        this.lbGold.string = this.gold + ' ';
         console.log("Keo dung ne ", this.countCorrect);
         if (!foundMatch) {
             console.log("sai me may roi");
@@ -164,9 +194,9 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         var resetCallback = function () {
             _this.randomOrderFood();
             _this.renderOrderFood();
-            _this.conveyor(_this.conveyor_1);
-            _this.conveyor(_this.conveyor_2);
-            _this.conveyor(_this.conveyor_3);
+            // this.conveyor(this.conveyor_1);
+            // this.conveyor(this.conveyor_2); 
+            // this.conveyor(this.conveyor_3);
             _this.resetFoodTable();
         };
         if (isHappy) {
@@ -176,6 +206,9 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
             this.player.sadEffectPlayerMoveOut(resetCallback);
         }
     };
+    ShuShiCarbGame.prototype.onclickBack = function () {
+        this.node.destroy();
+    };
     ShuShiCarbGame.prototype.start = function () {
     };
     var ShuShiCarbGame_1;
@@ -184,8 +217,8 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         property(cc.Prefab)
     ], ShuShiCarbGame.prototype, "prfOrder", void 0);
     __decorate([
-        property(cc.Label)
-    ], ShuShiCarbGame.prototype, "lbCountDown", void 0);
+        property(cc.Node)
+    ], ShuShiCarbGame.prototype, "nHome", void 0);
     __decorate([
         property(cc.SpriteFrame)
     ], ShuShiCarbGame.prototype, "listSpfFood", void 0);
@@ -207,6 +240,15 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], ShuShiCarbGame.prototype, "lsFoodTable", void 0);
+    __decorate([
+        property(cc.Label)
+    ], ShuShiCarbGame.prototype, "lbGold", void 0);
+    __decorate([
+        property(cc.ProgressBar)
+    ], ShuShiCarbGame.prototype, "prgTime", void 0);
+    __decorate([
+        property(cc.Label)
+    ], ShuShiCarbGame.prototype, "lbCountDown", void 0);
     ShuShiCarbGame = ShuShiCarbGame_1 = __decorate([
         ccclass
     ], ShuShiCarbGame);

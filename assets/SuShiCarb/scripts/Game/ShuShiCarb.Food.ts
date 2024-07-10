@@ -20,8 +20,9 @@ export default class ShuShiCarbFood extends cc.Component {
     id = 0 
     // LIFE-CYCLE CALLBACKS:
     isCheck = 0;
-    
+
     onLoad () {
+       
     }
 
     start () {
