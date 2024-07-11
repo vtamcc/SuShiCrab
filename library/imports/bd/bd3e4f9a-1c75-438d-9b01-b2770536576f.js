@@ -45,14 +45,9 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         return _this;
     }
     ShuShiCarbHook_1 = ShuShiCarbHook;
-    // initialLength: number = 100;  
-    // maxLength: number = 750;      
-    // growing: boolean = false;
     ShuShiCarbHook.prototype.onLoad = function () {
         ShuShiCarbHook_1.instance = this;
         cc.Canvas.instance.node.on(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
-        //  this.hookHeadBaseY = this.hookHeadBaseY || this.hookHead.y;
-        //  this.hookRopeBaseWidth = this.hookRopeBaseWidth || this.hookRope.width;
     };
     ShuShiCarbHook.prototype.initHook = function () {
         this.hookHead.y = this.hookHeadBaseY;
@@ -81,9 +76,6 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
     ShuShiCarbHook.prototype.moveHookHead = function (dt) {
         this.hookHead.y += dt * 30;
         this.hookRope.width -= dt * 40;
-    };
-    ShuShiCarbHook.prototype.getHookHeadGlobalPos = function () {
-        return this.node.convertToWorldSpaceAR(cc.v2(this.mousePos, this.hookHead.y - 25));
     };
     ShuShiCarbHook.prototype.onDestroy = function () {
         cc.Canvas.instance.node.off(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
@@ -116,32 +108,6 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
             default:
                 break;
         }
-    };
-    // update(dt: number) {
-    //     if (this.growing) {
-    //         if (this.node.height < this.maxLength) {
-    //             this.node.height += 200 * 0.2;
-    //             this.node.getComponent(cc.BoxCollider).size.height += 200 * 0.2;
-    //         } else {
-    //             this.growing = false;
-    //             this.node.height = this.initialLength;
-    //             this.node.getComponent(cc.BoxCollider).size.height = this.initialLength;
-    //         }
-    //     }
-    // }
-    ShuShiCarbHook.prototype.onCollisionEnter = function (other) {
-        // // Lấy bounding box của thanh kéo
-        // const dragBarBoundingBox = this.node.getBoundingBoxToWorld();
-        // // Lặp qua tất cả các món ăn để kiểm tra va chạm
-        // for (let i = 0; i < this.foodContainer.children.length; i++) {
-        //     const foodItem = this.foodContainer.children[i];
-        //     const foodBoundingBox = foodItem.getBoundingBoxToWorld();
-        //     if (dragBarBoundingBox.intersects(foodBoundingBox)) {
-        //         // Nếu va chạm, kéo món ăn về vị trí nhất định
-        //         foodItem.setPosition(cc.v2(100, 100));  // Ví dụ đặt về vị trí (100, 100)
-        //         break;  // Dừng lại sau khi tìm thấy va chạm đầu tiên
-        //     }
-        // }
     };
     var ShuShiCarbHook_1;
     ShuShiCarbHook.instance = null;

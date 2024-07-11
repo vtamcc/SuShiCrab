@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "btn_upgrade_gray",
+    "texture": "9e328d39-575b-406c-858a-5a01942b21cb",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      120,
+      35
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      120,
+      35
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -8,6 +8,10 @@
 import ShuShiCarbConveyor from "./Game/ShuShiCarb.Conveyor";
 import ShuShiCarbFood from "./Game/ShuShiCarb.Food";
 import ShuShiCarbPlayer from "./Game/ShuShiCarb.Player";
+import ShuShiCarbGameOver from "./Game/Ui_Popup/ShuShiCrab.GameOver";
+
+import ShuShiCarbGameManager from "./ShuShiCarb.GameManager";
+import Global from "./ShuShiCarb.Global";
 
 
 const {ccclass, property} = cc._decorator;
@@ -40,8 +44,10 @@ export default class ShuShiCarbGame extends cc.Component {
     lsFoodTable: cc.Node[]= [];
 
     @property(cc.Label)
-    lbGold
+    lbGold: cc.Label = null;
 
+    @property(cc.Prefab)
+    prfGameOver: cc.Prefab = null;
     @property(cc.ProgressBar)
     prgTime: cc.ProgressBar = null;
     @property(cc.Label)
@@ -57,11 +63,9 @@ export default class ShuShiCarbGame extends cc.Component {
     isMove  = false;
     player = null;
     gold = 0;
-
     duration = 60;
     numberCountDown = 0;
     isCountDown = false;
-
     onLoad () {
         ShuShiCarbGame.instance = this;
        
@@ -109,9 +113,19 @@ export default class ShuShiCarbGame extends cc.Component {
         }else {
             this.isCountDown = false;
             this.lbCountDown.string = "00:00"
+            this.gameOver(this.prfGameOver,false);
         }
     }
 
+    gameOver(prfGameOver: cc.Prefab, isWin: boolean) {
+        let gamOver = cc.instantiate(prfGameOver).getComponent(ShuShiCarbGameOver)
+        if(isWin) {
+            gamOver.gameWin()
+        }else {
+            gamOver.gameLose();
+        }
+        this.node.addChild(gamOver.node);
+    }
 
     updatePrgressTime() {
         if(this.prgTime) {
@@ -150,6 +164,7 @@ export default class ShuShiCarbGame extends cc.Component {
                         
                     },0.2);
                     this.gold += 5;
+                    this.updateGold();
                     foundMatch = true;
                     this.countCorrect++;
                     break;
@@ -170,7 +185,10 @@ export default class ShuShiCarbGame extends cc.Component {
 
 
 
-    
+    updateGold() {
+        Global.totalGold += this.gold;
+        cc.sys.localStorage.setItem('totalGold',JSON.stringify(Global.totalGold));
+    }
     conveyor(node: cc.Node) {
        for(let i = 0; i < node.childrenCount; i++) {
             let item = node.children[i].getComponent(ShuShiCarbFood);
@@ -213,8 +231,11 @@ export default class ShuShiCarbGame extends cc.Component {
         }
     }
 
-    onclickBack() {
+    onclickBack() { 
+        ShuShiCarbGameManager.instance.updateTotalGold();
         this.node.destroy();
+       
+        ShuShiCarbGameManager.instance.nHome.getChildByName('playbtn').getComponent(cc.Button).interactable = true;
     }
     start () {
     }

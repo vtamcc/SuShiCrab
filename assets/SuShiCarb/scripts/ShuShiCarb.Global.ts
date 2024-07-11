@@ -8,4 +8,5 @@
 
 export default class Global {
     static totalGold: number = 0;
+    static priceSpeedHook = 150;
 }

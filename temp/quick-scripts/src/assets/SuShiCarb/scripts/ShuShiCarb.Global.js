@@ -14,6 +14,7 @@ var Global = /** @class */ (function () {
     function Global() {
     }
     Global.totalGold = 0;
+    Global.priceSpeedHook = 150;
     return Global;
 }());
 exports.default = Global;

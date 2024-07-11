@@ -55,8 +55,6 @@ export default class Collier extends cc.Component {
     onLoad () {
         let node = cc.director.getCollisionManager()
         node.enabled = true;
-        node.enabledDebugDraw = true;
-       
     }
 
     start () {

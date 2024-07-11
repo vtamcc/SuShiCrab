@@ -31,6 +31,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var ShuShiCarb_Food_1 = require("./Game/ShuShiCarb.Food");
 var ShuShiCarb_Player_1 = require("./Game/ShuShiCarb.Player");
+var ShuShiCrab_GameOver_1 = require("./Game/Ui_Popup/ShuShiCrab.GameOver");
+var ShuShiCarb_GameManager_1 = require("./ShuShiCarb.GameManager");
+var ShuShiCarb_Global_1 = require("./ShuShiCarb.Global");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbGame = /** @class */ (function (_super) {
     __extends(ShuShiCarbGame, _super);
@@ -45,6 +48,8 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         _this.conveyor_3 = null;
         _this.prfFood = null;
         _this.lsFoodTable = [];
+        _this.lbGold = null;
+        _this.prfGameOver = null;
         _this.prgTime = null;
         _this.lbCountDown = null;
         // LIFE-CYCLE CALLBACKS:
@@ -108,7 +113,18 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         else {
             this.isCountDown = false;
             this.lbCountDown.string = "00:00";
+            this.gameOver(this.prfGameOver, false);
         }
+    };
+    ShuShiCarbGame.prototype.gameOver = function (prfGameOver, isWin) {
+        var gamOver = cc.instantiate(prfGameOver).getComponent(ShuShiCrab_GameOver_1.default);
+        if (isWin) {
+            gamOver.gameWin();
+        }
+        else {
+            gamOver.gameLose();
+        }
+        this.node.addChild(gamOver.node);
     };
     ShuShiCarbGame.prototype.updatePrgressTime = function () {
         if (this.prgTime) {
@@ -145,6 +161,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
                         _this.lsFoodTable[i].active = true;
                     }, 0.2);
                     this_1.gold += 5;
+                    this_1.updateGold();
                     foundMatch = true;
                     this_1.countCorrect++;
                     return "break";
@@ -165,6 +182,10 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         if (this.countCorrect >= 3) {
             this.resetGame(true);
         }
+    };
+    ShuShiCarbGame.prototype.updateGold = function () {
+        ShuShiCarb_Global_1.default.totalGold += this.gold;
+        cc.sys.localStorage.setItem('totalGold', JSON.stringify(ShuShiCarb_Global_1.default.totalGold));
     };
     ShuShiCarbGame.prototype.conveyor = function (node) {
         for (var i = 0; i < node.childrenCount; i++) {
@@ -207,7 +228,9 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         }
     };
     ShuShiCarbGame.prototype.onclickBack = function () {
+        ShuShiCarb_GameManager_1.default.instance.updateTotalGold();
         this.node.destroy();
+        ShuShiCarb_GameManager_1.default.instance.nHome.getChildByName('playbtn').getComponent(cc.Button).interactable = true;
     };
     ShuShiCarbGame.prototype.start = function () {
     };
@@ -243,6 +266,9 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     __decorate([
         property(cc.Label)
     ], ShuShiCarbGame.prototype, "lbGold", void 0);
+    __decorate([
+        property(cc.Prefab)
+    ], ShuShiCarbGame.prototype, "prfGameOver", void 0);
     __decorate([
         property(cc.ProgressBar)
     ], ShuShiCarbGame.prototype, "prgTime", void 0);

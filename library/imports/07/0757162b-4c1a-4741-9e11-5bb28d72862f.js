@@ -73,7 +73,6 @@ var Collier = /** @class */ (function (_super) {
     Collier.prototype.onLoad = function () {
         var node = cc.director.getCollisionManager();
         node.enabled = true;
-        node.enabledDebugDraw = true;
     };
     Collier.prototype.start = function () {
     };
