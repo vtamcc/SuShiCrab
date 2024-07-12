@@ -29,6 +29,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var ShuShiCarb_Global_1 = require("../ShuShiCarb.Global");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbHook = /** @class */ (function (_super) {
     __extends(ShuShiCarbHook, _super);
@@ -41,7 +42,7 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         _this.hookSpeed = 30;
         _this.hookState = 0;
         _this.hookHeadBaseY = 80;
-        _this.hookRopeBaseWidth = 0;
+        _this.hookRopeBaseWidth = 100;
         return _this;
     }
     ShuShiCarbHook_1 = ShuShiCarbHook;
@@ -74,8 +75,8 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         this.node.setPosition(this.mousePos);
     };
     ShuShiCarbHook.prototype.moveHookHead = function (dt) {
-        this.hookHead.y += dt * 30;
-        this.hookRope.width -= dt * 40;
+        this.hookHead.y += dt * ShuShiCarb_Global_1.default.speedHook;
+        this.hookRope.width += dt * 40;
     };
     ShuShiCarbHook.prototype.onDestroy = function () {
         cc.Canvas.instance.node.off(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
@@ -85,7 +86,7 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         switch (this.hookState) {
             case 1:
                 if (this.hookHead.y) {
-                    this.moveHookHead(this.hookSpeed * dt);
+                    this.moveHookHead(ShuShiCarb_Global_1.default.speedHook * dt);
                     if (this.hookHead.y >= 600) {
                         this.hookState = 2;
                     }
@@ -93,11 +94,11 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
                 break;
             case 2:
                 if (this.hookHead.y) {
-                    this.moveHookHead(-this.hookSpeed * dt);
+                    this.moveHookHead(-ShuShiCarb_Global_1.default.speedHook * dt);
                     this.hookHead.getComponent(cc.BoxCollider).enabled = false;
                     if (this.hookHead.y < 0) {
                         this.hookHead.y = 100;
-                        this.hookRope.width = 50;
+                        this.hookRope.width = 100;
                         this.hookState = 0;
                         this.hookHead.getComponent(cc.BoxCollider).enabled = true;
                     }

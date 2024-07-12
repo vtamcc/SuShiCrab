@@ -5,6 +5,7 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+import Global from "../ShuShiCarb.Global";
 import ShuShiCarbFood from "./ShuShiCarb.Food";
 
 const {ccclass, property} = cc._decorator;
@@ -28,7 +29,7 @@ export default class ShuShiCarbHook extends cc.Component {
     hookState = 0;
 
     hookHeadBaseY: number = 80;
-    hookRopeBaseWidth: number = 0;
+    hookRopeBaseWidth: number = 100;
     
     mousePos;
    
@@ -69,8 +70,8 @@ export default class ShuShiCarbHook extends cc.Component {
     }
 
     moveHookHead(dt) {
-        this.hookHead.y += dt * 30;
-        this.hookRope.width -= dt * 40;
+        this.hookHead.y += dt * Global.speedHook;
+        this.hookRope.width += dt * 40;
       
     }
     onDestroy() {
@@ -81,7 +82,7 @@ export default class ShuShiCarbHook extends cc.Component {
         switch(this.hookState) {
             case 1:
                 if(this.hookHead.y) {
-                    this.moveHookHead(this.hookSpeed * dt);
+                    this.moveHookHead(Global.speedHook * dt);
                     if(this.hookHead.y >= 600) {
                         this.hookState = 2;
                      
@@ -90,11 +91,11 @@ export default class ShuShiCarbHook extends cc.Component {
                 break;
             case 2:
                 if(this.hookHead.y) {
-                    this.moveHookHead(-this.hookSpeed  * dt);
+                    this.moveHookHead(-Global.speedHook  * dt);
                     this.hookHead.getComponent(cc.BoxCollider).enabled = false;
                     if(this.hookHead.y  < 0) {
                         this.hookHead.y = 100;
-                        this.hookRope.width = 50;
+                        this.hookRope.width = 100;
                         this.hookState = 0;
                         this.hookHead.getComponent(cc.BoxCollider).enabled = true;
                     }

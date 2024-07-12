@@ -29,7 +29,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var ShuShiCarb_ShopView_1 = require("./Game/Ui_Popup/ShuShiCarb.ShopView");
+var ShuShiCarb_ShopView_1 = require("./Game/Ui_Popup/Shop/ShuShiCarb.ShopView");
 var ShuShiCarb_Game_1 = require("./ShuShiCarb.Game");
 var ShuShiCarb_Global_1 = require("./ShuShiCarb.Global");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
@@ -48,7 +48,8 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
     // LIFE-CYCLE CALLBACKS:
     ShuShiCarbGameManager.prototype.onLoad = function () {
         ShuShiCarbGameManager_1.instance = this;
-        ShuShiCarb_Global_1.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 200;
+        ShuShiCarb_Global_1.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 2000;
+        ShuShiCarb_Global_1.default.speedHook = JSON.parse(cc.sys.localStorage.getItem("speed")) || 20;
         this.updateTotalGold();
     };
     ShuShiCarbGameManager.prototype.start = function () {

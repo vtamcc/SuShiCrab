@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "popup_0013_Rounded-Rectangle-10-copy-3",
+    "texture": "42be003d-7fa5-4b07-aa4e-72143fb94a20",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      11,
+      17
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      11,
+      17
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

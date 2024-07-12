@@ -5,7 +5,8 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import ShuShiCarbShopView from "./Game/Ui_Popup/ShuShiCarb.ShopView";
+
+import ShuShiCarbShopView from "./Game/Ui_Popup/Shop/ShuShiCarb.ShopView";
 import ShuShiCarbGame from "./ShuShiCarb.Game";
 import Global from "./ShuShiCarb.Global";
 
@@ -25,9 +26,10 @@ export default class ShuShiCarbGameManager extends cc.Component {
    lbTotalGold: cc.Label = null;
     // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
+   onLoad () {
       ShuShiCarbGameManager.instance = this;
-      Global.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 200;
+      Global.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 2000;
+      Global.speedHook = JSON.parse(cc.sys.localStorage.getItem("speed")) || 20;
       this.updateTotalGold();
    }
 

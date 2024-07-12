@@ -5,49 +5,48 @@
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
-import Global from "../../ShuShiCarb.Global";
+import Global from "../../../ShuShiCarb.Global";
+import ShuShiCarbItemHook from "./ShuShiCarb.ItemHook";
+
+
 
 const {ccclass, property} = cc._decorator;
 
 @ccclass
 export default class ShuShiCarbShopView extends cc.Component {
+    public static instace: ShuShiCarbShopView = null;
     @property(cc.Label)
     lbGold: cc.Label = null;
     @property(cc.Node)
-    nBtnGreen: cc.Node = null;
-    @property(cc.Node)
-    nBtnGray: cc.Node = null;
-    isCheck = false;
+    nItemSpeedHook: cc.Node = null;
+
+    @property(cc.Prefab)
+    prfItemSpeedHook: cc.Prefab = null;
 
     onLoad() {
+        ShuShiCarbShopView.instace = this;
+        this.itemSpeedHook();
         this.updateGold();
-        this.checkGold();
     }
     start () {
 
     }
+
+    itemSpeedHook() {
+        let item = cc.instantiate(this.prfItemSpeedHook).getComponent(ShuShiCarbItemHook)
+        this.nItemSpeedHook.addChild(item.node);
+
+    }
     
-    checkGold() {
-        if(Global.totalGold >= Global.priceSpeedHook) {
-            this.changeBtn(true);
-            this.isCheck = true;
-        }
-    }
 
-    clickBuyHookSpeed() {
-      
-        this.updateGold();
-        console.log(Global.totalGold - Global.priceSpeedHook);
-    }
     updateGold() {
-        this.lbGold.string = Global.totalGold + ' ';
+        this.lbGold.string = Global.totalGold + " ";
     }
 
-
-    changeBtn(isTrue: boolean) {
-        this.nBtnGreen.active = isTrue;
-        this.nBtnGray.active = !isTrue;
-    }
+    // changeBtn(isTrue: boolean) {
+    //     this.nBtnGreen.active = isTrue;
+    //     this.nBtnGray.active = !isTrue;
+    // }
     onClickClose() {
         this.node.destroy();
     }
