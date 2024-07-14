@@ -22,7 +22,7 @@ export default class ShuShiCarbShopView extends cc.Component {
 
     @property(cc.Prefab)
     prfItemSpeedHook: cc.Prefab = null;
-
+    listDataHook = [];
     onLoad() {
         ShuShiCarbShopView.instace = this;
         this.itemSpeedHook();
@@ -35,7 +35,6 @@ export default class ShuShiCarbShopView extends cc.Component {
     itemSpeedHook() {
         let item = cc.instantiate(this.prfItemSpeedHook).getComponent(ShuShiCarbItemHook)
         this.nItemSpeedHook.addChild(item.node);
-
     }
     
 

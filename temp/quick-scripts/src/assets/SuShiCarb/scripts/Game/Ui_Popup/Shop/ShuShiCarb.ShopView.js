@@ -39,6 +39,7 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
         _this.lbGold = null;
         _this.nItemSpeedHook = null;
         _this.prfItemSpeedHook = null;
+        _this.listDataHook = [];
         return _this;
         // update (dt) {}
     }

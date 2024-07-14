@@ -43,14 +43,16 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
         _this.nCheckmask = null;
         _this.index = 0;
         _this.isCheck = false;
+        _this._data = null;
         return _this;
         // update (dt) {}
     }
     // data;
-    // setData() {
-    //     Global.dataHook = this.data;
-    //     console.log(this.data);
-    // }
+    ShuShiCarbItemHook.prototype.setData = function (data) {
+        this._data = data;
+        this.nStateBuy.active = data.isBuy;
+        console.log("data ", data);
+    };
     // LIFE-CYCLE CALLBACKS:
     ShuShiCarbItemHook.prototype.onLoad = function () {
         //this.setData();
@@ -59,8 +61,26 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
         this.index = JSON.parse(cc.sys.localStorage.getItem("itemIndex")) || 0;
         // Global.dataHook[this.index] = JSON.parse(cc.sys.localStorage.getItem("price")) || 150;
         // this.updatePrice(this.index);
+        this.loadPurchaseState();
         this.checkClick();
         this.updatePrice(this.index);
+    };
+    ShuShiCarbItemHook.prototype.loadPurchaseState = function () {
+        var purchaseData = JSON.parse(cc.sys.localStorage.getItem("purchaseData")) || [];
+        for (var i = 0; i < ShuShiCarb_Global_1.default.dataHook.length; i++) {
+            if (purchaseData[i]) {
+                ShuShiCarb_Global_1.default.dataHook[i].isBuy = purchaseData[i].isBuy;
+                ShuShiCarb_Global_1.default.dataHook[i].speed = purchaseData[i].speed;
+                this.nStateBuy.children[i].active = purchaseData[i].isBuy;
+            }
+        }
+    };
+    ShuShiCarbItemHook.prototype.savePurchaseState = function () {
+        var purchaseData = ShuShiCarb_Global_1.default.dataHook.map(function (item) { return ({
+            isBuy: item.isBuy,
+            speed: item.speed
+        }); });
+        cc.sys.localStorage.setItem('purchaseData', JSON.stringify(purchaseData));
     };
     ShuShiCarbItemHook.prototype.checkClick = function () {
         if (ShuShiCarb_Global_1.default.totalGold >= ShuShiCarb_Global_1.default.dataHook[this.index].price) {
@@ -74,9 +94,11 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
     };
     ShuShiCarbItemHook.prototype.onClickBuy = function () {
         if (this.isCheck) {
+            ShuShiCarb_Global_1.default.dataHook[this.index].isBuy = true;
             ShuShiCarb_Global_1.default.totalGold -= ShuShiCarb_Global_1.default.dataHook[this.index].price;
             ShuShiCarb_Global_1.default.speedHook += ShuShiCarb_Global_1.default.dataHook[this.index].speed;
-            this.nStateBuy.children[this.index].active = true;
+            this.nStateBuy.children[this.index].active = ShuShiCarb_Global_1.default.dataHook[this.index].isBuy;
+            this.savePurchaseState();
             cc.sys.localStorage.setItem('itemIndex', this.index.toString());
             // cc.sys.localStorage.setItem('price', Global.dataHook[this.index].price.toString);
             this.index++;
@@ -85,6 +107,7 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
             ShuShiCarb_ShopView_1.default.instace.updateGold();
             ShuShiCarb_GameManager_1.default.instance.updateTotalGold();
             this.updatePrice(this.index);
+            console.log("data Hoook ", ShuShiCarb_Global_1.default.dataHook);
         }
     };
     ShuShiCarbItemHook.prototype.updatePrice = function (index) {

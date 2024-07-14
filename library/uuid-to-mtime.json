@@ -1,1107 +1,1107 @@
 {
   "7c78ca51-bbc3-4964-82bb-47bb79d84d8d": {
-    "asset": 1720666912130,
-    "meta": 1720666955162,
+    "asset": 1720966722046,
+    "meta": 1720966770082,
     "relativePath": "SuShiCarb"
   },
   "37fdec23-eb99-46d0-ad6f-17929680eb8c": {
-    "asset": 1719889670757,
-    "meta": 1720489835321,
-    "relativePath": "SuShiCarb/texture"
+    "asset": 1720450164438,
+    "meta": 1720966770084,
+    "relativePath": "SuShiCarb\\texture"
   },
   "baa3978f-4fe6-48e3-b3ad-75bb172c81ee": {
-    "asset": 1720684468886,
-    "meta": 1720749066814,
-    "relativePath": "SuShiCarb/prefab"
+    "asset": 1720966722069,
+    "meta": 1720966770083,
+    "relativePath": "SuShiCarb\\prefab"
   },
   "bef96dfa-59b0-4776-9cd0-829867049dc8": {
-    "asset": 1720681501746,
-    "meta": 1720749066814,
-    "relativePath": "SuShiCarb/scripts"
+    "asset": 1720966722093,
+    "meta": 1720966770083,
+    "relativePath": "SuShiCarb\\scripts"
   },
   "2c45d1a1-4c56-482e-9bea-e36e58be25dc": {
-    "asset": 1720085243297,
-    "meta": 1720489835548,
-    "relativePath": "SuShiCarb/prefab/food.prefab"
+    "asset": 1720102449248,
+    "meta": 1720966770427,
+    "relativePath": "SuShiCarb\\prefab\\food.prefab"
   },
   "684f3575-44ea-4aee-84cd-234ed5dcb9f4": {
-    "asset": 1719981679111,
-    "meta": 1720489835545,
-    "relativePath": "SuShiCarb/texture/img/food"
+    "asset": 1720450170587,
+    "meta": 1720966770361,
+    "relativePath": "SuShiCarb\\texture\\img\\food"
   },
   "308a83db-40c7-4c39-ad69-16d6388bdcf5": {
-    "asset": 1719819586603,
-    "meta": 1720489835577,
-    "relativePath": "SuShiCarb/texture/img/food/nuoc_2.png"
+    "asset": 1719910557390,
+    "meta": 1720966770501,
+    "relativePath": "SuShiCarb\\texture\\img\\food\\nuoc_2.png"
   },
   "0e17e9b3-b0f1-4073-88c8-17d67f8fd694": {
-    "asset": 1719819586603,
-    "meta": 1720489835574,
-    "relativePath": "SuShiCarb/texture/img/food/banhngotmauhong_2.png"
+    "asset": 1719910557384,
+    "meta": 1720966770492,
+    "relativePath": "SuShiCarb\\texture\\img\\food\\banhngotmauhong_2.png"
   },
   "9657b48d-2210-4cd9-abdd-68ee14ce7d81": {
-    "asset": 1719819586603,
-    "meta": 1720489835571,
-    "relativePath": "SuShiCarb/texture/img/food/dabao_2.png"
+    "asset": 1719910557385,
+    "meta": 1720966770487,
+    "relativePath": "SuShiCarb\\texture\\img\\food\\dabao_2.png"
   },
   "a8a34555-12b3-4094-9579-33b19992ab7b": {
-    "asset": 1719819586603,
-    "meta": 1720489835576,
-    "relativePath": "SuShiCarb/texture/img/food/mi_2.png"
+    "asset": 1719910557388,
+    "meta": 1720966770500,
+    "relativePath": "SuShiCarb\\texture\\img\\food\\mi_2.png"
   },
   "227df08d-c4f1-4036-b142-cddd6e798077": {
-    "asset": 1719819586603,
-    "meta": 1720489835573,
-    "relativePath": "SuShiCarb/texture/img/food/hamberger_2.png"
+    "asset": 1719910557386,
+    "meta": 1720966770497,
+    "relativePath": "SuShiCarb\\texture\\img\\food\\hamberger_2.png"
   },
   "26de3796-31e7-48eb-9a9f-270769d66632": {
-    "asset": 1720686620312,
-    "meta": 1720749066816,
-    "relativePath": "SuShiCarb/texture/img"
+    "asset": 1720966722172,
+    "meta": 1720966770210,
+    "relativePath": "SuShiCarb\\texture\\img"
   },
   "c8ce394b-0b36-4625-8ceb-454f70841516": {
-    "asset": 1719889737407,
-    "meta": 1720489835398,
-    "relativePath": "SuShiCarb/texture/spines"
+    "asset": 1720450181075,
+    "meta": 1720966770211,
+    "relativePath": "SuShiCarb\\texture\\spines"
   },
   "0e1f6dc0-e82d-4559-99d5-929373b390f1": {
-    "asset": 1719889696166,
-    "meta": 1720489835546,
-    "relativePath": "SuShiCarb/texture/spines/char_2"
+    "asset": 1720450187258,
+    "meta": 1720966770366,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_2"
   },
   "8d89e2e3-9d31-4f56-a691-331561cc1d4c": {
-    "asset": 1719889696168,
-    "meta": 1720489835552,
-    "relativePath": "SuShiCarb/texture/spines/char_7"
+    "asset": 1720450192145,
+    "meta": 1720966770372,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_7"
   },
   "f8fd5e4b-636e-412c-94eb-3797485fc886": {
-    "asset": 1719889696167,
-    "meta": 1720489835547,
-    "relativePath": "SuShiCarb/texture/spines/char_3"
+    "asset": 1720450187264,
+    "meta": 1720966770368,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_3"
   },
   "5238f94a-9a4e-4b29-b018-7c53c3ab6446": {
-    "asset": 1719889696171,
-    "meta": 1720489835592,
-    "relativePath": "SuShiCarb/texture/spines/char_2/char_3.atlas.txt"
+    "asset": 1719910557403,
+    "meta": 1720966770720,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_2\\char_3.atlas.txt"
   },
   "22fcbcd2-6f8e-4543-b304-f03154771424": {
-    "asset": 1719889696173,
-    "meta": 1720489835743,
-    "relativePath": "SuShiCarb/texture/spines/char_2/char_3.json"
+    "asset": 1719910557405,
+    "meta": 1720966771025,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_2\\char_3.json"
   },
   "aab71d0d-7d50-4fb3-a97c-dc849d32480b": {
-    "asset": 1719889696167,
-    "meta": 1720489835547,
-    "relativePath": "SuShiCarb/texture/spines/char_4"
+    "asset": 1720450187268,
+    "meta": 1720966770369,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_4"
   },
   "d4f03e79-f2ca-46f6-b70e-33036451b416": {
-    "asset": 1719889696172,
-    "meta": 1720489835649,
-    "relativePath": "SuShiCarb/texture/spines/char_7/char_5_skin.atlas.txt"
+    "asset": 1719910557431,
+    "meta": 1720966770824,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_7\\char_5_skin.atlas.txt"
   },
   "9b4d06ae-fec7-4ab8-b043-afb9f8c7f12b": {
-    "asset": 1719889696175,
-    "meta": 1720489835771,
-    "relativePath": "SuShiCarb/texture/spines/char_7/char_5_skin.json"
+    "asset": 1719910557431,
+    "meta": 1720966771047,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_7\\char_5_skin.json"
   },
   "2170f520-4772-4119-8a7f-7a95b209ea13": {
-    "asset": 1719889696171,
-    "meta": 1720489835617,
-    "relativePath": "SuShiCarb/texture/spines/char_3/1.atlas.txt"
+    "asset": 1719910557408,
+    "meta": 1720966770743,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_3\\1.atlas.txt"
   },
   "f29ce688-fae8-488d-bd7e-91594f615f55": {
-    "asset": 1719889696170,
-    "meta": 1720489835548,
-    "relativePath": "SuShiCarb/texture/spines/char_5"
+    "asset": 1720450192140,
+    "meta": 1720966770370,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_5"
   },
   "77e60425-14c5-4ef7-9a9e-8a7597479474": {
-    "asset": 1719889696175,
-    "meta": 1720489835751,
-    "relativePath": "SuShiCarb/texture/spines/char_3/1.json"
+    "asset": 1719910557409,
+    "meta": 1720966771031,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_3\\1.json"
   },
   "3a639e83-02ca-4224-9a43-cd22d4d091c9": {
-    "asset": 1719889696171,
-    "meta": 1720489835624,
-    "relativePath": "SuShiCarb/texture/spines/char_4/char_4.atlas.txt"
+    "asset": 1719910557413,
+    "meta": 1720966770746,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_4\\char_4.atlas.txt"
   },
   "e246bef9-135a-40e8-8b6a-b5bcff466d37": {
-    "asset": 1719889696175,
-    "meta": 1720489835757,
-    "relativePath": "SuShiCarb/texture/spines/char_4/char_4.json"
+    "asset": 1719910557414,
+    "meta": 1720966771038,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_4\\char_4.json"
   },
   "3f5db20e-1764-4e52-9868-1f67fb5dfc7e": {
-    "asset": 1719889696168,
-    "meta": 1720489835551,
-    "relativePath": "SuShiCarb/texture/spines/char_6"
+    "asset": 1720450192144,
+    "meta": 1720966770371,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_6"
   },
   "00a1b84f-01f4-4857-a49a-63e7e8cc9957": {
-    "asset": 1719889696173,
-    "meta": 1720489835633,
-    "relativePath": "SuShiCarb/texture/spines/char_5/char_3_skin.atlas.txt"
+    "asset": 1719910557417,
+    "meta": 1720966770768,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_5\\char_3_skin.atlas.txt"
   },
   "8479e444-3741-42b9-a9f1-8660eb4fc6df": {
-    "asset": 1719889696175,
-    "meta": 1720489835761,
-    "relativePath": "SuShiCarb/texture/spines/char_5/char_3_skin.json"
+    "asset": 1719910557419,
+    "meta": 1720966771041,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_5\\char_3_skin.json"
   },
   "b0733005-906e-4263-9441-718bb43329a9": {
-    "asset": 1719889696172,
-    "meta": 1720489835639,
-    "relativePath": "SuShiCarb/texture/spines/char_6/char_4_skin.atlas.txt"
+    "asset": 1719910557425,
+    "meta": 1720966770785,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_6\\char_4_skin.atlas.txt"
   },
   "94bd4fcb-6031-451c-bb7b-cb75fde9e64d": {
-    "asset": 1719889696168,
-    "meta": 1720489835552,
-    "relativePath": "SuShiCarb/texture/spines/char_8"
+    "asset": 1720450196888,
+    "meta": 1720966770372,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_8"
   },
   "7e464746-6b1b-4f49-89ef-d10dc71cd22e": {
-    "asset": 1719889696176,
-    "meta": 1720489835766,
-    "relativePath": "SuShiCarb/texture/spines/char_6/char_4_skin.json"
+    "asset": 1719910557426,
+    "meta": 1720966771058,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_6\\char_4_skin.json"
   },
   "f4d0468c-fcfc-4482-bb29-318c6b714ee8": {
-    "asset": 1719889696172,
-    "meta": 1720489835662,
-    "relativePath": "SuShiCarb/texture/spines/char_8/char_nu_2_skin.atlas.txt"
+    "asset": 1719910557436,
+    "meta": 1720966770850,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_8\\char_nu_2_skin.atlas.txt"
   },
   "687db4c5-b1e2-40d0-ac12-d1a3bf375aa4": {
-    "asset": 1719889696175,
-    "meta": 1720489835776,
-    "relativePath": "SuShiCarb/texture/spines/char_8/char_nu_2_skin.json"
+    "asset": 1719910557437,
+    "meta": 1720966771052,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_8\\char_nu_2_skin.json"
   },
   "00a287d0-8a6f-43d6-bf7e-e5311571cbed": {
-    "asset": 1719889696166,
-    "meta": 1720489835546,
-    "relativePath": "SuShiCarb/texture/spines/char_1"
+    "asset": 1720450181070,
+    "meta": 1720966770365,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_1"
   },
   "a965f143-8169-4779-9883-df1af133dc7a": {
-    "asset": 1719889696175,
-    "meta": 1720489835683,
-    "relativePath": "SuShiCarb/texture/spines/char_7/char_5_skin.png"
+    "asset": 1719910557433,
+    "meta": 1720966770892,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_7\\char_5_skin.png"
   },
   "c85e5afc-72e7-4a83-b17e-5637811ca576": {
-    "asset": 1719889696173,
-    "meta": 1720489835657,
-    "relativePath": "SuShiCarb/texture/spines/char_2/char_3.png"
+    "asset": 1719910557407,
+    "meta": 1720966770862,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_2\\char_3.png"
   },
   "66368af1-0864-498b-bf3c-8b4a4d85a717": {
-    "asset": 1719889696171,
-    "meta": 1720489835591,
-    "relativePath": "SuShiCarb/texture/spines/char_1/char_1.atlas.txt"
+    "asset": 1719910557397,
+    "meta": 1720966770690,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_1\\char_1.atlas.txt"
   },
   "1a3902e6-340d-48e3-9280-26d4dfdd7f89": {
-    "asset": 1719889696170,
-    "meta": 1720489835553,
-    "relativePath": "SuShiCarb/texture/spines/char_9"
+    "asset": 1720450196892,
+    "meta": 1720966770373,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_9"
   },
   "1949ac16-d6c5-43c7-b801-cd2ded84c5c2": {
-    "asset": 1719889696173,
-    "meta": 1720489835660,
-    "relativePath": "SuShiCarb/texture/spines/char_3/1.png"
+    "asset": 1719910557411,
+    "meta": 1720966770879,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_3\\1.png"
   },
   "e4abee84-163a-404b-ab8f-7afedf0b0cc0": {
-    "asset": 1719889696176,
-    "meta": 1720489835736,
-    "relativePath": "SuShiCarb/texture/spines/char_1/char_1.json"
+    "asset": 1719910557399,
+    "meta": 1720966771020,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_1\\char_1.json"
   },
   "8f4e5afc-c5ab-43b8-a4bd-f3a81d513e9e": {
-    "asset": 1719889696173,
-    "meta": 1720489835667,
-    "relativePath": "SuShiCarb/texture/spines/char_4/char_4.png"
+    "asset": 1719910557415,
+    "meta": 1720966770883,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_4\\char_4.png"
   },
   "6caf8131-60f4-409c-a2d1-b2765383f156": {
-    "asset": 1719889696175,
-    "meta": 1720489835675,
-    "relativePath": "SuShiCarb/texture/spines/char_5/char_3_skin.png"
+    "asset": 1719910557422,
+    "meta": 1720966770886,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_5\\char_3_skin.png"
   },
   "77d9f0bc-ee94-493d-bc45-74e7e20b7835": {
-    "asset": 1719889696174,
-    "meta": 1720489835678,
-    "relativePath": "SuShiCarb/texture/spines/char_9/char_nu_2.atlas.txt"
+    "asset": 1719910557440,
+    "meta": 1720966770858,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_9\\char_nu_2.atlas.txt"
   },
   "5cab4aa8-02e8-4c67-917a-c40aa15ff880": {
-    "asset": 1719889696176,
-    "meta": 1720489835783,
-    "relativePath": "SuShiCarb/texture/spines/char_9/char_nu_2.json"
+    "asset": 1719910557442,
+    "meta": 1720966771063,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_9\\char_nu_2.json"
   },
   "194961f2-3680-45a6-8ce0-f87aeb31d490": {
-    "asset": 1719889696176,
-    "meta": 1720489835691,
-    "relativePath": "SuShiCarb/texture/spines/char_8/char_nu_2_skin.png"
+    "asset": 1719910557438,
+    "meta": 1720966770906,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_8\\char_nu_2_skin.png"
   },
   "26160d09-3e91-4eab-a3fc-509eb3bd342a": {
-    "asset": 1719889696176,
-    "meta": 1720489835676,
-    "relativePath": "SuShiCarb/texture/spines/char_6/char_4_skin.png"
+    "asset": 1719910557429,
+    "meta": 1720966770903,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_6\\char_4_skin.png"
   },
   "36f1f5cc-4bb7-4b05-ab65-0e5bfec5d86b": {
-    "asset": 1719889696171,
-    "meta": 1720489835632,
-    "relativePath": "SuShiCarb/texture/spines/char_1/char_1.png"
+    "asset": 1719910557400,
+    "meta": 1720966770859,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_1\\char_1.png"
   },
   "cb25cbe7-486b-4ec3-a048-0b89d989e334": {
-    "asset": 1719889696176,
-    "meta": 1720489835691,
-    "relativePath": "SuShiCarb/texture/spines/char_9/char_nu_2.png"
+    "asset": 1719910557444,
+    "meta": 1720966770905,
+    "relativePath": "SuShiCarb\\texture\\spines\\char_9\\char_nu_2.png"
   },
   "bc3dba52-03f1-42e3-8583-2d0f72bb5d61": {
-    "asset": 1720602154489,
-    "meta": 1720666955349,
-    "relativePath": "SuShiCarb/texture/img/other"
+    "asset": 1720966722169,
+    "meta": 1720966770362,
+    "relativePath": "SuShiCarb\\texture\\img\\other"
   },
   "6cc46511-2891-47c9-8345-c0bcb817a3b6": {
-    "asset": 1719889908416,
-    "meta": 1720489835613,
-    "relativePath": "SuShiCarb/texture/img/other/customerNeed-frame.png"
+    "asset": 1719910557393,
+    "meta": 1720966770536,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\customerNeed-frame.png"
   },
   "88f7216d-b968-4c07-a372-e2b8900e16c6": {
-    "asset": 1720496965996,
-    "meta": 1720496966008,
-    "relativePath": "SuShiCarb/prefab/nPlayer.prefab"
+    "asset": 1720966722070,
+    "meta": 1720966770422,
+    "relativePath": "SuShiCarb\\prefab\\nPlayer.prefab"
   },
   "e14ed4fd-bc4f-4634-a348-42b866f07f96": {
-    "asset": 1720691321196,
-    "meta": 1720749066815,
-    "relativePath": "SuShiCarb/scripts/Game"
+    "asset": 1720966722078,
+    "meta": 1720966770086,
+    "relativePath": "SuShiCarb\\scripts\\Game"
   },
   "71643b2c-ae53-4309-8a64-1e145a67afe6": {
-    "asset": 1719981679110,
-    "meta": 1720489835578,
-    "relativePath": "SuShiCarb/texture/img/food/banh my mu tat copy.png"
+    "asset": 1720102449253,
+    "meta": 1720966770489,
+    "relativePath": "SuShiCarb\\texture\\img\\food\\banh my mu tat copy.png"
   },
   "301f0b7f-df29-4951-9358-d203328365e7": {
-    "asset": 1720144827652,
-    "meta": 1720489835604,
-    "relativePath": "SuShiCarb/texture/img/other/hook_close.png"
+    "asset": 1720450642547,
+    "meta": 1720966770534,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\hook_close.png"
   },
   "d454e086-ac40-40f2-97a7-2b04203c7f26": {
-    "asset": 1720144827652,
-    "meta": 1720489835608,
-    "relativePath": "SuShiCarb/texture/img/other/hook_open.png"
+    "asset": 1720450642548,
+    "meta": 1720966770571,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\hook_open.png"
   },
   "21660401-4863-4961-b37b-9ecefabf2c97": {
-    "asset": 1720144937115,
-    "meta": 1720489835604,
-    "relativePath": "SuShiCarb/texture/img/other/hook_rope.png"
+    "asset": 1720450642548,
+    "meta": 1720966770568,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\hook_rope.png"
   },
   "f9e4e27c-cef0-445b-8bd3-96d142d771db": {
-    "asset": 1720599098933,
-    "meta": 1720666955349,
-    "relativePath": "SuShiCarb/texture/img/bg"
+    "asset": 1720966722143,
+    "meta": 1720966770360,
+    "relativePath": "SuShiCarb\\texture\\img\\bg"
   },
   "5293a04a-a90f-4be2-9872-0b6036cccc43": {
-    "asset": 1720432482280,
-    "meta": 1720489835577,
-    "relativePath": "SuShiCarb/texture/img/other/ multiply.png"
+    "asset": 1720450642546,
+    "meta": 1720966770518,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\ multiply.png"
   },
   "2d2cebd6-60e7-4c4d-b569-47123e381f46": {
-    "asset": 1720432482280,
-    "meta": 1720489835605,
-    "relativePath": "SuShiCarb/texture/img/other/tick.png"
+    "asset": 1720450642549,
+    "meta": 1720966770614,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\tick.png"
   },
   "692ea535-b34a-45a5-bbf3-5507cc4a8852": {
-    "asset": 1720490165481,
-    "meta": 1720490165495,
-    "relativePath": "SuShiCarb/texture/img/other/khay.png"
+    "asset": 1720966722156,
+    "meta": 1720966770584,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\khay.png"
   },
   "55f846b2-5e34-4078-b045-b5bb568052e6": {
-    "asset": 1720490805928,
-    "meta": 1720490845706,
-    "relativePath": "SuShiCarb/texture/img/bg/bg_game.png"
+    "asset": 1720966722143,
+    "meta": 1720966770548,
+    "relativePath": "SuShiCarb\\texture\\img\\bg\\bg_game.png"
   },
   "426bfee1-1355-408f-94ad-449096ef5e5f": {
-    "asset": 1720492114621,
-    "meta": 1720492114641,
-    "relativePath": "SuShiCarb/texture/img/other/texture_gameplay_1 copy.png"
+    "asset": 1720966722169,
+    "meta": 1720966770605,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\texture_gameplay_1 copy.png"
   },
   "bcf0bc43-45f3-46fa-9f23-c3b8a044eb1a": {
-    "asset": 1720499025953,
-    "meta": 1720499032037,
-    "relativePath": "SuShiCarb/texture/img/other/Gold.png"
+    "asset": 1720966722150,
+    "meta": 1720966770527,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\Gold.png"
   },
   "ea88ffa0-c608-497b-803d-b0674f4d57c7": {
-    "asset": 1720499025953,
-    "meta": 1720499060734,
-    "relativePath": "SuShiCarb/texture/img/bg/bg-lb.png"
+    "asset": 1720966722139,
+    "meta": 1720966770483,
+    "relativePath": "SuShiCarb\\texture\\img\\bg\\bg-lb.png"
   },
   "3894fc97-5af5-4c97-8a83-6f65bf111a0d": {
-    "asset": 1720576281280,
-    "meta": 1720576409366,
-    "relativePath": "SuShiCarb/scripts/Game/ShuShiCarb.Player.ts"
+    "asset": 1720966722076,
+    "meta": 1720966770327,
+    "relativePath": "SuShiCarb\\scripts\\Game\\ShuShiCarb.Player.ts"
   },
   "8124f8f0-4c62-4ea2-90ec-4cc78b305265": {
-    "asset": 1720576860607,
-    "meta": 1720576860641,
-    "relativePath": "SuShiCarb/texture/img/other/3.png"
+    "asset": 1720966722146,
+    "meta": 1720966770513,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\3.png"
   },
   "1a7c5ce6-c8c9-4704-bb8b-e246cc868375": {
-    "asset": 1720576860607,
-    "meta": 1720576860655,
-    "relativePath": "SuShiCarb/texture/img/other/4.png"
+    "asset": 1720966722148,
+    "meta": 1720966770532,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\4.png"
   },
   "1814de53-8909-4312-886a-4e0a97c76cd5": {
-    "asset": 1720583402255,
-    "meta": 1720583524421,
-    "relativePath": "SuShiCarb/scripts/Game/ShuShiCarb.Food.ts"
+    "asset": 1720966722073,
+    "meta": 1720966770256,
+    "relativePath": "SuShiCarb\\scripts\\Game\\ShuShiCarb.Food.ts"
   },
   "eafd9bbe-a948-4f13-86eb-dde2f61b6859": {
-    "asset": 1720759559387,
-    "meta": 1720759559392,
-    "relativePath": "SuShiCarb/Main.fire"
+    "asset": 1720968067360,
+    "meta": 1720968067369,
+    "relativePath": "SuShiCarb\\Main.fire"
   },
   "c3512697-4ba7-4a4a-94a9-073be1d9aa82": {
-    "asset": 1720599098931,
-    "meta": 1720599099008,
-    "relativePath": "SuShiCarb/texture/img/bg/bg 2-4.png"
+    "asset": 1720966722136,
+    "meta": 1720966770957,
+    "relativePath": "SuShiCarb\\texture\\img\\bg\\bg 2-4.png"
   },
   "006de1ef-fb42-4c5d-860c-6c38a1a743c2": {
-    "asset": 1720600453860,
-    "meta": 1720600453886,
-    "relativePath": "SuShiCarb/texture/img/other/rank.png"
+    "asset": 1720966722162,
+    "meta": 1720966770592,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\rank.png"
   },
   "7d6475ae-c363-48bc-acaa-9e97d41127b0": {
-    "asset": 1720600453860,
-    "meta": 1720600453887,
-    "relativePath": "SuShiCarb/texture/img/other/setting.png"
+    "asset": 1720966722164,
+    "meta": 1720966770600,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\setting.png"
   },
   "7b97c6e6-611d-41c2-939c-45fad7d4e988": {
-    "asset": 1720600453860,
-    "meta": 1720600453887,
-    "relativePath": "SuShiCarb/texture/img/other/shop.png"
+    "asset": 1720966722166,
+    "meta": 1720966770597,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\shop.png"
   },
   "30c435b4-a5c0-467a-b841-308086fb1881": {
-    "asset": 1720600453860,
-    "meta": 1720600453888,
-    "relativePath": "SuShiCarb/texture/img/other/playbtn.png"
+    "asset": 1720966722158,
+    "meta": 1720966770574,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\playbtn.png"
   },
   "10b53d97-f027-4dcc-a2dc-ee69d21d16cc": {
-    "asset": 1720600453862,
-    "meta": 1720600453892,
-    "relativePath": "SuShiCarb/texture/img/other/LG.png"
+    "asset": 1720966722151,
+    "meta": 1720966770590,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\LG.png"
   },
   "146f7249-f9d5-4ef3-856e-0660f08c50ba": {
-    "asset": 1720600464813,
-    "meta": 1720600464828,
-    "relativePath": "SuShiCarb/texture/img/other/progress2.png"
+    "asset": 1720966722159,
+    "meta": 1720966770578,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\progress2.png"
   },
   "712f9333-a111-4070-a951-4ca4e5de2c6a": {
-    "asset": 1720602154483,
-    "meta": 1720602154506,
-    "relativePath": "SuShiCarb/texture/img/other/close.png"
+    "asset": 1720966722154,
+    "meta": 1720966770528,
+    "relativePath": "SuShiCarb\\texture\\img\\other\\close.png"
   },
   "37f96d5b-afe1-4d6a-bef2-042be1745237": {
-    "asset": 1720684719459,
-    "meta": 1720684719467,
-    "relativePath": "SuShiCarb/prefab/Main.prefab"
+    "asset": 1720966722048,
+    "meta": 1720966770430,
+    "relativePath": "SuShiCarb\\prefab\\Main.prefab"
   },
   "feab3a36-d342-436d-8488-ecd44d3e7a73": {
-    "asset": 1720666905206,
-    "meta": 1720666955306,
-    "relativePath": "SuShiCarb/scripts/Game/ShuShiCarb.Conveyor.ts"
+    "asset": 1720966722071,
+    "meta": 1720966770237,
+    "relativePath": "SuShiCarb\\scripts\\Game\\ShuShiCarb.Conveyor.ts"
   },
   "1c92f9f0-5818-4966-aad0-ac1068288c45": {
-    "asset": 1720691323164,
-    "meta": 1720691323170,
-    "relativePath": "SuShiCarb/prefab/UI_PopUp/GameOver.prefab"
+    "asset": 1720966722052,
+    "meta": 1720966770424,
+    "relativePath": "SuShiCarb\\prefab\\UI_PopUp\\GameOver.prefab"
   },
   "2db67d16-b586-4623-9f31-19c89146a6e9": {
-    "asset": 1720681455059,
-    "meta": 1720681455119,
-    "relativePath": "SuShiCarb/texture/img/popup/bgPopup.png"
+    "asset": 1720966722180,
+    "meta": 1720966770612,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\bgPopup.png"
   },
   "a81f31b7-4234-4d47-97b9-d73e2e82e07a": {
-    "asset": 1720681455059,
-    "meta": 1720681455120,
-    "relativePath": "SuShiCarb/texture/img/popup/YOU FAILED.png"
+    "asset": 1720966722176,
+    "meta": 1720966770681,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\YOU FAILED.png"
   },
   "ecf4eeb2-6c13-4aa8-a95b-f799c85e9469": {
-    "asset": 1720681455059,
-    "meta": 1720681455120,
-    "relativePath": "SuShiCarb/texture/img/popup/YOU WIN_.png"
+    "asset": 1720966722178,
+    "meta": 1720966770686,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\YOU WIN_.png"
   },
   "c9e0a05d-af0f-48a1-a7cc-830d0f09ea24": {
-    "asset": 1720681455059,
-    "meta": 1720681455121,
-    "relativePath": "SuShiCarb/texture/img/popup/NPC_3 copy.png"
+    "asset": 1720966722175,
+    "meta": 1720966770668,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\NPC_3 copy.png"
   },
   "3587e1f7-d7fa-4099-816b-5577536aec5d": {
-    "asset": 1720681455059,
-    "meta": 1720681455122,
-    "relativePath": "SuShiCarb/texture/img/popup/bt.png"
+    "asset": 1720966722183,
+    "meta": 1720966770607,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\bt.png"
   },
   "f99acfb9-30c2-42e5-b514-393396516f92": {
-    "asset": 1720681455059,
-    "meta": 1720681455128,
-    "relativePath": "SuShiCarb/texture/img/popup/circle.png"
+    "asset": 1720966722184,
+    "meta": 1720966770620,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\circle.png"
   },
   "ad20045b-7559-4b26-86f3-2bec0d5d4a89": {
-    "asset": 1720681455059,
-    "meta": 1720681455130,
-    "relativePath": "SuShiCarb/texture/img/popup/star-off.png"
+    "asset": 1720966722197,
+    "meta": 1720966770655,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\star-off.png"
   },
   "96004419-f784-4dfb-997e-6762bf57413f": {
-    "asset": 1720681455059,
-    "meta": 1720681455132,
-    "relativePath": "SuShiCarb/texture/img/popup/star.png"
+    "asset": 1720966722200,
+    "meta": 1720966770670,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\star.png"
   },
   "63440a1f-f485-403a-999c-f339228001f2": {
-    "asset": 1720681455059,
-    "meta": 1720681455132,
-    "relativePath": "SuShiCarb/texture/img/popup/light.png"
+    "asset": 1720966722189,
+    "meta": 1720966770626,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\light.png"
   },
   "6b9db4a7-7ed7-4265-be0c-34439d32a1c7": {
-    "asset": 1720686620312,
-    "meta": 1720749066817,
-    "relativePath": "SuShiCarb/texture/img/popup"
+    "asset": 1720966722202,
+    "meta": 1720966770364,
+    "relativePath": "SuShiCarb\\texture\\img\\popup"
   },
   "0757162b-4c1a-4741-9e11-5bb28d72862f": {
-    "asset": 1720683100621,
-    "meta": 1720683101899,
-    "relativePath": "SuShiCarb/scripts/Game/ShuShiCard.CollierManager.ts"
+    "asset": 1720966722077,
+    "meta": 1720966770358,
+    "relativePath": "SuShiCarb\\scripts\\Game\\ShuShiCard.CollierManager.ts"
   },
   "09ca05d0-a1d9-4d71-92ab-88bfa296f9c1": {
-    "asset": 1720684583890,
-    "meta": 1720684583897,
-    "relativePath": "SuShiCarb/prefab/UI_PopUp/SettingView.prefab"
+    "asset": 1720966722055,
+    "meta": 1720966770432,
+    "relativePath": "SuShiCarb\\prefab\\UI_PopUp\\SettingView.prefab"
   },
   "db0ee58a-35c6-4cca-9e27-66975460a25a": {
-    "asset": 1720684283612,
-    "meta": 1720684283681,
-    "relativePath": "SuShiCarb/texture/img/popup/x.png"
+    "asset": 1720966722202,
+    "meta": 1720966770675,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\x.png"
   },
   "4e92ccab-5f33-46a3-80f7-ae59cea6157c": {
-    "asset": 1720684283609,
-    "meta": 1720684283682,
-    "relativePath": "SuShiCarb/texture/img/popup/music.png"
+    "asset": 1720966722193,
+    "meta": 1720966770646,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\music.png"
   },
   "c47d7142-bb43-4b57-bd8e-a17342f2d35e": {
-    "asset": 1720684283609,
-    "meta": 1720684283682,
-    "relativePath": "SuShiCarb/texture/img/popup/music2.png"
+    "asset": 1720966722195,
+    "meta": 1720966770648,
+    "relativePath": "SuShiCarb\\texture\\img\\popup\\music2.png"
   },
   "be91290b-0b00-471f-abc4-35aec3bc67d6": {
-    "asset": 1720686522166,
-    "meta": 1720749066815,
-    "relativePath": "SuShiCarb/prefab/UI_PopUp"
+    "asset": 1720966722058,
+    "meta": 1720966770086,
+    "relativePath": "SuShiCarb\\prefab\\UI_PopUp"
   },
   "4a457e35-fe6b-4939-9811-61a851cc24c3": {
-    "asset": 1720687754310,
-    "meta": 1720749066816,
-    "relativePath": "SuShiCarb/scripts/Game/Ui_Popup"
+    "asset": 1720966722086,
+    "meta": 1720966770359,
+    "relativePath": "SuShiCarb\\scripts\\Game\\Ui_Popup"
   },
   "48471dd9-099f-45b2-941a-8fa9dc24ab3d": {
-    "asset": 1720684621879,
-    "meta": 1720687754320,
-    "relativePath": "SuShiCarb/scripts/Game/Ui_Popup/ShuShiCarb.SettingView.ts"
+    "asset": 1720966722083,
+    "meta": 1720966770389,
+    "relativePath": "SuShiCarb\\scripts\\Game\\Ui_Popup\\ShuShiCarb.SettingView.ts"
   },
   "44367fcb-565f-40a9-ba92-f8a2ee0565b8": {
-    "asset": 1720686442938,
-    "meta": 1720686444090,
-    "relativePath": "SuShiCarb/scripts/Game/Ui_Popup/ShuShiCrab.GameOver.ts"
+    "asset": 1720966722085,
+    "meta": 1720966770411,
+    "relativePath": "SuShiCarb\\scripts\\Game\\Ui_Popup\\ShuShiCrab.GameOver.ts"
   },
   "7b62cb46-6c3a-4b79-a792-81e8a735a967": {
-    "asset": 1720689904667,
-    "meta": 1720749066817,
-    "relativePath": "SuShiCarb/texture/img/Shop"
+    "asset": 1720966722113,
+    "meta": 1720966770364,
+    "relativePath": "SuShiCarb\\texture\\img\\Shop"
   },
   "7096e32e-2d78-4ac5-9453-19f4621d8fb2": {
-    "asset": 1720686589277,
-    "meta": 1720686589306,
-    "relativePath": "SuShiCarb/texture/img/Shop/time.png"
+    "asset": 1720966722113,
+    "meta": 1720966770789,
+    "relativePath": "SuShiCarb\\texture\\img\\Shop\\time.png"
   },
   "f0a4ad52-7689-4dd3-a70e-c23582702dec": {
-    "asset": 1720686589277,
-    "meta": 1720686589307,
-    "relativePath": "SuShiCarb/texture/img/Shop/money.png"
+    "asset": 1720966722108,
+    "meta": 1720966770714,
+    "relativePath": "SuShiCarb\\texture\\img\\Shop\\money.png"
   },
   "bb653e7c-4755-44a4-8215-8a99dba0ade6": {
-    "asset": 1720686589277,
-    "meta": 1720686589308,
-    "relativePath": "SuShiCarb/texture/img/Shop/hook.png"
+    "asset": 1720966722104,
+    "meta": 1720966770716,
+    "relativePath": "SuShiCarb\\texture\\img\\Shop\\hook.png"
   },
   "004156fc-5d1e-4830-b72c-1b2d23c50041": {
-    "asset": 1720686589278,
-    "meta": 1720686589325,
-    "relativePath": "SuShiCarb/texture/img/Shop/bgShop.png"
+    "asset": 1720966722099,
+    "meta": 1720966770765,
+    "relativePath": "SuShiCarb\\texture\\img\\Shop\\bgShop.png"
   },
   "30edba6e-98f4-4299-a148-1be30a5557a7": {
-    "asset": 1720689649901,
-    "meta": 1720689904680,
-    "relativePath": "SuShiCarb/texture/img/Shop/btn_upgrade_green.png"
+    "asset": 1720966722101,
+    "meta": 1720966770700,
+    "relativePath": "SuShiCarb\\texture\\img\\Shop\\btn_upgrade_green.png"
   },
   "9e328d39-575b-406c-858a-5a01942b21cb": {
-    "asset": 1720689875402,
-    "meta": 1720689895552,
-    "relativePath": "SuShiCarb/texture/img/Shop/btn_upgrade_gray.png"
+    "asset": 1720966722100,
+    "meta": 1720966770697,
+    "relativePath": "SuShiCarb\\texture\\img\\Shop\\btn_upgrade_gray.png"
   },
   "57e45225-4d13-41a0-9dba-9655724847c7": {
-    "asset": 1720691423908,
-    "meta": 1720691444862,
-    "relativePath": "SuShiCarb/scripts/ShuShiCarb.Game.ts"
+    "asset": 1720966722088,
+    "meta": 1720966770172,
+    "relativePath": "SuShiCarb\\scripts\\ShuShiCarb.Game.ts"
   },
   "ba5e2f98-4512-4d07-a0a3-7a4c6bd0f426": {
-    "asset": 1720759587423,
-    "meta": 1720759587430,
-    "relativePath": "SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
+    "asset": 1720966722067,
+    "meta": 1720966770441,
+    "relativePath": "SuShiCarb\\prefab\\UI_PopUp\\Shop\\ShopView.prefab"
   },
   "e0ea53df-eaa0-4e42-b2b9-8306a2198ebb": {
-    "asset": 1720749224346,
-    "meta": 1720749224347,
-    "relativePath": "SuShiCarb/prefab/UI_PopUp/Shop"
+    "asset": 1720966722067,
+    "meta": 1720966770213,
+    "relativePath": "SuShiCarb\\prefab\\UI_PopUp\\Shop"
   },
   "e3b940b3-7468-4ab4-a646-dd127b4c35d6": {
-    "asset": 1720749256029,
-    "meta": 1720749266526,
-    "relativePath": "SuShiCarb/prefab/UI_PopUp/Shop/ItemMoney.prefab"
+    "asset": 1720966722062,
+    "meta": 1720966770436,
+    "relativePath": "SuShiCarb\\prefab\\UI_PopUp\\Shop\\ItemMoney.prefab"
   },
   "6e8f326d-e577-4027-b9b1-4098d0c34ea1": {
-    "asset": 1720749273205,
-    "meta": 1720749283053,
-    "relativePath": "SuShiCarb/prefab/UI_PopUp/Shop/ItemTime.prefab"
+    "asset": 1720966722065,
+    "meta": 1720966770439,
+    "relativePath": "SuShiCarb\\prefab\\UI_PopUp\\Shop\\ItemTime.prefab"
   },
   "aa5eeb38-8ebd-40e1-9c3a-207f96485a63": {
-    "asset": 1720755176887,
-    "meta": 1720755176889,
-    "relativePath": "SuShiCarb/scripts/Game/Ui_Popup/Shop"
-  },
-  "f6e6dd15-71d1-4ffe-ace7-24fd39942c05": {
-    "asset": 1627377544000,
-    "meta": 1720768456469,
-    "relativePath": "obsolete"
-  },
-  "f743d2b6-b7ea-4c14-a55b-547ed4d0a045": {
-    "asset": 1627377544000,
-    "meta": 1720768456470,
-    "relativePath": "particle"
-  },
-  "ae6c6c98-11e4-452f-8758-75f5c6a56e83": {
-    "asset": 1627377544000,
-    "meta": 1720768456473,
-    "relativePath": "prefab"
-  },
-  "897ef7a1-4860-4f64-968d-f5924b18668a": {
-    "asset": 1627377544000,
-    "meta": 1720768456476,
-    "relativePath": "prefab/2d-camera.prefab"
-  },
-  "70bbeb73-6dc2-4ee4-8faf-76b3a0e34ec4": {
-    "asset": 1627377544000,
-    "meta": 1720768456477,
-    "relativePath": "prefab/3d-particle.prefab"
-  },
-  "972b9a4d-47ee-4c74-b5c3-61d8a69bc29f": {
-    "asset": 1627377544000,
-    "meta": 1720768456478,
-    "relativePath": "prefab/button.prefab"
-  },
-  "70d7cdb0-04cd-41bb-9480-c06a4785f386": {
-    "asset": 1627377544000,
-    "meta": 1720768456479,
-    "relativePath": "prefab/3d-camera.prefab"
-  },
-  "ed88f13d-fcad-4848-aa35-65a2cb973584": {
-    "asset": 1627377544000,
-    "meta": 1720768456480,
-    "relativePath": "prefab/3d-stage.prefab"
-  },
-  "a3ee0214-b432-4865-9666-4a3211814282": {
-    "asset": 1627377544000,
-    "meta": 1720768456480,
-    "relativePath": "prefab/light"
-  },
-  "2c937608-2562-40ea-b264-7395df6f0cea": {
-    "asset": 1627377544000,
-    "meta": 1720768456482,
-    "relativePath": "prefab/canvas.prefab"
-  },
-  "61aeb05b-3b32-452b-8eed-2b76deeed554": {
-    "asset": 1627377544000,
-    "meta": 1720768456483,
-    "relativePath": "prefab/editbox.prefab"
-  },
-  "27756ebb-3d33-44b0-9b96-e858fadd4dd4": {
-    "asset": 1627377544000,
-    "meta": 1720768456484,
-    "relativePath": "prefab/label.prefab"
-  },
-  "785a442c-3ceb-45be-a46e-7317f625f3b9": {
-    "asset": 1627377544000,
-    "meta": 1720768456485,
-    "relativePath": "prefab/layout.prefab"
-  },
-  "ca8401fe-ad6e-41a8-bd46-8e3e4e9945be": {
-    "asset": 1627377544000,
-    "meta": 1720768456485,
-    "relativePath": "prefab/pageview.prefab"
-  },
-  "cd33edea-55f5-46c2-958d-357a01384a36": {
-    "asset": 1627377544000,
-    "meta": 1720768456492,
-    "relativePath": "prefab/particlesystem.prefab"
-  },
-  "4a37dd57-78cd-4cec-aad4-f11a73d12b63": {
-    "asset": 1627377544000,
-    "meta": 1720768456493,
-    "relativePath": "prefab/richtext.prefab"
-  },
-  "5965ffac-69da-4b55-bcde-9225d0613c28": {
-    "asset": 1627377544000,
-    "meta": 1720768456494,
-    "relativePath": "prefab/progressBar.prefab"
-  },
-  "0004d1cf-a0ad-47d8-ab17-34d3db9d35a3": {
-    "asset": 1627377544000,
-    "meta": 1720768456495,
-    "relativePath": "prefab/slider.prefab"
-  },
-  "32044bd2-481f-4cf1-a656-e2b2fb1594eb": {
-    "asset": 1627377544000,
-    "meta": 1720768456496,
-    "relativePath": "prefab/scrollview.prefab"
-  },
-  "96083d03-c332-4a3f-9386-d03e2d19e8ee": {
-    "asset": 1627377544000,
-    "meta": 1720768456498,
-    "relativePath": "prefab/sprite.prefab"
-  },
-  "1f55e3be-b89b-4b79-88de-47fd31018044": {
-    "asset": 1627377544000,
-    "meta": 1720768456499,
-    "relativePath": "prefab/sprite_splash.prefab"
-  },
-  "8a96b965-2dc0-4e03-aa90-3b79cb93b5b4": {
-    "asset": 1627377544000,
-    "meta": 1720768456496,
-    "relativePath": "obsolete/atom.png"
-  },
-  "7de03a80-4457-438d-95a7-3e7cdffd6086": {
-    "asset": 1627377544000,
-    "meta": 1720768456499,
-    "relativePath": "prefab/tiledmap.prefab"
-  },
-  "0d784963-d024-4ea6-a7db-03be0ad63010": {
-    "asset": 1627377544000,
-    "meta": 1720768456500,
-    "relativePath": "prefab/toggle.prefab"
-  },
-  "d0a82d39-bede-46c4-b698-c81ff0dedfff": {
-    "asset": 1627377544000,
-    "meta": 1720768456497,
-    "relativePath": "particle/atom.png"
-  },
-  "0e42ba95-1fa1-46aa-b2cf-143cd1bcee2c": {
-    "asset": 1627377544000,
-    "meta": 1720768456501,
-    "relativePath": "prefab/tiledtile.prefab"
-  },
-  "bf0a434c-84dd-4a8e-a08a-7a36f180cc75": {
-    "asset": 1627377544000,
-    "meta": 1720768456502,
-    "relativePath": "prefab/toggleContainer.prefab"
-  },
-  "d1b8be49-b0a0-435c-83b7-552bed4bbe35": {
-    "asset": 1627377544000,
-    "meta": 1720768456503,
-    "relativePath": "prefab/toggleGroup.prefab"
-  },
-  "b8223619-7e38-47c4-841f-9160c232495a": {
-    "asset": 1627377544000,
-    "meta": 1720768456735,
-    "relativePath": "obsolete/atom.plist"
-  },
-  "d8afc78c-4eac-4a9f-83dd-67bc70344d33": {
-    "asset": 1627377544000,
-    "meta": 1720768456504,
-    "relativePath": "resources"
-  },
-  "294c1663-4adf-4a1e-a795-53808011a38a": {
-    "asset": 1627377544000,
-    "meta": 1720768456504,
-    "relativePath": "resources/effects"
-  },
-  "bbee2217-c261-49bd-a8ce-708d6bcc3500": {
-    "asset": 1627377544000,
-    "meta": 1720768456505,
-    "relativePath": "resources/materials"
-  },
-  "30682f87-9f0d-4f17-8a44-72863791461b": {
-    "asset": 1627377544000,
-    "meta": 1720768456519,
-    "relativePath": "resources/effects/builtin-2d-graphics.effect"
-  },
-  "232d2782-c4bd-4bb4-9e01-909f03d6d3b9": {
-    "asset": 1627377544000,
-    "meta": 1720768456522,
-    "relativePath": "prefab/videoplayer.prefab"
-  },
-  "144c3297-af63-49e8-b8ef-1cfa29b3be28": {
-    "asset": 1627377544000,
-    "meta": 1720768456530,
-    "relativePath": "resources/effects/builtin-2d-gray-sprite.effect"
-  },
-  "8c5001fd-07ee-4a4b-a8a0-63e15195e94d": {
-    "asset": 1627377544000,
-    "meta": 1720768456531,
-    "relativePath": "prefab/webview.prefab"
-  },
-  "f18742d7-56d2-4eb5-ae49-2d9d710b37c8": {
-    "asset": 1627377544000,
-    "meta": 1720768456546,
-    "relativePath": "resources/effects/builtin-2d-label.effect"
-  },
-  "b2687ac4-099e-403c-a192-ff477686f4f5": {
-    "asset": 1627377544000,
-    "meta": 1720768456737,
-    "relativePath": "particle/atom.plist"
-  },
-  "61906da3-7003-4bda-9abc-5769c76faee4": {
-    "asset": 1627377544000,
-    "meta": 1720768456547,
-    "relativePath": "prefab/light/ambient.prefab"
-  },
-  "0e93aeaa-0b53-4e40-b8e0-6268b4e07bd7": {
-    "asset": 1627377544000,
-    "meta": 1720768456556,
-    "relativePath": "resources/effects/builtin-2d-spine.effect"
-  },
-  "ddb99b39-7004-47cd-9705-751905c43c46": {
-    "asset": 1627377544000,
-    "meta": 1720768456557,
-    "relativePath": "prefab/light/directional.prefab"
-  },
-  "2874f8dd-416c-4440-81b7-555975426e93": {
-    "asset": 1627377544000,
-    "meta": 1720768456568,
-    "relativePath": "resources/effects/builtin-2d-sprite.effect"
-  },
-  "829a282c-b049-4019-bd38-5ace8d8a6417": {
-    "asset": 1627377544000,
-    "meta": 1720768456638,
-    "relativePath": "resources/effects/builtin-3d-particle.effect"
-  },
-  "2a7c0036-e0b3-4fe1-8998-89a54b8a2bec": {
-    "asset": 1627377544000,
-    "meta": 1720768456655,
-    "relativePath": "resources/effects/builtin-3d-trail.effect"
-  },
-  "c0040c95-c57f-49cd-9cbc-12316b73d0d4": {
-    "asset": 1627377544000,
-    "meta": 1720768456659,
-    "relativePath": "resources/effects/builtin-clear-stencil.effect"
-  },
-  "6d91e591-4ce0-465c-809f-610ec95019c6": {
-    "asset": 1627377544000,
-    "meta": 1720768456669,
-    "relativePath": "resources/effects/builtin-unlit.effect"
-  },
-  "f5331fd2-bf42-4ee3-a3fd-3e1657600eff": {
-    "asset": 1627377544000,
-    "meta": 1720768456672,
-    "relativePath": "prefab/light/spot.prefab"
-  },
-  "0cf30284-9073-46bc-9eba-e62b69dbbff3": {
-    "asset": 1627377544000,
-    "meta": 1720768456672,
-    "relativePath": "prefab/light/point.prefab"
-  },
-  "6f801092-0c37-4f30-89ef-c8d960825b36": {
-    "asset": 1627377544000,
-    "meta": 1720768456740,
-    "relativePath": "resources/materials/builtin-2d-base.mtl"
-  },
-  "a153945d-2511-4c14-be7b-05d242f47d57": {
-    "asset": 1627377544000,
-    "meta": 1720768456741,
-    "relativePath": "resources/materials/builtin-2d-graphics.mtl"
-  },
-  "3a7bb79f-32fd-422e-ada2-96f518fed422": {
-    "asset": 1627377544000,
-    "meta": 1720768456741,
-    "relativePath": "resources/materials/builtin-2d-gray-sprite.mtl"
-  },
-  "e02d87d4-e599-4d16-8001-e14891ac6506": {
-    "asset": 1627377544000,
-    "meta": 1720768456741,
-    "relativePath": "resources/materials/builtin-2d-label.mtl"
-  },
-  "7afd064b-113f-480e-b793-8817d19f63c3": {
-    "asset": 1627377544000,
-    "meta": 1720768456742,
-    "relativePath": "resources/materials/builtin-2d-spine.mtl"
-  },
-  "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432": {
-    "asset": 1627377544000,
-    "meta": 1720768456742,
-    "relativePath": "resources/materials/builtin-2d-sprite.mtl"
-  },
-  "432fa09c-cf03-4cff-a186-982604408a07": {
-    "asset": 1627377544000,
-    "meta": 1720768456742,
-    "relativePath": "resources/materials/builtin-3d-particle.mtl"
-  },
-  "466d4f9b-e5f4-4ea8-85d5-3c6e9a65658a": {
-    "asset": 1627377544000,
-    "meta": 1720768456743,
-    "relativePath": "resources/materials/builtin-3d-trail.mtl"
-  },
-  "cf7e0bb8-a81c-44a9-ad79-d28d43991032": {
-    "asset": 1627377544000,
-    "meta": 1720768456743,
-    "relativePath": "resources/materials/builtin-clear-stencil.mtl"
-  },
-  "2a296057-247c-4a1c-bbeb-0548b6c98650": {
-    "asset": 1627377544000,
-    "meta": 1720768456743,
-    "relativePath": "resources/materials/builtin-unlit.mtl"
-  },
-  "9836134e-b892-4283-b6b2-78b5acf3ed45": {
-    "asset": 1627377544000,
-    "meta": 1720768484585,
-    "relativePath": "effects"
-  },
-  "430eccbf-bf2c-4e6e-8c0c-884bbb487f32": {
-    "asset": 1627377544000,
-    "meta": 1720768484617,
-    "relativePath": "effects/__builtin-editor-gizmo-line.effect"
-  },
-  "6c5cf6e1-b044-4eac-9431-835644d57381": {
-    "asset": 1627377544000,
-    "meta": 1720768484630,
-    "relativePath": "effects/__builtin-editor-gizmo-unlit.effect"
-  },
-  "115286d1-2e10-49ee-aab4-341583f607e8": {
-    "asset": 1627377544000,
-    "meta": 1720768484653,
-    "relativePath": "effects/__builtin-editor-gizmo.effect"
-  },
-  "7e44a572-5b8f-47b7-b916-3bf59440a8e4": {
-    "asset": 1720770494207,
-    "meta": 1720770561654,
-    "relativePath": "SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ShopView.ts"
-  },
-  "36872a8d-5bfe-44c5-b838-e4640934177e": {
-    "asset": 1720772256955,
-    "meta": 1720772356198,
-    "relativePath": "SuShiCarb/scripts/ShuShiCarb.Global.ts"
+    "asset": 1720966722082,
+    "meta": 1720966770377,
+    "relativePath": "SuShiCarb\\scripts\\Game\\Ui_Popup\\Shop"
   },
   "bd3e4f9a-1c75-438d-9b01-b2770536576f": {
-    "asset": 1720773143392,
-    "meta": 1720773147028,
-    "relativePath": "SuShiCarb/scripts/Game/ShuShiCarb.Hook.ts"
+    "asset": 1720966722074,
+    "meta": 1720966770292,
+    "relativePath": "SuShiCarb\\scripts\\Game\\ShuShiCarb.Hook.ts"
   },
   "b4f8bb70-b428-4327-b796-0d30dff2e50e": {
-    "asset": 1720775358970,
-    "meta": 1720775361779,
-    "relativePath": "SuShiCarb/scripts/ShuShiCarb.GameManager.ts"
+    "asset": 1720966722090,
+    "meta": 1720966770197,
+    "relativePath": "SuShiCarb\\scripts\\ShuShiCarb.GameManager.ts"
   },
   "bdc483b6-73dd-411a-98ab-6e5222ba8f21": {
-    "asset": 1720776417676,
-    "meta": 1720776417690,
-    "relativePath": "SuShiCarb/texture/img/Shop/texture_Shop_0.png"
+    "asset": 1720966722111,
+    "meta": 1720966770730,
+    "relativePath": "SuShiCarb\\texture\\img\\Shop\\texture_Shop_0.png"
   },
   "42be003d-7fa5-4b07-aa4e-72143fb94a20": {
-    "asset": 1720776599053,
-    "meta": 1720776599065,
-    "relativePath": "SuShiCarb/texture/img/Shop/popup_0013_Rounded-Rectangle-10-copy-3.png"
+    "asset": 1720966722110,
+    "meta": 1720966770728,
+    "relativePath": "SuShiCarb\\texture\\img\\Shop\\popup_0013_Rounded-Rectangle-10-copy-3.png"
   },
   "0cbde57c-52c3-4bfb-8b41-517fc0de9c77": {
-    "asset": 1720780324999,
-    "meta": 1720780325071,
-    "relativePath": "SuShiCarb/prefab/UI_PopUp/Shop/ItemHook.prefab"
+    "asset": 1720972638249,
+    "meta": 1720972638262,
+    "relativePath": "SuShiCarb\\prefab\\UI_PopUp\\Shop\\ItemHook.prefab"
+  },
+  "9836134e-b892-4283-b6b2-78b5acf3ed45": {
+    "asset": 1701941673276,
+    "meta": 1720967511403,
+    "relativePath": "effects"
   },
   "abc2cb62-7852-4525-a90d-d474487b88f2": {
-    "asset": 1627377544000,
-    "meta": 1720780324511,
-    "relativePath": "effects/builtin-phong.effect"
+    "asset": 1701941673273,
+    "meta": 1720967511598,
+    "relativePath": "effects\\builtin-phong.effect"
   },
   "e2f00085-c597-422d-9759-52c360279106": {
-    "asset": 1627377544000,
-    "meta": 1720780324576,
-    "relativePath": "effects/builtin-toon.effect"
+    "asset": 1701941673274,
+    "meta": 1720967511646,
+    "relativePath": "effects\\builtin-toon.effect"
+  },
+  "430eccbf-bf2c-4e6e-8c0c-884bbb487f32": {
+    "asset": 1701941673275,
+    "meta": 1720967511667,
+    "relativePath": "effects\\__builtin-editor-gizmo-line.effect"
+  },
+  "6c5cf6e1-b044-4eac-9431-835644d57381": {
+    "asset": 1701941673276,
+    "meta": 1720967511681,
+    "relativePath": "effects\\__builtin-editor-gizmo-unlit.effect"
+  },
+  "115286d1-2e10-49ee-aab4-341583f607e8": {
+    "asset": 1701941673276,
+    "meta": 1720967511703,
+    "relativePath": "effects\\__builtin-editor-gizmo.effect"
   },
   "f8e6b000-5643-4b86-9080-aa680ce1f599": {
-    "asset": 1627377544000,
-    "meta": 1720780324580,
+    "asset": 1701941673292,
+    "meta": 1720967511704,
     "relativePath": "image"
   },
-  "71561142-4c83-4933-afca-cb7a17f67053": {
-    "asset": 1627377544000,
-    "meta": 1720780324601,
-    "relativePath": "image/default_btn_disabled.png"
-  },
-  "b43ff3c2-02bb-4874-81f7-f2dea6970f18": {
-    "asset": 1627377544000,
-    "meta": 1720780324602,
-    "relativePath": "image/default_btn_pressed.png"
-  },
-  "cfef78f1-c8df-49b7-8ed0-4c953ace2621": {
-    "asset": 1627377544000,
-    "meta": 1720780324603,
-    "relativePath": "image/default_progressbar.png"
-  },
-  "edd215b9-2796-4a05-aaf5-81f96c9281ce": {
-    "asset": 1627377544000,
-    "meta": 1720780324603,
-    "relativePath": "image/default_editbox_bg.png"
-  },
-  "d81ec8ad-247c-4e62-aa3c-d35c4193c7af": {
-    "asset": 1627377544000,
-    "meta": 1720780324604,
-    "relativePath": "image/default_panel.png"
-  },
-  "99170b0b-d210-46f1-b213-7d9e3f23098a": {
-    "asset": 1627377544000,
-    "meta": 1720780324607,
-    "relativePath": "image/default_progressbar_bg.png"
-  },
-  "e851e89b-faa2-4484-bea6-5c01dd9f06e2": {
-    "asset": 1627377544000,
-    "meta": 1720780324608,
-    "relativePath": "image/default_btn_normal.png"
-  },
-  "0291c134-b3da-4098-b7b5-e397edbe947f": {
-    "asset": 1627377544000,
-    "meta": 1720780324616,
-    "relativePath": "image/default_scrollbar.png"
-  },
-  "9d60001f-b5f4-4726-a629-2659e3ded0b8": {
-    "asset": 1627377544000,
-    "meta": 1720780324616,
-    "relativePath": "image/default_radio_button_on.png"
-  },
-  "567dcd80-8bf4-4535-8a5a-313f1caf078a": {
-    "asset": 1627377544000,
-    "meta": 1720780324617,
-    "relativePath": "image/default_radio_button_off.png"
-  },
   "5c3eedba-6c41-4c0c-9ba7-d91f813cbd1c": {
-    "asset": 1627377544000,
-    "meta": 1720780324620,
+    "asset": 1701941673294,
+    "meta": 1720967511808,
     "relativePath": "materials"
   },
-  "c4480a0a-6ac5-443f-8b40-361a14257fc8": {
-    "asset": 1627377544000,
-    "meta": 1720780324941,
-    "relativePath": "materials/builtin-phong.mtl"
-  },
-  "600301aa-3357-4a10-b086-84f011fa32ba": {
-    "asset": 1627377544000,
-    "meta": 1720780324618,
-    "relativePath": "image/default-particle.png"
-  },
   "fc09f9bd-2cce-4605-b630-8145ef809ed6": {
-    "asset": 1627377544000,
-    "meta": 1720780324622,
+    "asset": 1701941673296,
+    "meta": 1720967511816,
     "relativePath": "misc"
   },
-  "d6d3ca85-4681-47c1-b5dd-d036a9d39ea2": {
-    "asset": 1627377544000,
-    "meta": 1720780324619,
-    "relativePath": "image/default_scrollbar_vertical.png"
+  "617323dd-11f4-4dd3-8eec-0caf6b3b45b9": {
+    "asset": 1701941673287,
+    "meta": 1720967511786,
+    "relativePath": "image\\default_scrollbar_vertical_bg.png"
+  },
+  "edd215b9-2796-4a05-aaf5-81f96c9281ce": {
+    "asset": 1701941673280,
+    "meta": 1720967511790,
+    "relativePath": "image\\default_editbox_bg.png"
+  },
+  "b43ff3c2-02bb-4874-81f7-f2dea6970f18": {
+    "asset": 1701941673280,
+    "meta": 1720967511793,
+    "relativePath": "image\\default_btn_pressed.png"
   },
   "db019bf7-f71c-4111-98cf-918ea180cb48": {
-    "asset": 1627377544000,
-    "meta": 1720780324629,
+    "asset": 1701941673306,
+    "meta": 1720967511820,
     "relativePath": "model"
   },
-  "4bab67cb-18e6-4099-b840-355f0473f890": {
-    "asset": 1627377544000,
-    "meta": 1720780324619,
-    "relativePath": "image/default_scrollbar_bg.png"
+  "71561142-4c83-4933-afca-cb7a17f67053": {
+    "asset": 1701941673278,
+    "meta": 1720967511802,
+    "relativePath": "image\\default_btn_disabled.png"
   },
   "e39e96e6-6f6e-413f-bcf1-ac7679bb648a": {
-    "asset": 1627377544000,
-    "meta": 1720780324629,
-    "relativePath": "model/prefab"
-  },
-  "617323dd-11f4-4dd3-8eec-0caf6b3b45b9": {
-    "asset": 1627377544000,
-    "meta": 1720780324628,
-    "relativePath": "image/default_scrollbar_vertical_bg.png"
-  },
-  "c25b9d50-c8fc-4d27-beeb-6e7c1f2e5c0f": {
-    "asset": 1627377544000,
-    "meta": 1720780324706,
-    "relativePath": "image/default_toggle_disabled.png"
+    "asset": 1701941673304,
+    "meta": 1720967511824,
+    "relativePath": "model\\prefab"
   },
   "6e056173-d285-473c-b206-40a7fff5386e": {
-    "asset": 1627377544000,
-    "meta": 1720780324708,
-    "relativePath": "image/default_sprite.png"
+    "asset": 1701941673288,
+    "meta": 1720967511808,
+    "relativePath": "image\\default_sprite.png"
   },
-  "73a0903d-d80e-4e3c-aa67-f999543c08f5": {
-    "asset": 1627377544000,
-    "meta": 1720780324710,
-    "relativePath": "image/default_toggle_checkmark.png"
+  "d81ec8ad-247c-4e62-aa3c-d35c4193c7af": {
+    "asset": 1701941673281,
+    "meta": 1720967511812,
+    "relativePath": "image\\default_panel.png"
   },
-  "a87cc147-01b2-43f8-8e42-a7ca90b0c757": {
-    "asset": 1627377544000,
-    "meta": 1720780324805,
-    "relativePath": "model/prefab/box.prefab"
+  "567dcd80-8bf4-4535-8a5a-313f1caf078a": {
+    "asset": 1701941673284,
+    "meta": 1720967511815,
+    "relativePath": "image\\default_radio_button_off.png"
+  },
+  "cfef78f1-c8df-49b7-8ed0-4c953ace2621": {
+    "asset": 1701941673282,
+    "meta": 1720967511817,
+    "relativePath": "image\\default_progressbar.png"
+  },
+  "e851e89b-faa2-4484-bea6-5c01dd9f06e2": {
+    "asset": 1701941673279,
+    "meta": 1720967511818,
+    "relativePath": "image\\default_btn_normal.png"
+  },
+  "f6e6dd15-71d1-4ffe-ace7-24fd39942c05": {
+    "asset": 1701941673308,
+    "meta": 1720967512023,
+    "relativePath": "obsolete"
+  },
+  "4bab67cb-18e6-4099-b840-355f0473f890": {
+    "asset": 1701941673286,
+    "meta": 1720967511823,
+    "relativePath": "image\\default_scrollbar_bg.png"
+  },
+  "c4480a0a-6ac5-443f-8b40-361a14257fc8": {
+    "asset": 1701941673293,
+    "meta": 1720967512647,
+    "relativePath": "materials\\builtin-phong.mtl"
+  },
+  "f743d2b6-b7ea-4c14-a55b-547ed4d0a045": {
+    "asset": 1701941673311,
+    "meta": 1720967512030,
+    "relativePath": "particle"
+  },
+  "99170b0b-d210-46f1-b213-7d9e3f23098a": {
+    "asset": 1701941673283,
+    "meta": 1720967511866,
+    "relativePath": "image\\default_progressbar_bg.png"
   },
   "b5fc2cf2-7942-483d-be1f-bbeadc4714ad": {
-    "asset": 1627377544000,
-    "meta": 1720780324807,
-    "relativePath": "model/prefab/cone.prefab"
+    "asset": 1701941673300,
+    "meta": 1720967512037,
+    "relativePath": "model\\prefab\\cone.prefab"
   },
-  "0275e94c-56a7-410f-bd1a-fc7483f7d14a": {
-    "asset": 1627377544000,
-    "meta": 1720780324710,
-    "relativePath": "image/default_sprite_splash.png"
-  },
-  "1c5e4038-953a-44c2-b620-0bbfc6170477": {
-    "asset": 1627377544000,
-    "meta": 1720780324808,
-    "relativePath": "model/prefab/cylinder.prefab"
-  },
-  "dc267012-00ac-4b8d-9066-de7a42d6ffb5": {
-    "asset": 1720780318838,
-    "meta": 1720780324850,
-    "relativePath": "SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ItemHook.ts"
-  },
-  "d29077ba-1627-4a72-9579-7b56a235340c": {
-    "asset": 1627377544000,
-    "meta": 1720780324711,
-    "relativePath": "image/default_toggle_normal.png"
+  "600301aa-3357-4a10-b086-84f011fa32ba": {
+    "asset": 1701941673278,
+    "meta": 1720967511870,
+    "relativePath": "image\\default-particle.png"
   },
   "fe1417b6-fe6b-46a4-ae7c-9fd331f33a2a": {
-    "asset": 1627377544000,
-    "meta": 1720780324851,
-    "relativePath": "model/prefab/capsule.prefab"
+    "asset": 1701941673299,
+    "meta": 1720967512039,
+    "relativePath": "model\\prefab\\capsule.prefab"
+  },
+  "ae6c6c98-11e4-452f-8758-75f5c6a56e83": {
+    "asset": 1701941673334,
+    "meta": 1720967512041,
+    "relativePath": "prefab"
+  },
+  "0275e94c-56a7-410f-bd1a-fc7483f7d14a": {
+    "asset": 1701941673288,
+    "meta": 1720967512004,
+    "relativePath": "image\\default_sprite_splash.png"
+  },
+  "a87cc147-01b2-43f8-8e42-a7ca90b0c757": {
+    "asset": 1701941673298,
+    "meta": 1720967512048,
+    "relativePath": "model\\prefab\\box.prefab"
   },
   "3f376125-a699-40ca-ad05-04d662eaa1f2": {
-    "asset": 1627377544000,
-    "meta": 1720780324852,
-    "relativePath": "model/prefab/plane.prefab"
+    "asset": 1701941673302,
+    "meta": 1720967512058,
+    "relativePath": "model\\prefab\\plane.prefab"
   },
-  "b181c1e4-0a72-4a91-bfb0-ae6f36ca60bd": {
-    "asset": 1627377544000,
-    "meta": 1720780324716,
-    "relativePath": "image/default_toggle_pressed.png"
+  "9d60001f-b5f4-4726-a629-2659e3ded0b8": {
+    "asset": 1701941673284,
+    "meta": 1720967512013,
+    "relativePath": "image\\default_radio_button_on.png"
+  },
+  "1c5e4038-953a-44c2-b620-0bbfc6170477": {
+    "asset": 1701941673301,
+    "meta": 1720967512063,
+    "relativePath": "model\\prefab\\cylinder.prefab"
   },
   "6c9ef10d-b479-420b-bfe6-39cdda6a8ae0": {
-    "asset": 1627377544000,
-    "meta": 1720780324871,
-    "relativePath": "model/prefab/quad.prefab"
+    "asset": 1701941673302,
+    "meta": 1720967512065,
+    "relativePath": "model\\prefab\\quad.prefab"
   },
-  "2be36297-9abb-4fee-8049-9ed5e271da8a": {
-    "asset": 1627377544000,
-    "meta": 1720780324875,
-    "relativePath": "misc/default_video.mp4"
+  "0291c134-b3da-4098-b7b5-e397edbe947f": {
+    "asset": 1701941673285,
+    "meta": 1720967512019,
+    "relativePath": "image\\default_scrollbar.png"
   },
   "2d9a4b85-b0ab-4c46-84c5-18f393ab2058": {
-    "asset": 1627377544000,
-    "meta": 1720780324878,
-    "relativePath": "model/prefab/sphere.prefab"
+    "asset": 1701941673303,
+    "meta": 1720967512069,
+    "relativePath": "model\\prefab\\sphere.prefab"
   },
   "de510076-056b-484f-b94c-83bef217d0e1": {
-    "asset": 1627377544000,
-    "meta": 1720780324879,
-    "relativePath": "model/prefab/torus.prefab"
+    "asset": 1701941673304,
+    "meta": 1720967512082,
+    "relativePath": "model\\prefab\\torus.prefab"
+  },
+  "d6d3ca85-4681-47c1-b5dd-d036a9d39ea2": {
+    "asset": 1701941673286,
+    "meta": 1720967512022,
+    "relativePath": "image\\default_scrollbar_vertical.png"
+  },
+  "897ef7a1-4860-4f64-968d-f5924b18668a": {
+    "asset": 1701941673312,
+    "meta": 1720967512095,
+    "relativePath": "prefab\\2d-camera.prefab"
+  },
+  "70d7cdb0-04cd-41bb-9480-c06a4785f386": {
+    "asset": 1701941673314,
+    "meta": 1720967512099,
+    "relativePath": "prefab\\3d-camera.prefab"
+  },
+  "a3ee0214-b432-4865-9666-4a3211814282": {
+    "asset": 1701941673323,
+    "meta": 1720967512100,
+    "relativePath": "prefab\\light"
+  },
+  "70bbeb73-6dc2-4ee4-8faf-76b3a0e34ec4": {
+    "asset": 1701941673315,
+    "meta": 1720967512104,
+    "relativePath": "prefab\\3d-particle.prefab"
+  },
+  "ed88f13d-fcad-4848-aa35-65a2cb973584": {
+    "asset": 1701941673316,
+    "meta": 1720967512109,
+    "relativePath": "prefab\\3d-stage.prefab"
+  },
+  "972b9a4d-47ee-4c74-b5c3-61d8a69bc29f": {
+    "asset": 1701941673317,
+    "meta": 1720967512136,
+    "relativePath": "prefab\\button.prefab"
+  },
+  "2c937608-2562-40ea-b264-7395df6f0cea": {
+    "asset": 1701941673318,
+    "meta": 1720967512139,
+    "relativePath": "prefab\\canvas.prefab"
+  },
+  "61aeb05b-3b32-452b-8eed-2b76deeed554": {
+    "asset": 1701941673318,
+    "meta": 1720967512142,
+    "relativePath": "prefab\\editbox.prefab"
+  },
+  "27756ebb-3d33-44b0-9b96-e858fadd4dd4": {
+    "asset": 1701941673319,
+    "meta": 1720967512150,
+    "relativePath": "prefab\\label.prefab"
+  },
+  "73a0903d-d80e-4e3c-aa67-f999543c08f5": {
+    "asset": 1701941673290,
+    "meta": 1720967512115,
+    "relativePath": "image\\default_toggle_checkmark.png"
+  },
+  "785a442c-3ceb-45be-a46e-7317f625f3b9": {
+    "asset": 1701941673320,
+    "meta": 1720967512153,
+    "relativePath": "prefab\\layout.prefab"
+  },
+  "ca8401fe-ad6e-41a8-bd46-8e3e4e9945be": {
+    "asset": 1701941673324,
+    "meta": 1720967512158,
+    "relativePath": "prefab\\pageview.prefab"
+  },
+  "d29077ba-1627-4a72-9579-7b56a235340c": {
+    "asset": 1701941673291,
+    "meta": 1720967512118,
+    "relativePath": "image\\default_toggle_normal.png"
+  },
+  "cd33edea-55f5-46c2-958d-357a01384a36": {
+    "asset": 1701941673324,
+    "meta": 1720967512162,
+    "relativePath": "prefab\\particlesystem.prefab"
+  },
+  "5965ffac-69da-4b55-bcde-9225d0613c28": {
+    "asset": 1701941673325,
+    "meta": 1720967512165,
+    "relativePath": "prefab\\progressBar.prefab"
+  },
+  "c25b9d50-c8fc-4d27-beeb-6e7c1f2e5c0f": {
+    "asset": 1701941673291,
+    "meta": 1720967512120,
+    "relativePath": "image\\default_toggle_disabled.png"
+  },
+  "4a37dd57-78cd-4cec-aad4-f11a73d12b63": {
+    "asset": 1701941673326,
+    "meta": 1720967512169,
+    "relativePath": "prefab\\richtext.prefab"
+  },
+  "32044bd2-481f-4cf1-a656-e2b2fb1594eb": {
+    "asset": 1701941673327,
+    "meta": 1720967512173,
+    "relativePath": "prefab\\scrollview.prefab"
+  },
+  "b181c1e4-0a72-4a91-bfb0-ae6f36ca60bd": {
+    "asset": 1701941673292,
+    "meta": 1720967512132,
+    "relativePath": "image\\default_toggle_pressed.png"
+  },
+  "0004d1cf-a0ad-47d8-ab17-34d3db9d35a3": {
+    "asset": 1701941673327,
+    "meta": 1720967512176,
+    "relativePath": "prefab\\slider.prefab"
+  },
+  "2be36297-9abb-4fee-8049-9ed5e271da8a": {
+    "asset": 1701941673296,
+    "meta": 1720967512203,
+    "relativePath": "misc\\default_video.mp4"
+  },
+  "d8afc78c-4eac-4a9f-83dd-67bc70344d33": {
+    "asset": 1701941673343,
+    "meta": 1720967512204,
+    "relativePath": "resources"
+  },
+  "96083d03-c332-4a3f-9386-d03e2d19e8ee": {
+    "asset": 1701941673328,
+    "meta": 1720967512209,
+    "relativePath": "prefab\\sprite.prefab"
+  },
+  "294c1663-4adf-4a1e-a795-53808011a38a": {
+    "asset": 1701941673342,
+    "meta": 1720967512218,
+    "relativePath": "resources\\effects"
+  },
+  "8a96b965-2dc0-4e03-aa90-3b79cb93b5b4": {
+    "asset": 1701941673308,
+    "meta": 1720967512146,
+    "relativePath": "obsolete\\atom.png"
+  },
+  "1f55e3be-b89b-4b79-88de-47fd31018044": {
+    "asset": 1701941673329,
+    "meta": 1720967512227,
+    "relativePath": "prefab\\sprite_splash.prefab"
+  },
+  "bbee2217-c261-49bd-a8ce-708d6bcc3500": {
+    "asset": 1701941673350,
+    "meta": 1720967512228,
+    "relativePath": "resources\\materials"
+  },
+  "30682f87-9f0d-4f17-8a44-72863791461b": {
+    "asset": 1701941673336,
+    "meta": 1720967512256,
+    "relativePath": "resources\\effects\\builtin-2d-graphics.effect"
+  },
+  "144c3297-af63-49e8-b8ef-1cfa29b3be28": {
+    "asset": 1701941673337,
+    "meta": 1720967512276,
+    "relativePath": "resources\\effects\\builtin-2d-gray-sprite.effect"
+  },
+  "f18742d7-56d2-4eb5-ae49-2d9d710b37c8": {
+    "asset": 1701941673338,
+    "meta": 1720967512308,
+    "relativePath": "resources\\effects\\builtin-2d-label.effect"
+  },
+  "0e93aeaa-0b53-4e40-b8e0-6268b4e07bd7": {
+    "asset": 1701941673338,
+    "meta": 1720967512336,
+    "relativePath": "resources\\effects\\builtin-2d-spine.effect"
+  },
+  "2874f8dd-416c-4440-81b7-555975426e93": {
+    "asset": 1701941673339,
+    "meta": 1720967512364,
+    "relativePath": "resources\\effects\\builtin-2d-sprite.effect"
+  },
+  "7de03a80-4457-438d-95a7-3e7cdffd6086": {
+    "asset": 1701941673329,
+    "meta": 1720967512373,
+    "relativePath": "prefab\\tiledmap.prefab"
+  },
+  "829a282c-b049-4019-bd38-5ace8d8a6417": {
+    "asset": 1701941673340,
+    "meta": 1720967512477,
+    "relativePath": "resources\\effects\\builtin-3d-particle.effect"
+  },
+  "0e42ba95-1fa1-46aa-b2cf-143cd1bcee2c": {
+    "asset": 1701941673330,
+    "meta": 1720967512480,
+    "relativePath": "prefab\\tiledtile.prefab"
+  },
+  "2a7c0036-e0b3-4fe1-8998-89a54b8a2bec": {
+    "asset": 1701941673341,
+    "meta": 1720967512507,
+    "relativePath": "resources\\effects\\builtin-3d-trail.effect"
+  },
+  "c0040c95-c57f-49cd-9cbc-12316b73d0d4": {
+    "asset": 1701941673341,
+    "meta": 1720967512520,
+    "relativePath": "resources\\effects\\builtin-clear-stencil.effect"
+  },
+  "6d91e591-4ce0-465c-809f-610ec95019c6": {
+    "asset": 1701941673342,
+    "meta": 1720967512543,
+    "relativePath": "resources\\effects\\builtin-unlit.effect"
+  },
+  "0d784963-d024-4ea6-a7db-03be0ad63010": {
+    "asset": 1701941673331,
+    "meta": 1720967512548,
+    "relativePath": "prefab\\toggle.prefab"
+  },
+  "d0a82d39-bede-46c4-b698-c81ff0dedfff": {
+    "asset": 1701941673311,
+    "meta": 1720967512230,
+    "relativePath": "particle\\atom.png"
+  },
+  "d1b8be49-b0a0-435c-83b7-552bed4bbe35": {
+    "asset": 1701941673333,
+    "meta": 1720967512550,
+    "relativePath": "prefab\\toggleGroup.prefab"
+  },
+  "bf0a434c-84dd-4a8e-a08a-7a36f180cc75": {
+    "asset": 1701941673331,
+    "meta": 1720967512555,
+    "relativePath": "prefab\\toggleContainer.prefab"
+  },
+  "232d2782-c4bd-4bb4-9e01-909f03d6d3b9": {
+    "asset": 1701941673334,
+    "meta": 1720967512563,
+    "relativePath": "prefab\\videoplayer.prefab"
+  },
+  "8c5001fd-07ee-4a4b-a8a0-63e15195e94d": {
+    "asset": 1701941673334,
+    "meta": 1720967512566,
+    "relativePath": "prefab\\webview.prefab"
+  },
+  "0cf30284-9073-46bc-9eba-e62b69dbbff3": {
+    "asset": 1701941673322,
+    "meta": 1720967512569,
+    "relativePath": "prefab\\light\\point.prefab"
+  },
+  "61906da3-7003-4bda-9abc-5769c76faee4": {
+    "asset": 1701941673321,
+    "meta": 1720967512572,
+    "relativePath": "prefab\\light\\ambient.prefab"
+  },
+  "f5331fd2-bf42-4ee3-a3fd-3e1657600eff": {
+    "asset": 1701941673323,
+    "meta": 1720967512574,
+    "relativePath": "prefab\\light\\spot.prefab"
+  },
+  "ddb99b39-7004-47cd-9705-751905c43c46": {
+    "asset": 1701941673322,
+    "meta": 1720967512577,
+    "relativePath": "prefab\\light\\directional.prefab"
+  },
+  "3a7bb79f-32fd-422e-ada2-96f518fed422": {
+    "asset": 1701941673345,
+    "meta": 1720967512670,
+    "relativePath": "resources\\materials\\builtin-2d-gray-sprite.mtl"
+  },
+  "a153945d-2511-4c14-be7b-05d242f47d57": {
+    "asset": 1701941673344,
+    "meta": 1720967512671,
+    "relativePath": "resources\\materials\\builtin-2d-graphics.mtl"
+  },
+  "7afd064b-113f-480e-b793-8817d19f63c3": {
+    "asset": 1701941673346,
+    "meta": 1720967512672,
+    "relativePath": "resources\\materials\\builtin-2d-spine.mtl"
+  },
+  "432fa09c-cf03-4cff-a186-982604408a07": {
+    "asset": 1701941673347,
+    "meta": 1720967512673,
+    "relativePath": "resources\\materials\\builtin-3d-particle.mtl"
+  },
+  "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432": {
+    "asset": 1701941673347,
+    "meta": 1720967512673,
+    "relativePath": "resources\\materials\\builtin-2d-sprite.mtl"
+  },
+  "6f801092-0c37-4f30-89ef-c8d960825b36": {
+    "asset": 1701941673343,
+    "meta": 1720967512674,
+    "relativePath": "resources\\materials\\builtin-2d-base.mtl"
+  },
+  "cf7e0bb8-a81c-44a9-ad79-d28d43991032": {
+    "asset": 1701941673349,
+    "meta": 1720967512675,
+    "relativePath": "resources\\materials\\builtin-clear-stencil.mtl"
+  },
+  "466d4f9b-e5f4-4ea8-85d5-3c6e9a65658a": {
+    "asset": 1701941673348,
+    "meta": 1720967512676,
+    "relativePath": "resources\\materials\\builtin-3d-trail.mtl"
+  },
+  "2a296057-247c-4a1c-bbeb-0548b6c98650": {
+    "asset": 1701941673350,
+    "meta": 1720967512677,
+    "relativePath": "resources\\materials\\builtin-unlit.mtl"
+  },
+  "e02d87d4-e599-4d16-8001-e14891ac6506": {
+    "asset": 1701941673345,
+    "meta": 1720967512678,
+    "relativePath": "resources\\materials\\builtin-2d-label.mtl"
+  },
+  "b8223619-7e38-47c4-841f-9160c232495a": {
+    "asset": 1701941673307,
+    "meta": 1720967512689,
+    "relativePath": "obsolete\\atom.plist"
+  },
+  "b2687ac4-099e-403c-a192-ff477686f4f5": {
+    "asset": 1701941673310,
+    "meta": 1720967512690,
+    "relativePath": "particle\\atom.plist"
   },
   "954fec8b-cd16-4bb9-a3b7-7719660e7558": {
-    "asset": 1627377544000,
-    "meta": 1720780324963,
-    "relativePath": "model/primitives.fbx"
+    "asset": 1701941673305,
+    "meta": 1720967512814,
+    "relativePath": "model\\primitives.fbx"
+  },
+  "36872a8d-5bfe-44c5-b838-e4640934177e": {
+    "asset": 1720968183247,
+    "meta": 1720968187742,
+    "relativePath": "SuShiCarb\\scripts\\ShuShiCarb.Global.ts"
+  },
+  "7e44a572-5b8f-47b7-b916-3bf59440a8e4": {
+    "asset": 1720970007918,
+    "meta": 1720970011295,
+    "relativePath": "SuShiCarb\\scripts\\Game\\Ui_Popup\\Shop\\ShuShiCarb.ShopView.ts"
+  },
+  "dc267012-00ac-4b8d-9066-de7a42d6ffb5": {
+    "asset": 1720972635152,
+    "meta": 1720972638117,
+    "relativePath": "SuShiCarb\\scripts\\Game\\Ui_Popup\\Shop\\ShuShiCarb.ItemHook.ts"
   }
 }

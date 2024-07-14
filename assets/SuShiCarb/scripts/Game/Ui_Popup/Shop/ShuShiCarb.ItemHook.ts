@@ -27,12 +27,14 @@ export default class ShuShiCarbItemHook extends cc.Component {
     nCheckmask: cc.Node = null;
     index = 0;
     isCheck = false;
+    _data = null
     // data;
-    // setData() {
-    //     Global.dataHook = this.data;
-    //     console.log(this.data);
-    // }
-
+ 
+    setData(data) {
+        this._data = data;
+        this.nStateBuy.active = data.isBuy;
+        console.log("data ", data);
+    }
     // LIFE-CYCLE CALLBACKS:
 
     
@@ -43,11 +45,30 @@ export default class ShuShiCarbItemHook extends cc.Component {
         this.index = JSON.parse(cc.sys.localStorage.getItem("itemIndex")) || 0;
         // Global.dataHook[this.index] = JSON.parse(cc.sys.localStorage.getItem("price")) || 150;
         // this.updatePrice(this.index);
+        this.loadPurchaseState();
         this.checkClick();
         this.updatePrice(this.index);
     }
 
+    loadPurchaseState() {
+        const purchaseData = JSON.parse(cc.sys.localStorage.getItem("purchaseData")) || [];
+        for (let i = 0; i < Global.dataHook.length; i++) {
+            if (purchaseData[i]) {
+                Global.dataHook[i].isBuy = purchaseData[i].isBuy;
+                Global.dataHook[i].speed = purchaseData[i].speed;
+                this.nStateBuy.children[i].active = purchaseData[i].isBuy;
+            }
+        }
+    }
 
+    savePurchaseState() {
+        const purchaseData = Global.dataHook.map(item => ({
+            isBuy: item.isBuy,
+            speed: item.speed
+        }));
+        cc.sys.localStorage.setItem('purchaseData', JSON.stringify(purchaseData));
+    }
+    
     checkClick() {
        if(Global.totalGold >= Global.dataHook[this.index].price) {
            this.nCheckmask.active = false;
@@ -60,9 +81,11 @@ export default class ShuShiCarbItemHook extends cc.Component {
 
     onClickBuy() {
         if(this.isCheck) {
+            Global.dataHook[this.index].isBuy = true;
             Global.totalGold -= Global.dataHook[this.index].price;
             Global.speedHook += Global.dataHook[this.index].speed;
-            this.nStateBuy.children[this.index].active = true;
+            this.nStateBuy.children[this.index].active =   Global.dataHook[this.index].isBuy;
+            this.savePurchaseState();
             cc.sys.localStorage.setItem('itemIndex',this.index.toString());
             // cc.sys.localStorage.setItem('price', Global.dataHook[this.index].price.toString);
             this.index++;
@@ -72,6 +95,7 @@ export default class ShuShiCarbItemHook extends cc.Component {
             ShuShiCarbShopView.instace.updateGold();
             ShuShiCarbGameManager.instance.updateTotalGold();
             this.updatePrice(this.index);
+            console.log("data Hoook ",Global.dataHook);
         }
        
     }

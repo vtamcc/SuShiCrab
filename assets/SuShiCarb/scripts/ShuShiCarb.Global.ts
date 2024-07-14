@@ -8,7 +8,11 @@
 
 export default class Global {
     static totalGold: number = 0;
-    static dataHook = [{price: 150,speed: 10},{price: 300,speed: 15}, {price: 450,speed: 20},{price: 600,speed: 25},{price: 750,speed: 30}];
+    static dataHook = [{price: 150,speed: 21 ,isBuy: false},
+        {price: 300,speed: 22, isBuy: false}, 
+        {price: 450,speed: 23, isBuy: false},
+        {price: 600,speed: 25, isBuy: false},
+        {price: 750,speed: 27, isBuy: false}];
     static speedHook = 20;
     // static dataHook = [1,23];
     
