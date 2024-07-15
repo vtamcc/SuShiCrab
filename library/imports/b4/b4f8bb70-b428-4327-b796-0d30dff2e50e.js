@@ -41,6 +41,7 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
         _this.prfGame = null;
         _this.prfShopView = null;
         _this.lbTotalGold = null;
+        _this.prfSetting = null;
         return _this;
         // update (dt) {}
     }
@@ -49,7 +50,6 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
     ShuShiCarbGameManager.prototype.onLoad = function () {
         ShuShiCarbGameManager_1.instance = this;
         ShuShiCarb_Global_1.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 2000;
-        ShuShiCarb_Global_1.default.speedHook = JSON.parse(cc.sys.localStorage.getItem("speed")) || 20;
         this.updateTotalGold();
     };
     ShuShiCarbGameManager.prototype.start = function () {
@@ -69,6 +69,10 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
     ShuShiCarbGameManager.prototype.updateTotalGold = function () {
         this.lbTotalGold.string = ShuShiCarb_Global_1.default.totalGold + " ";
     };
+    ShuShiCarbGameManager.prototype.onClickSettingView = function () {
+        var setting = cc.instantiate(this.prfSetting);
+        this.node.addChild(setting);
+    };
     var ShuShiCarbGameManager_1;
     ShuShiCarbGameManager.instance = null;
     __decorate([
@@ -83,6 +87,9 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
     __decorate([
         property(cc.Label)
     ], ShuShiCarbGameManager.prototype, "lbTotalGold", void 0);
+    __decorate([
+        property(cc.Prefab)
+    ], ShuShiCarbGameManager.prototype, "prfSetting", void 0);
     ShuShiCarbGameManager = ShuShiCarbGameManager_1 = __decorate([
         ccclass
     ], ShuShiCarbGameManager);

@@ -17,14 +17,18 @@ export default class ShuShiCarbItemHook extends cc.Component {
 
     @property(cc.Label)
     lbPrice: cc.Label = null;
-
     @property(cc.Node)
     nBtnBuy: cc.Node = null;
-
     @property(cc.Node)
     nStateBuy: cc.Node = null;
     @property(cc.Node)
     nCheckmask: cc.Node = null;
+
+    @property(cc.Label)
+    lbLeverSpeedOld: cc.Label = null;
+    @property(cc.Label)
+    lbLeverSpeedNew: cc.Label = null;
+
     index = 0;
     isCheck = false;
     _data = null
@@ -67,7 +71,12 @@ export default class ShuShiCarbItemHook extends cc.Component {
             speed: item.speed
         }));
         cc.sys.localStorage.setItem('purchaseData', JSON.stringify(purchaseData));
+        cc.sys.localStorage.setItem('activeIndex', JSON.stringify(Global.activeIndex));
+        cc.sys.localStorage.setItem('itemIndex', this.index.toString());
+        cc.sys.localStorage.setItem('speedHook', JSON.stringify(Global.speedHook));
+        cc.sys.localStorage.setItem('lengthHook', JSON.stringify(Global.lengthHook));
     }
+    
     
     checkClick() {
        if(Global.totalGold >= Global.dataHook[this.index].price) {
@@ -80,19 +89,22 @@ export default class ShuShiCarbItemHook extends cc.Component {
     }
 
     onClickBuy() {
-        if(this.isCheck) {
+        if(this.isCheck && this.index < Global.lengthHook) {
             Global.dataHook[this.index].isBuy = true;
             Global.totalGold -= Global.dataHook[this.index].price;
             Global.speedHook += Global.dataHook[this.index].speed;
-            this.nStateBuy.children[this.index].active =   Global.dataHook[this.index].isBuy;
+            Global.lengthHook += Global.dataHook[this.index].widthHook;
+          
+            this.nStateBuy.children[this.index].active = Global.dataHook[this.index].isBuy;
+            Global.activeIndex = this.index;
             this.savePurchaseState();
-            cc.sys.localStorage.setItem('itemIndex',this.index.toString());
+            // cc.sys.localStorage.setItem('itemIndex',this.index.toString());
             // cc.sys.localStorage.setItem('price', Global.dataHook[this.index].price.toString);
             this.index++;
-
+            this.savePurchaseState();
             console.log(this.index);
             this.checkClick();
-            ShuShiCarbShopView.instace.updateGold();
+            ShuShiCarbShopView.instace.updateGold();    
             ShuShiCarbGameManager.instance.updateTotalGold();
             this.updatePrice(this.index);
             console.log("data Hoook ",Global.dataHook);
@@ -102,6 +114,8 @@ export default class ShuShiCarbItemHook extends cc.Component {
 
     updatePrice(index) {
         this.lbPrice.string = Global.dataHook[index].price + ' '; 
+        this.lbLeverSpeedNew.string = Global.dataHook[index].speed + 1 + ' ';
+        this.lbLeverSpeedOld.string = Global.dataHook[index].speed + ' ' +  ' -> ';
     }
     start () {
 

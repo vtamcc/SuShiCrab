@@ -30,6 +30,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ShuShiCarb_Global_1 = require("../ShuShiCarb.Global");
+var ShuShiCarb_Player_1 = require("./ShuShiCarb.Player");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbHook = /** @class */ (function (_super) {
     __extends(ShuShiCarbHook, _super);
@@ -43,12 +44,16 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         _this.hookState = 0;
         _this.hookHeadBaseY = 80;
         _this.hookRopeBaseWidth = 100;
+        _this.isClickable = true;
         return _this;
     }
     ShuShiCarbHook_1 = ShuShiCarbHook;
     ShuShiCarbHook.prototype.onLoad = function () {
         ShuShiCarbHook_1.instance = this;
         cc.Canvas.instance.node.on(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
+        ShuShiCarb_Global_1.default.speedHook = JSON.parse(cc.sys.localStorage.getItem("speedHook")) || ShuShiCarb_Global_1.default.speedHook;
+        ShuShiCarb_Global_1.default.lengthHook = JSON.parse(cc.sys.localStorage.getItem("lengthHook")) || ShuShiCarb_Global_1.default.lengthHook;
+        console.log("speed ", ShuShiCarb_Global_1.default.speedHook);
     };
     ShuShiCarbHook.prototype.initHook = function () {
         this.hookHead.y = this.hookHeadBaseY;
@@ -66,7 +71,7 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         this.hookSpriteOpen.active = isOpen;
     };
     ShuShiCarbHook.prototype.onMouseDown = function (event) {
-        if (this.hookState !== 0) {
+        if (!this.isClickable || this.hookState !== 0 || !ShuShiCarb_Player_1.default.instace.isAtOrderPosition) {
             return;
         }
         this.hookState = 1;
@@ -76,7 +81,7 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
     };
     ShuShiCarbHook.prototype.moveHookHead = function (dt) {
         this.hookHead.y += dt * ShuShiCarb_Global_1.default.speedHook;
-        this.hookRope.width += dt * 40;
+        this.hookRope.width += dt * ShuShiCarb_Global_1.default.lengthHook;
     };
     ShuShiCarbHook.prototype.onDestroy = function () {
         cc.Canvas.instance.node.off(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
@@ -101,6 +106,7 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
                         this.hookRope.width = 100;
                         this.hookState = 0;
                         this.hookHead.getComponent(cc.BoxCollider).enabled = true;
+                        this.disableClickTemporarily(0.2);
                     }
                 }
                 this.setHookSprite(false);
@@ -109,6 +115,13 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
             default:
                 break;
         }
+    };
+    ShuShiCarbHook.prototype.disableClickTemporarily = function (duration) {
+        var _this = this;
+        this.isClickable = false;
+        this.scheduleOnce(function () {
+            _this.isClickable = true;
+        }, duration);
     };
     var ShuShiCarbHook_1;
     ShuShiCarbHook.instance = null;

@@ -41,6 +41,8 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
         _this.nBtnBuy = null;
         _this.nStateBuy = null;
         _this.nCheckmask = null;
+        _this.lbLeverSpeedOld = null;
+        _this.lbLeverSpeedNew = null;
         _this.index = 0;
         _this.isCheck = false;
         _this._data = null;
@@ -81,6 +83,10 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
             speed: item.speed
         }); });
         cc.sys.localStorage.setItem('purchaseData', JSON.stringify(purchaseData));
+        cc.sys.localStorage.setItem('activeIndex', JSON.stringify(ShuShiCarb_Global_1.default.activeIndex));
+        cc.sys.localStorage.setItem('itemIndex', this.index.toString());
+        cc.sys.localStorage.setItem('speedHook', JSON.stringify(ShuShiCarb_Global_1.default.speedHook));
+        cc.sys.localStorage.setItem('lengthHook', JSON.stringify(ShuShiCarb_Global_1.default.lengthHook));
     };
     ShuShiCarbItemHook.prototype.checkClick = function () {
         if (ShuShiCarb_Global_1.default.totalGold >= ShuShiCarb_Global_1.default.dataHook[this.index].price) {
@@ -93,15 +99,18 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
         }
     };
     ShuShiCarbItemHook.prototype.onClickBuy = function () {
-        if (this.isCheck) {
+        if (this.isCheck && this.index < ShuShiCarb_Global_1.default.lengthHook) {
             ShuShiCarb_Global_1.default.dataHook[this.index].isBuy = true;
             ShuShiCarb_Global_1.default.totalGold -= ShuShiCarb_Global_1.default.dataHook[this.index].price;
             ShuShiCarb_Global_1.default.speedHook += ShuShiCarb_Global_1.default.dataHook[this.index].speed;
+            ShuShiCarb_Global_1.default.lengthHook += ShuShiCarb_Global_1.default.dataHook[this.index].widthHook;
             this.nStateBuy.children[this.index].active = ShuShiCarb_Global_1.default.dataHook[this.index].isBuy;
+            ShuShiCarb_Global_1.default.activeIndex = this.index;
             this.savePurchaseState();
-            cc.sys.localStorage.setItem('itemIndex', this.index.toString());
+            // cc.sys.localStorage.setItem('itemIndex',this.index.toString());
             // cc.sys.localStorage.setItem('price', Global.dataHook[this.index].price.toString);
             this.index++;
+            this.savePurchaseState();
             console.log(this.index);
             this.checkClick();
             ShuShiCarb_ShopView_1.default.instace.updateGold();
@@ -112,6 +121,8 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
     };
     ShuShiCarbItemHook.prototype.updatePrice = function (index) {
         this.lbPrice.string = ShuShiCarb_Global_1.default.dataHook[index].price + ' ';
+        this.lbLeverSpeedNew.string = ShuShiCarb_Global_1.default.dataHook[index].speed + 1 + ' ';
+        this.lbLeverSpeedOld.string = ShuShiCarb_Global_1.default.dataHook[index].speed + ' ' + ' -> ';
     };
     ShuShiCarbItemHook.prototype.start = function () {
     };
@@ -127,6 +138,12 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], ShuShiCarbItemHook.prototype, "nCheckmask", void 0);
+    __decorate([
+        property(cc.Label)
+    ], ShuShiCarbItemHook.prototype, "lbLeverSpeedOld", void 0);
+    __decorate([
+        property(cc.Label)
+    ], ShuShiCarbItemHook.prototype, "lbLeverSpeedNew", void 0);
     ShuShiCarbItemHook = __decorate([
         ccclass
     ], ShuShiCarbItemHook);

@@ -28,10 +28,13 @@
     "_components": [
       {
         "__id__": 39
+      },
+      {
+        "__id__": 40
       }
     ],
     "_prefab": {
-      "__id__": 40
+      "__id__": 41
     },
     "_opacity": 255,
     "_color": {
@@ -558,8 +561,8 @@
       "__id__": 1
     },
     "component": "",
-    "_componentId": "484713ZCZ9FspQaj6ncJKs9",
-    "handler": "onHide",
+    "_componentId": "2f0fd3epKRG7byTyvDHzrTW",
+    "handler": "onClickClose",
     "customEventData": ""
   },
   {
@@ -957,7 +960,9 @@
     "_N$hoverSprite": null,
     "hoverSprite": null,
     "_N$disabledSprite": null,
-    "_N$target": null,
+    "_N$target": {
+      "__id__": 20
+    },
     "_id": ""
   },
   {
@@ -966,7 +971,7 @@
       "__id__": 1
     },
     "component": "",
-    "_componentId": "484713ZCZ9FspQaj6ncJKs9",
+    "_componentId": "2f0fd3epKRG7byTyvDHzrTW",
     "handler": "onClickMusic",
     "customEventData": ""
   },
@@ -1149,7 +1154,9 @@
     "_N$hoverSprite": null,
     "hoverSprite": null,
     "_N$disabledSprite": null,
-    "_N$target": null,
+    "_N$target": {
+      "__id__": 25
+    },
     "_id": ""
   },
   {
@@ -1158,7 +1165,7 @@
       "__id__": 1
     },
     "component": "",
-    "_componentId": "484713ZCZ9FspQaj6ncJKs9",
+    "_componentId": "2f0fd3epKRG7byTyvDHzrTW",
     "handler": "onClickSound",
     "customEventData": ""
   },
@@ -1464,6 +1471,30 @@
       "__id__": 1
     },
     "_enabled": true,
+    "_id": ""
+  },
+  {
+    "__type__": "2f0fd3epKRG7byTyvDHzrTW",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
+    "sfMusic": [
+      {
+        "__uuid__": "62f5c116-b761-474f-8a4f-901aacbad188"
+      },
+      {
+        "__uuid__": "e9da2e2c-2b19-4a7c-b6df-b1644b18b7b0"
+      }
+    ],
+    "spMusic": {
+      "__id__": 21
+    },
+    "spSound": {
+      "__id__": 26
+    },
     "_id": ""
   },
   {

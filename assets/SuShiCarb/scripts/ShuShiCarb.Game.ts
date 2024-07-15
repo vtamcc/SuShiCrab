@@ -12,6 +12,7 @@ import ShuShiCarbGameOver from "./Game/Ui_Popup/ShuShiCrab.GameOver";
 
 import ShuShiCarbGameManager from "./ShuShiCarb.GameManager";
 import Global from "./ShuShiCarb.Global";
+import ShuShiCarbGoldFly from "./ShuShiCarb.GoldFly";
 
 
 const {ccclass, property} = cc._decorator;
@@ -45,13 +46,15 @@ export default class ShuShiCarbGame extends cc.Component {
 
     @property(cc.Label)
     lbGold: cc.Label = null;
-
+   
     @property(cc.Prefab)
     prfGameOver: cc.Prefab = null;
     @property(cc.ProgressBar)
     prgTime: cc.ProgressBar = null;
     @property(cc.Label)
     lbCountDown: cc.Label = null
+    @property(cc.Node)
+    nGoldFly: cc.Node = null; 
     // LIFE-CYCLE CALLBACKS:
     data = [0,1,2,3,4,5];
     playOrders = [];
@@ -113,17 +116,12 @@ export default class ShuShiCarbGame extends cc.Component {
         }else {
             this.isCountDown = false;
             this.lbCountDown.string = "00:00"
-            this.gameOver(this.prfGameOver,false);
+            this.gameOver(this.prfGameOver);
         }
     }
 
-    gameOver(prfGameOver: cc.Prefab, isWin: boolean) {
+    gameOver(prfGameOver: cc.Prefab) {
         let gamOver = cc.instantiate(prfGameOver).getComponent(ShuShiCarbGameOver)
-        if(isWin) {
-            gamOver.gameWin()
-        }else {
-            gamOver.gameLose();
-        }
         this.node.addChild(gamOver.node);
     }
 
@@ -158,12 +156,14 @@ export default class ShuShiCarbGame extends cc.Component {
             if (this.playOrders[i] === hookFoodId) {
                 if (!this.player.listFood[i].getChildByName("tick").active) {
                     this.player.listFood[i].getChildByName("tick").active = true;
+                    this.nGoldFly.active = true;
                     this.scheduleOnce(() => {
                         this.lsFoodTable[i].getComponent(cc.Sprite).spriteFrame = this.listSpfFood[hookFoodId];
                         this.lsFoodTable[i].active = true;
-                        
+                        this.nGoldFly.active = false;
                     },0.2);
                     this.gold += 5;
+                    ShuShiCarbGoldFly.instance.playAnim();
                     this.updateGold();
                     foundMatch = true;
                     this.countCorrect++;
@@ -213,6 +213,9 @@ export default class ShuShiCarbGame extends cc.Component {
         } 
     }
     resetGame(isHappy: boolean) {
+        if(this.indexData >= 8) {
+            this.indexData = 0;
+        }
         console.log("Resetting game...");
         this.countCorrect = 0;
         let resetCallback = () => {
@@ -237,6 +240,8 @@ export default class ShuShiCarbGame extends cc.Component {
        
         ShuShiCarbGameManager.instance.nHome.getChildByName('playbtn').getComponent(cc.Button).interactable = true;
     }
+
+    
     start () {
     }
 

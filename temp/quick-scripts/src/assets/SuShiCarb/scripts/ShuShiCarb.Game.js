@@ -34,6 +34,7 @@ var ShuShiCarb_Player_1 = require("./Game/ShuShiCarb.Player");
 var ShuShiCrab_GameOver_1 = require("./Game/Ui_Popup/ShuShiCrab.GameOver");
 var ShuShiCarb_GameManager_1 = require("./ShuShiCarb.GameManager");
 var ShuShiCarb_Global_1 = require("./ShuShiCarb.Global");
+var ShuShiCarb_GoldFly_1 = require("./ShuShiCarb.GoldFly");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbGame = /** @class */ (function (_super) {
     __extends(ShuShiCarbGame, _super);
@@ -52,6 +53,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         _this.prfGameOver = null;
         _this.prgTime = null;
         _this.lbCountDown = null;
+        _this.nGoldFly = null;
         // LIFE-CYCLE CALLBACKS:
         _this.data = [0, 1, 2, 3, 4, 5];
         _this.playOrders = [];
@@ -113,17 +115,11 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         else {
             this.isCountDown = false;
             this.lbCountDown.string = "00:00";
-            this.gameOver(this.prfGameOver, false);
+            this.gameOver(this.prfGameOver);
         }
     };
-    ShuShiCarbGame.prototype.gameOver = function (prfGameOver, isWin) {
+    ShuShiCarbGame.prototype.gameOver = function (prfGameOver) {
         var gamOver = cc.instantiate(prfGameOver).getComponent(ShuShiCrab_GameOver_1.default);
-        if (isWin) {
-            gamOver.gameWin();
-        }
-        else {
-            gamOver.gameLose();
-        }
         this.node.addChild(gamOver.node);
     };
     ShuShiCarbGame.prototype.updatePrgressTime = function () {
@@ -156,11 +152,14 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
             if (this_1.playOrders[i] === hookFoodId) {
                 if (!this_1.player.listFood[i].getChildByName("tick").active) {
                     this_1.player.listFood[i].getChildByName("tick").active = true;
+                    this_1.nGoldFly.active = true;
                     this_1.scheduleOnce(function () {
                         _this.lsFoodTable[i].getComponent(cc.Sprite).spriteFrame = _this.listSpfFood[hookFoodId];
                         _this.lsFoodTable[i].active = true;
+                        _this.nGoldFly.active = false;
                     }, 0.2);
                     this_1.gold += 5;
+                    ShuShiCarb_GoldFly_1.default.instance.playAnim();
                     this_1.updateGold();
                     foundMatch = true;
                     this_1.countCorrect++;
@@ -210,6 +209,9 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     };
     ShuShiCarbGame.prototype.resetGame = function (isHappy) {
         var _this = this;
+        if (this.indexData >= 8) {
+            this.indexData = 0;
+        }
         console.log("Resetting game...");
         this.countCorrect = 0;
         var resetCallback = function () {
@@ -275,6 +277,9 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     __decorate([
         property(cc.Label)
     ], ShuShiCarbGame.prototype, "lbCountDown", void 0);
+    __decorate([
+        property(cc.Node)
+    ], ShuShiCarbGame.prototype, "nGoldFly", void 0);
     ShuShiCarbGame = ShuShiCarbGame_1 = __decorate([
         ccclass
     ], ShuShiCarbGame);

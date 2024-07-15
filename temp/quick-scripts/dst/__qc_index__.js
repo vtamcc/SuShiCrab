@@ -22,6 +22,8 @@ require('./assets/SuShiCarb/scripts/Game/Ui_Popup/ShuShiCrab.GameOver');
 require('./assets/SuShiCarb/scripts/ShuShiCarb.Game');
 require('./assets/SuShiCarb/scripts/ShuShiCarb.GameManager');
 require('./assets/SuShiCarb/scripts/ShuShiCarb.Global');
+require('./assets/SuShiCarb/scripts/ShuShiCarb.GoldFly');
+require('./assets/SuShiCarb/scripts/ShuShiCarb.SoundManager');
 
                     }
                     if (nodeEnv) {

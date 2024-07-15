@@ -13,6 +13,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ShuShiCarbPlayer extends cc.Component {
 
+    public static instace: ShuShiCarbPlayer = null;
     @property(sp.Skeleton)
     char: sp.Skeleton = null;
     @property(cc.Node)
@@ -31,7 +32,7 @@ export default class ShuShiCarbPlayer extends cc.Component {
     numberCountDown = 0;
     isCountDown = false;
     isMove = false;
-
+    isAtOrderPosition = false;
     
     // @property(cc.Node)
     // foodItem1: cc.Node = null;
@@ -40,7 +41,9 @@ export default class ShuShiCarbPlayer extends cc.Component {
     // @property(cc.Node)
     // foodItem3: cc.Node = null;
 
-
+    onLoad() {
+        ShuShiCarbPlayer.instace = this;
+    }
     setData(index) {
         this.char.skeletonData = this.listCharacter[index]; // listChar [0] = con ao vang
     }
@@ -81,6 +84,7 @@ export default class ShuShiCarbPlayer extends cc.Component {
             this.char.animation = 'idle';
             this.nchat.active = true;
             this.nTime.active = true;
+            this.isAtOrderPosition = true;
             this.startCountDown();
         })
         .start()

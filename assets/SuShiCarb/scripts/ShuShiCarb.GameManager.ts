@@ -24,12 +24,14 @@ export default class ShuShiCarbGameManager extends cc.Component {
    prfShopView: cc.Prefab = null;
    @property(cc.Label) 
    lbTotalGold: cc.Label = null;
+   @property(cc.Prefab)
+   prfSetting: cc.Prefab = null;
     // LIFE-CYCLE CALLBACKS:
 
    onLoad () {
       ShuShiCarbGameManager.instance = this;
       Global.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 2000;
-      Global.speedHook = JSON.parse(cc.sys.localStorage.getItem("speed")) || 20;
+     
       this.updateTotalGold();
    }
 
@@ -52,6 +54,11 @@ export default class ShuShiCarbGameManager extends cc.Component {
    }
    updateTotalGold() {
       this.lbTotalGold.string = Global.totalGold + " "; 
+   }
+
+   onClickSettingView() {
+      let setting = cc.instantiate(this.prfSetting)
+      this.node.addChild(setting);
    }
     // update (dt) {}
 }

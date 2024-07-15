@@ -1,51 +1,62 @@
+// Learn TypeScript:
+//  - https://docs.cocos.com/creator/manual/en/scripting/typescript.html
+// Learn Attribute:
+//  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
+// Learn life-cycle callbacks:
+//  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
+import Global from "../../ShuShiCarb.Global";
 
-// const {ccclass, property} = cc._decorator;
+const {ccclass, property} = cc._decorator;
 
-// @ccclass
-// export default class GPFSettingView extends GPFBasePopup {
+@ccclass
+export default class NewClass extends cc.Component {
 
-//     @property(cc.SpriteFrame)
-//     sfMusic: cc.SpriteFrame[] = [];
+    @property(cc.SpriteFrame)
+    sfMusic: cc.SpriteFrame[] = [];
 
-//     @property(cc.Sprite)
-//     spMusic: cc.Sprite = null
-//     @property(cc.Sprite)
-//     spSound: cc.Sprite = null
+    @property(cc.Sprite)
+    spMusic: cc.Sprite = null
+    @property(cc.Sprite)
+    spSound: cc.Sprite = null
 
+    start() {
+        this.updateStatus()
+    }
 
-//     updateStatus() {
-//         if (GPFGlobal.isMusicOn) {
-//             this.spMusic.spriteFrame = this.sfMusic[0];
-//         } else {
-//             this.spMusic.spriteFrame = this.sfMusic[1];
-//         }
+    updateStatus() {
+        if (Global.isSoundOn)
+            this.spSound.spriteFrame = this.sfMusic[0];
+        else
+            this.spSound.spriteFrame = this.sfMusic[1];
 
-//         if (GPFGlobal.isSoundOn) {
-//             this.spSound.spriteFrame = this.sfMusic[0]
-//         } else {
-//             this.spSound.spriteFrame = this.sfMusic[1]
-//         }
-//     }
+        if (Global.isMusicOn)
+            this.spMusic.spriteFrame = this.sfMusic[0];
+        else
+            this.spMusic.spriteFrame = this.sfMusic[1];
+    }
 
-//     onClickMusic() {
-//         GPFGlobal.isMusicOn = !GPFGlobal.isMusicOn;
-//         this.updateStatus()
-//         GPFGlobal.soundManager.updateMusicState()
-//     }
+    onClickSound() {
+        if (Global.soundManager)
+            Global.soundManager.playSoundClick();
 
-//     onClickSound() {
-//         GPFGlobal.isSoundOn = !GPFGlobal.isSoundOn;
-//         this.updateStatus();
-//         console.log(GPFGlobal.isSoundOn)
-//     }
-//     // LIFE-CYCLE CALLBACKS:
+        Global.isSoundOn = !Global.isSoundOn;
+        this.updateStatus();
+    }
 
-//     // onLoad () {}
+    onClickMusic() {
+        if (Global.soundManager)
+            Global.soundManager.playSoundClick();
+        
+        Global.isMusicOn = !Global.isMusicOn;
+        this.updateStatus()
+        Global.soundManager.updateMusicState();
+    }
 
-//     start () {
-//         this.updateStatus()
-//     }
+    onClickClose() {
+        this.node.destroy();
+    }
+   
 
-//     // update (dt) {}
-// }
+    // update (dt) {}
+}

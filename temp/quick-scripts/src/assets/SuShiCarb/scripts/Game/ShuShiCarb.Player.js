@@ -46,15 +46,20 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
         _this.numberCountDown = 0;
         _this.isCountDown = false;
         _this.isMove = false;
+        _this.isAtOrderPosition = false;
         return _this;
         // update (dt) {}
     }
+    ShuShiCarbPlayer_1 = ShuShiCarbPlayer;
     // @property(cc.Node)
     // foodItem1: cc.Node = null;
     // @property(cc.Node)
     // foodItem2: cc.Node = null;
     // @property(cc.Node)
     // foodItem3: cc.Node = null;
+    ShuShiCarbPlayer.prototype.onLoad = function () {
+        ShuShiCarbPlayer_1.instace = this;
+    };
     ShuShiCarbPlayer.prototype.setData = function (index) {
         this.char.skeletonData = this.listCharacter[index]; // listChar [0] = con ao vang
     };
@@ -92,6 +97,7 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
             _this.char.animation = 'idle';
             _this.nchat.active = true;
             _this.nTime.active = true;
+            _this.isAtOrderPosition = true;
             _this.startCountDown();
         })
             .start();
@@ -123,6 +129,8 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
     ShuShiCarbPlayer.prototype.start = function () {
         this.effectShow();
     };
+    var ShuShiCarbPlayer_1;
+    ShuShiCarbPlayer.instace = null;
     __decorate([
         property(sp.Skeleton)
     ], ShuShiCarbPlayer.prototype, "char", void 0);
@@ -144,7 +152,7 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], ShuShiCarbPlayer.prototype, "nTime", void 0);
-    ShuShiCarbPlayer = __decorate([
+    ShuShiCarbPlayer = ShuShiCarbPlayer_1 = __decorate([
         ccclass
     ], ShuShiCarbPlayer);
     return ShuShiCarbPlayer;
