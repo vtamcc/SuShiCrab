@@ -7,6 +7,7 @@
 
 import Global from "../../../ShuShiCarb.Global";
 import ShuShiCarbItemHook from "./ShuShiCarb.ItemHook";
+import ShuShiCarbItemMoneyBag from "./ShuShiCarb.ItemMoneyBag";
 
 
 
@@ -18,15 +19,21 @@ export default class ShuShiCarbShopView extends cc.Component {
     @property(cc.Label)
     lbGold: cc.Label = null;
     @property(cc.Node)
-    nItemSpeedHook: cc.Node = null;
+    nlistItem: cc.Node = null;
 
     @property(cc.Prefab)
     prfItemSpeedHook: cc.Prefab = null;
+    
+   
+
+    @property(cc.Prefab)
+    prfItemMoney: cc.Prefab = null;
     listDataHook = [];
     onLoad() {
         ShuShiCarbShopView.instace = this;
         this.itemSpeedHook();
         this.updateGold();
+        this.itemMoney();
     }
     start () {
 
@@ -34,10 +41,13 @@ export default class ShuShiCarbShopView extends cc.Component {
 
     itemSpeedHook() {
         let item = cc.instantiate(this.prfItemSpeedHook).getComponent(ShuShiCarbItemHook)
-        this.nItemSpeedHook.addChild(item.node);
+        this.nlistItem.addChild(item.node);
     }
     
-
+    itemMoney() {
+        let item = cc.instantiate(this.prfItemMoney).getComponent(ShuShiCarbItemMoneyBag)
+        this.nlistItem.addChild(item.node);
+    }
     updateGold() {
         this.lbGold.string = Global.totalGold + " ";
     }

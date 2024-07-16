@@ -107,8 +107,9 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
         // this.char.setAnimation(0,"happy_out",active);
         // this.char.setAnimation(0,"discomfort",!active);
         this.char.animation = "happy";
+        this.isAtOrderPosition = false;
         cc.tween(this.char.node)
-            .to(1.5, { x: 600 })
+            .to(0.8, { x: 600 })
             .call(function () {
             _this.node.destroy();
             callbacks();
@@ -119,9 +120,11 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
         // this.char.setAnimation(0,"happy_out",active);
         // this.char.setAnimation(0,"discomfort",!active);
         this.char.animation = "discomfort";
+        this.isAtOrderPosition = false;
         cc.tween(this.char.node)
-            .to(1.5, { x: 600 })
+            .to(0.8, { x: 600 })
             .call(function () {
+            _this.isAtOrderPosition = false;
             _this.node.destroy();
             callbacks();
         }).start();

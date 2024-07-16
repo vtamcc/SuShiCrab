@@ -31,14 +31,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var ShuShiCarb_Global_1 = require("../../../ShuShiCarb.Global");
 var ShuShiCarb_ItemHook_1 = require("./ShuShiCarb.ItemHook");
+var ShuShiCarb_ItemMoneyBag_1 = require("./ShuShiCarb.ItemMoneyBag");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbShopView = /** @class */ (function (_super) {
     __extends(ShuShiCarbShopView, _super);
     function ShuShiCarbShopView() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.lbGold = null;
-        _this.nItemSpeedHook = null;
+        _this.nlistItem = null;
         _this.prfItemSpeedHook = null;
+        _this.prfItemMoney = null;
         _this.listDataHook = [];
         return _this;
         // update (dt) {}
@@ -48,12 +50,17 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
         ShuShiCarbShopView_1.instace = this;
         this.itemSpeedHook();
         this.updateGold();
+        this.itemMoney();
     };
     ShuShiCarbShopView.prototype.start = function () {
     };
     ShuShiCarbShopView.prototype.itemSpeedHook = function () {
         var item = cc.instantiate(this.prfItemSpeedHook).getComponent(ShuShiCarb_ItemHook_1.default);
-        this.nItemSpeedHook.addChild(item.node);
+        this.nlistItem.addChild(item.node);
+    };
+    ShuShiCarbShopView.prototype.itemMoney = function () {
+        var item = cc.instantiate(this.prfItemMoney).getComponent(ShuShiCarb_ItemMoneyBag_1.default);
+        this.nlistItem.addChild(item.node);
     };
     ShuShiCarbShopView.prototype.updateGold = function () {
         this.lbGold.string = ShuShiCarb_Global_1.default.totalGold + " ";
@@ -72,10 +79,13 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
     ], ShuShiCarbShopView.prototype, "lbGold", void 0);
     __decorate([
         property(cc.Node)
-    ], ShuShiCarbShopView.prototype, "nItemSpeedHook", void 0);
+    ], ShuShiCarbShopView.prototype, "nlistItem", void 0);
     __decorate([
         property(cc.Prefab)
     ], ShuShiCarbShopView.prototype, "prfItemSpeedHook", void 0);
+    __decorate([
+        property(cc.Prefab)
+    ], ShuShiCarbShopView.prototype, "prfItemMoney", void 0);
     ShuShiCarbShopView = ShuShiCarbShopView_1 = __decorate([
         ccclass
     ], ShuShiCarbShopView);

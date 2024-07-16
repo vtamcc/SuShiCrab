@@ -80,6 +80,8 @@ var ShuShiCarbGameOver = /** @class */ (function (_super) {
     ShuShiCarbGameOver.prototype.stopGamePlay = function () {
         var nodeGamePlay = cc.Canvas.instance.node.getChildByName("Main");
         ShuShiCarb_GameManager_1.default.instance.nHome.getChildByName('playbtn').getComponent(cc.Button).interactable = true;
+        ShuShiCarb_GameManager_1.default.instance.nHome.getChildByName('shop').getComponent(cc.Button).interactable = true;
+        ShuShiCarb_GameManager_1.default.instance.nHome.getChildByName('setting').getComponent(cc.Button).interactable = true;
         nodeGamePlay.destroy();
     };
     ShuShiCarbGameOver.prototype.onLoad = function () {

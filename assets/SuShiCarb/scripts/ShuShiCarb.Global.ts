@@ -15,6 +15,14 @@ export default class Global {
         {price: 450,speed: 3.5, widthHook: 7,isBuy: false},
         {price: 600,speed: 4.5, widthHook: 9,isBuy: false},
         {price: 750,speed: 5.5, widthHook: 11,isBuy: false}];
+
+    static dataMoney = [{price: 120, gold: 20, isBuy: false},
+        {price: 250, gold: 25, isBuy: false},
+        {price: 320, gold: 30, isBuy: false},
+        {price: 450,gold: 35, isBuy: false},
+        {price: 750,gold: 40, isBuy: false}
+    ]
+    static checkBagMoney = false;
     static speedHook = 20;
     static lengthHook = 35;
     static isMusicOn = true;

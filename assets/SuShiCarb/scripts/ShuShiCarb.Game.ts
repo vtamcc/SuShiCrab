@@ -55,13 +55,15 @@ export default class ShuShiCarbGame extends cc.Component {
     lbCountDown: cc.Label = null
     @property(cc.Node)
     nGoldFly: cc.Node = null; 
+    @property(cc.Node)
+    nCheckFalse: cc.Node = null;
     // LIFE-CYCLE CALLBACKS:
     data = [0,1,2,3,4,5];
     playOrders = [];
     hookObjects: {node:cc.Node, id: number} [] = [];
     indexData = 0;
     countCorrect = 0;
-    numberCountdown = 7;
+    // numberCountdown = 7;
     countdownInterval: any = null;
     isMove  = false;
     player = null;
@@ -77,9 +79,11 @@ export default class ShuShiCarbGame extends cc.Component {
         console.log(this.playOrders);
         this.conveyor(this.conveyor_1);
         this.conveyor(this.conveyor_2);
-        this.conveyor(this.conveyor_3);
+       this.conveyor(this.conveyor_3);
         this.renderOrderFood();
         this.startCountDown();
+        console.log(Global.checkBagMoney);
+        //this.schedule(this.addRandomMoneyBag, 5)
         //this.renderFood();      
     }
 
@@ -93,6 +97,8 @@ export default class ShuShiCarbGame extends cc.Component {
     //     }
     //     return arr;
     // }
+
+
     randomOrderFood() {
         this.playOrders = []; 
         for(let i = 0; i < 3; i++) {
@@ -117,6 +123,7 @@ export default class ShuShiCarbGame extends cc.Component {
             this.isCountDown = false;
             this.lbCountDown.string = "00:00"
             this.gameOver(this.prfGameOver);
+          
         }
     }
 
@@ -127,14 +134,14 @@ export default class ShuShiCarbGame extends cc.Component {
 
     updatePrgressTime() {
         if(this.prgTime) {
-            this.prgTime.progress -= 1 / this.duration;
+            this.prgTime.progress -= 1/ this.duration;
         }
     }
+
     renderOrderFood() {
         // if (this.player) {
         //     this.player.node.destroy(); // Destroy previous player node
         // }
-       
         this.player = cc.instantiate(this.prfOrder).getComponent(ShuShiCarbPlayer);
         for(let i = 0; i < this.player.listFood.length; i++) {
             let food = this.player.listFood[i]
@@ -147,7 +154,6 @@ export default class ShuShiCarbGame extends cc.Component {
 
     checkCorrect() {
         if (this.hookObjects.length === 0) {
-            console.log("hut het me roi");
             return;
         }
         let hookFoodId = this.hookObjects[0].id;
@@ -162,20 +168,21 @@ export default class ShuShiCarbGame extends cc.Component {
                         this.lsFoodTable[i].active = true;
                         this.nGoldFly.active = false;
                     },0.2);
-                    this.gold += 5;
                     ShuShiCarbGoldFly.instance.playAnim();
+                    this.gold += 5;
+                    
                     this.updateGold();
                     foundMatch = true;
                     this.countCorrect++;
                     break;
                 }
+                
             }
+            
         }
 
         this.lbGold.string = this.gold + ' ';
-        console.log("Keo dung ne ",this.countCorrect);
         if (!foundMatch) {
-            console.log("sai me may roi");
         }
         
         if(this.countCorrect >=3) {
@@ -186,15 +193,22 @@ export default class ShuShiCarbGame extends cc.Component {
 
 
     updateGold() {
-        Global.totalGold += this.gold;
+        Global.totalGold += 5;
+        console.log("Tong tien ", Global.totalGold);
         cc.sys.localStorage.setItem('totalGold',JSON.stringify(Global.totalGold));
     }
     conveyor(node: cc.Node) {
-       for(let i = 0; i < node.childrenCount; i++) {
+        for (let i = 0; i < node.childrenCount; i++) {
             let item = node.children[i].getComponent(ShuShiCarbFood);
-            let randomIndex = Math.floor(Math.random() * this.data.length);
-            item.setData(this.data[randomIndex]);
-       }
+            if(Global.checkBagMoney == true && i === 5) {
+                item.setData(999);
+                console.log("khong chay vao day a ")
+            } else {
+                let randomIndex = Math.floor(Math.random() * this.data.length);
+                item.setData(this.data[randomIndex]);
+            }
+           
+        }
     }
 
     removeNode(node: cc.Node, id) {
@@ -237,8 +251,9 @@ export default class ShuShiCarbGame extends cc.Component {
     onclickBack() { 
         ShuShiCarbGameManager.instance.updateTotalGold();
         this.node.destroy();
-       
         ShuShiCarbGameManager.instance.nHome.getChildByName('playbtn').getComponent(cc.Button).interactable = true;
+        ShuShiCarbGameManager.instance.nHome.getChildByName('shop').getComponent(cc.Button).interactable = true;
+        ShuShiCarbGameManager.instance.nHome.getChildByName('setting').getComponent(cc.Button).interactable = true;
     }
 
     

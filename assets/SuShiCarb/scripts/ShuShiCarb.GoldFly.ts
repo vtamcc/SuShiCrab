@@ -11,6 +11,8 @@ const {ccclass, property} = cc._decorator;
 export default class ShuShiCarbGoldFly extends cc.Component {
   public static instance: ShuShiCarbGoldFly = null;
   @property(cc.Node)
+  nodeLbFly: cc.Node = null;
+  @property(cc.Node)
   startPoint: cc.Node = null;
   @property(cc.Node)
   endPoint: cc.Node = null;
@@ -37,6 +39,14 @@ export default class ShuShiCarbGoldFly extends cc.Component {
     let stPos = this.startPoint.getPosition();
     let edPos = this.endPoint.getPosition();
     this.playCoinFlyAnim(randomCount, stPos, edPos);
+    this.nodeLbFly.active = true;
+    cc.tween(this.nodeLbFly)
+    .to(0.8, {y:edPos.y})
+    .call(() => {
+        this.nodeLbFly.y = 0;
+        this.nodeLbFly.active = false;
+    })
+    .start();
   }
 
   playCoinFlyAnim(count: number, stPos: cc.Vec2, edPos: cc.Vec2, r: number = 130) {

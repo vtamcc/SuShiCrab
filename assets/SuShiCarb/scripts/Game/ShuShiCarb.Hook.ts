@@ -36,7 +36,7 @@ export default class ShuShiCarbHook extends cc.Component {
     isClickable: boolean = true;
     onLoad() {
         ShuShiCarbHook.instance = this;
-        cc.Canvas.instance.node.on(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);  
+        cc.Canvas.instance.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this);  
         Global.speedHook = JSON.parse(cc.sys.localStorage.getItem("speedHook")) || Global.speedHook;
         Global.lengthHook = JSON.parse(cc.sys.localStorage.getItem("lengthHook")) || Global.lengthHook;
         console.log("speed ", Global.speedHook);
@@ -62,14 +62,14 @@ export default class ShuShiCarbHook extends cc.Component {
     }
  
 
-    onMouseDown(event: cc.Event.EventMouse) {
+    onTouchEnd(event: cc.Event.EventTouch) {
         if (!this.isClickable || this.hookState !== 0 || !ShuShiCarbPlayer.instace.isAtOrderPosition) {
             return;
         }
         this.hookState = 1;
         this.mousePos = this.node.parent.convertToNodeSpaceAR(cc.v2(event.getLocationX()));
 
-        console.log(this.mousePos);
+        console.log(this.mousePos); 
         this.node.setPosition(this.mousePos);
     }
 
@@ -79,7 +79,7 @@ export default class ShuShiCarbHook extends cc.Component {
       
     }
     onDestroy() {
-        cc.Canvas.instance.node.off(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
+        cc.Canvas.instance.node.off(cc.Node.EventType.MOUSE_DOWN, this.onTouchEnd, this);
     }
     update(dt) {
         this.setHookSprite(true);

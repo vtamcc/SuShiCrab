@@ -36,6 +36,8 @@ var ShuShiCarbFood = /** @class */ (function (_super) {
     function ShuShiCarbFood() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.nFood = null;
+        // @property(cc.Node)
+        // nBagMoney: cc.Node = null;
         _this.id = 0;
         // LIFE-CYCLE CALLBACKS:
         _this.isCheck = 0;
@@ -47,7 +49,13 @@ var ShuShiCarbFood = /** @class */ (function (_super) {
     };
     ShuShiCarbFood.prototype.setData = function (idFood) {
         this.id = idFood;
-        this.nFood.getComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[idFood];
+        if (idFood === 999) {
+            console.log("Chay vao day ma ");
+            this.nFood.getComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[6];
+        }
+        else {
+            this.nFood.getComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[idFood];
+        }
     };
     ShuShiCarbFood.prototype.update = function (dt) {
         //    if(this.isCheck == 1) {

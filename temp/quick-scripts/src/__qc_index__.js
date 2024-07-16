@@ -5,6 +5,7 @@ require('./assets/SuShiCarb/scripts/Game/ShuShiCarb.Hook');
 require('./assets/SuShiCarb/scripts/Game/ShuShiCarb.Player');
 require('./assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager');
 require('./assets/SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ItemHook');
+require('./assets/SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ItemMoneyBag');
 require('./assets/SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ShopView');
 require('./assets/SuShiCarb/scripts/Game/Ui_Popup/ShuShiCarb.SettingView');
 require('./assets/SuShiCarb/scripts/Game/Ui_Popup/ShuShiCrab.GameOver');

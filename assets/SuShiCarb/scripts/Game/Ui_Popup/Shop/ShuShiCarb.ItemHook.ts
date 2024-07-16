@@ -79,17 +79,20 @@ export default class ShuShiCarbItemHook extends cc.Component {
     
     
     checkClick() {
-       if(Global.totalGold >= Global.dataHook[this.index].price) {
-           this.nCheckmask.active = false;
-           this.isCheck = true;
-       }else {
-            this.nCheckmask.active = true;
-            this.nBtnBuy.getComponent(cc.Toggle).interactable = false;
+        if(this.index < Global.dataHook.length) {
+            if(Global.totalGold >= Global.dataHook[this.index].price) {
+                this.nCheckmask.active = false;
+                this.isCheck = true;
+            }else {
+                 this.nCheckmask.active = true;
+                 this.nBtnBuy.getComponent(cc.Toggle).interactable = false;
+             }
         }
+      
     }
 
     onClickBuy() {
-        if(this.isCheck && this.index < Global.lengthHook) {
+        if(this.isCheck && this.index < Global.dataHook.length) {
             Global.dataHook[this.index].isBuy = true;
             Global.totalGold -= Global.dataHook[this.index].price;
             Global.speedHook += Global.dataHook[this.index].speed;
@@ -108,14 +111,24 @@ export default class ShuShiCarbItemHook extends cc.Component {
             ShuShiCarbGameManager.instance.updateTotalGold();
             this.updatePrice(this.index);
             console.log("data Hoook ",Global.dataHook);
+        } else {
+            this.nCheckmask.active = true;
+            this.nBtnBuy.getComponent(cc.Toggle).interactable = false;
         }
        
     }
 
     updatePrice(index) {
-        this.lbPrice.string = Global.dataHook[index].price + ' '; 
-        this.lbLeverSpeedNew.string = Global.dataHook[index].speed + 1 + ' ';
-        this.lbLeverSpeedOld.string = Global.dataHook[index].speed + ' ' +  ' -> ';
+        if(index < Global.dataHook.length) {
+            this.lbPrice.string = Global.dataHook[index].price + ' '; 
+            this.lbLeverSpeedNew.string = Global.dataHook[index].speed + 1 + ' ';
+            this.lbLeverSpeedOld.string = Global.dataHook[index].speed + ' ' +  ' -> ';
+        }else {
+            this.lbPrice.string = "Max";
+            this.lbLeverSpeedNew.string = "Max";
+            this.lbLeverSpeedOld.string = "Max";
+        }
+       
     }
     start () {
 

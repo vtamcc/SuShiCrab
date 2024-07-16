@@ -61,6 +61,8 @@ export default class ShuShiCarbGameOver extends cc.Component {
     stopGamePlay() {
         let nodeGamePlay = cc.Canvas.instance.node.getChildByName("Main")
         ShuShiCarbGameManager.instance.nHome.getChildByName('playbtn').getComponent(cc.Button).interactable = true;
+        ShuShiCarbGameManager.instance.nHome.getChildByName('shop').getComponent(cc.Button).interactable = true;
+        ShuShiCarbGameManager.instance.nHome.getChildByName('setting').getComponent(cc.Button).interactable = true;
         nodeGamePlay.destroy();
     }
 

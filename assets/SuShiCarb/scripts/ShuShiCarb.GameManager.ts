@@ -45,6 +45,8 @@ export default class ShuShiCarbGameManager extends cc.Component {
       this.node.addChild(game.node);
       //this.nHome.active = false;
       this.nHome.getChildByName('playbtn').getComponent(cc.Button).interactable = false;
+      this.nHome.getChildByName('shop').getComponent(cc.Button).interactable = false;
+      this.nHome.getChildByName('setting').getComponent(cc.Button).interactable = false;
       
    }
 

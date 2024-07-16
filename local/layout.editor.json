@@ -89,8 +89,7 @@
         "node-library"
       ]
     },
-    " common-asset-worker-worker": {},
-    " load-media-worker": {}
+    " build-worker-worker": {}
   },
   "panels": {
     "project-settings": {
@@ -98,6 +97,12 @@
       "y": 234,
       "width": 584,
       "height": 554
+    },
+    "builder": {
+      "x": 681,
+      "y": 127,
+      "width": 500,
+      "height": 728
     }
   },
   "panelLabelWidth": {

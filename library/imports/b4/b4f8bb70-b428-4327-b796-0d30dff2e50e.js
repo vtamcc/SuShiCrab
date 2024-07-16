@@ -61,6 +61,8 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
         this.node.addChild(game.node);
         //this.nHome.active = false;
         this.nHome.getChildByName('playbtn').getComponent(cc.Button).interactable = false;
+        this.nHome.getChildByName('shop').getComponent(cc.Button).interactable = false;
+        this.nHome.getChildByName('setting').getComponent(cc.Button).interactable = false;
     };
     ShuShiCarbGameManager.prototype.onClickShopView = function () {
         var shopView = cc.instantiate(this.prfShopView).getComponent(ShuShiCarb_ShopView_1.default);

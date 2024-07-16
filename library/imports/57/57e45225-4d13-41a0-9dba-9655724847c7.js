@@ -54,13 +54,14 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         _this.prgTime = null;
         _this.lbCountDown = null;
         _this.nGoldFly = null;
+        _this.nCheckFalse = null;
         // LIFE-CYCLE CALLBACKS:
         _this.data = [0, 1, 2, 3, 4, 5];
         _this.playOrders = [];
         _this.hookObjects = [];
         _this.indexData = 0;
         _this.countCorrect = 0;
-        _this.numberCountdown = 7;
+        // numberCountdown = 7;
         _this.countdownInterval = null;
         _this.isMove = false;
         _this.player = null;
@@ -82,6 +83,8 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         this.conveyor(this.conveyor_3);
         this.renderOrderFood();
         this.startCountDown();
+        console.log(ShuShiCarb_Global_1.default.checkBagMoney);
+        //this.schedule(this.addRandomMoneyBag, 5)
         //this.renderFood();      
     };
     // randomIdFood(arr,count) {
@@ -143,7 +146,6 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     ShuShiCarbGame.prototype.checkCorrect = function () {
         var _this = this;
         if (this.hookObjects.length === 0) {
-            console.log("hut het me roi");
             return;
         }
         var hookFoodId = this.hookObjects[0].id;
@@ -158,8 +160,8 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
                         _this.lsFoodTable[i].active = true;
                         _this.nGoldFly.active = false;
                     }, 0.2);
-                    this_1.gold += 5;
                     ShuShiCarb_GoldFly_1.default.instance.playAnim();
+                    this_1.gold += 5;
                     this_1.updateGold();
                     foundMatch = true;
                     this_1.countCorrect++;
@@ -174,23 +176,28 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
                 break;
         }
         this.lbGold.string = this.gold + ' ';
-        console.log("Keo dung ne ", this.countCorrect);
         if (!foundMatch) {
-            console.log("sai me may roi");
         }
         if (this.countCorrect >= 3) {
             this.resetGame(true);
         }
     };
     ShuShiCarbGame.prototype.updateGold = function () {
-        ShuShiCarb_Global_1.default.totalGold += this.gold;
+        ShuShiCarb_Global_1.default.totalGold += 5;
+        console.log("Tong tien ", ShuShiCarb_Global_1.default.totalGold);
         cc.sys.localStorage.setItem('totalGold', JSON.stringify(ShuShiCarb_Global_1.default.totalGold));
     };
     ShuShiCarbGame.prototype.conveyor = function (node) {
         for (var i = 0; i < node.childrenCount; i++) {
             var item = node.children[i].getComponent(ShuShiCarb_Food_1.default);
-            var randomIndex = Math.floor(Math.random() * this.data.length);
-            item.setData(this.data[randomIndex]);
+            if (ShuShiCarb_Global_1.default.checkBagMoney == true && i === 5) {
+                item.setData(999);
+                console.log("khong chay vao day a ");
+            }
+            else {
+                var randomIndex = Math.floor(Math.random() * this.data.length);
+                item.setData(this.data[randomIndex]);
+            }
         }
     };
     ShuShiCarbGame.prototype.removeNode = function (node, id) {
@@ -233,6 +240,8 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         ShuShiCarb_GameManager_1.default.instance.updateTotalGold();
         this.node.destroy();
         ShuShiCarb_GameManager_1.default.instance.nHome.getChildByName('playbtn').getComponent(cc.Button).interactable = true;
+        ShuShiCarb_GameManager_1.default.instance.nHome.getChildByName('shop').getComponent(cc.Button).interactable = true;
+        ShuShiCarb_GameManager_1.default.instance.nHome.getChildByName('setting').getComponent(cc.Button).interactable = true;
     };
     ShuShiCarbGame.prototype.start = function () {
     };
@@ -280,6 +289,9 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], ShuShiCarbGame.prototype, "nGoldFly", void 0);
+    __decorate([
+        property(cc.Node)
+    ], ShuShiCarbGame.prototype, "nCheckFalse", void 0);
     ShuShiCarbGame = ShuShiCarbGame_1 = __decorate([
         ccclass
     ], ShuShiCarbGame);

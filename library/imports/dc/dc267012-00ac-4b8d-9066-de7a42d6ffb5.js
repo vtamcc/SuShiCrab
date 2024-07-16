@@ -89,17 +89,19 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
         cc.sys.localStorage.setItem('lengthHook', JSON.stringify(ShuShiCarb_Global_1.default.lengthHook));
     };
     ShuShiCarbItemHook.prototype.checkClick = function () {
-        if (ShuShiCarb_Global_1.default.totalGold >= ShuShiCarb_Global_1.default.dataHook[this.index].price) {
-            this.nCheckmask.active = false;
-            this.isCheck = true;
-        }
-        else {
-            this.nCheckmask.active = true;
-            this.nBtnBuy.getComponent(cc.Toggle).interactable = false;
+        if (this.index < ShuShiCarb_Global_1.default.dataHook.length) {
+            if (ShuShiCarb_Global_1.default.totalGold >= ShuShiCarb_Global_1.default.dataHook[this.index].price) {
+                this.nCheckmask.active = false;
+                this.isCheck = true;
+            }
+            else {
+                this.nCheckmask.active = true;
+                this.nBtnBuy.getComponent(cc.Toggle).interactable = false;
+            }
         }
     };
     ShuShiCarbItemHook.prototype.onClickBuy = function () {
-        if (this.isCheck && this.index < ShuShiCarb_Global_1.default.lengthHook) {
+        if (this.isCheck && this.index < ShuShiCarb_Global_1.default.dataHook.length) {
             ShuShiCarb_Global_1.default.dataHook[this.index].isBuy = true;
             ShuShiCarb_Global_1.default.totalGold -= ShuShiCarb_Global_1.default.dataHook[this.index].price;
             ShuShiCarb_Global_1.default.speedHook += ShuShiCarb_Global_1.default.dataHook[this.index].speed;
@@ -118,11 +120,22 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
             this.updatePrice(this.index);
             console.log("data Hoook ", ShuShiCarb_Global_1.default.dataHook);
         }
+        else {
+            this.nCheckmask.active = true;
+            this.nBtnBuy.getComponent(cc.Toggle).interactable = false;
+        }
     };
     ShuShiCarbItemHook.prototype.updatePrice = function (index) {
-        this.lbPrice.string = ShuShiCarb_Global_1.default.dataHook[index].price + ' ';
-        this.lbLeverSpeedNew.string = ShuShiCarb_Global_1.default.dataHook[index].speed + 1 + ' ';
-        this.lbLeverSpeedOld.string = ShuShiCarb_Global_1.default.dataHook[index].speed + ' ' + ' -> ';
+        if (index < ShuShiCarb_Global_1.default.dataHook.length) {
+            this.lbPrice.string = ShuShiCarb_Global_1.default.dataHook[index].price + ' ';
+            this.lbLeverSpeedNew.string = ShuShiCarb_Global_1.default.dataHook[index].speed + 1 + ' ';
+            this.lbLeverSpeedOld.string = ShuShiCarb_Global_1.default.dataHook[index].speed + ' ' + ' -> ';
+        }
+        else {
+            this.lbPrice.string = "Max";
+            this.lbLeverSpeedNew.string = "Max";
+            this.lbLeverSpeedOld.string = "Max";
+        }
     };
     ShuShiCarbItemHook.prototype.start = function () {
     };

@@ -50,7 +50,7 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
     ShuShiCarbHook_1 = ShuShiCarbHook;
     ShuShiCarbHook.prototype.onLoad = function () {
         ShuShiCarbHook_1.instance = this;
-        cc.Canvas.instance.node.on(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
+        cc.Canvas.instance.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this);
         ShuShiCarb_Global_1.default.speedHook = JSON.parse(cc.sys.localStorage.getItem("speedHook")) || ShuShiCarb_Global_1.default.speedHook;
         ShuShiCarb_Global_1.default.lengthHook = JSON.parse(cc.sys.localStorage.getItem("lengthHook")) || ShuShiCarb_Global_1.default.lengthHook;
         console.log("speed ", ShuShiCarb_Global_1.default.speedHook);
@@ -70,7 +70,7 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         this.hookSpriteClose.active = !isOpen;
         this.hookSpriteOpen.active = isOpen;
     };
-    ShuShiCarbHook.prototype.onMouseDown = function (event) {
+    ShuShiCarbHook.prototype.onTouchEnd = function (event) {
         if (!this.isClickable || this.hookState !== 0 || !ShuShiCarb_Player_1.default.instace.isAtOrderPosition) {
             return;
         }
@@ -84,7 +84,7 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         this.hookRope.width += dt * ShuShiCarb_Global_1.default.lengthHook;
     };
     ShuShiCarbHook.prototype.onDestroy = function () {
-        cc.Canvas.instance.node.off(cc.Node.EventType.MOUSE_DOWN, this.onMouseDown, this);
+        cc.Canvas.instance.node.off(cc.Node.EventType.MOUSE_DOWN, this.onTouchEnd, this);
     };
     ShuShiCarbHook.prototype.update = function (dt) {
         this.setHookSprite(true);
