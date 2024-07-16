@@ -39,7 +39,6 @@ export default class ShuShiCarbHook extends cc.Component {
         cc.Canvas.instance.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this);  
         Global.speedHook = JSON.parse(cc.sys.localStorage.getItem("speedHook")) || Global.speedHook;
         Global.lengthHook = JSON.parse(cc.sys.localStorage.getItem("lengthHook")) || Global.lengthHook;
-        console.log("speed ", Global.speedHook);
     }
 
 
@@ -53,7 +52,6 @@ export default class ShuShiCarbHook extends cc.Component {
     }
     setHookState(hookState) {
         this.hookState = hookState;
-        console.log("hookState ",hookState);
     }
 
     setHookSprite(isOpen: boolean) {
@@ -68,8 +66,6 @@ export default class ShuShiCarbHook extends cc.Component {
         }
         this.hookState = 1;
         this.mousePos = this.node.parent.convertToNodeSpaceAR(cc.v2(event.getLocationX()));
-
-        console.log(this.mousePos); 
         this.node.setPosition(this.mousePos);
     }
 

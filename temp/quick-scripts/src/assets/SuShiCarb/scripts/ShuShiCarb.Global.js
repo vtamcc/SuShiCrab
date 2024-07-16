@@ -20,7 +20,7 @@ var Global = /** @class */ (function () {
         { price: 450, speed: 3.5, widthHook: 7, isBuy: false },
         { price: 600, speed: 4.5, widthHook: 9, isBuy: false },
         { price: 750, speed: 5.5, widthHook: 11, isBuy: false }];
-    Global.dataMoney = [{ price: 120, gold: 20, isBuy: false },
+    Global.dataBagMoney = [{ price: 120, gold: 20, isBuy: false },
         { price: 250, gold: 25, isBuy: false },
         { price: 320, gold: 30, isBuy: false },
         { price: 450, gold: 35, isBuy: false },
@@ -28,10 +28,12 @@ var Global = /** @class */ (function () {
     ];
     Global.checkBagMoney = false;
     Global.speedHook = 20;
+    Global.moneyBag = 20;
     Global.lengthHook = 35;
     Global.isMusicOn = true;
     Global.isSoundOn = true;
     Global.activeIndex = 0;
+    Global.activeIndexMoneyBag = 0;
     return Global;
 }());
 exports.default = Global;

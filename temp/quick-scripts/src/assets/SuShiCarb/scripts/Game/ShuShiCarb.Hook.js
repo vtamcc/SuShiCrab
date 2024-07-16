@@ -53,7 +53,6 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         cc.Canvas.instance.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this);
         ShuShiCarb_Global_1.default.speedHook = JSON.parse(cc.sys.localStorage.getItem("speedHook")) || ShuShiCarb_Global_1.default.speedHook;
         ShuShiCarb_Global_1.default.lengthHook = JSON.parse(cc.sys.localStorage.getItem("lengthHook")) || ShuShiCarb_Global_1.default.lengthHook;
-        console.log("speed ", ShuShiCarb_Global_1.default.speedHook);
     };
     ShuShiCarbHook.prototype.initHook = function () {
         this.hookHead.y = this.hookHeadBaseY;
@@ -64,7 +63,6 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
     };
     ShuShiCarbHook.prototype.setHookState = function (hookState) {
         this.hookState = hookState;
-        console.log("hookState ", hookState);
     };
     ShuShiCarbHook.prototype.setHookSprite = function (isOpen) {
         this.hookSpriteClose.active = !isOpen;
@@ -76,7 +74,6 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
         }
         this.hookState = 1;
         this.mousePos = this.node.parent.convertToNodeSpaceAR(cc.v2(event.getLocationX()));
-        console.log(this.mousePos);
         this.node.setPosition(this.mousePos);
     };
     ShuShiCarbHook.prototype.moveHookHead = function (dt) {

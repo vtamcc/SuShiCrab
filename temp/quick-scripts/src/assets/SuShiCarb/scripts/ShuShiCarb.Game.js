@@ -83,6 +83,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         this.conveyor(this.conveyor_3);
         this.renderOrderFood();
         this.startCountDown();
+        ShuShiCarb_Global_1.default.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || ShuShiCarb_Global_1.default.moneyBag;
         console.log(ShuShiCarb_Global_1.default.checkBagMoney);
         //this.schedule(this.addRandomMoneyBag, 5)
         //this.renderFood();      
@@ -150,30 +151,37 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         }
         var hookFoodId = this.hookObjects[0].id;
         var foundMatch = false;
-        var _loop_1 = function (i) {
-            if (this_1.playOrders[i] === hookFoodId) {
-                if (!this_1.player.listFood[i].getChildByName("tick").active) {
-                    this_1.player.listFood[i].getChildByName("tick").active = true;
-                    this_1.nGoldFly.active = true;
-                    this_1.scheduleOnce(function () {
-                        _this.lsFoodTable[i].getComponent(cc.Sprite).spriteFrame = _this.listSpfFood[hookFoodId];
-                        _this.lsFoodTable[i].active = true;
-                        _this.nGoldFly.active = false;
-                    }, 0.2);
-                    ShuShiCarb_GoldFly_1.default.instance.playAnim();
-                    this_1.gold += 5;
-                    this_1.updateGold();
-                    foundMatch = true;
-                    this_1.countCorrect++;
-                    return "break";
+        if (hookFoodId === 999) {
+            this.gold += ShuShiCarb_Global_1.default.moneyBag;
+            this.updateGold(ShuShiCarb_Global_1.default.moneyBag);
+            foundMatch = true;
+        }
+        else {
+            var _loop_1 = function (i) {
+                if (this_1.playOrders[i] === hookFoodId) {
+                    if (!this_1.player.listFood[i].getChildByName("tick").active) {
+                        this_1.player.listFood[i].getChildByName("tick").active = true;
+                        this_1.nGoldFly.active = true;
+                        this_1.scheduleOnce(function () {
+                            _this.lsFoodTable[i].getComponent(cc.Sprite).spriteFrame = _this.listSpfFood[hookFoodId];
+                            _this.lsFoodTable[i].active = true;
+                            _this.nGoldFly.active = false;
+                        }, 0.2);
+                        ShuShiCarb_GoldFly_1.default.instance.playAnim();
+                        this_1.gold += 5;
+                        this_1.updateGold(5);
+                        foundMatch = true;
+                        this_1.countCorrect++;
+                        return "break";
+                    }
                 }
+            };
+            var this_1 = this;
+            for (var i = 0; i < this.playOrders.length; i++) {
+                var state_1 = _loop_1(i);
+                if (state_1 === "break")
+                    break;
             }
-        };
-        var this_1 = this;
-        for (var i = 0; i < this.playOrders.length; i++) {
-            var state_1 = _loop_1(i);
-            if (state_1 === "break")
-                break;
         }
         this.lbGold.string = this.gold + ' ';
         if (!foundMatch) {
@@ -182,8 +190,8 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
             this.resetGame(true);
         }
     };
-    ShuShiCarbGame.prototype.updateGold = function () {
-        ShuShiCarb_Global_1.default.totalGold += 5;
+    ShuShiCarbGame.prototype.updateGold = function (gold) {
+        ShuShiCarb_Global_1.default.totalGold += gold;
         console.log("Tong tien ", ShuShiCarb_Global_1.default.totalGold);
         cc.sys.localStorage.setItem('totalGold', JSON.stringify(ShuShiCarb_Global_1.default.totalGold));
     };
@@ -192,7 +200,6 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
             var item = node.children[i].getComponent(ShuShiCarb_Food_1.default);
             if (ShuShiCarb_Global_1.default.checkBagMoney == true && i === 5) {
                 item.setData(999);
-                console.log("khong chay vao day a ");
             }
             else {
                 var randomIndex = Math.floor(Math.random() * this.data.length);

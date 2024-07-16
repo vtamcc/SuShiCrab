@@ -18,11 +18,7 @@ export default class Collier extends cc.Component {
     onCollisionEnter(other, self) {
         let food = this.node.getComponent(ShuShiCarbFood);
         let id = food.id;
-        console.log(food);
         if (other.tag == 1) {
-            // ShuShiCarbHook.instance.hookObjects.push(food.node)
-            // ShuShiCarbHook.instance.hookState = 2;
-            // console.log("Thu ve luoon ne ")
             let nodeNew = new cc.Node()
             nodeNew.parent = this.node.parent;
             nodeNew.scale = 0.5;
@@ -30,14 +26,9 @@ export default class Collier extends cc.Component {
             nodeNew.setParent(ShuShiCarbHook.instance.hookHead);
             nodeNew.setPosition(cc.v2(0, -25));
             ShuShiCarbGame.instance.hookObjects.push({node: nodeNew, id: id});
-            console.log("obj ", ShuShiCarbGame.instance.hookObjects)
             ShuShiCarbHook.instance.setHookState(2);
             food.isCheck = 1;
             ShuShiCarbGame.instance.checkCorrect();
-            // this.scheduleOnce(()=> {
-            //     ShuShiCarbGame.instance.removeNode(nodeNew, id);
-                
-            // },0.5)
             this.node.getComponent(ShuShiCarbConveyor).resetSate(false);
             this.scheduleOnce(() => {
                 // Xóa món ăn khỏi mảng hookObjects

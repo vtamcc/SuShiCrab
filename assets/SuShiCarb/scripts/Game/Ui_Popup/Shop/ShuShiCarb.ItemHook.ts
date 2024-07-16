@@ -43,12 +43,6 @@ export default class ShuShiCarbItemHook extends cc.Component {
 
     
     onLoad () {
-        //this.setData();
-        //this.checkClick(this.index);
-        console.log(Global.dataHook[this.index].price);
-        this.index = JSON.parse(cc.sys.localStorage.getItem("itemIndex")) || 0;
-        // Global.dataHook[this.index] = JSON.parse(cc.sys.localStorage.getItem("price")) || 150;
-        // this.updatePrice(this.index);
         this.loadPurchaseState();
         this.checkClick();
         this.updatePrice(this.index);
@@ -101,8 +95,6 @@ export default class ShuShiCarbItemHook extends cc.Component {
             this.nStateBuy.children[this.index].active = Global.dataHook[this.index].isBuy;
             Global.activeIndex = this.index;
             this.savePurchaseState();
-            // cc.sys.localStorage.setItem('itemIndex',this.index.toString());
-            // cc.sys.localStorage.setItem('price', Global.dataHook[this.index].price.toString);
             this.index++;
             this.savePurchaseState();
             console.log(this.index);

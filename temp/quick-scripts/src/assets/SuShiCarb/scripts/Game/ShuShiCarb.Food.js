@@ -50,7 +50,6 @@ var ShuShiCarbFood = /** @class */ (function (_super) {
     ShuShiCarbFood.prototype.setData = function (idFood) {
         this.id = idFood;
         if (idFood === 999) {
-            console.log("Chay vao day ma ");
             this.nFood.getComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[6];
         }
         else {

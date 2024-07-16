@@ -79,9 +79,10 @@ export default class ShuShiCarbGame extends cc.Component {
         console.log(this.playOrders);
         this.conveyor(this.conveyor_1);
         this.conveyor(this.conveyor_2);
-       this.conveyor(this.conveyor_3);
+        this.conveyor(this.conveyor_3);
         this.renderOrderFood();
         this.startCountDown();
+        Global.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || Global.moneyBag;
         console.log(Global.checkBagMoney);
         //this.schedule(this.addRandomMoneyBag, 5)
         //this.renderFood();      
@@ -158,29 +159,33 @@ export default class ShuShiCarbGame extends cc.Component {
         }
         let hookFoodId = this.hookObjects[0].id;
         let foundMatch = false;
-        for (let i = 0; i < this.playOrders.length; i++) {
-            if (this.playOrders[i] === hookFoodId) {
-                if (!this.player.listFood[i].getChildByName("tick").active) {
-                    this.player.listFood[i].getChildByName("tick").active = true;
-                    this.nGoldFly.active = true;
-                    this.scheduleOnce(() => {
-                        this.lsFoodTable[i].getComponent(cc.Sprite).spriteFrame = this.listSpfFood[hookFoodId];
-                        this.lsFoodTable[i].active = true;
-                        this.nGoldFly.active = false;
-                    },0.2);
-                    ShuShiCarbGoldFly.instance.playAnim();
-                    this.gold += 5;
-                    
-                    this.updateGold();
-                    foundMatch = true;
-                    this.countCorrect++;
-                    break;
-                }
-                
-            }
-            
-        }
+        if (hookFoodId === 999) {
+            this.gold += Global.moneyBag;
+            this.updateGold(Global.moneyBag);
+            foundMatch = true;
+        } else {
+            for (let i = 0; i < this.playOrders.length; i++) {
+                if (this.playOrders[i] === hookFoodId) {
+                    if (!this.player.listFood[i].getChildByName("tick").active) {
+                        this.player.listFood[i].getChildByName("tick").active = true;
+                        this.nGoldFly.active = true;
+                        this.scheduleOnce(() => {
+                            this.lsFoodTable[i].getComponent(cc.Sprite).spriteFrame = this.listSpfFood[hookFoodId];
+                            this.lsFoodTable[i].active = true;
+                            this.nGoldFly.active = false;
+                        }, 0.2);
+                        ShuShiCarbGoldFly.instance.playAnim();
 
+                        this.gold += 5;
+                        this.updateGold(5);
+
+                        foundMatch = true;
+                        this.countCorrect++;
+                        break;
+                    }
+                }
+            }
+        }
         this.lbGold.string = this.gold + ' ';
         if (!foundMatch) {
         }
@@ -192,8 +197,8 @@ export default class ShuShiCarbGame extends cc.Component {
 
 
 
-    updateGold() {
-        Global.totalGold += 5;
+    updateGold(gold: number) {
+        Global.totalGold += gold;
         console.log("Tong tien ", Global.totalGold);
         cc.sys.localStorage.setItem('totalGold',JSON.stringify(Global.totalGold));
     }
@@ -202,7 +207,6 @@ export default class ShuShiCarbGame extends cc.Component {
             let item = node.children[i].getComponent(ShuShiCarbFood);
             if(Global.checkBagMoney == true && i === 5) {
                 item.setData(999);
-                console.log("khong chay vao day a ")
             } else {
                 let randomIndex = Math.floor(Math.random() * this.data.length);
                 item.setData(this.data[randomIndex]);

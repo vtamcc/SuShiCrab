@@ -42,11 +42,7 @@ var Collier = /** @class */ (function (_super) {
     Collier.prototype.onCollisionEnter = function (other, self) {
         var food = this.node.getComponent(ShuShiCarb_Food_1.default);
         var id = food.id;
-        console.log(food);
         if (other.tag == 1) {
-            // ShuShiCarbHook.instance.hookObjects.push(food.node)
-            // ShuShiCarbHook.instance.hookState = 2;
-            // console.log("Thu ve luoon ne ")
             var nodeNew_1 = new cc.Node();
             nodeNew_1.parent = this.node.parent;
             nodeNew_1.scale = 0.5;
@@ -54,13 +50,9 @@ var Collier = /** @class */ (function (_super) {
             nodeNew_1.setParent(ShuShiCarb_Hook_1.default.instance.hookHead);
             nodeNew_1.setPosition(cc.v2(0, -25));
             ShuShiCarb_Game_1.default.instance.hookObjects.push({ node: nodeNew_1, id: id });
-            console.log("obj ", ShuShiCarb_Game_1.default.instance.hookObjects);
             ShuShiCarb_Hook_1.default.instance.setHookState(2);
             food.isCheck = 1;
             ShuShiCarb_Game_1.default.instance.checkCorrect();
-            // this.scheduleOnce(()=> {
-            //     ShuShiCarbGame.instance.removeNode(nodeNew, id);
-            // },0.5)
             this.node.getComponent(ShuShiCarb_Conveyor_1.default).resetSate(false);
             this.scheduleOnce(function () {
                 // Xóa món ăn khỏi mảng hookObjects

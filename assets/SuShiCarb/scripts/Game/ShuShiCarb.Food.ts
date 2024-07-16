@@ -35,7 +35,6 @@ export default class ShuShiCarbFood extends cc.Component {
     setData(idFood) {
         this.id = idFood;
         if(idFood === 999) {
-            console.log("Chay vao day ma ")
             this.nFood.getComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[6]
         }else {
             this.nFood.getComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[idFood]

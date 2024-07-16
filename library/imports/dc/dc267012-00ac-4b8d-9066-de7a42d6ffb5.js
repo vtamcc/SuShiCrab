@@ -57,12 +57,6 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
     };
     // LIFE-CYCLE CALLBACKS:
     ShuShiCarbItemHook.prototype.onLoad = function () {
-        //this.setData();
-        //this.checkClick(this.index);
-        console.log(ShuShiCarb_Global_1.default.dataHook[this.index].price);
-        this.index = JSON.parse(cc.sys.localStorage.getItem("itemIndex")) || 0;
-        // Global.dataHook[this.index] = JSON.parse(cc.sys.localStorage.getItem("price")) || 150;
-        // this.updatePrice(this.index);
         this.loadPurchaseState();
         this.checkClick();
         this.updatePrice(this.index);
@@ -109,8 +103,6 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
             this.nStateBuy.children[this.index].active = ShuShiCarb_Global_1.default.dataHook[this.index].isBuy;
             ShuShiCarb_Global_1.default.activeIndex = this.index;
             this.savePurchaseState();
-            // cc.sys.localStorage.setItem('itemIndex',this.index.toString());
-            // cc.sys.localStorage.setItem('price', Global.dataHook[this.index].price.toString);
             this.index++;
             this.savePurchaseState();
             console.log(this.index);

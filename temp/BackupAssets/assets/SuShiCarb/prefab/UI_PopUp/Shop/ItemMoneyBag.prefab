@@ -480,8 +480,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "150",
-    "_N$string": "150",
+    "_string": "120",
+    "_N$string": "120",
     "_fontSize": 28,
     "_lineHeight": 28,
     "_enableWrapText": true,
@@ -644,7 +644,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 19.46,
+      "width": 23.36,
       "height": 25.2
     },
     "_anchorPoint": {
@@ -696,8 +696,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "1.5",
-    "_N$string": "1.5",
+    "_string": "20$",
+    "_N$string": "20$",
     "_fontSize": 14,
     "_lineHeight": 20,
     "_enableWrapText": true,

@@ -29,7 +29,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var ShuShiCarb_GameManager_1 = require("../../../ShuShiCarb.GameManager");
 var ShuShiCarb_Global_1 = require("../../../ShuShiCarb.Global");
+var ShuShiCarb_ShopView_1 = require("./ShuShiCarb.ShopView");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbItemMoneyBag = /** @class */ (function (_super) {
     __extends(ShuShiCarbItemMoneyBag, _super);
@@ -48,11 +50,32 @@ var ShuShiCarbItemMoneyBag = /** @class */ (function (_super) {
         // update (dt) {}
     }
     ShuShiCarbItemMoneyBag.prototype.onLoad = function () {
+        this.loadPurchaseState();
         this.checkClick();
     };
+    ShuShiCarbItemMoneyBag.prototype.loadPurchaseState = function () {
+        var purchaseData = JSON.parse(cc.sys.localStorage.getItem("itemMoneyBag")) || [];
+        for (var i = 0; i < ShuShiCarb_Global_1.default.dataBagMoney.length; i++) {
+            if (purchaseData[i]) {
+                ShuShiCarb_Global_1.default.dataBagMoney[i].isBuy = purchaseData[i].isBuy;
+                ShuShiCarb_Global_1.default.dataBagMoney[i].gold = purchaseData[i].gold;
+                this.nStateBuy.children[i].active = purchaseData[i].isBuy;
+            }
+        }
+    };
+    ShuShiCarbItemMoneyBag.prototype.savePurchaseState = function () {
+        var purchaseData = ShuShiCarb_Global_1.default.dataBagMoney.map(function (item) { return ({
+            isBuy: item.isBuy,
+            gold: item.gold
+        }); });
+        cc.sys.localStorage.setItem('itemMoneyBag', JSON.stringify(purchaseData));
+        cc.sys.localStorage.setItem('activeIndexMoneyBag', JSON.stringify(ShuShiCarb_Global_1.default.activeIndex));
+        cc.sys.localStorage.setItem('itemIndexMoneyBag', this.index.toString());
+        cc.sys.localStorage.setItem('moneyBag', JSON.stringify(ShuShiCarb_Global_1.default.moneyBag));
+    };
     ShuShiCarbItemMoneyBag.prototype.checkClick = function () {
-        if (this.index < ShuShiCarb_Global_1.default.dataMoney.length) {
-            if (ShuShiCarb_Global_1.default.totalGold >= ShuShiCarb_Global_1.default.dataMoney[this.index].price) {
+        if (this.index < ShuShiCarb_Global_1.default.dataBagMoney.length) {
+            if (ShuShiCarb_Global_1.default.totalGold >= ShuShiCarb_Global_1.default.dataBagMoney[this.index].price) {
                 this.nCheckmask.active = false;
                 this.isCheck = true;
             }
@@ -63,13 +86,32 @@ var ShuShiCarbItemMoneyBag = /** @class */ (function (_super) {
         }
     };
     ShuShiCarbItemMoneyBag.prototype.onBuy = function () {
-        if (this.isCheck) {
-            // Trừ vàng của người chơi
-            // Global.totalGold -= Global.dataMoney[this.index].price;
-            // cc.sys.localStorage.setItem('totalGold', JSON.stringify(Global.totalGold));
+        if (this.isCheck && this.index < ShuShiCarb_Global_1.default.dataBagMoney.length) {
             ShuShiCarb_Global_1.default.checkBagMoney = true;
+            ShuShiCarb_Global_1.default.dataBagMoney[this.index].isBuy = true;
+            ShuShiCarb_Global_1.default.totalGold -= ShuShiCarb_Global_1.default.dataBagMoney[this.index].price;
+            this.nStateBuy.children[this.index].active = ShuShiCarb_Global_1.default.dataBagMoney[this.index].isBuy;
+            ShuShiCarb_Global_1.default.activeIndexMoneyBag = this.index;
+            this.savePurchaseState();
+            this.index++;
+            this.savePurchaseState();
+            ShuShiCarb_GameManager_1.default.instance.updateTotalGold();
+            ShuShiCarb_ShopView_1.default.instace.updateGold();
+            this.updatePrice(this.index);
         }
         console.log("onbuy");
+    };
+    ShuShiCarbItemMoneyBag.prototype.updatePrice = function (index) {
+        if (index < ShuShiCarb_Global_1.default.dataBagMoney.length) {
+            this.lbPrice.string = ShuShiCarb_Global_1.default.dataBagMoney[index].price + ' ';
+            this.lbLeverSpeedOld.string = "0";
+            this.lbLeverSpeedNew.string = ShuShiCarb_Global_1.default.dataBagMoney[index].gold + ' ';
+        }
+        else {
+            this.lbPrice.string = "Max";
+            this.lbLeverSpeedNew.string = "Max";
+            this.lbLeverSpeedOld.string = "Max";
+        }
     };
     ShuShiCarbItemMoneyBag.prototype.start = function () {
     };
