@@ -55,7 +55,8 @@ export default class ShuShiCarbGameManager extends cc.Component {
       this.node.addChild(shopView.node);
    }
    updateTotalGold() {
-      this.lbTotalGold.string = Global.totalGold + " "; 
+      this.lbTotalGold.string = Global.totalGold + " ";
+      cc.sys.localStorage.setItem('totalGold',JSON.stringify(Global.totalGold));
    }
 
    onClickSettingView() {

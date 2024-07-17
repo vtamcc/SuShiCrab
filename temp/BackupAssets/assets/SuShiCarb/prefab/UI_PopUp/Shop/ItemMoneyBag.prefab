@@ -56,7 +56,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 550,
-      "height": 170
+      "height": 280
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -138,8 +138,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        188.227,
-        -36.6,
+        187.227,
+        -67.6,
         0,
         0,
         0,
@@ -428,7 +428,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 46.72,
+      "width": 61.74,
       "height": 35.28
     },
     "_anchorPoint": {
@@ -441,7 +441,7 @@
       "ctor": "Float64Array",
       "array": [
         202.956,
-        29.86,
+        46.86,
         0,
         0,
         0,
@@ -485,8 +485,10 @@
     "_fontSize": 28,
     "_lineHeight": 28,
     "_enableWrapText": true,
-    "_N$file": null,
-    "_isSystemFontUsed": true,
+    "_N$file": {
+      "__uuid__": "bbc0c664-e2a5-4a0c-9962-52386623d370"
+    },
+    "_isSystemFontUsed": false,
     "_spacingX": 0,
     "_batchAsBitmap": false,
     "_styleFlags": 1,
@@ -517,7 +519,7 @@
       "__id__": 1
     },
     "_children": [],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 14
@@ -656,7 +658,7 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        59,
+        26.019,
         7,
         0,
         0,
@@ -841,7 +843,7 @@
       "ctor": "Float64Array",
       "array": [
         0,
-        0,
+        -20,
         0,
         0,
         0,
@@ -948,7 +950,7 @@
       "ctor": "Float64Array",
       "array": [
         47.321,
-        0,
+        -22,
         0,
         0,
         0,
@@ -1055,7 +1057,7 @@
       "ctor": "Float64Array",
       "array": [
         96.075,
-        0,
+        -20,
         0,
         0,
         0,
@@ -1162,7 +1164,7 @@
       "ctor": "Float64Array",
       "array": [
         144.829,
-        0,
+        -19,
         0,
         0,
         0,
@@ -1269,7 +1271,7 @@
       "ctor": "Float64Array",
       "array": [
         191.433,
-        0,
+        -22,
         0,
         0,
         0,

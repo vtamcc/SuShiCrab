@@ -16,11 +16,11 @@ export default class Global {
         {price: 600,speed: 4.5, widthHook: 9,isBuy: false},
         {price: 750,speed: 5.5, widthHook: 11,isBuy: false}];
 
-    static dataBagMoney = [{price: 120, gold: 20, isBuy: false},
-        {price: 250, gold: 25, isBuy: false},
-        {price: 320, gold: 30, isBuy: false},
-        {price: 450,gold: 35, isBuy: false},
-        {price: 750,gold: 40, isBuy: false}
+    static dataBagMoney = [{price: 120, gold: 3, isBuy: false},
+        {price: 250, gold: 5, isBuy: false},
+        {price: 320, gold: 7, isBuy: false},
+        {price: 450,gold: 9, isBuy: false},
+        {price: 750,gold: 11, isBuy: false}
     ]
     static checkBagMoney = false;
     static speedHook = 20;

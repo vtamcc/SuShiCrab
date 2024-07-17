@@ -42,13 +42,22 @@ var Collier = /** @class */ (function (_super) {
     Collier.prototype.onCollisionEnter = function (other, self) {
         var food = this.node.getComponent(ShuShiCarb_Food_1.default);
         var id = food.id;
+        console.log("id ", id);
         if (other.tag == 1) {
             var nodeNew_1 = new cc.Node();
             nodeNew_1.parent = this.node.parent;
-            nodeNew_1.scale = 0.5;
-            nodeNew_1.addComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[id];
-            nodeNew_1.setParent(ShuShiCarb_Hook_1.default.instance.hookHead);
-            nodeNew_1.setPosition(cc.v2(0, -25));
+            nodeNew_1.scale = 0.4;
+            if (id === 999) {
+                nodeNew_1.scale = 1;
+                nodeNew_1.addComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[6];
+                nodeNew_1.setParent(ShuShiCarb_Hook_1.default.instance.hookHead);
+                nodeNew_1.setPosition(cc.v2(0, -25));
+            }
+            else {
+                nodeNew_1.addComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[id];
+                nodeNew_1.setParent(ShuShiCarb_Hook_1.default.instance.hookHead);
+                nodeNew_1.setPosition(cc.v2(0, -25));
+            }
             ShuShiCarb_Game_1.default.instance.hookObjects.push({ node: nodeNew_1, id: id });
             ShuShiCarb_Hook_1.default.instance.setHookState(2);
             food.isCheck = 1;

@@ -18,13 +18,24 @@ export default class Collier extends cc.Component {
     onCollisionEnter(other, self) {
         let food = this.node.getComponent(ShuShiCarbFood);
         let id = food.id;
+        console.log("id ", id);
         if (other.tag == 1) {
             let nodeNew = new cc.Node()
             nodeNew.parent = this.node.parent;
-            nodeNew.scale = 0.5;
-            nodeNew.addComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[id]
-            nodeNew.setParent(ShuShiCarbHook.instance.hookHead);
-            nodeNew.setPosition(cc.v2(0, -25));
+            nodeNew.scale = 0.4;
+            if(id === 999) {
+                nodeNew.scale = 1;
+                nodeNew.addComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[6]
+                nodeNew.setParent(ShuShiCarbHook.instance.hookHead);
+                nodeNew.setPosition(cc.v2(0, -25));
+            }else {
+                nodeNew.addComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[id]
+                nodeNew.setParent(ShuShiCarbHook.instance.hookHead);
+                nodeNew.setPosition(cc.v2(0, -25));
+            }
+            
+
+           
             ShuShiCarbGame.instance.hookObjects.push({node: nodeNew, id: id});
             ShuShiCarbHook.instance.setHookState(2);
             food.isCheck = 1;

@@ -57,6 +57,7 @@ var ShuShiCarbItemHook = /** @class */ (function (_super) {
     };
     // LIFE-CYCLE CALLBACKS:
     ShuShiCarbItemHook.prototype.onLoad = function () {
+        this.index = JSON.parse(cc.sys.localStorage.getItem("itemIndex")) || 0;
         this.loadPurchaseState();
         this.checkClick();
         this.updatePrice(this.index);

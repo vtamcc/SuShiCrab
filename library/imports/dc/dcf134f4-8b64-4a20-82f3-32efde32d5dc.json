@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "time_happy",
+    "texture": "ea6e7742-2d07-46f4-b526-d8aae491a9f9",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      493,
+      126
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      493,
+      126
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

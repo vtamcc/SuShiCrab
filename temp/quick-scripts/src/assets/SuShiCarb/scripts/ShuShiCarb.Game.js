@@ -75,6 +75,12 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     ShuShiCarbGame_1 = ShuShiCarbGame;
     ShuShiCarbGame.prototype.onLoad = function () {
         ShuShiCarbGame_1.instance = this;
+        var checkBagMoney = JSON.parse(cc.sys.localStorage.getItem("checkBagMoney"));
+        ShuShiCarb_Global_1.default.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || ShuShiCarb_Global_1.default.moneyBag;
+        if (checkBagMoney !== null) {
+            ShuShiCarb_Global_1.default.checkBagMoney = checkBagMoney;
+            console.log(ShuShiCarb_Global_1.default.checkBagMoney);
+        }
         // this.renderFoodOder();
         this.randomOrderFood();
         console.log(this.playOrders);
@@ -83,10 +89,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         this.conveyor(this.conveyor_3);
         this.renderOrderFood();
         this.startCountDown();
-        ShuShiCarb_Global_1.default.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || ShuShiCarb_Global_1.default.moneyBag;
         console.log(ShuShiCarb_Global_1.default.checkBagMoney);
-        //this.schedule(this.addRandomMoneyBag, 5)
-        //this.renderFood();      
     };
     // randomIdFood(arr,count) {
     //     let idFood = [];
@@ -198,7 +201,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     ShuShiCarbGame.prototype.conveyor = function (node) {
         for (var i = 0; i < node.childrenCount; i++) {
             var item = node.children[i].getComponent(ShuShiCarb_Food_1.default);
-            if (ShuShiCarb_Global_1.default.checkBagMoney == true && i === 5) {
+            if (ShuShiCarb_Global_1.default.checkBagMoney === true && i === 5) {
                 item.setData(999);
             }
             else {

@@ -33,9 +33,12 @@ export default class ShuShiCarbItemMoneyBag extends cc.Component {
     index = 0;
     isCheck = false;
     _data = null
+    isClick = false;
     onLoad() {
+        this.index = JSON.parse(cc.sys.localStorage.getItem("itemIndexMoneyBag")) || 0;
         this.loadPurchaseState()
         this.checkClick();
+        this.updatePrice(this.index);
     }
 
     loadPurchaseState() {
@@ -58,6 +61,7 @@ export default class ShuShiCarbItemMoneyBag extends cc.Component {
         cc.sys.localStorage.setItem('activeIndexMoneyBag', JSON.stringify(Global.activeIndex));
         cc.sys.localStorage.setItem('itemIndexMoneyBag', this.index.toString());
         cc.sys.localStorage.setItem('moneyBag', JSON.stringify(Global.moneyBag));
+        cc.sys.localStorage.setItem('checkBagMoney', JSON.stringify(Global.checkBagMoney));
     }
 
     checkClick() {
@@ -77,16 +81,17 @@ export default class ShuShiCarbItemMoneyBag extends cc.Component {
             Global.checkBagMoney = true;
             Global.dataBagMoney[this.index].isBuy = true;
             Global.totalGold -= Global.dataBagMoney[this.index].price;
+            Global.moneyBag += Global.dataBagMoney[this.index].gold;
             this.nStateBuy.children[this.index].active = Global.dataBagMoney[this.index].isBuy;
             Global.activeIndexMoneyBag = this.index;
+            
             this.savePurchaseState();
             this.index++;
-            this.savePurchaseState();
+            //this.savePurchaseState();
+            this.checkClick();
             ShuShiCarbGameManager.instance.updateTotalGold();
             ShuShiCarbShopView.instace.updateGold();
-            
             this.updatePrice(this.index);
-           
         }
         console.log("onbuy")
     }
@@ -94,12 +99,10 @@ export default class ShuShiCarbItemMoneyBag extends cc.Component {
     updatePrice(index) {
         if(index < Global.dataBagMoney.length) {
             this.lbPrice.string = Global.dataBagMoney[index].price + ' ';
-            this.lbLeverSpeedOld.string = "0";
-            this.lbLeverSpeedNew.string = Global.dataBagMoney[index].gold + ' ';
+            this.lbLeverSpeedNew.string = '+' + Global.dataBagMoney[index].gold + '$';
         }else {
             this.lbPrice.string = "Max";
             this.lbLeverSpeedNew.string = "Max";
-            this.lbLeverSpeedOld.string = "Max";
         }
     }
     start () {

@@ -43,6 +43,7 @@ export default class ShuShiCarbItemHook extends cc.Component {
 
     
     onLoad () {
+        this.index = JSON.parse(cc.sys.localStorage.getItem("itemIndex")) || 0;
         this.loadPurchaseState();
         this.checkClick();
         this.updatePrice(this.index);

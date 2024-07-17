@@ -70,6 +70,7 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
     };
     ShuShiCarbGameManager.prototype.updateTotalGold = function () {
         this.lbTotalGold.string = ShuShiCarb_Global_1.default.totalGold + " ";
+        cc.sys.localStorage.setItem('totalGold', JSON.stringify(ShuShiCarb_Global_1.default.totalGold));
     };
     ShuShiCarbGameManager.prototype.onClickSettingView = function () {
         var setting = cc.instantiate(this.prfSetting);

@@ -73,7 +73,12 @@ export default class ShuShiCarbGame extends cc.Component {
     isCountDown = false;
     onLoad () {
         ShuShiCarbGame.instance = this;
-       
+        const checkBagMoney = JSON.parse(cc.sys.localStorage.getItem("checkBagMoney"));
+        Global.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || Global.moneyBag;
+        if (checkBagMoney !== null) {
+            Global.checkBagMoney = checkBagMoney;
+            console.log(Global.checkBagMoney)
+        }
         // this.renderFoodOder();
         this.randomOrderFood();
         console.log(this.playOrders);
@@ -82,10 +87,7 @@ export default class ShuShiCarbGame extends cc.Component {
         this.conveyor(this.conveyor_3);
         this.renderOrderFood();
         this.startCountDown();
-        Global.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || Global.moneyBag;
         console.log(Global.checkBagMoney);
-        //this.schedule(this.addRandomMoneyBag, 5)
-        //this.renderFood();      
     }
 
    
@@ -163,6 +165,7 @@ export default class ShuShiCarbGame extends cc.Component {
             this.gold += Global.moneyBag;
             this.updateGold(Global.moneyBag);
             foundMatch = true;
+
         } else {
             for (let i = 0; i < this.playOrders.length; i++) {
                 if (this.playOrders[i] === hookFoodId) {
@@ -205,7 +208,7 @@ export default class ShuShiCarbGame extends cc.Component {
     conveyor(node: cc.Node) {
         for (let i = 0; i < node.childrenCount; i++) {
             let item = node.children[i].getComponent(ShuShiCarbFood);
-            if(Global.checkBagMoney == true && i === 5) {
+            if(Global.checkBagMoney === true && i === 5) {
                 item.setData(999);
             } else {
                 let randomIndex = Math.floor(Math.random() * this.data.length);
