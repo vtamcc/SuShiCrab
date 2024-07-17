@@ -1,180 +1,80 @@
-2024-07-17T02:18:51.095Z - success: protocol editor-framework registered
-2024-07-17T02:18:51.098Z - success: protocol app registered
-2024-07-17T02:18:51.098Z - success: protocol theme registered
-2024-07-17T02:18:51.098Z - success: protocol packages registered
-2024-07-17T02:18:51.125Z - normal: Load ~/.CocosCreator/settings.json
-2024-07-17T02:18:51.168Z - success: protocol uuid registerred
-2024-07-17T02:18:51.168Z - success: protocol db registerred
-2024-07-17T02:18:51.168Z - success: protocol thumbnail registerred
-2024-07-17T02:18:51.252Z - normal: Initializing Asset Database
-2024-07-17T02:18:51.254Z - normal: checking language setting...
-2024-07-17T02:18:51.254Z - normal: Language: en
-2024-07-17T02:18:51.257Z - success: protocol unpack registerred
-2024-07-17T02:18:51.257Z - success: protocol disable-commonjs registerred
-2024-07-17T02:18:53.177Z - normal: connected!
-2024-07-17T02:18:53.736Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
-2024-07-17T02:18:53.739Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
-2024-07-17T02:18:53.964Z - success: adapters loaded
-2024-07-17T02:18:53.969Z - success: asset-db-debugger loaded
-2024-07-17T02:18:54.045Z - success: fb-audience-network loaded
-2024-07-17T02:18:54.101Z - success: fb-live-stream loaded
-2024-07-17T02:18:54.108Z - success: google-play-instant loaded
-2024-07-17T02:18:54.109Z - success: jsb-adapter loaded
-2024-07-17T02:18:54.132Z - success: package-manager loaded
-2024-07-17T02:18:54.133Z - success: runtime-adapters loaded
-2024-07-17T02:18:54.135Z - success: runtime-dev-tools loaded
-2024-07-17T02:18:54.137Z - success: ui-kit-preview-extra loaded
-2024-07-17T02:18:54.139Z - success: ui-kit-preview loaded
-2024-07-17T02:18:54.983Z - success: alipay-minigame loaded
-2024-07-17T02:18:55.002Z - success: assets loaded
-2024-07-17T02:18:55.005Z - success: baidugame-opendata loaded
-2024-07-17T02:18:55.007Z - success: baidugame loaded
-2024-07-17T02:18:55.011Z - success: builder loaded
-2024-07-17T02:18:55.015Z - success: bytedance-opendata loaded
-2024-07-17T02:18:55.017Z - success: bytedance loaded
-2024-07-17T02:18:55.022Z - success: channel-upload-tools loaded
-2024-07-17T02:18:55.169Z - success: cloud-function loaded
-2024-07-17T02:18:55.377Z - success: cocos-services loaded
-2024-07-17T02:18:55.384Z - success: console loaded
-2024-07-17T02:18:55.386Z - success: curve-editor loaded
-2024-07-17T02:18:55.395Z - success: fb-instant-games loaded
-2024-07-17T02:18:55.397Z - success: game-window loaded
-2024-07-17T02:18:55.398Z - success: google-instant-games loaded
-2024-07-17T02:18:55.403Z - success: hierarchy loaded
-2024-07-17T02:18:55.406Z - success: huawei-agc loaded
-2024-07-17T02:18:55.409Z - success: huawei-runtime loaded
-2024-07-17T02:18:55.413Z - success: inspector loaded
-2024-07-17T02:18:55.437Z - success: cpk-publish loaded
-2024-07-17T02:18:55.439Z - success: keystore loaded
-2024-07-17T02:18:55.465Z - success: link-sure-runtime loaded
-2024-07-17T02:18:55.478Z - success: node-library loaded
-2024-07-17T02:18:55.479Z - success: open-recent-items loaded
-2024-07-17T02:18:55.482Z - success: oppo-runtime loaded
-2024-07-17T02:18:55.483Z - success: package-asset loaded
-2024-07-17T02:18:55.484Z - success: preferences loaded
-2024-07-17T02:18:55.488Z - success: project-importer loaded
-2024-07-17T02:18:55.491Z - success: project-settings loaded
-2024-07-17T02:18:55.504Z - success: qtt-runtime loaded
-2024-07-17T02:18:55.509Z - success: scene loaded
-2024-07-17T02:18:55.509Z - success: simulator-debugger loaded
-2024-07-17T02:18:55.510Z - success: sprite-editor loaded
-2024-07-17T02:18:55.582Z - success: store loaded
-2024-07-17T02:18:55.584Z - success: taobao-creativeapp loaded
-2024-07-17T02:18:55.587Z - success: timeline loaded
-2024-07-17T02:18:55.594Z - success: vivo-runtime loaded
-2024-07-17T02:18:55.596Z - success: wechatgame-opendata loaded
-2024-07-17T02:18:55.602Z - success: wechatgame loaded
-2024-07-17T02:18:55.606Z - success: xiaomi-runtime loaded
-2024-07-17T02:18:55.663Z - success: im-plugin loaded
-2024-07-17T02:18:55.664Z - success: preview server running at http://localhost:7456
-2024-07-17T02:18:57.804Z - normal: Initializing Cocos2d
-2024-07-17T02:18:58.075Z - normal: Initializing engine extends
-2024-07-17T02:18:59.104Z - info: Cocos Service load base data!
-2024-07-17T02:19:04.659Z - normal: Loading packages
-2024-07-17T02:19:04.663Z - normal: Watching packages
-2024-07-17T02:19:04.886Z - normal: Run Application
-2024-07-17T02:19:09.959Z - success: cloud-function unloaded
-2024-07-17T04:14:19.499Z - normal: Start building with options : {
-  "title": "ShuShi",
-  "packageName": "org.cocos2d.demo",
-  "startScene": "eafd9bbe-a948-4f13-86eb-dde2f61b6859",
-  "excludeScenes": [],
-  "orientation": {
-    "landscapeRight": false,
-    "landscapeLeft": false,
-    "portrait": true,
-    "upsideDown": true
-  },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
-  "optimizeHotUpdate": false,
-  "md5Cache": true,
-  "encryptJs": true,
-  "xxteaKey": "db9b81f4-6611-47",
-  "zipCompressJs": true,
-  "fb-instant-games": {},
-  "android": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": ""
-  },
-  "ios": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "ios_enable_jit": true
-  },
-  "mac": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "win32": {
-    "REMOTE_SERVER_ROOT": "",
-    "width": 1280,
-    "height": 720
-  },
-  "android-instant": {
-    "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
-    "pathPattern": "",
-    "scheme": "https",
-    "host": "",
-    "skipRecord": false,
-    "recordPath": ""
-  },
-  "appBundle": false,
-  "agreements": {},
-  "platform": "web-mobile",
-  "actualPlatform": "web-mobile",
-  "template": "link",
-  "buildPath": "/Users/mac/Documents/WORK/ShuShi/build",
-  "debug": false,
-  "sourceMaps": false,
-  "embedWebDebugger": false,
-  "previewWidth": "1280",
-  "previewHeight": "720",
-  "useDebugKeystore": true,
-  "apiLevel": "",
-  "appABIs": [],
-  "vsVersion": "auto",
-  "buildScriptsOnly": false,
-  "dest": "/Users/mac/Documents/WORK/ShuShi/build/web-mobile",
-  "separateEngineMode": false,
-  "scenes": [
-    "eafd9bbe-a948-4f13-86eb-dde2f61b6859"
-  ],
-  "excludedModules": [
-    "3D Physics/Builtin"
-  ],
-  "project": "/Users/mac/Documents/WORK/ShuShi",
-  "projectName": "ShuShi",
-  "debugBuildWorker": false
-}
-2024-07-17T04:14:19.500Z - normal: Building /Users/mac/Documents/WORK/ShuShi
-2024-07-17T04:14:19.500Z - normal: Destination /Users/mac/Documents/WORK/ShuShi/build/web-mobile
-2024-07-17T04:14:19.616Z - normal: Start spawn build-worker
-2024-07-17T04:14:22.120Z - normal: Finish spawn build-worker
-2024-07-17T04:14:22.122Z - normal: Delete /Users/mac/Documents/WORK/ShuShi/build/web-mobile/**/*
-2024-07-17T04:14:22.171Z - normal: Building 3D physics modules...
-2024-07-17T04:15:01.998Z - normal: Compiling /Users/mac/Documents/WORK/ShuShi
-2024-07-17T04:15:03.143Z - normal: Start init build-worker
-2024-07-17T04:15:04.514Z - normal: Finish init build-worker
-2024-07-17T04:15:04.514Z - normal: Start build-assets in worker
-2024-07-17T04:15:04.515Z - normal: 
---- build-asset: {"root":"db://internal/resources","name":"internal","dest":"/Users/mac/Documents/WORK/ShuShi/build/web-mobile/assets/internal","scriptDest":"/Users/mac/Documents/WORK/ShuShi/build/web-mobile/assets/internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
-
-2024-07-17T04:15:04.623Z - normal: 
---- build-asset: {"root":null,"priority":7,"dest":"/Users/mac/Documents/WORK/ShuShi/build/web-mobile/assets/main","scriptDest":"/Users/mac/Documents/WORK/ShuShi/build/web-mobile/assets/main","name":"main","scenes":["eafd9bbe-a948-4f13-86eb-dde2f61b6859"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
-
-2024-07-17T04:15:05.066Z - normal: Finish build-assets in worker
-2024-07-17T04:15:05.081Z - normal: Start building plugin scripts
-2024-07-17T04:15:05.091Z - normal: Generating main.js from /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2024-07-17T04:15:05.098Z - normal: Generating html from /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/static/build-templates/web-mobile/template/index.html
-2024-07-17T04:15:05.211Z - normal: Built to "/Users/mac/Documents/WORK/ShuShi/build/web-mobile" successfully
-2024-07-17T04:21:36.972Z - normal: Start building with options : {
+2024-07-17T09:20:05.440Z - success: protocol editor-framework registered
+2024-07-17T09:20:05.441Z - success: protocol app registered
+2024-07-17T09:20:05.441Z - success: protocol theme registered
+2024-07-17T09:20:05.441Z - success: protocol packages registered
+2024-07-17T09:20:05.470Z - normal: Load ~/.CocosCreator/settings.json
+2024-07-17T09:20:05.504Z - success: protocol uuid registerred
+2024-07-17T09:20:05.504Z - success: protocol db registerred
+2024-07-17T09:20:05.505Z - success: protocol thumbnail registerred
+2024-07-17T09:20:05.585Z - normal: Initializing Asset Database
+2024-07-17T09:20:05.588Z - normal: checking language setting...
+2024-07-17T09:20:05.588Z - normal: Language: en
+2024-07-17T09:20:05.590Z - success: protocol unpack registerred
+2024-07-17T09:20:05.590Z - success: protocol disable-commonjs registerred
+2024-07-17T09:20:07.335Z - normal: connected!
+2024-07-17T09:20:07.568Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
+2024-07-17T09:20:07.573Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
+2024-07-17T09:20:07.807Z - success: adapters loaded
+2024-07-17T09:20:07.812Z - success: asset-db-debugger loaded
+2024-07-17T09:20:07.885Z - success: fb-audience-network loaded
+2024-07-17T09:20:07.933Z - success: fb-live-stream loaded
+2024-07-17T09:20:07.940Z - success: google-play-instant loaded
+2024-07-17T09:20:07.941Z - success: jsb-adapter loaded
+2024-07-17T09:20:07.963Z - success: package-manager loaded
+2024-07-17T09:20:07.964Z - success: runtime-adapters loaded
+2024-07-17T09:20:07.965Z - success: runtime-dev-tools loaded
+2024-07-17T09:20:07.968Z - success: ui-kit-preview-extra loaded
+2024-07-17T09:20:07.970Z - success: ui-kit-preview loaded
+2024-07-17T09:20:08.807Z - success: alipay-minigame loaded
+2024-07-17T09:20:08.823Z - success: assets loaded
+2024-07-17T09:20:08.827Z - success: baidugame-opendata loaded
+2024-07-17T09:20:08.829Z - success: baidugame loaded
+2024-07-17T09:20:08.832Z - success: builder loaded
+2024-07-17T09:20:08.838Z - success: bytedance-opendata loaded
+2024-07-17T09:20:08.840Z - success: bytedance loaded
+2024-07-17T09:20:08.845Z - success: channel-upload-tools loaded
+2024-07-17T09:20:09.004Z - success: cloud-function loaded
+2024-07-17T09:20:09.230Z - success: cocos-services loaded
+2024-07-17T09:20:09.237Z - success: console loaded
+2024-07-17T09:20:09.240Z - success: curve-editor loaded
+2024-07-17T09:20:09.249Z - success: fb-instant-games loaded
+2024-07-17T09:20:09.251Z - success: game-window loaded
+2024-07-17T09:20:09.252Z - success: google-instant-games loaded
+2024-07-17T09:20:09.257Z - success: hierarchy loaded
+2024-07-17T09:20:09.260Z - success: huawei-agc loaded
+2024-07-17T09:20:09.264Z - success: huawei-runtime loaded
+2024-07-17T09:20:09.267Z - success: inspector loaded
+2024-07-17T09:20:09.290Z - success: cpk-publish loaded
+2024-07-17T09:20:09.292Z - success: keystore loaded
+2024-07-17T09:20:09.319Z - success: link-sure-runtime loaded
+2024-07-17T09:20:09.331Z - success: node-library loaded
+2024-07-17T09:20:09.332Z - success: open-recent-items loaded
+2024-07-17T09:20:09.335Z - success: oppo-runtime loaded
+2024-07-17T09:20:09.337Z - success: package-asset loaded
+2024-07-17T09:20:09.338Z - success: preferences loaded
+2024-07-17T09:20:09.341Z - success: project-importer loaded
+2024-07-17T09:20:09.345Z - success: project-settings loaded
+2024-07-17T09:20:09.358Z - success: qtt-runtime loaded
+2024-07-17T09:20:09.362Z - success: scene loaded
+2024-07-17T09:20:09.363Z - success: simulator-debugger loaded
+2024-07-17T09:20:09.364Z - success: sprite-editor loaded
+2024-07-17T09:20:09.434Z - success: store loaded
+2024-07-17T09:20:09.436Z - success: taobao-creativeapp loaded
+2024-07-17T09:20:09.442Z - success: timeline loaded
+2024-07-17T09:20:09.448Z - success: vivo-runtime loaded
+2024-07-17T09:20:09.451Z - success: wechatgame-opendata loaded
+2024-07-17T09:20:09.456Z - success: wechatgame loaded
+2024-07-17T09:20:09.460Z - success: xiaomi-runtime loaded
+2024-07-17T09:20:09.517Z - success: im-plugin loaded
+2024-07-17T09:20:09.519Z - success: preview server running at http://localhost:7456
+2024-07-17T09:20:11.577Z - normal: Initializing Cocos2d
+2024-07-17T09:20:11.861Z - normal: Initializing engine extends
+2024-07-17T09:20:12.904Z - info: Cocos Service load base data!
+2024-07-17T09:20:13.010Z - normal: Loading packages
+2024-07-17T09:20:13.013Z - normal: Watching packages
+2024-07-17T09:20:13.278Z - normal: Run Application
+2024-07-17T09:20:17.968Z - success: cloud-function unloaded
+2024-07-17T09:22:16.630Z - normal: Start building with options : {
   "title": "ShuShi",
   "packageName": "org.cocos2d.demo",
   "startScene": "eafd9bbe-a948-4f13-86eb-dde2f61b6859",
@@ -254,52 +154,27 @@
   "projectName": "ShuShi",
   "debugBuildWorker": false
 }
-2024-07-17T04:21:36.973Z - normal: Building /Users/mac/Documents/WORK/ShuShi
-2024-07-17T04:21:36.974Z - normal: Destination /Users/mac/Documents/WORK/ShuShi/build/jsb-link
-2024-07-17T04:21:36.974Z - normal: Start spawn build-worker
-2024-07-17T04:21:36.974Z - normal: Finish spawn build-worker
-2024-07-17T04:21:36.974Z - normal: Delete /Users/mac/Documents/WORK/ShuShi/build/jsb-link/assets/**/*,/Users/mac/Documents/WORK/ShuShi/build/jsb-link/remote/**/*,/Users/mac/Documents/WORK/ShuShi/build/jsb-link/src/**/*
-2024-07-17T04:21:37.202Z - normal: Checked Python Version [2.7.14]
-2024-07-17T04:21:38.740Z - normal: Building 3D physics modules...
-2024-07-17T04:21:46.695Z - normal: Compiling /Users/mac/Documents/WORK/ShuShi
-2024-07-17T04:21:47.851Z - normal: Start build-assets in worker
-2024-07-17T04:21:47.852Z - normal: 
+2024-07-17T09:22:16.810Z - normal: Building /Users/mac/Documents/WORK/ShuShi
+2024-07-17T09:22:16.810Z - normal: Destination /Users/mac/Documents/WORK/ShuShi/build/jsb-link
+2024-07-17T09:22:16.912Z - normal: Start spawn build-worker
+2024-07-17T09:22:19.313Z - normal: Finish spawn build-worker
+2024-07-17T09:22:19.314Z - normal: Delete /Users/mac/Documents/WORK/ShuShi/build/jsb-link/assets/**/*,/Users/mac/Documents/WORK/ShuShi/build/jsb-link/remote/**/*,/Users/mac/Documents/WORK/ShuShi/build/jsb-link/src/**/*
+2024-07-17T09:22:19.377Z - normal: Checked Python Version [2.7.14]
+2024-07-17T09:22:20.567Z - normal: Creating native cocos project to  /Users/mac/Documents/WORK/ShuShi/build/jsb-link
+2024-07-17T09:22:21.860Z - normal: Building 3D physics modules...
+2024-07-17T09:22:31.204Z - normal: Compiling /Users/mac/Documents/WORK/ShuShi
+2024-07-17T09:22:32.333Z - normal: Start init build-worker
+2024-07-17T09:22:33.571Z - normal: Finish init build-worker
+2024-07-17T09:22:33.571Z - normal: Start build-assets in worker
+2024-07-17T09:22:33.571Z - normal: 
 --- build-asset: {"root":"db://internal/resources","name":"internal","dest":"/Users/mac/Documents/WORK/ShuShi/build/jsb-link/assets/internal","scriptDest":"/Users/mac/Documents/WORK/ShuShi/build/jsb-link/assets/internal","priority":11,"scenes":[],"compressionType":"merge_all_json"}
 
-2024-07-17T04:21:47.918Z - normal: 
+2024-07-17T09:22:33.682Z - normal: 
 --- build-asset: {"root":null,"priority":7,"dest":"/Users/mac/Documents/WORK/ShuShi/build/jsb-link/assets/main","scriptDest":"/Users/mac/Documents/WORK/ShuShi/build/jsb-link/assets/main","name":"main","scenes":["eafd9bbe-a948-4f13-86eb-dde2f61b6859"],"compressionType":"default","optimizeHotUpdate":false,"inlineSpriteFrames":true,"isRemote":false}
 
-2024-07-17T04:21:47.920Z - info: Enable "Inline all SpriteFrames" in native platform will increase the package size used in hot update.
-2024-07-17T04:21:48.276Z - normal: Finish build-assets in worker
-2024-07-17T04:21:48.285Z - normal: Start building plugin scripts
-2024-07-17T04:21:48.293Z - normal: Generating main.js from /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
-2024-07-17T04:21:48.394Z - normal: Checked Python Version [2.7.14]
-2024-07-17T04:21:49.746Z - normal: Built to "/Users/mac/Documents/WORK/ShuShi/build/jsb-link" successfully
-2024-07-17T05:29:45.811Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@main:108762
-2024-07-17T06:26:14.576Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@main:112972
-2024-07-17T07:49:18.452Z - error: Failed to apply "time" because the prefab asset is missing, please save the prefab to a new asset by dragging and drop the node from Node Tree into Assets.
-    at Object._doApplyPrefab (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.ccc:1:5187)
-    at Object.applyPrefab (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.ccc:1:5730)
-    at Object.save (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/edit-mode/modes/prefab.ccc:1:2439)
-    at Object.run (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/edit-mode/index.ccc:1:2061)
-    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.ccc:1:384
-    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/dist/async.js:3205:13
-    at Object.process (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/dist/async.js:1431:21)
-    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/dist/async.js:1289:23
-    at Immediate._onImmediate (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/dist/async.js:73:45)
-2024-07-17T07:49:26.438Z - error: Failed to apply "time" because the prefab asset is missing, please save the prefab to a new asset by dragging and drop the node from Node Tree into Assets.
-    at Object._doApplyPrefab (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.ccc:1:5187)
-    at Object.applyPrefab (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.ccc:1:5730)
-    at Object.save (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/edit-mode/modes/prefab.ccc:1:2439)
-    at Object.run (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/edit-mode/index.ccc:1:2061)
-    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/tasks.ccc:1:384
-    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/dist/async.js:3205:13
-    at Object.process (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/dist/async.js:1431:21)
-    at /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/dist/async.js:1289:23
-    at Immediate._onImmediate (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/node_modules/async/dist/async.js:73:45)
-2024-07-17T07:49:41.911Z - error: Failed to apply "time" because the prefab asset is missing, please save the prefab to a new asset by dragging and drop the node from Node Tree into Assets.
-    at Object._doApplyPrefab (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.ccc:1:5187)
-    at Object.applyPrefab (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.ccc:1:5730)
-    at Object.save (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/edit-mode/modes/prefab.ccc:1:2439)
-    at Object.close (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/edit-mode/modes/prefab.ccc:1:1759)
-    at Object.run (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/edit-mode/index.ccc:1:734)
+2024-07-17T09:22:33.684Z - info: Enable "Inline all SpriteFrames" in native platform will increase the package size used in hot update.
+2024-07-17T09:22:34.113Z - normal: Finish build-assets in worker
+2024-07-17T09:22:34.127Z - normal: Start building plugin scripts
+2024-07-17T09:22:34.139Z - normal: Generating main.js from /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/static/build-templates/shares/main.js
+2024-07-17T09:22:34.203Z - normal: Checked Python Version [2.7.14]
+2024-07-17T09:22:35.529Z - normal: Built to "/Users/mac/Documents/WORK/ShuShi/build/jsb-link" successfully

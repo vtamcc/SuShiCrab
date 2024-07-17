@@ -51,12 +51,12 @@ var Collier = /** @class */ (function (_super) {
                 nodeNew_1.scale = 1;
                 nodeNew_1.addComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[6];
                 nodeNew_1.setParent(ShuShiCarb_Hook_1.default.instance.hookHead);
-                nodeNew_1.setPosition(cc.v2(0, -25));
+                nodeNew_1.setPosition(cc.v2(0, 25));
             }
             else {
                 nodeNew_1.addComponent(cc.Sprite).spriteFrame = ShuShiCarb_Game_1.default.instance.listSpfFood[id];
                 nodeNew_1.setParent(ShuShiCarb_Hook_1.default.instance.hookHead);
-                nodeNew_1.setPosition(cc.v2(0, -25));
+                nodeNew_1.setPosition(cc.v2(0, 25));
             }
             ShuShiCarb_Game_1.default.instance.hookObjects.push({ node: nodeNew_1, id: id });
             ShuShiCarb_Hook_1.default.instance.setHookState(2);

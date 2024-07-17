@@ -8,6 +8,7 @@
 import Global from "../../../ShuShiCarb.Global";
 import ShuShiCarbItemHook from "./ShuShiCarb.ItemHook";
 import ShuShiCarbItemMoneyBag from "./ShuShiCarb.ItemMoneyBag";
+import ShuShiCarbItemTimeHappy from "./ShuShiCarb.ItemTimeHappy";
 
 
 
@@ -24,7 +25,8 @@ export default class ShuShiCarbShopView extends cc.Component {
     @property(cc.Prefab)
     prfItemSpeedHook: cc.Prefab = null;
     
-   
+    @property(cc.Prefab)
+    prfItemTimeHapy: cc.Prefab = null;
 
     @property(cc.Prefab)
     prfItemMoney: cc.Prefab = null;
@@ -34,6 +36,7 @@ export default class ShuShiCarbShopView extends cc.Component {
         this.itemSpeedHook();
         this.updateGold();
         this.itemMoney();
+        this.itemTimeHappy();
     }
     start () {
 
@@ -48,10 +51,17 @@ export default class ShuShiCarbShopView extends cc.Component {
         let item = cc.instantiate(this.prfItemMoney).getComponent(ShuShiCarbItemMoneyBag)
         this.nlistItem.addChild(item.node);
     }
+
+    itemTimeHappy() {
+        let item = cc.instantiate(this.prfItemTimeHapy).getComponent(ShuShiCarbItemTimeHappy)
+        this.nlistItem.addChild(item.node);
+    }
     updateGold() {
         this.lbGold.string = Global.totalGold + " ";
     }
 
+
+    
     // changeBtn(isTrue: boolean) {
     //     this.nBtnGreen.active = isTrue;
     //     this.nBtnGray.active = !isTrue;

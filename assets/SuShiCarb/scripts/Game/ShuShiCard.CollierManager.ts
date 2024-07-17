@@ -27,11 +27,11 @@ export default class Collier extends cc.Component {
                 nodeNew.scale = 1;
                 nodeNew.addComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[6]
                 nodeNew.setParent(ShuShiCarbHook.instance.hookHead);
-                nodeNew.setPosition(cc.v2(0, -25));
+                nodeNew.setPosition(cc.v2(0, 25));
             }else {
                 nodeNew.addComponent(cc.Sprite).spriteFrame = ShuShiCarbGame.instance.listSpfFood[id]
                 nodeNew.setParent(ShuShiCarbHook.instance.hookHead);
-                nodeNew.setPosition(cc.v2(0, -25));
+                nodeNew.setPosition(cc.v2(0, 25));
             }
             
 

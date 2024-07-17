@@ -53,7 +53,9 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         _this.prfGameOver = null;
         _this.prgTime = null;
         _this.lbCountDown = null;
-        _this.nGoldFly = null;
+        _this.nEffectGold = null;
+        _this.nEffecBagMoneyFly = null;
+        _this.nEndEffect = null;
         _this.nCheckFalse = null;
         // LIFE-CYCLE CALLBACKS:
         _this.data = [0, 1, 2, 3, 4, 5];
@@ -77,6 +79,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         ShuShiCarbGame_1.instance = this;
         var checkBagMoney = JSON.parse(cc.sys.localStorage.getItem("checkBagMoney"));
         ShuShiCarb_Global_1.default.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || ShuShiCarb_Global_1.default.moneyBag;
+        console.log(ShuShiCarb_Global_1.default.moneyBag);
         if (checkBagMoney !== null) {
             ShuShiCarb_Global_1.default.checkBagMoney = checkBagMoney;
             console.log(ShuShiCarb_Global_1.default.checkBagMoney);
@@ -158,19 +161,20 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
             this.gold += ShuShiCarb_Global_1.default.moneyBag;
             this.updateGold(ShuShiCarb_Global_1.default.moneyBag);
             foundMatch = true;
+            ShuShiCarb_GoldFly_1.default.instance.playAnim(this.nEffecBagMoneyFly, this.nEndEffect, this.nEffecBagMoneyFly);
         }
         else {
             var _loop_1 = function (i) {
                 if (this_1.playOrders[i] === hookFoodId) {
                     if (!this_1.player.listFood[i].getChildByName("tick").active) {
                         this_1.player.listFood[i].getChildByName("tick").active = true;
-                        this_1.nGoldFly.active = true;
+                        //this.nGoldFly.active = true;
                         this_1.scheduleOnce(function () {
                             _this.lsFoodTable[i].getComponent(cc.Sprite).spriteFrame = _this.listSpfFood[hookFoodId];
                             _this.lsFoodTable[i].active = true;
-                            _this.nGoldFly.active = false;
+                            // this.nGoldFly.active = false;
                         }, 0.2);
-                        ShuShiCarb_GoldFly_1.default.instance.playAnim();
+                        ShuShiCarb_GoldFly_1.default.instance.playAnim(this_1.nEffectGold, this_1.nEndEffect, this_1.nEffectGold);
                         this_1.gold += 5;
                         this_1.updateGold(5);
                         foundMatch = true;
@@ -298,7 +302,13 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     ], ShuShiCarbGame.prototype, "lbCountDown", void 0);
     __decorate([
         property(cc.Node)
-    ], ShuShiCarbGame.prototype, "nGoldFly", void 0);
+    ], ShuShiCarbGame.prototype, "nEffectGold", void 0);
+    __decorate([
+        property(cc.Node)
+    ], ShuShiCarbGame.prototype, "nEffecBagMoneyFly", void 0);
+    __decorate([
+        property(cc.Node)
+    ], ShuShiCarbGame.prototype, "nEndEffect", void 0);
     __decorate([
         property(cc.Node)
     ], ShuShiCarbGame.prototype, "nCheckFalse", void 0);

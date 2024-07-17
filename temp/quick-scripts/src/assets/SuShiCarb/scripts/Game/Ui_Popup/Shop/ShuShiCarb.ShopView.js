@@ -32,6 +32,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ShuShiCarb_Global_1 = require("../../../ShuShiCarb.Global");
 var ShuShiCarb_ItemHook_1 = require("./ShuShiCarb.ItemHook");
 var ShuShiCarb_ItemMoneyBag_1 = require("./ShuShiCarb.ItemMoneyBag");
+var ShuShiCarb_ItemTimeHappy_1 = require("./ShuShiCarb.ItemTimeHappy");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbShopView = /** @class */ (function (_super) {
     __extends(ShuShiCarbShopView, _super);
@@ -40,6 +41,7 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
         _this.lbGold = null;
         _this.nlistItem = null;
         _this.prfItemSpeedHook = null;
+        _this.prfItemTimeHapy = null;
         _this.prfItemMoney = null;
         _this.listDataHook = [];
         return _this;
@@ -51,6 +53,7 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
         this.itemSpeedHook();
         this.updateGold();
         this.itemMoney();
+        this.itemTimeHappy();
     };
     ShuShiCarbShopView.prototype.start = function () {
     };
@@ -60,6 +63,10 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
     };
     ShuShiCarbShopView.prototype.itemMoney = function () {
         var item = cc.instantiate(this.prfItemMoney).getComponent(ShuShiCarb_ItemMoneyBag_1.default);
+        this.nlistItem.addChild(item.node);
+    };
+    ShuShiCarbShopView.prototype.itemTimeHappy = function () {
+        var item = cc.instantiate(this.prfItemTimeHapy).getComponent(ShuShiCarb_ItemTimeHappy_1.default);
         this.nlistItem.addChild(item.node);
     };
     ShuShiCarbShopView.prototype.updateGold = function () {
@@ -83,6 +90,9 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
     __decorate([
         property(cc.Prefab)
     ], ShuShiCarbShopView.prototype, "prfItemSpeedHook", void 0);
+    __decorate([
+        property(cc.Prefab)
+    ], ShuShiCarbShopView.prototype, "prfItemTimeHapy", void 0);
     __decorate([
         property(cc.Prefab)
     ], ShuShiCarbShopView.prototype, "prfItemMoney", void 0);

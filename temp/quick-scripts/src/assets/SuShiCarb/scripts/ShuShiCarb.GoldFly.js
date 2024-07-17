@@ -34,9 +34,6 @@ var ShuShiCarbGoldFly = /** @class */ (function (_super) {
     __extends(ShuShiCarbGoldFly, _super);
     function ShuShiCarbGoldFly() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.nodeLbFly = null;
-        _this.startPoint = null;
-        _this.endPoint = null;
         _this.coinPrefab = null;
         _this.coinPool = null;
         return _this;
@@ -54,18 +51,17 @@ var ShuShiCarbGoldFly = /** @class */ (function (_super) {
             this.coinPool.put(coin);
         }
     };
-    ShuShiCarbGoldFly.prototype.playAnim = function () {
-        var _this = this;
+    ShuShiCarbGoldFly.prototype.playAnim = function (startPos, endPos, nodeEffect) {
         var randomCount = 5;
-        var stPos = this.startPoint.getPosition();
-        var edPos = this.endPoint.getPosition();
+        var stPos = startPos.getPosition();
+        var edPos = endPos.getPosition();
         this.playCoinFlyAnim(randomCount, stPos, edPos);
-        this.nodeLbFly.active = true;
-        cc.tween(this.nodeLbFly)
+        nodeEffect.active = true;
+        cc.tween(nodeEffect)
             .to(0.8, { y: edPos.y })
             .call(function () {
-            _this.nodeLbFly.y = 0;
-            _this.nodeLbFly.active = false;
+            nodeEffect.y = 0;
+            nodeEffect.active = false;
         })
             .start();
     };
@@ -126,15 +122,6 @@ var ShuShiCarbGoldFly = /** @class */ (function (_super) {
     };
     var ShuShiCarbGoldFly_1;
     ShuShiCarbGoldFly.instance = null;
-    __decorate([
-        property(cc.Node)
-    ], ShuShiCarbGoldFly.prototype, "nodeLbFly", void 0);
-    __decorate([
-        property(cc.Node)
-    ], ShuShiCarbGoldFly.prototype, "startPoint", void 0);
-    __decorate([
-        property(cc.Node)
-    ], ShuShiCarbGoldFly.prototype, "endPoint", void 0);
     __decorate([
         property(cc.Prefab)
     ], ShuShiCarbGoldFly.prototype, "coinPrefab", void 0);

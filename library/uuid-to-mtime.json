@@ -255,8 +255,8 @@
     "relativePath": "SuShiCarb/texture/img/other/customerNeed-frame.png"
   },
   "88f7216d-b968-4c07-a372-e2b8900e16c6": {
-    "asset": 1720496965996,
-    "meta": 1721182742454,
+    "asset": 1721204328030,
+    "meta": 1721204328040,
     "relativePath": "SuShiCarb/prefab/nPlayer.prefab"
   },
   "e14ed4fd-bc4f-4634-a348-42b866f07f96": {
@@ -333,11 +333,6 @@
     "asset": 1720576860607,
     "meta": 1721182743930,
     "relativePath": "SuShiCarb/texture/img/other/4.png"
-  },
-  "eafd9bbe-a948-4f13-86eb-dde2f61b6859": {
-    "asset": 1721184680176,
-    "meta": 1721184680183,
-    "relativePath": "SuShiCarb/Main.fire"
   },
   "c3512697-4ba7-4a4a-94a9-073be1d9aa82": {
     "asset": 1720599098931,
@@ -465,8 +460,8 @@
     "relativePath": "SuShiCarb/scripts/Game/Ui_Popup"
   },
   "7b62cb46-6c3a-4b79-a792-81e8a735a967": {
-    "asset": 1721115031525,
-    "meta": 1721182743793,
+    "asset": 1721202500562,
+    "meta": 1721208012525,
     "relativePath": "SuShiCarb/texture/img/Shop"
   },
   "7096e32e-2d78-4ac5-9453-19f4621d8fb2": {
@@ -500,13 +495,13 @@
     "relativePath": "SuShiCarb/texture/img/Shop/btn_upgrade_gray.png"
   },
   "e0ea53df-eaa0-4e42-b2b9-8306a2198ebb": {
-    "asset": 1721180915251,
-    "meta": 1721182743619,
+    "asset": 1721202724768,
+    "meta": 1721208012524,
     "relativePath": "SuShiCarb/prefab/UI_PopUp/Shop"
   },
   "aa5eeb38-8ebd-40e1-9c3a-207f96485a63": {
-    "asset": 1721182524289,
-    "meta": 1721182743803,
+    "asset": 1721202996580,
+    "meta": 1721208012526,
     "relativePath": "SuShiCarb/scripts/Game/Ui_Popup/Shop"
   },
   "bdc483b6-73dd-411a-98ab-6e5222ba8f21": {
@@ -624,11 +619,6 @@
     "meta": 1721182743797,
     "relativePath": "SuShiCarb/prefab/UI_PopUp/GameOver.prefab"
   },
-  "c2cbed72-a4d1-4c30-a6c7-0bccd7bbb0db": {
-    "asset": 1721103317258,
-    "meta": 1721182742390,
-    "relativePath": "SuShiCarb/scripts/ShuShiCarb.GoldFly.ts"
-  },
   "3894fc97-5af5-4c97-8a83-6f65bf111a0d": {
     "asset": 1721104693802,
     "meta": 1721182743762,
@@ -648,11 +638,6 @@
     "asset": 1721115031523,
     "meta": 1721182743852,
     "relativePath": "SuShiCarb/texture/img/Shop/bag.png"
-  },
-  "7e44a572-5b8f-47b7-b916-3bf59440a8e4": {
-    "asset": 1721115260841,
-    "meta": 1721182744168,
-    "relativePath": "SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ShopView.ts"
   },
   "9836134e-b892-4283-b6b2-78b5acf3ed45": {
     "asset": 1627377544000,
@@ -1155,8 +1140,8 @@
     "relativePath": "model/primitives.fbx"
   },
   "37f96d5b-afe1-4d6a-bef2-042be1745237": {
-    "asset": 1721127149517,
-    "meta": 1721182742452,
+    "asset": 1721207907141,
+    "meta": 1721207907152,
     "relativePath": "SuShiCarb/prefab/Main.prefab"
   },
   "1814de53-8909-4312-886a-4e0a97c76cd5": {
@@ -1179,34 +1164,59 @@
     "meta": 1721184352694,
     "relativePath": "SuShiCarb/scripts/ShuShiCarb.Global.ts"
   },
-  "b4f8bb70-b428-4327-b796-0d30dff2e50e": {
-    "asset": 1721198044464,
-    "meta": 1721198045778,
-    "relativePath": "SuShiCarb/scripts/ShuShiCarb.GameManager.ts"
-  },
   "ba5e2f98-4512-4d07-a0a3-7a4c6bd0f426": {
-    "asset": 1721202325262,
-    "meta": 1721202325268,
+    "asset": 1721203335556,
+    "meta": 1721203335563,
     "relativePath": "SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
-  },
-  "0757162b-4c1a-4741-9e11-5bb28d72862f": {
-    "asset": 1721200301947,
-    "meta": 1721200303732,
-    "relativePath": "SuShiCarb/scripts/Game/ShuShiCard.CollierManager.ts"
   },
   "75348970-1c50-410b-a253-d97100a18c19": {
     "asset": 1721200782161,
     "meta": 1721200784567,
     "relativePath": "SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ItemMoneyBag.ts"
   },
-  "57e45225-4d13-41a0-9dba-9655724847c7": {
-    "asset": 1721201513248,
-    "meta": 1721201514548,
-    "relativePath": "SuShiCarb/scripts/ShuShiCarb.Game.ts"
-  },
   "ea6e7742-2d07-46f4-b526-d8aae491a9f9": {
     "asset": 1721202489216,
     "meta": 1721202500578,
     "relativePath": "SuShiCarb/texture/img/Shop/time_happy.png"
+  },
+  "8823be6c-3c16-4a43-9ad9-46a7b43964be": {
+    "asset": 1721203292185,
+    "meta": 1721203292201,
+    "relativePath": "SuShiCarb/prefab/UI_PopUp/Shop/ItemTimeHappy.prefab"
+  },
+  "b9fc50aa-f94b-4fe0-b38f-34d7409d1fbe": {
+    "asset": 1721203123416,
+    "meta": 1721203287110,
+    "relativePath": "SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ItemTimeHappy.ts"
+  },
+  "7e44a572-5b8f-47b7-b916-3bf59440a8e4": {
+    "asset": 1721203334350,
+    "meta": 1721203335420,
+    "relativePath": "SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ShopView.ts"
+  },
+  "c2cbed72-a4d1-4c30-a6c7-0bccd7bbb0db": {
+    "asset": 1721205908596,
+    "meta": 1721205918875,
+    "relativePath": "SuShiCarb/scripts/ShuShiCarb.GoldFly.ts"
+  },
+  "b4f8bb70-b428-4327-b796-0d30dff2e50e": {
+    "asset": 1721212449623,
+    "meta": 1721212452469,
+    "relativePath": "SuShiCarb/scripts/ShuShiCarb.GameManager.ts"
+  },
+  "57e45225-4d13-41a0-9dba-9655724847c7": {
+    "asset": 1721212552929,
+    "meta": 1721212554803,
+    "relativePath": "SuShiCarb/scripts/ShuShiCarb.Game.ts"
+  },
+  "0757162b-4c1a-4741-9e11-5bb28d72862f": {
+    "asset": 1721213677823,
+    "meta": 1721213678373,
+    "relativePath": "SuShiCarb/scripts/Game/ShuShiCard.CollierManager.ts"
+  },
+  "eafd9bbe-a948-4f13-86eb-dde2f61b6859": {
+    "asset": 1721213679661,
+    "meta": 1721213752181,
+    "relativePath": "SuShiCarb/Main.fire"
   }
 }

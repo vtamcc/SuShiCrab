@@ -181,7 +181,7 @@ return e;
 o = e;
 e.prototype.onLoad = function() {
 o.instance = this;
-s.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 0;
+s.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 500;
 this.updateTotalGold();
 };
 e.prototype.start = function() {};
@@ -262,7 +262,9 @@ e.lbGold = null;
 e.prfGameOver = null;
 e.prgTime = null;
 e.lbCountDown = null;
-e.nGoldFly = null;
+e.nEffectGold = null;
+e.nEffecBagMoneyFly = null;
+e.nEndEffect = null;
 e.nCheckFalse = null;
 e.data = [ 0, 1, 2, 3, 4, 5 ];
 e.playOrders = [];
@@ -281,6 +283,12 @@ return e;
 o = e;
 e.prototype.onLoad = function() {
 o.instance = this;
+var t = JSON.parse(cc.sys.localStorage.getItem("checkBagMoney"));
+u.default.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || u.default.moneyBag;
+if (null !== t) {
+u.default.checkBagMoney = t;
+console.log(u.default.checkBagMoney);
+}
 this.randomOrderFood();
 console.log(this.playOrders);
 this.conveyor(this.conveyor_1);
@@ -288,11 +296,7 @@ this.conveyor(this.conveyor_2);
 this.conveyor(this.conveyor_3);
 this.renderOrderFood();
 this.startCountDown();
-var t = JSON.parse(cc.sys.localStorage.getItem("checkBagMoney"));
-null !== t && (u.default.checkBagMoney = t);
-u.default.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || u.default.moneyBag;
 console.log(u.default.checkBagMoney);
-console.log("Tien tui qua ", u.default.moneyBag);
 };
 e.prototype.randomOrderFood = function() {
 this.playOrders = [];
@@ -338,16 +342,15 @@ var e = this.hookObjects[0].id;
 if (999 === e) {
 this.gold += u.default.moneyBag;
 this.updateGold(u.default.moneyBag);
+p.default.instance.playAnim(this.nEffecBagMoneyFly, this.nEndEffect, this.nEffecBagMoneyFly);
 } else for (var o = function(o) {
 if (n.playOrders[o] === e && !n.player.listFood[o].getChildByName("tick").active) {
 n.player.listFood[o].getChildByName("tick").active = !0;
-n.nGoldFly.active = !0;
 n.scheduleOnce(function() {
 t.lsFoodTable[o].getComponent(cc.Sprite).spriteFrame = t.listSpfFood[e];
 t.lsFoodTable[o].active = !0;
-t.nGoldFly.active = !1;
 }, .2);
-p.default.instance.playAnim();
+p.default.instance.playAnim(n.nEffectGold, n.nEndEffect, n.nEffectGold);
 n.gold += 5;
 n.updateGold(5);
 n.countCorrect++;
@@ -366,7 +369,7 @@ cc.sys.localStorage.setItem("totalGold", JSON.stringify(u.default.totalGold));
 e.prototype.conveyor = function(t) {
 for (var e = 0; e < t.childrenCount; e++) {
 var o = t.children[e].getComponent(a.default);
-if (1 == u.default.checkBagMoney && 5 === e) o.setData(999); else {
+if (!0 === u.default.checkBagMoney && 5 === e) o.setData(999); else {
 var n = Math.floor(Math.random() * this.data.length);
 o.setData(this.data[n]);
 }
@@ -414,7 +417,9 @@ r([ f(cc.Label) ], e.prototype, "lbGold", void 0);
 r([ f(cc.Prefab) ], e.prototype, "prfGameOver", void 0);
 r([ f(cc.ProgressBar) ], e.prototype, "prgTime", void 0);
 r([ f(cc.Label) ], e.prototype, "lbCountDown", void 0);
-r([ f(cc.Node) ], e.prototype, "nGoldFly", void 0);
+r([ f(cc.Node) ], e.prototype, "nEffectGold", void 0);
+r([ f(cc.Node) ], e.prototype, "nEffecBagMoneyFly", void 0);
+r([ f(cc.Node) ], e.prototype, "nEndEffect", void 0);
 r([ f(cc.Node) ], e.prototype, "nCheckFalse", void 0);
 return o = r([ h ], e);
 }(cc.Component);
@@ -527,9 +532,6 @@ var a = cc._decorator, c = a.ccclass, s = a.property, l = function(t) {
 i(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
-e.nodeLbFly = null;
-e.startPoint = null;
-e.endPoint = null;
 e.coinPrefab = null;
 e.coinPool = null;
 return e;
@@ -547,15 +549,15 @@ var o = cc.instantiate(this.coinPrefab);
 this.coinPool.put(o);
 }
 };
-e.prototype.playAnim = function() {
-var t = this, e = this.startPoint.getPosition(), o = this.endPoint.getPosition();
-this.playCoinFlyAnim(5, e, o);
-this.nodeLbFly.active = !0;
-cc.tween(this.nodeLbFly).to(.8, {
-y: o.y
+e.prototype.playAnim = function(t, e, o) {
+var n = t.getPosition(), i = e.getPosition();
+this.playCoinFlyAnim(5, n, i);
+o.active = !0;
+cc.tween(o).to(.8, {
+y: i.y
 }).call(function() {
-t.nodeLbFly.y = 0;
-t.nodeLbFly.active = !1;
+o.y = 0;
+o.active = !1;
 }).start();
 };
 e.prototype.playCoinFlyAnim = function(t, e, o, n) {
@@ -593,9 +595,6 @@ return i;
 };
 var o;
 e.instance = null;
-r([ s(cc.Node) ], e.prototype, "nodeLbFly", void 0);
-r([ s(cc.Node) ], e.prototype, "startPoint", void 0);
-r([ s(cc.Node) ], e.prototype, "endPoint", void 0);
 r([ s(cc.Prefab) ], e.prototype, "coinPrefab", void 0);
 return o = r([ c ], e);
 }(cc.Component);
@@ -938,7 +937,6 @@ this.nStateBuy.children[this.index].active = c.default.dataBagMoney[this.index].
 c.default.activeIndexMoneyBag = this.index;
 this.savePurchaseState();
 this.index++;
-this.savePurchaseState();
 this.checkClick();
 a.default.instance.updateTotalGold();
 s.default.instace.updateGold();
@@ -971,6 +969,47 @@ cc._RF.pop();
 "../../../ShuShiCarb.Global": "ShuShiCarb.Global",
 "./ShuShiCarb.ShopView": "ShuShiCarb.ShopView"
 } ],
+"ShuShiCarb.ItemTimeHappy": [ function(t, e, o) {
+"use strict";
+cc._RF.push(e, "b9fc5Cq+UtP4LOPNNdAnR++", "ShuShiCarb.ItemTimeHappy");
+var n, i = this && this.__extends || (n = function(t, e) {
+return (n = Object.setPrototypeOf || {
+__proto__: []
+} instanceof Array && function(t, e) {
+t.__proto__ = e;
+} || function(t, e) {
+for (var o in e) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
+})(t, e);
+}, function(t, e) {
+n(t, e);
+function o() {
+this.constructor = t;
+}
+t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
+}), r = this && this.__decorate || function(t, e, o, n) {
+var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
+return r > 3 && a && Object.defineProperty(e, o, a), a;
+};
+Object.defineProperty(o, "__esModule", {
+value: !0
+});
+var a = cc._decorator, c = a.ccclass, s = a.property, l = function(t) {
+i(e, t);
+function e() {
+var e = null !== t && t.apply(this, arguments) || this;
+e.label = null;
+e.text = "hello";
+return e;
+}
+e.prototype.start = function() {};
+r([ s(cc.Label) ], e.prototype, "label", void 0);
+r([ s ], e.prototype, "text", void 0);
+return r([ c ], e);
+}(cc.Component);
+o.default = l;
+cc._RF.pop();
+}, {} ],
 "ShuShiCarb.Player": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "3894fyXWvVMl4qDb2W/ERoN", "ShuShiCarb.Player");
@@ -1187,13 +1226,14 @@ return r > 3 && a && Object.defineProperty(e, o, a), a;
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("../../../ShuShiCarb.Global"), c = t("./ShuShiCarb.ItemHook"), s = t("./ShuShiCarb.ItemMoneyBag"), l = cc._decorator, u = l.ccclass, p = l.property, d = function(t) {
+var a = t("../../../ShuShiCarb.Global"), c = t("./ShuShiCarb.ItemHook"), s = t("./ShuShiCarb.ItemMoneyBag"), l = t("./ShuShiCarb.ItemTimeHappy"), u = cc._decorator, p = u.ccclass, d = u.property, h = function(t) {
 i(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.lbGold = null;
 e.nlistItem = null;
 e.prfItemSpeedHook = null;
+e.prfItemTimeHapy = null;
 e.prfItemMoney = null;
 e.listDataHook = [];
 return e;
@@ -1204,6 +1244,7 @@ o.instace = this;
 this.itemSpeedHook();
 this.updateGold();
 this.itemMoney();
+this.itemTimeHappy();
 };
 e.prototype.start = function() {};
 e.prototype.itemSpeedHook = function() {
@@ -1214,6 +1255,10 @@ e.prototype.itemMoney = function() {
 var t = cc.instantiate(this.prfItemMoney).getComponent(s.default);
 this.nlistItem.addChild(t.node);
 };
+e.prototype.itemTimeHappy = function() {
+var t = cc.instantiate(this.prfItemTimeHapy).getComponent(l.default);
+this.nlistItem.addChild(t.node);
+};
 e.prototype.updateGold = function() {
 this.lbGold.string = a.default.totalGold + " ";
 };
@@ -1222,18 +1267,20 @@ this.node.destroy();
 };
 var o;
 e.instace = null;
-r([ p(cc.Label) ], e.prototype, "lbGold", void 0);
-r([ p(cc.Node) ], e.prototype, "nlistItem", void 0);
-r([ p(cc.Prefab) ], e.prototype, "prfItemSpeedHook", void 0);
-r([ p(cc.Prefab) ], e.prototype, "prfItemMoney", void 0);
-return o = r([ u ], e);
+r([ d(cc.Label) ], e.prototype, "lbGold", void 0);
+r([ d(cc.Node) ], e.prototype, "nlistItem", void 0);
+r([ d(cc.Prefab) ], e.prototype, "prfItemSpeedHook", void 0);
+r([ d(cc.Prefab) ], e.prototype, "prfItemTimeHapy", void 0);
+r([ d(cc.Prefab) ], e.prototype, "prfItemMoney", void 0);
+return o = r([ p ], e);
 }(cc.Component);
-o.default = d;
+o.default = h;
 cc._RF.pop();
 }, {
 "../../../ShuShiCarb.Global": "ShuShiCarb.Global",
 "./ShuShiCarb.ItemHook": "ShuShiCarb.ItemHook",
-"./ShuShiCarb.ItemMoneyBag": "ShuShiCarb.ItemMoneyBag"
+"./ShuShiCarb.ItemMoneyBag": "ShuShiCarb.ItemMoneyBag",
+"./ShuShiCarb.ItemTimeHappy": "ShuShiCarb.ItemTimeHappy"
 } ],
 "ShuShiCarb.SoundManager": [ function(t, e, o) {
 "use strict";
@@ -1379,13 +1426,21 @@ return null !== t && t.apply(this, arguments) || this;
 }
 e.prototype.onCollisionEnter = function(t) {
 var e = this.node.getComponent(s.default), o = e.id;
+console.log("id ", o);
 if (1 == t.tag) {
 var n = new cc.Node();
 n.parent = this.node.parent;
-n.scale = .5;
+n.scale = .4;
+if (999 === o) {
+n.scale = 1;
+n.addComponent(cc.Sprite).spriteFrame = a.default.instance.listSpfFood[6];
+n.setParent(l.default.instance.hookHead);
+n.setPosition(cc.v2(0, -25));
+} else {
 n.addComponent(cc.Sprite).spriteFrame = a.default.instance.listSpfFood[o];
 n.setParent(l.default.instance.hookHead);
 n.setPosition(cc.v2(0, -25));
+}
 a.default.instance.hookObjects.push({
 node: n,
 id: o
@@ -1480,4 +1535,4 @@ cc._RF.pop();
 "../../ShuShiCarb.Game": "ShuShiCarb.Game",
 "../../ShuShiCarb.GameManager": "ShuShiCarb.GameManager"
 } ]
-}, {}, [ "ShuShiCarb.Conveyor", "ShuShiCarb.Food", "ShuShiCarb.Hook", "ShuShiCarb.Player", "ShuShiCard.CollierManager", "ShuShiCarb.ItemHook", "ShuShiCarb.ItemMoneyBag", "ShuShiCarb.ShopView", "ShuShiCarb.SettingView", "ShuShiCrab.GameOver", "ShuShiCarb.Game", "ShuShiCarb.GameManager", "ShuShiCarb.Global", "ShuShiCarb.GoldFly", "ShuShiCarb.SoundManager" ]);
+}, {}, [ "ShuShiCarb.Conveyor", "ShuShiCarb.Food", "ShuShiCarb.Hook", "ShuShiCarb.Player", "ShuShiCard.CollierManager", "ShuShiCarb.ItemHook", "ShuShiCarb.ItemMoneyBag", "ShuShiCarb.ItemTimeHappy", "ShuShiCarb.ShopView", "ShuShiCarb.SettingView", "ShuShiCrab.GameOver", "ShuShiCarb.Game", "ShuShiCarb.GameManager", "ShuShiCarb.Global", "ShuShiCarb.GoldFly", "ShuShiCarb.SoundManager" ]);

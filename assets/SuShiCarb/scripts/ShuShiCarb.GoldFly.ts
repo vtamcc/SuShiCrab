@@ -10,12 +10,7 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class ShuShiCarbGoldFly extends cc.Component {
   public static instance: ShuShiCarbGoldFly = null;
-  @property(cc.Node)
-  nodeLbFly: cc.Node = null;
-  @property(cc.Node)
-  startPoint: cc.Node = null;
-  @property(cc.Node)
-  endPoint: cc.Node = null;
+ 
   @property(cc.Prefab)
   coinPrefab: cc.Prefab = null;
 
@@ -34,17 +29,17 @@ export default class ShuShiCarbGoldFly extends cc.Component {
     }
   }
 
-  playAnim() {
+  playAnim(startPos: cc.Node, endPos: cc.Node, nodeEffect: cc.Node) {
     let randomCount = 5;
-    let stPos = this.startPoint.getPosition();
-    let edPos = this.endPoint.getPosition();
+    let stPos = startPos.getPosition();
+    let edPos = endPos.getPosition();
     this.playCoinFlyAnim(randomCount, stPos, edPos);
-    this.nodeLbFly.active = true;
-    cc.tween(this.nodeLbFly)
+    nodeEffect.active = true;
+    cc.tween(nodeEffect)
     .to(0.8, {y:edPos.y})
     .call(() => {
-        this.nodeLbFly.y = 0;
-        this.nodeLbFly.active = false;
+        nodeEffect.y = 0;
+        nodeEffect.active = false;
     })
     .start();
   }

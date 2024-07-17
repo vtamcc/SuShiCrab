@@ -656,7 +656,7 @@
     "_N$paddingTop": 0,
     "_N$paddingBottom": 0,
     "_N$spacingX": 0,
-    "_N$spacingY": 80,
+    "_N$spacingY": 50,
     "_N$verticalDirection": 1,
     "_N$horizontalDirection": 0,
     "_N$affectedByScale": false,
@@ -742,6 +742,9 @@
     },
     "prfItemSpeedHook": {
       "__uuid__": "0cbde57c-52c3-4bfb-8b41-517fc0de9c77"
+    },
+    "prfItemTimeHapy": {
+      "__uuid__": "8823be6c-3c16-4a43-9ad9-46a7b43964be"
     },
     "prfItemMoney": {
       "__uuid__": "d9964e1a-fa85-4209-8dac-cb4c5e44efb0"

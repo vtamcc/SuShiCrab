@@ -54,9 +54,14 @@ export default class ShuShiCarbGame extends cc.Component {
     @property(cc.Label)
     lbCountDown: cc.Label = null
     @property(cc.Node)
-    nGoldFly: cc.Node = null; 
+    nEffectGold: cc.Node = null; 
+    @property(cc.Node)
+    nEffecBagMoneyFly: cc.Node = null;
+    @property(cc.Node)
+    nEndEffect: cc.Node = null;
     @property(cc.Node)
     nCheckFalse: cc.Node = null;
+   
     // LIFE-CYCLE CALLBACKS:
     data = [0,1,2,3,4,5];
     playOrders = [];
@@ -75,6 +80,7 @@ export default class ShuShiCarbGame extends cc.Component {
         ShuShiCarbGame.instance = this;
         const checkBagMoney = JSON.parse(cc.sys.localStorage.getItem("checkBagMoney"));
         Global.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || Global.moneyBag;
+        console.log(Global.moneyBag);
         if (checkBagMoney !== null) {
             Global.checkBagMoney = checkBagMoney;
             console.log(Global.checkBagMoney)
@@ -165,19 +171,22 @@ export default class ShuShiCarbGame extends cc.Component {
             this.gold += Global.moneyBag;
             this.updateGold(Global.moneyBag);
             foundMatch = true;
+            ShuShiCarbGoldFly.instance.playAnim(this.nEffecBagMoneyFly,this.nEndEffect,this.nEffecBagMoneyFly);
+           
+          
 
         } else {
             for (let i = 0; i < this.playOrders.length; i++) {
                 if (this.playOrders[i] === hookFoodId) {
                     if (!this.player.listFood[i].getChildByName("tick").active) {
                         this.player.listFood[i].getChildByName("tick").active = true;
-                        this.nGoldFly.active = true;
+                        //this.nGoldFly.active = true;
                         this.scheduleOnce(() => {
                             this.lsFoodTable[i].getComponent(cc.Sprite).spriteFrame = this.listSpfFood[hookFoodId];
                             this.lsFoodTable[i].active = true;
-                            this.nGoldFly.active = false;
+                            // this.nGoldFly.active = false;
                         }, 0.2);
-                        ShuShiCarbGoldFly.instance.playAnim();
+                        ShuShiCarbGoldFly.instance.playAnim(this.nEffectGold,this.nEndEffect,this.nEffectGold);
 
                         this.gold += 5;
                         this.updateGold(5);
