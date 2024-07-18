@@ -25,6 +25,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var ShuShiCarb_Game_1 = require("../../ShuShiCarb.Game");
 var ShuShiCarb_GameManager_1 = require("../../ShuShiCarb.GameManager");
+var ShuShiCarb_Global_1 = require("../../ShuShiCarb.Global");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbGameOver = /** @class */ (function (_super) {
     __extends(ShuShiCarbGameOver, _super);
@@ -69,6 +70,9 @@ var ShuShiCarbGameOver = /** @class */ (function (_super) {
             .start();
     };
     ShuShiCarbGameOver.prototype.onHome = function () {
+        if (ShuShiCarb_Global_1.default.soundManager) {
+            ShuShiCarb_Global_1.default.soundManager.playSoundClick();
+        }
         ShuShiCarb_GameManager_1.default.instance.updateTotalGold();
         // let nodeGamePlay = cc.Canvas.instance.node.getChildByName("GamePlay")
         // nodeGamePlay.destroy();

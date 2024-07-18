@@ -36,7 +36,7 @@ export default class ShuShiCarbGoldFly extends cc.Component {
     this.playCoinFlyAnim(randomCount, stPos, edPos);
     nodeEffect.active = true;
     cc.tween(nodeEffect)
-    .to(0.8, {y:edPos.y})
+    .to(1.2, {y:edPos.y})
     .call(() => {
         nodeEffect.y = 0;
         nodeEffect.active = false;

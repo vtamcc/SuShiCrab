@@ -6,6 +6,7 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
 
 import ShuShiCarbGame from "../ShuShiCarb.Game";
+import Global from "../ShuShiCarb.Global";
 import ShuShiCarbFood from "./ShuShiCarb.Food";
 
 const {ccclass, property} = cc._decorator;
@@ -28,7 +29,6 @@ export default class ShuShiCarbPlayer extends cc.Component {
     lbCountDown: cc.Label = null;
     @property(cc.Node)
     nTime: cc.Node = null;
-    duration = 10;
     numberCountDown = 0;
     isCountDown = false;
     isMove = false;
@@ -43,6 +43,8 @@ export default class ShuShiCarbPlayer extends cc.Component {
 
     onLoad() {
         ShuShiCarbPlayer.instace = this;
+        Global.timeHappy = JSON.parse(cc.sys.localStorage.getItem("timeHappy")) || Global.timeHappy;
+        console.log("Time vua duoc update ",Global.timeHappy);
     }
     setData(index) {
         this.char.skeletonData = this.listCharacter[index]; // listChar [0] = con ao vang
@@ -50,7 +52,7 @@ export default class ShuShiCarbPlayer extends cc.Component {
 
     startCountDown() {
         this.isCountDown = true;
-        this.numberCountDown = this.duration;
+        this.numberCountDown = Global.timeHappy;
         this.schedule(this.updateCountDown,1);
     }
 
@@ -71,7 +73,7 @@ export default class ShuShiCarbPlayer extends cc.Component {
 
     updateProgressBar() {
         if(this.prgBarCountDown) {
-            this.prgBarCountDown.progress -= 0.1;
+            this.prgBarCountDown.progress -= 1/ Global.timeHappy;
         }
     }
     effectShow() {

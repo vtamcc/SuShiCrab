@@ -68,6 +68,9 @@ var NewClass = /** @class */ (function (_super) {
         ShuShiCarb_Global_1.default.soundManager.updateMusicState();
     };
     NewClass.prototype.onClickClose = function () {
+        if (ShuShiCarb_Global_1.default.soundManager) {
+            ShuShiCarb_Global_1.default.soundManager.playSoundClick();
+        }
         this.node.destroy();
     };
     __decorate([

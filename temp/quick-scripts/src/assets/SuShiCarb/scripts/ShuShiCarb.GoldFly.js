@@ -58,7 +58,7 @@ var ShuShiCarbGoldFly = /** @class */ (function (_super) {
         this.playCoinFlyAnim(randomCount, stPos, edPos);
         nodeEffect.active = true;
         cc.tween(nodeEffect)
-            .to(0.8, { y: edPos.y })
+            .to(1.2, { y: edPos.y })
             .call(function () {
             nodeEffect.y = 0;
             nodeEffect.active = false;

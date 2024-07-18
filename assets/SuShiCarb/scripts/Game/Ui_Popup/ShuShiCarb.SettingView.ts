@@ -54,6 +54,9 @@ export default class NewClass extends cc.Component {
     }
 
     onClickClose() {
+        if(Global.soundManager) {
+            Global.soundManager.playSoundClick();
+         }
         this.node.destroy();
     }
    

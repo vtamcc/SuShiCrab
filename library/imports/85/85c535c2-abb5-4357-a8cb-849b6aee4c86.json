@@ -1,22 +1,22 @@
 {
   "__type__": "cc.SpriteFrame",
   "content": {
-    "name": "Bottle Coffee",
-    "texture": "7d1e6772-bf21-46d2-9bc6-3da5b6177a29",
+    "name": "item_bagMoney",
+    "texture": "c038dc9b-588f-4129-b703-ac2d7724c76b",
     "atlas": "",
     "rect": [
       0,
       0,
-      1559,
-      1038
+      497,
+      132
     ],
     "offset": [
-      0,
+      -1,
       0
     ],
     "originalSize": [
-      1559,
-      1038
+      499,
+      132
     ],
     "capInsets": [
       0,

@@ -88,10 +88,7 @@
         "cocos-services",
         "node-library"
       ]
-    },
-    "window-1721208126107": {},
-    " build-worker-worker": {},
-    " compile-worker-worker": {}
+    }
   },
   "panels": {
     "project-settings": {

@@ -20,20 +20,28 @@ var Global = /** @class */ (function () {
         { price: 450, speed: 3.5, widthHook: 7, isBuy: false },
         { price: 600, speed: 4.5, widthHook: 9, isBuy: false },
         { price: 750, speed: 5.5, widthHook: 11, isBuy: false }];
-    Global.dataBagMoney = [{ price: 120, gold: 3, isBuy: false },
-        { price: 250, gold: 5, isBuy: false },
-        { price: 320, gold: 7, isBuy: false },
-        { price: 450, gold: 9, isBuy: false },
-        { price: 750, gold: 11, isBuy: false }
+    Global.dataBagMoney = [{ price: 120, gold: 1, isBuy: false },
+        { price: 250, gold: 2, isBuy: false },
+        { price: 320, gold: 3, isBuy: false },
+        { price: 450, gold: 4, isBuy: false },
+        { price: 750, gold: 2, isBuy: false }
     ];
+    Global.dataTimeHappy = [{ price: 120, time: 2, isBuy: false },
+        { price: 250, time: 1, isBuy: false },
+        { price: 320, time: 1, isBuy: false },
+        { price: 450, time: 1, isBuy: false },
+        { price: 750, time: 2, isBuy: false }
+    ];
+    Global.timeHappy = 10;
     Global.checkBagMoney = false;
     Global.speedHook = 20;
-    Global.moneyBag = 20;
+    Global.moneyBag = 10;
     Global.lengthHook = 35;
     Global.isMusicOn = true;
     Global.isSoundOn = true;
     Global.activeIndex = 0;
     Global.activeIndexMoneyBag = 0;
+    Global.activeIndexTimeHappy = 0;
     return Global;
 }());
 exports.default = Global;

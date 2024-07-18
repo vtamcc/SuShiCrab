@@ -57,6 +57,8 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         _this.nEffecBagMoneyFly = null;
         _this.nEndEffect = null;
         _this.nCheckFalse = null;
+        _this.nCheckTrue = null;
+        _this.lbBagMoneyEffect = null;
         // LIFE-CYCLE CALLBACKS:
         _this.data = [0, 1, 2, 3, 4, 5];
         _this.playOrders = [];
@@ -92,7 +94,6 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         this.conveyor(this.conveyor_3);
         this.renderOrderFood();
         this.startCountDown();
-        console.log(ShuShiCarb_Global_1.default.checkBagMoney);
     };
     // randomIdFood(arr,count) {
     //     let idFood = [];
@@ -161,6 +162,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
             this.gold += ShuShiCarb_Global_1.default.moneyBag;
             this.updateGold(ShuShiCarb_Global_1.default.moneyBag);
             foundMatch = true;
+            this.lbBagMoneyEffect.string = "+" + ShuShiCarb_Global_1.default.moneyBag + '';
             ShuShiCarb_GoldFly_1.default.instance.playAnim(this.nEffecBagMoneyFly, this.nEndEffect, this.nEffecBagMoneyFly);
         }
         else {
@@ -178,6 +180,10 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
                         this_1.gold += 5;
                         this_1.updateGold(5);
                         foundMatch = true;
+                        this_1.nCheckTrue.active = true;
+                        setTimeout(function () {
+                            _this.nCheckTrue.active = false;
+                        }, 500);
                         this_1.countCorrect++;
                         return "break";
                     }
@@ -192,6 +198,10 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         }
         this.lbGold.string = this.gold + ' ';
         if (!foundMatch) {
+            this.nCheckFalse.active = true;
+            setTimeout(function () {
+                _this.nCheckFalse.active = false;
+            }, 500);
         }
         if (this.countCorrect >= 3) {
             this.resetGame(true);
@@ -251,6 +261,9 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
         }
     };
     ShuShiCarbGame.prototype.onclickBack = function () {
+        if (ShuShiCarb_Global_1.default.soundManager) {
+            ShuShiCarb_Global_1.default.soundManager.playSoundClick();
+        }
         ShuShiCarb_GameManager_1.default.instance.updateTotalGold();
         this.node.destroy();
         ShuShiCarb_GameManager_1.default.instance.nHome.getChildByName('playbtn').getComponent(cc.Button).interactable = true;
@@ -312,6 +325,12 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], ShuShiCarbGame.prototype, "nCheckFalse", void 0);
+    __decorate([
+        property(cc.Node)
+    ], ShuShiCarbGame.prototype, "nCheckTrue", void 0);
+    __decorate([
+        property(cc.Label)
+    ], ShuShiCarbGame.prototype, "lbBagMoneyEffect", void 0);
     ShuShiCarbGame = ShuShiCarbGame_1 = __decorate([
         ccclass
     ], ShuShiCarbGame);

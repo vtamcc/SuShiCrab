@@ -1,5 +1,6 @@
 import ShuShiCarbGame from "../../ShuShiCarb.Game";
 import ShuShiCarbGameManager from "../../ShuShiCarb.GameManager";
+import Global from "../../ShuShiCarb.Global";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
@@ -48,6 +49,9 @@ export default class ShuShiCarbGameOver extends cc.Component {
     }
 
     onHome() {
+        if(Global.soundManager) {
+            Global.soundManager.playSoundClick();
+         }
         ShuShiCarbGameManager.instance.updateTotalGold();
         // let nodeGamePlay = cc.Canvas.instance.node.getChildByName("GamePlay")
         // nodeGamePlay.destroy();

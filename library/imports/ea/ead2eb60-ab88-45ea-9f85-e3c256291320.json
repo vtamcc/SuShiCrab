@@ -1,7 +1,7 @@
 {
   "__type__": "cc.TTFFont",
-  "_name": "Bottle Coffee",
+  "_name": "font",
   "_objFlags": 0,
-  "_native": "Bottle Coffee.ttf",
+  "_native": "font.ttf",
   "_fontFamily": null
 }

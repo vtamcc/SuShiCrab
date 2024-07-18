@@ -30,6 +30,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ShuShiCarb_Game_1 = require("../ShuShiCarb.Game");
+var ShuShiCarb_Global_1 = require("../ShuShiCarb.Global");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbPlayer = /** @class */ (function (_super) {
     __extends(ShuShiCarbPlayer, _super);
@@ -42,7 +43,6 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
         _this.prgBarCountDown = null;
         _this.lbCountDown = null;
         _this.nTime = null;
-        _this.duration = 10;
         _this.numberCountDown = 0;
         _this.isCountDown = false;
         _this.isMove = false;
@@ -59,13 +59,15 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
     // foodItem3: cc.Node = null;
     ShuShiCarbPlayer.prototype.onLoad = function () {
         ShuShiCarbPlayer_1.instace = this;
+        ShuShiCarb_Global_1.default.timeHappy = JSON.parse(cc.sys.localStorage.getItem("timeHappy")) || ShuShiCarb_Global_1.default.timeHappy;
+        console.log("Time vua duoc update ", ShuShiCarb_Global_1.default.timeHappy);
     };
     ShuShiCarbPlayer.prototype.setData = function (index) {
         this.char.skeletonData = this.listCharacter[index]; // listChar [0] = con ao vang
     };
     ShuShiCarbPlayer.prototype.startCountDown = function () {
         this.isCountDown = true;
-        this.numberCountDown = this.duration;
+        this.numberCountDown = ShuShiCarb_Global_1.default.timeHappy;
         this.schedule(this.updateCountDown, 1);
     };
     ShuShiCarbPlayer.prototype.updateCountDown = function () {
@@ -83,7 +85,7 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
     };
     ShuShiCarbPlayer.prototype.updateProgressBar = function () {
         if (this.prgBarCountDown) {
-            this.prgBarCountDown.progress -= 0.1;
+            this.prgBarCountDown.progress -= 1 / ShuShiCarb_Global_1.default.timeHappy;
         }
     };
     ShuShiCarbPlayer.prototype.effectShow = function () {

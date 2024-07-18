@@ -61,7 +61,10 @@ export default class ShuShiCarbGame extends cc.Component {
     nEndEffect: cc.Node = null;
     @property(cc.Node)
     nCheckFalse: cc.Node = null;
-   
+   @property(cc.Node)
+    nCheckTrue: cc.Node = null;
+    @property(cc.Label)
+    lbBagMoneyEffect: cc.Label = null;
     // LIFE-CYCLE CALLBACKS:
     data = [0,1,2,3,4,5];
     playOrders = [];
@@ -93,7 +96,6 @@ export default class ShuShiCarbGame extends cc.Component {
         this.conveyor(this.conveyor_3);
         this.renderOrderFood();
         this.startCountDown();
-        console.log(Global.checkBagMoney);
     }
 
    
@@ -171,6 +173,7 @@ export default class ShuShiCarbGame extends cc.Component {
             this.gold += Global.moneyBag;
             this.updateGold(Global.moneyBag);
             foundMatch = true;
+            this.lbBagMoneyEffect.string = "+" + Global.moneyBag + '';
             ShuShiCarbGoldFly.instance.playAnim(this.nEffecBagMoneyFly,this.nEndEffect,this.nEffecBagMoneyFly);
            
           
@@ -190,8 +193,11 @@ export default class ShuShiCarbGame extends cc.Component {
 
                         this.gold += 5;
                         this.updateGold(5);
-
                         foundMatch = true;
+                        this.nCheckTrue.active = true;
+                        setTimeout(() => {
+                            this.nCheckTrue.active = false;
+                        },500);
                         this.countCorrect++;
                         break;
                     }
@@ -200,6 +206,10 @@ export default class ShuShiCarbGame extends cc.Component {
         }
         this.lbGold.string = this.gold + ' ';
         if (!foundMatch) {
+                this.nCheckFalse.active = true;
+                setTimeout(() => {
+                this.nCheckFalse.active = false 
+                }, 500);
         }
         
         if(this.countCorrect >=3) {
@@ -265,6 +275,9 @@ export default class ShuShiCarbGame extends cc.Component {
     }
 
     onclickBack() { 
+        if(Global.soundManager) {
+            Global.soundManager.playSoundClick();
+        }
         ShuShiCarbGameManager.instance.updateTotalGold();
         this.node.destroy();
         ShuShiCarbGameManager.instance.nHome.getChildByName('playbtn').getComponent(cc.Button).interactable = true;

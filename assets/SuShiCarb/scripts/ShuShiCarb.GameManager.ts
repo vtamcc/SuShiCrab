@@ -30,7 +30,7 @@ export default class ShuShiCarbGameManager extends cc.Component {
 
    onLoad () {
       ShuShiCarbGameManager.instance = this;
-      Global.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 2000;
+      Global.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 100000;
      
       this.updateTotalGold();
    }
@@ -39,6 +39,9 @@ export default class ShuShiCarbGameManager extends cc.Component {
 
     }
    onClickPlay() {
+      if(Global.soundManager) {
+         Global.soundManager.playSoundClick();
+      }
       //  this.nHome.active = false;
       //  this.nGame.active = true;
       let game = cc.instantiate(this.prfGame).getComponent(ShuShiCarbGame)
@@ -51,6 +54,9 @@ export default class ShuShiCarbGameManager extends cc.Component {
    }
 
    onClickShopView() {
+      if(Global.soundManager) {
+         Global.soundManager.playSoundClick();
+      }
       let shopView = cc.instantiate(this.prfShopView).getComponent(ShuShiCarbShopView)
       this.node.addChild(shopView.node);
    }
@@ -60,8 +66,15 @@ export default class ShuShiCarbGameManager extends cc.Component {
    }
 
    onClickSettingView() {
+      if(Global.soundManager) {
+         Global.soundManager.playSoundClick();
+      }
       let setting = cc.instantiate(this.prfSetting)
       this.node.addChild(setting);
+   }
+
+   clickTest() {
+      cc.sys.localStorage.clear();
    }
     // update (dt) {}
 }

@@ -30,9 +30,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var ShuShiCarb_Global_1 = require("../../../ShuShiCarb.Global");
-var ShuShiCarb_ItemHook_1 = require("./ShuShiCarb.ItemHook");
-var ShuShiCarb_ItemMoneyBag_1 = require("./ShuShiCarb.ItemMoneyBag");
-var ShuShiCarb_ItemTimeHappy_1 = require("./ShuShiCarb.ItemTimeHappy");
+var ShuShiCarb_ItemShop_1 = require("./ShuShiCarb.ItemShop");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var ShuShiCarbShopView = /** @class */ (function (_super) {
     __extends(ShuShiCarbShopView, _super);
@@ -40,47 +38,42 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.lbGold = null;
         _this.nlistItem = null;
-        _this.prfItemSpeedHook = null;
-        _this.prfItemTimeHapy = null;
-        _this.prfItemMoney = null;
+        _this.prfItem = null;
+        _this.test = 0;
         _this.listDataHook = [];
         return _this;
         // update (dt) {}
     }
     ShuShiCarbShopView_1 = ShuShiCarbShopView;
     ShuShiCarbShopView.prototype.onLoad = function () {
-        ShuShiCarbShopView_1.instace = this;
-        this.itemSpeedHook();
+        ShuShiCarbShopView_1.instance = this;
         this.updateGold();
-        this.itemMoney();
-        this.itemTimeHappy();
+        this.itemShop();
     };
     ShuShiCarbShopView.prototype.start = function () {
     };
-    ShuShiCarbShopView.prototype.itemSpeedHook = function () {
-        var item = cc.instantiate(this.prfItemSpeedHook).getComponent(ShuShiCarb_ItemHook_1.default);
-        this.nlistItem.addChild(item.node);
-    };
-    ShuShiCarbShopView.prototype.itemMoney = function () {
-        var item = cc.instantiate(this.prfItemMoney).getComponent(ShuShiCarb_ItemMoneyBag_1.default);
-        this.nlistItem.addChild(item.node);
-    };
-    ShuShiCarbShopView.prototype.itemTimeHappy = function () {
-        var item = cc.instantiate(this.prfItemTimeHapy).getComponent(ShuShiCarb_ItemTimeHappy_1.default);
-        this.nlistItem.addChild(item.node);
-    };
     ShuShiCarbShopView.prototype.updateGold = function () {
         this.lbGold.string = ShuShiCarb_Global_1.default.totalGold + " ";
+    };
+    ShuShiCarbShopView.prototype.itemShop = function () {
+        for (var i = 0; i < 3; i++) {
+            var item = cc.instantiate(this.prfItem).getComponent(ShuShiCarb_ItemShop_1.default);
+            item.setData(i);
+            this.nlistItem.addChild(item.node);
+        }
     };
     // changeBtn(isTrue: boolean) {
     //     this.nBtnGreen.active = isTrue;
     //     this.nBtnGray.active = !isTrue;
     // }
     ShuShiCarbShopView.prototype.onClickClose = function () {
+        if (ShuShiCarb_Global_1.default.soundManager) {
+            ShuShiCarb_Global_1.default.soundManager.playSoundClick();
+        }
         this.node.destroy();
     };
     var ShuShiCarbShopView_1;
-    ShuShiCarbShopView.instace = null;
+    ShuShiCarbShopView.instance = null;
     __decorate([
         property(cc.Label)
     ], ShuShiCarbShopView.prototype, "lbGold", void 0);
@@ -89,13 +82,7 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
     ], ShuShiCarbShopView.prototype, "nlistItem", void 0);
     __decorate([
         property(cc.Prefab)
-    ], ShuShiCarbShopView.prototype, "prfItemSpeedHook", void 0);
-    __decorate([
-        property(cc.Prefab)
-    ], ShuShiCarbShopView.prototype, "prfItemTimeHapy", void 0);
-    __decorate([
-        property(cc.Prefab)
-    ], ShuShiCarbShopView.prototype, "prfItemMoney", void 0);
+    ], ShuShiCarbShopView.prototype, "prfItem", void 0);
     ShuShiCarbShopView = ShuShiCarbShopView_1 = __decorate([
         ccclass
     ], ShuShiCarbShopView);

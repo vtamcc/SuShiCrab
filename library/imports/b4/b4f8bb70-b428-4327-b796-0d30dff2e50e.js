@@ -49,12 +49,15 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
     // LIFE-CYCLE CALLBACKS:
     ShuShiCarbGameManager.prototype.onLoad = function () {
         ShuShiCarbGameManager_1.instance = this;
-        ShuShiCarb_Global_1.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 2000;
+        ShuShiCarb_Global_1.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 100000;
         this.updateTotalGold();
     };
     ShuShiCarbGameManager.prototype.start = function () {
     };
     ShuShiCarbGameManager.prototype.onClickPlay = function () {
+        if (ShuShiCarb_Global_1.default.soundManager) {
+            ShuShiCarb_Global_1.default.soundManager.playSoundClick();
+        }
         //  this.nHome.active = false;
         //  this.nGame.active = true;
         var game = cc.instantiate(this.prfGame).getComponent(ShuShiCarb_Game_1.default);
@@ -65,6 +68,9 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
         this.nHome.getChildByName('setting').getComponent(cc.Button).interactable = false;
     };
     ShuShiCarbGameManager.prototype.onClickShopView = function () {
+        if (ShuShiCarb_Global_1.default.soundManager) {
+            ShuShiCarb_Global_1.default.soundManager.playSoundClick();
+        }
         var shopView = cc.instantiate(this.prfShopView).getComponent(ShuShiCarb_ShopView_1.default);
         this.node.addChild(shopView.node);
     };
@@ -73,8 +79,14 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
         cc.sys.localStorage.setItem('totalGold', JSON.stringify(ShuShiCarb_Global_1.default.totalGold));
     };
     ShuShiCarbGameManager.prototype.onClickSettingView = function () {
+        if (ShuShiCarb_Global_1.default.soundManager) {
+            ShuShiCarb_Global_1.default.soundManager.playSoundClick();
+        }
         var setting = cc.instantiate(this.prfSetting);
         this.node.addChild(setting);
+    };
+    ShuShiCarbGameManager.prototype.clickTest = function () {
+        cc.sys.localStorage.clear();
     };
     var ShuShiCarbGameManager_1;
     ShuShiCarbGameManager.instance = null;
