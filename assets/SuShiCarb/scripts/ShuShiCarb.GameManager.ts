@@ -30,7 +30,7 @@ export default class ShuShiCarbGameManager extends cc.Component {
 
    onLoad () {
       ShuShiCarbGameManager.instance = this;
-      Global.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 100000;
+      Global.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 250;
      
       this.updateTotalGold();
    }
@@ -63,6 +63,7 @@ export default class ShuShiCarbGameManager extends cc.Component {
    updateTotalGold() {
       this.lbTotalGold.string = Global.totalGold + " ";
       cc.sys.localStorage.setItem('totalGold',JSON.stringify(Global.totalGold));
+      console.log("Tong tien ", Global.totalGold);
    }
 
    onClickSettingView() {

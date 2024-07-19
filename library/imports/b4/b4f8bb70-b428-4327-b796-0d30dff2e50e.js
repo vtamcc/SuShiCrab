@@ -49,7 +49,7 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
     // LIFE-CYCLE CALLBACKS:
     ShuShiCarbGameManager.prototype.onLoad = function () {
         ShuShiCarbGameManager_1.instance = this;
-        ShuShiCarb_Global_1.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 100000;
+        ShuShiCarb_Global_1.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 250;
         this.updateTotalGold();
     };
     ShuShiCarbGameManager.prototype.start = function () {
@@ -77,6 +77,7 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
     ShuShiCarbGameManager.prototype.updateTotalGold = function () {
         this.lbTotalGold.string = ShuShiCarb_Global_1.default.totalGold + " ";
         cc.sys.localStorage.setItem('totalGold', JSON.stringify(ShuShiCarb_Global_1.default.totalGold));
+        console.log("Tong tien ", ShuShiCarb_Global_1.default.totalGold);
     };
     ShuShiCarbGameManager.prototype.onClickSettingView = function () {
         if (ShuShiCarb_Global_1.default.soundManager) {

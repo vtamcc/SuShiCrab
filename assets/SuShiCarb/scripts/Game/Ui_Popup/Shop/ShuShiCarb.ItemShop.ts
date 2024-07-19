@@ -34,6 +34,8 @@ export default class ShuShiCarbItemShop extends cc.Component {
     index = 0;
     isCheck = false;
     _data = null
+    _data2 = null;
+    _data3 = null;
     itemId = 0;
 
     onLoad() {
@@ -54,38 +56,45 @@ export default class ShuShiCarbItemShop extends cc.Component {
                 this._data = Global.dataBagMoney[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
                 this.lbLeverSpeedOld.node.active = false;
+                this.lbLeverSpeedNew.node.x = 27;
+                this.lbLeverSpeedNew.node.y = 5;
                 break;
             case 2: // time Happy
                 this._data = Global.dataTimeHappy[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
                 this.lbLeverSpeedOld.node.active = false;
+                this.lbLeverSpeedNew.node.x = 25;
+                this.lbLeverSpeedNew.node.y = 6;
                 this.index = Global.timeIndex;
-
+                this.nStateBuy.x = -115;
+                this.nStateBuy.y = -28;
                 break;
             default:
                 break;
         }
-        this.updatePrice(this.index);
-
+        this.updatePrice(this.index,Global.totalGold);
     }
 
-    updatePrice(index) {
+    updatePrice(index, totalGold) {
         if (index < 4) {
             this.lbPrice.string = this._data.price + ' ';
-            this.lbLeverSpeedOld.string = "0";
-            //this.lbLeverSpeedNew.string = this._data[index].gold ? this._data[index].gold + ' ' : this._data[index].time + ' ';
-            this.nBtnBuy.getComponent(cc.Button).interactable = true;
-            console.log("Vao If ")
+            if (totalGold >= this._data.price) {
+                this.lbLeverSpeedOld.string = "0";
+                this.nBtnBuy.getComponent(cc.Button).interactable = true;
+            } else {
+                this.lbLeverSpeedNew.string = this._data.price + ' ';
+                this.lbLeverSpeedOld.string = this._data.price + ' ';
+                this.nBtnBuy.getComponent(cc.Button).interactable = false;
+            }
         } else {
             this.lbPrice.string = "Max";
             this.lbLeverSpeedNew.string = "Max";
             this.lbLeverSpeedOld.string = "Max";
             this.nBtnBuy.getComponent(cc.Button).interactable = false;
-            console.log("vao Else");
         }
-
         this.updatePurchaseState();
     }
+   
 
     savePurchaseState() {
         let purchaseData = {
@@ -96,18 +105,13 @@ export default class ShuShiCarbItemShop extends cc.Component {
         };
         cc.sys.localStorage.setItem('itemShopData', JSON.stringify(purchaseData));
         
-    
-
+        
     }
 
     updatePurchaseState() {
         for (let i = 0; i <= this.index; i++) {
             this.nStateBuy.children[i].active = true;
         }
-    }
-
-    checkBuy(): boolean {
-        return Global.totalGold >= this._data.price;
     }
 
     onBuy() {
@@ -138,111 +142,16 @@ export default class ShuShiCarbItemShop extends cc.Component {
                     //console.log("Index ", this.index);
                     break;
             }
-            this.updatePrice(this.index);
+           
             this.savePurchaseState();
+          
+            this.updatePrice(this.index,Global.totalGold);
             ShuShiCarbGameManager.instance.updateTotalGold();
-            ShuShiCarbShopView.instance.updateGold();
-            
-            //this.checkClick(); // Gọi lại checkClick để cập nhật trạng thái nút sau khi mua
+            ShuShiCarbShopView.instance.updateGold(); 
+            ShuShiCarbShopView.instance.updateItemsState(Global.totalGold);
+           
         }
+
+        
     }
-    // LIFE-CYCLE CALLBACKS:
-
-
-    // onLoad () {
-    //     this.index = JSON.parse(cc.sys.localStorage.getItem("itemIndex")) || 0;
-    //     this.loadPurchaseState();
-    //     this.checkClick();
-    //     this.updatePrice(this.index);
-    // }
-
-    // loadPurchaseState() {
-    //     const purchaseData = JSON.parse(cc.sys.localStorage.getItem("purchaseData")) || [];
-    //     for (let i = 0; i < Global.dataHook.length; i++) {
-    //         if (purchaseData[i]) {
-    //             Global.dataHook[i].isBuy = purchaseData[i].isBuy;
-    //             Global.dataHook[i].speed = purchaseData[i].speed;
-    //             this.nStateBuy.children[i].active = purchaseData[i].isBuy;
-    //         }
-    //     }
-    // }
-
-    // savePurchaseState() {
-    //     const purchaseData = Global.dataHook.map(item => ({
-    //         isBuy: item.isBuy,
-    //         speed: item.speed
-    //     }));
-    //     cc.sys.localStorage.setItem('purchaseData', JSON.stringify(purchaseData));
-    //     cc.sys.localStorage.setItem('activeIndex', JSON.stringify(Global.activeIndex));
-    //     cc.sys.localStorage.setItem('itemIndex', this.index.toString());
-    //     cc.sys.localStorage.setItem('speedHook', JSON.stringify(Global.speedHook));
-    //     cc.sys.localStorage.setItem('lengthHook', JSON.stringify(Global.lengthHook));
-    // }
-
-
-    // checkClick() {
-    //     // if(this.index < Global.dataHook.length) {
-    //     //     if(Global.totalGold >= Global.dataHook[this.index].price) {
-    //     //         this.nCheckmask.active = false;
-    //     //         this.isCheck = true;
-    //     //     }else {
-    //     //          this.nCheckmask.active = true;
-    //     //          this.isCheck = false;
-    //     //          this.nBtnBuy.getComponent(cc.Toggle).interactable = false;
-    //     //      }
-    //     // }
-    //     if(this.index < Global.dataHook.length && Global.totalGold >= Global.dataHook[this.index].price) { 
-    //             this.nCheckmask.active = false;
-    //             this.isCheck = true; 
-    //     }
-    //     else {
-    //         this.nCheckmask.active = true;
-    //         this.isCheck = false;
-    //         this.nBtnBuy.getComponent(cc.Toggle).interactable = false;
-    //     }
-    //     console.log(this.index);
-
-    // }
-
-    // onClickBuy() {
-    //     if(this.isCheck && this.index < Global.dataHook.length) {
-    //         Global.dataHook[this.index].isBuy = true;
-    //         Global.totalGold -= Global.dataHook[this.index].price;
-    //         Global.speedHook += Global.dataHook[this.index].speed;
-    //         Global.lengthHook += Global.dataHook[this.index].widthHook;
-
-    //         this.nStateBuy.children[this.index].active = Global.dataHook[this.index].isBuy;
-    //         Global.activeIndex = this.index;
-
-    //         this.index++;
-    //         this.checkClick();
-    //         this.savePurchaseState();
-    //         ShuShiCarbGameManager.instance.updateTotalGold();
-    //         ShuShiCarbShopView.instace.updateGold();
-    //         this.updatePrice(this.index);
-    //         console.log("data Hoook ",Global.dataHook);
-    //     } else {
-    //         this.nCheckmask.active = true;
-    //         this.nBtnBuy.getComponent(cc.Toggle).interactable = false;
-    //     }
-
-    // }
-
-    // updatePrice(index) {
-    //     if(index < Global.dataHook.length) {
-    //         this.lbPrice.string = Global.dataHook[index].price + ' '; 
-    //         this.lbLeverSpeedNew.string = Global.dataHook[index].speed + 1 + ' ';
-    //         this.lbLeverSpeedOld.string = Global.dataHook[index].speed + ' ' +  ' -> ';
-    //     }else {
-    //         this.lbPrice.string = "Max";
-    //         this.lbLeverSpeedNew.string = "Max";
-    //         this.lbLeverSpeedOld.string = "Max";
-    //     }
-
-    // }
-    // start () {
-
-    // }
-
-    // update (dt) {}
 }

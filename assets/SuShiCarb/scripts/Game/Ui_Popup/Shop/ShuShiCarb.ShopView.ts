@@ -31,13 +31,14 @@ export default class ShuShiCarbShopView extends cc.Component {
             dataHook: Global.dataHook,
             dataBagMoney: Global.dataBagMoney,
             dataTimeHappy: Global.dataTimeHappy,
-            activeIndexHook: Global.hookIndex,
         };
 
         let hookIndex = parseInt(cc.sys.localStorage.getItem("hookIndex")) || 0;
         Global.hookIndex = hookIndex;
         let bagIndex = parseInt(cc.sys.localStorage.getItem("bagIndex")) || 0;
         Global.bagIndex = bagIndex;
+        let timeIndex = parseInt(cc.sys.localStorage.getItem("timeIndex")) || 0;
+        Global.timeIndex = timeIndex;
         Global.dataHook = purchaseData.dataHook;
         Global.dataBagMoney = purchaseData.dataBagMoney;
         Global.dataTimeHappy = purchaseData.dataTimeHappy;
@@ -57,6 +58,13 @@ export default class ShuShiCarbShopView extends cc.Component {
         this.lbGold.string = Global.totalGold + " ";
     }
 
+    updateItemsState(totalGold) {
+        let items = this.nlistItem.children;
+        for (let i = 0; i < items.length; i++) {
+            let item = items[i].getComponent(ShuShiCarbItemShop);
+            item.updatePrice(item.index, totalGold);
+        }
+    }
 
     itemShop() {
         for (let i = 0; i < 3; i++) {

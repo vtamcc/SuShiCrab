@@ -51,12 +51,13 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
             dataHook: ShuShiCarb_Global_1.default.dataHook,
             dataBagMoney: ShuShiCarb_Global_1.default.dataBagMoney,
             dataTimeHappy: ShuShiCarb_Global_1.default.dataTimeHappy,
-            activeIndexHook: ShuShiCarb_Global_1.default.hookIndex,
         };
         var hookIndex = parseInt(cc.sys.localStorage.getItem("hookIndex")) || 0;
         ShuShiCarb_Global_1.default.hookIndex = hookIndex;
         var bagIndex = parseInt(cc.sys.localStorage.getItem("bagIndex")) || 0;
         ShuShiCarb_Global_1.default.bagIndex = bagIndex;
+        var timeIndex = parseInt(cc.sys.localStorage.getItem("timeIndex")) || 0;
+        ShuShiCarb_Global_1.default.timeIndex = timeIndex;
         ShuShiCarb_Global_1.default.dataHook = purchaseData.dataHook;
         ShuShiCarb_Global_1.default.dataBagMoney = purchaseData.dataBagMoney;
         ShuShiCarb_Global_1.default.dataTimeHappy = purchaseData.dataTimeHappy;
@@ -69,6 +70,13 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
     };
     ShuShiCarbShopView.prototype.updateGold = function () {
         this.lbGold.string = ShuShiCarb_Global_1.default.totalGold + " ";
+    };
+    ShuShiCarbShopView.prototype.updateItemsState = function (totalGold) {
+        var items = this.nlistItem.children;
+        for (var i = 0; i < items.length; i++) {
+            var item = items[i].getComponent(ShuShiCarb_ItemShop_1.default);
+            item.updatePrice(item.index, totalGold);
+        }
     };
     ShuShiCarbShopView.prototype.itemShop = function () {
         for (var i = 0; i < 3; i++) {
