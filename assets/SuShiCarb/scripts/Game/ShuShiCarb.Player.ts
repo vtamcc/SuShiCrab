@@ -43,7 +43,9 @@ export default class ShuShiCarbPlayer extends cc.Component {
 
     onLoad() {
         ShuShiCarbPlayer.instace = this;
-        Global.timeHappy = JSON.parse(cc.sys.localStorage.getItem("timeHappy")) || Global.timeHappy;
+        let timeIndex = cc.sys.localStorage.getItem("timeIndex") || 0;
+        let timeUpdate = Global.dataTimeHappy[timeIndex].time;
+        Global.timeHappy += timeUpdate;
         console.log("Time vua duoc update ",Global.timeHappy);
     }
     setData(index) {

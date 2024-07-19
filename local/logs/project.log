@@ -1,183 +1,76 @@
-2024-07-18T07:35:33.312Z - success: protocol editor-framework registered
-2024-07-18T07:35:33.314Z - success: protocol app registered
-2024-07-18T07:35:33.314Z - success: protocol theme registered
-2024-07-18T07:35:33.314Z - success: protocol packages registered
-2024-07-18T07:35:33.340Z - normal: Load ~/.CocosCreator/settings.json
-2024-07-18T07:35:33.372Z - success: protocol uuid registerred
-2024-07-18T07:35:33.373Z - success: protocol db registerred
-2024-07-18T07:35:33.373Z - success: protocol thumbnail registerred
-2024-07-18T07:35:33.460Z - normal: Initializing Asset Database
-2024-07-18T07:35:33.463Z - normal: checking language setting...
-2024-07-18T07:35:33.463Z - normal: Language: en
-2024-07-18T07:35:33.465Z - success: protocol unpack registerred
-2024-07-18T07:35:33.466Z - success: protocol disable-commonjs registerred
-2024-07-18T07:35:35.359Z - normal: connected!
-2024-07-18T07:35:37.453Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
-2024-07-18T07:35:37.456Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
-2024-07-18T07:35:37.698Z - success: adapters loaded
-2024-07-18T07:35:37.702Z - success: asset-db-debugger loaded
-2024-07-18T07:35:37.782Z - success: fb-audience-network loaded
-2024-07-18T07:35:37.835Z - success: fb-live-stream loaded
-2024-07-18T07:35:37.840Z - success: google-play-instant loaded
-2024-07-18T07:35:37.841Z - success: jsb-adapter loaded
-2024-07-18T07:35:37.865Z - success: package-manager loaded
-2024-07-18T07:35:37.867Z - success: runtime-adapters loaded
-2024-07-18T07:35:37.871Z - success: runtime-dev-tools loaded
-2024-07-18T07:35:37.875Z - success: ui-kit-preview-extra loaded
-2024-07-18T07:35:37.877Z - success: ui-kit-preview loaded
-2024-07-18T07:35:38.765Z - success: alipay-minigame loaded
-2024-07-18T07:35:38.783Z - success: assets loaded
-2024-07-18T07:35:38.786Z - success: baidugame-opendata loaded
-2024-07-18T07:35:38.788Z - success: baidugame loaded
-2024-07-18T07:35:38.793Z - success: builder loaded
-2024-07-18T07:35:38.799Z - success: bytedance-opendata loaded
-2024-07-18T07:35:38.801Z - success: bytedance loaded
-2024-07-18T07:35:38.806Z - success: channel-upload-tools loaded
-2024-07-18T07:35:38.977Z - success: cloud-function loaded
-2024-07-18T07:35:39.229Z - success: cocos-services loaded
-2024-07-18T07:35:39.236Z - success: console loaded
-2024-07-18T07:35:39.239Z - success: curve-editor loaded
-2024-07-18T07:35:39.248Z - success: fb-instant-games loaded
-2024-07-18T07:35:39.251Z - success: game-window loaded
-2024-07-18T07:35:39.252Z - success: google-instant-games loaded
-2024-07-18T07:35:39.257Z - success: hierarchy loaded
-2024-07-18T07:35:39.261Z - success: huawei-agc loaded
-2024-07-18T07:35:39.264Z - success: huawei-runtime loaded
-2024-07-18T07:35:39.268Z - success: inspector loaded
-2024-07-18T07:35:39.289Z - success: cpk-publish loaded
-2024-07-18T07:35:39.292Z - success: keystore loaded
-2024-07-18T07:35:39.315Z - success: link-sure-runtime loaded
-2024-07-18T07:35:39.337Z - success: node-library loaded
-2024-07-18T07:35:39.338Z - success: open-recent-items loaded
-2024-07-18T07:35:39.342Z - success: oppo-runtime loaded
-2024-07-18T07:35:39.344Z - success: package-asset loaded
-2024-07-18T07:35:39.345Z - success: preferences loaded
-2024-07-18T07:35:39.349Z - success: project-importer loaded
-2024-07-18T07:35:39.353Z - success: project-settings loaded
-2024-07-18T07:35:39.367Z - success: qtt-runtime loaded
-2024-07-18T07:35:39.371Z - success: scene loaded
-2024-07-18T07:35:39.372Z - success: simulator-debugger loaded
-2024-07-18T07:35:39.373Z - success: sprite-editor loaded
-2024-07-18T07:35:39.447Z - success: store loaded
-2024-07-18T07:35:39.449Z - success: taobao-creativeapp loaded
-2024-07-18T07:35:39.453Z - success: timeline loaded
-2024-07-18T07:35:39.461Z - success: vivo-runtime loaded
-2024-07-18T07:35:39.464Z - success: wechatgame-opendata loaded
-2024-07-18T07:35:39.470Z - success: wechatgame loaded
-2024-07-18T07:35:39.474Z - success: xiaomi-runtime loaded
-2024-07-18T07:35:39.533Z - success: im-plugin loaded
-2024-07-18T07:35:39.534Z - success: preview server running at http://localhost:7456
-2024-07-18T07:35:41.937Z - normal: Initializing Cocos2d
-2024-07-18T07:35:42.239Z - normal: Initializing engine extends
-2024-07-18T07:35:43.376Z - info: Cocos Service load base data!
-2024-07-18T07:35:43.499Z - normal: Loading packages
-2024-07-18T07:35:43.503Z - normal: Watching packages
-2024-07-18T07:35:43.744Z - normal: Run Application
-2024-07-18T07:35:49.517Z - success: cloud-function unloaded
-2024-07-18T08:43:54.988Z - warn: The Asset used by component "ShuShiCarb.ShopView" in prefab "ShopView.prefab" is missing. Detailed information:
-Node path: "ShopView"
-Asset url: "db://assets/SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
-Missing uuid: "8823be6c-3c16-4a43-9ad9-46a7b43964be"
-
-2024-07-18T08:43:54.989Z - warn: The Asset used by component "ShuShiCarb.ShopView" in prefab "ShopView.prefab" is missing. Detailed information:
-Node path: "ShopView"
-Asset url: "db://assets/SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
-Missing uuid: "d9964e1a-fa85-4209-8dac-cb4c5e44efb0"
-
-2024-07-18T08:43:55.100Z - warn: The Asset used by component "ShuShiCarb.ShopView" in prefab "ShopView.prefab" is missing. Detailed information:
-Node path: "ShopView"
-Asset url: "db://assets/SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
-Missing uuid: "8823be6c-3c16-4a43-9ad9-46a7b43964be"
-
-2024-07-18T08:43:55.100Z - warn: The Asset used by component "ShuShiCarb.ShopView" in prefab "ShopView.prefab" is missing. Detailed information:
-Node path: "ShopView"
-Asset url: "db://assets/SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
-Missing uuid: "d9964e1a-fa85-4209-8dac-cb4c5e44efb0"
-
-2024-07-18T08:44:03.844Z - warn: The Asset used by component "ShuShiCarb.ShopView" in prefab "ShopView.prefab" is missing. Detailed information:
-Node path: "ShopView"
-Asset url: "db://assets/SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
-Missing uuid: "8823be6c-3c16-4a43-9ad9-46a7b43964be"
-
-2024-07-18T08:44:03.844Z - warn: The Asset used by component "ShuShiCarb.ShopView" in prefab "ShopView.prefab" is missing. Detailed information:
-Node path: "ShopView"
-Asset url: "db://assets/SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
-Missing uuid: "d9964e1a-fa85-4209-8dac-cb4c5e44efb0"
-
-2024-07-18T08:44:03.910Z - warn: The Asset used by component "ShuShiCarb.ShopView" in prefab "ShopView.prefab" is missing. Detailed information:
-Node path: "ShopView"
-Asset url: "db://assets/SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
-Missing uuid: "8823be6c-3c16-4a43-9ad9-46a7b43964be"
-
-2024-07-18T08:44:03.910Z - warn: The Asset used by component "ShuShiCarb.ShopView" in prefab "ShopView.prefab" is missing. Detailed information:
-Node path: "ShopView"
-Asset url: "db://assets/SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
-Missing uuid: "d9964e1a-fa85-4209-8dac-cb4c5e44efb0"
-
-2024-07-18T08:44:29.217Z - failed: load script [./ShuShiCarb.ItemMoneyBag] failed : Error: Cannot find module './ShuShiCarb.ItemMoneyBag'
-Require stack:
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/sandbox.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/edit-mode/index.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/editor.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/index.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/renderer.js
-    at Module._resolveFilename (internal/modules/cjs/loader.js:972:15)
-    at Function.i._resolveFilename [as _resolveFilenameVendor] (electron/js2c/renderer_init.js:35:917)
-    at Function._resolveFilename (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.ccc:1:1117)
-    at Module._load (internal/modules/cjs/loader.js:848:27)
-    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
-    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
-    at Module.i.require (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:630)
-    at b (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:2179)
-    at Object.require (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.ccc:1:534)
-    at /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ShopView.js:7:35
-2024-07-18T08:44:29.218Z - failed: load script [./ShuShiCarb.ItemTimeHappy] failed : Error: Cannot find module './ShuShiCarb.ItemTimeHappy'
-Require stack:
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/sandbox.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/edit-mode/index.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/editor.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/index.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/renderer.js
-    at Module._resolveFilename (internal/modules/cjs/loader.js:972:15)
-    at Function.i._resolveFilename [as _resolveFilenameVendor] (electron/js2c/renderer_init.js:35:917)
-    at Function._resolveFilename (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.ccc:1:1117)
-    at Module._load (internal/modules/cjs/loader.js:848:27)
-    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
-    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
-    at Module.i.require (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:630)
-    at b (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:2179)
-    at Object.require (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.ccc:1:534)
-    at /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ShopView.js:7:35
-2024-07-18T08:44:29.507Z - warn: The Asset used by component "ShuShiCarb.ShopView" in prefab "ShopView.prefab" is missing. Detailed information:
-Node path: "ShopView"
-Asset url: "db://assets/SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
-Missing uuid: "8823be6c-3c16-4a43-9ad9-46a7b43964be"
-
-2024-07-18T08:44:29.507Z - warn: The Asset used by component "ShuShiCarb.ShopView" in prefab "ShopView.prefab" is missing. Detailed information:
-Node path: "ShopView"
-Asset url: "db://assets/SuShiCarb/prefab/UI_PopUp/Shop/ShopView.prefab"
-Missing uuid: "d9964e1a-fa85-4209-8dac-cb4c5e44efb0"
-
-2024-07-18T08:45:47.008Z - failed: load script [./ShuShiCarb.ItemHook] failed : Error: Cannot find module './ShuShiCarb.ItemHook'
-Require stack:
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/lib/sandbox.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/edit-mode/index.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/scene-utils/index.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/editor.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/renderer/index.ccc
-- /Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/renderer.js
-    at Module._resolveFilename (internal/modules/cjs/loader.js:972:15)
-    at Function.i._resolveFilename [as _resolveFilenameVendor] (electron/js2c/renderer_init.js:35:917)
-    at Function._resolveFilename (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.ccc:1:1117)
-    at Module._load (internal/modules/cjs/loader.js:848:27)
-    at Function.f._load (electron/js2c/asar_bundle.js:5:12734)
-    at Module.require [as __require] (internal/modules/cjs/loader.js:1032:19)
-    at Module.i.require (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:630)
-    at b (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor-framework/lib/share/require.js:1:2179)
-    at Object.require (/Applications/Cocos/Creator/2.4.6/CocosCreator.app/Contents/Resources/app.asar/editor/page/project-scripts.ccc:1:534)
-    at /Users/mac/Documents/WORK/ShuShi/temp/quick-scripts/dst/assets/SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ShopView.js:7:35
+2024-07-19T01:27:00.992Z - success: protocol editor-framework registered
+2024-07-19T01:27:00.994Z - success: protocol app registered
+2024-07-19T01:27:00.994Z - success: protocol theme registered
+2024-07-19T01:27:00.994Z - success: protocol packages registered
+2024-07-19T01:27:01.018Z - normal: Load ~/.CocosCreator/settings.json
+2024-07-19T01:27:01.050Z - success: protocol uuid registerred
+2024-07-19T01:27:01.050Z - success: protocol db registerred
+2024-07-19T01:27:01.050Z - success: protocol thumbnail registerred
+2024-07-19T01:27:01.133Z - normal: Initializing Asset Database
+2024-07-19T01:27:01.136Z - normal: checking language setting...
+2024-07-19T01:27:01.136Z - normal: Language: en
+2024-07-19T01:27:01.139Z - success: protocol unpack registerred
+2024-07-19T01:27:01.139Z - success: protocol disable-commonjs registerred
+2024-07-19T01:27:02.796Z - normal: connected!
+2024-07-19T01:27:03.057Z - normal: Check project /Users/mac/Documents/WORK/ShuShi
+2024-07-19T01:27:03.063Z - normal: Initializing project /Users/mac/Documents/WORK/ShuShi
+2024-07-19T01:27:03.299Z - success: adapters loaded
+2024-07-19T01:27:03.304Z - success: asset-db-debugger loaded
+2024-07-19T01:27:03.378Z - success: fb-audience-network loaded
+2024-07-19T01:27:03.427Z - success: fb-live-stream loaded
+2024-07-19T01:27:03.431Z - success: google-play-instant loaded
+2024-07-19T01:27:03.431Z - success: jsb-adapter loaded
+2024-07-19T01:27:03.454Z - success: package-manager loaded
+2024-07-19T01:27:03.456Z - success: runtime-adapters loaded
+2024-07-19T01:27:03.457Z - success: runtime-dev-tools loaded
+2024-07-19T01:27:03.460Z - success: ui-kit-preview-extra loaded
+2024-07-19T01:27:03.462Z - success: ui-kit-preview loaded
+2024-07-19T01:27:04.300Z - success: alipay-minigame loaded
+2024-07-19T01:27:04.318Z - success: assets loaded
+2024-07-19T01:27:04.322Z - success: baidugame-opendata loaded
+2024-07-19T01:27:04.323Z - success: baidugame loaded
+2024-07-19T01:27:04.327Z - success: builder loaded
+2024-07-19T01:27:04.333Z - success: bytedance-opendata loaded
+2024-07-19T01:27:04.335Z - success: bytedance loaded
+2024-07-19T01:27:04.340Z - success: channel-upload-tools loaded
+2024-07-19T01:27:04.502Z - success: cloud-function loaded
+2024-07-19T01:27:04.735Z - success: cocos-services loaded
+2024-07-19T01:27:04.742Z - success: console loaded
+2024-07-19T01:27:04.744Z - success: curve-editor loaded
+2024-07-19T01:27:04.753Z - success: fb-instant-games loaded
+2024-07-19T01:27:04.755Z - success: game-window loaded
+2024-07-19T01:27:04.756Z - success: google-instant-games loaded
+2024-07-19T01:27:04.762Z - success: hierarchy loaded
+2024-07-19T01:27:04.764Z - success: huawei-agc loaded
+2024-07-19T01:27:04.768Z - success: huawei-runtime loaded
+2024-07-19T01:27:04.771Z - success: inspector loaded
+2024-07-19T01:27:04.793Z - success: cpk-publish loaded
+2024-07-19T01:27:04.795Z - success: keystore loaded
+2024-07-19T01:27:04.822Z - success: link-sure-runtime loaded
+2024-07-19T01:27:04.834Z - success: node-library loaded
+2024-07-19T01:27:04.835Z - success: open-recent-items loaded
+2024-07-19T01:27:04.838Z - success: oppo-runtime loaded
+2024-07-19T01:27:04.840Z - success: package-asset loaded
+2024-07-19T01:27:04.840Z - success: preferences loaded
+2024-07-19T01:27:04.844Z - success: project-importer loaded
+2024-07-19T01:27:04.848Z - success: project-settings loaded
+2024-07-19T01:27:04.861Z - success: qtt-runtime loaded
+2024-07-19T01:27:04.865Z - success: scene loaded
+2024-07-19T01:27:04.867Z - success: simulator-debugger loaded
+2024-07-19T01:27:04.867Z - success: sprite-editor loaded
+2024-07-19T01:27:04.939Z - success: store loaded
+2024-07-19T01:27:04.941Z - success: taobao-creativeapp loaded
+2024-07-19T01:27:04.945Z - success: timeline loaded
+2024-07-19T01:27:04.951Z - success: vivo-runtime loaded
+2024-07-19T01:27:04.954Z - success: wechatgame-opendata loaded
+2024-07-19T01:27:04.960Z - success: wechatgame loaded
+2024-07-19T01:27:04.963Z - success: xiaomi-runtime loaded
+2024-07-19T01:27:05.018Z - success: im-plugin loaded
+2024-07-19T01:27:05.019Z - success: preview server running at http://localhost:7456
+2024-07-19T01:27:07.153Z - normal: Initializing Cocos2d
+2024-07-19T01:27:07.434Z - normal: Initializing engine extends
+2024-07-19T01:27:08.567Z - normal: Loading packages
+2024-07-19T01:27:08.570Z - normal: Watching packages
+2024-07-19T01:27:08.609Z - info: Cocos Service load base data!
+2024-07-19T01:27:08.801Z - normal: Run Application
+2024-07-19T01:27:13.650Z - success: cloud-function unloaded

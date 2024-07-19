@@ -15,22 +15,22 @@ var Global = /** @class */ (function () {
     }
     Global.soundManager = null;
     Global.totalGold = 0;
-    Global.dataHook = [{ price: 150, speed: 1.5, widthHook: 3, isBuy: false },
-        { price: 300, speed: 2.5, widthHook: 5, isBuy: false },
-        { price: 450, speed: 3.5, widthHook: 7, isBuy: false },
-        { price: 600, speed: 4.5, widthHook: 9, isBuy: false },
-        { price: 750, speed: 5.5, widthHook: 11, isBuy: false }];
-    Global.dataBagMoney = [{ price: 120, gold: 1, isBuy: false },
-        { price: 250, gold: 2, isBuy: false },
-        { price: 320, gold: 3, isBuy: false },
-        { price: 450, gold: 4, isBuy: false },
-        { price: 750, gold: 2, isBuy: false }
+    Global.dataHook = [{ price: 150, speed: 1.5, widthHook: 3 },
+        { price: 300, speed: 2.5, widthHook: 5 },
+        { price: 450, speed: 3.5, widthHook: 7 },
+        { price: 600, speed: 4.5, widthHook: 9 },
+        { price: 750, speed: 5.5, widthHook: 11, }];
+    Global.dataBagMoney = [{ price: 120, gold: 1 },
+        { price: 250, gold: 2 },
+        { price: 320, gold: 3 },
+        { price: 450, gold: 4 },
+        { price: 750, gold: 5 }
     ];
-    Global.dataTimeHappy = [{ price: 120, time: 2, isBuy: false },
-        { price: 250, time: 1, isBuy: false },
-        { price: 320, time: 1, isBuy: false },
-        { price: 450, time: 1, isBuy: false },
-        { price: 750, time: 2, isBuy: false }
+    Global.dataTimeHappy = [{ price: 120, time: 2 },
+        { price: 250, time: 3 },
+        { price: 320, time: 4 },
+        { price: 450, time: 5 },
+        { price: 750, time: 6 }
     ];
     Global.timeHappy = 10;
     Global.checkBagMoney = false;
@@ -39,9 +39,9 @@ var Global = /** @class */ (function () {
     Global.lengthHook = 35;
     Global.isMusicOn = true;
     Global.isSoundOn = true;
-    Global.activeIndex = 0;
-    Global.activeIndexMoneyBag = 0;
-    Global.activeIndexTimeHappy = 0;
+    Global.hookIndex = 0;
+    Global.bagIndex = 0;
+    Global.timeIndex = 0;
     return Global;
 }());
 exports.default = Global;

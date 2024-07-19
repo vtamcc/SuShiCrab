@@ -47,10 +47,25 @@ var ShuShiCarbShopView = /** @class */ (function (_super) {
     ShuShiCarbShopView_1 = ShuShiCarbShopView;
     ShuShiCarbShopView.prototype.onLoad = function () {
         ShuShiCarbShopView_1.instance = this;
+        var purchaseData = JSON.parse(cc.sys.localStorage.getItem("itemShopData")) || {
+            dataHook: ShuShiCarb_Global_1.default.dataHook,
+            dataBagMoney: ShuShiCarb_Global_1.default.dataBagMoney,
+            dataTimeHappy: ShuShiCarb_Global_1.default.dataTimeHappy,
+            activeIndexHook: ShuShiCarb_Global_1.default.hookIndex,
+        };
+        var hookIndex = parseInt(cc.sys.localStorage.getItem("hookIndex")) || 0;
+        ShuShiCarb_Global_1.default.hookIndex = hookIndex;
+        var bagIndex = parseInt(cc.sys.localStorage.getItem("bagIndex")) || 0;
+        ShuShiCarb_Global_1.default.bagIndex = bagIndex;
+        ShuShiCarb_Global_1.default.dataHook = purchaseData.dataHook;
+        ShuShiCarb_Global_1.default.dataBagMoney = purchaseData.dataBagMoney;
+        ShuShiCarb_Global_1.default.dataTimeHappy = purchaseData.dataTimeHappy;
         this.updateGold();
         this.itemShop();
     };
     ShuShiCarbShopView.prototype.start = function () {
+    };
+    ShuShiCarbShopView.prototype.updateShop = function () {
     };
     ShuShiCarbShopView.prototype.updateGold = function () {
         this.lbGold.string = ShuShiCarb_Global_1.default.totalGold + " ";

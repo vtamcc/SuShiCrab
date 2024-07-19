@@ -41,7 +41,6 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
         _this.lbPrice = null;
         _this.nBtnBuy = null;
         _this.nStateBuy = null;
-        _this.nCheckmask = null;
         _this.lbLeverSpeedOld = null;
         _this.lbLeverSpeedNew = null;
         _this.lsSpFItemShop = [];
@@ -136,25 +135,28 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
         // update (dt) {}
     }
     ShuShiCarbItemShop.prototype.onLoad = function () {
-        this.loadPurchaseState();
-        this.checkClick();
+        //this.checkClick();
     };
     ShuShiCarbItemShop.prototype.setData = function (id) {
         this.itemId = id;
         switch (id) {
             case 0: // hook
-                this._data = ShuShiCarb_Global_1.default.dataHook;
+                this.index = ShuShiCarb_Global_1.default.hookIndex;
+                this._data = ShuShiCarb_Global_1.default.dataHook[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
+                console.log(this._data, this.index);
                 break;
             case 1: // Bag money
-                this._data = ShuShiCarb_Global_1.default.dataBagMoney;
+                this.index = ShuShiCarb_Global_1.default.bagIndex;
+                this._data = ShuShiCarb_Global_1.default.dataBagMoney[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
                 this.lbLeverSpeedOld.node.active = false;
                 break;
             case 2: // time Happy
-                this._data = ShuShiCarb_Global_1.default.dataTimeHappy;
+                this._data = ShuShiCarb_Global_1.default.dataTimeHappy[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
                 this.lbLeverSpeedOld.node.active = false;
+                this.index = ShuShiCarb_Global_1.default.timeIndex;
                 break;
             default:
                 break;
@@ -162,87 +164,72 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
         this.updatePrice(this.index);
     };
     ShuShiCarbItemShop.prototype.updatePrice = function (index) {
-        if (index < this._data.length) {
-            this.lbPrice.string = this._data[index].price + ' ';
+        if (index < 4) {
+            this.lbPrice.string = this._data.price + ' ';
             this.lbLeverSpeedOld.string = "0";
-            this.lbLeverSpeedNew.string = this._data[index].gold ? this._data[index].gold + ' ' : this._data[index].time + ' ';
+            //this.lbLeverSpeedNew.string = this._data[index].gold ? this._data[index].gold + ' ' : this._data[index].time + ' ';
+            this.nBtnBuy.getComponent(cc.Button).interactable = true;
+            console.log("Vao If ");
         }
         else {
             this.lbPrice.string = "Max";
             this.lbLeverSpeedNew.string = "Max";
             this.lbLeverSpeedOld.string = "Max";
+            this.nBtnBuy.getComponent(cc.Button).interactable = false;
+            console.log("vao Else");
         }
-    };
-    ShuShiCarbItemShop.prototype.loadPurchaseState = function () {
-        var purchaseData = JSON.parse(cc.sys.localStorage.getItem("itemShopData")) || {
-            dataHook: ShuShiCarb_Global_1.default.dataHook,
-            dataBagMoney: ShuShiCarb_Global_1.default.dataBagMoney,
-            dataTimeHappy: ShuShiCarb_Global_1.default.dataTimeHappy
-        };
-        ShuShiCarb_Global_1.default.dataHook = purchaseData.dataHook;
-        ShuShiCarb_Global_1.default.dataBagMoney = purchaseData.dataBagMoney;
-        ShuShiCarb_Global_1.default.dataTimeHappy = purchaseData.dataTimeHappy;
-        // Kiểm tra trạng thái mua của item hiện tại
-        this.index = 0;
-        while (this.index < this._data.length && this._data[this.index].isBuy) {
-            this.nStateBuy.children[this.index].active = true;
-            this.index++;
-        }
-        this.checkClick();
+        this.updatePurchaseState();
     };
     ShuShiCarbItemShop.prototype.savePurchaseState = function () {
         var purchaseData = {
             dataHook: ShuShiCarb_Global_1.default.dataHook,
             dataBagMoney: ShuShiCarb_Global_1.default.dataBagMoney,
             dataTimeHappy: ShuShiCarb_Global_1.default.dataTimeHappy,
+            activeIndexHook: ShuShiCarb_Global_1.default.hookIndex,
         };
         cc.sys.localStorage.setItem('itemShopData', JSON.stringify(purchaseData));
     };
-    ShuShiCarbItemShop.prototype.checkClick = function () {
-        if (this.index < this._data.length) {
-            if (ShuShiCarb_Global_1.default.totalGold >= this._data[this.index].price) {
-                this.nCheckmask.active = false;
-                this.isCheck = true;
-                this.nBtnBuy.getComponent(cc.Button).interactable = true; // Nút "Mua" sáng lên
-            }
-            else {
-                this.nCheckmask.active = true;
-                this.isCheck = false;
-                this.nBtnBuy.getComponent(cc.Button).interactable = false; // Nút "Mua" bị tắt
-            }
+    ShuShiCarbItemShop.prototype.updatePurchaseState = function () {
+        for (var i = 0; i <= this.index; i++) {
+            this.nStateBuy.children[i].active = true;
         }
     };
     ShuShiCarbItemShop.prototype.checkBuy = function () {
-        return ShuShiCarb_Global_1.default.totalGold >= this._data[this.index].price;
+        return ShuShiCarb_Global_1.default.totalGold >= this._data.price;
     };
     ShuShiCarbItemShop.prototype.onBuy = function () {
-        if (this.checkBuy() && this.index < this._data.length) {
-            this._data[this.index].isBuy = true;
-            ShuShiCarb_Global_1.default.totalGold -= this._data[this.index].price;
-            this.nStateBuy.children[this.index].active = this._data[this.index].isBuy;
+        if (this.index < 4) {
+            this.nStateBuy.children[this.index].active = true;
+            ShuShiCarb_Global_1.default.totalGold -= this._data.price;
             switch (this.itemId) {
                 case 0:
-                    ShuShiCarb_Global_1.default.activeIndex = this.index;
-                    ShuShiCarb_Global_1.default.speedHook += this._data[this.index].speed;
+                    this.index++;
+                    ShuShiCarb_Global_1.default.hookIndex = this.index;
+                    this._data = ShuShiCarb_Global_1.default.dataHook[this.index];
+                    cc.sys.localStorage.setItem("hookIndex", this.index);
                     break;
                 case 1:
-                    ShuShiCarb_Global_1.default.activeIndexMoneyBag = this.index;
-                    ShuShiCarb_Global_1.default.moneyBag += this._data[this.index].gold;
+                    this.index++;
+                    ShuShiCarb_Global_1.default.checkBagMoney = true;
+                    ShuShiCarb_Global_1.default.bagIndex = this.index;
+                    this._data = ShuShiCarb_Global_1.default.dataBagMoney[this.index];
+                    cc.sys.localStorage.setItem("bagIndex", this.index);
+                    cc.sys.localStorage.setItem("checkBagMoney", JSON.stringify(ShuShiCarb_Global_1.default.checkBagMoney));
                     break;
                 case 2:
-                    ShuShiCarb_Global_1.default.activeIndexTimeHappy = this.index;
-                    ShuShiCarb_Global_1.default.timeHappy += this._data[this.index].time;
+                    this.index++;
+                    ShuShiCarb_Global_1.default.timeIndex = this.index;
+                    this._data = ShuShiCarb_Global_1.default.dataTimeHappy[this.index];
+                    cc.sys.localStorage.setItem("timeIndex", this.index);
+                    //console.log("Index ", this.index);
                     break;
             }
-            this.savePurchaseState();
-            this.index++;
+            this.updatePrice(this.index);
             this.savePurchaseState();
             ShuShiCarb_GameManager_1.default.instance.updateTotalGold();
             ShuShiCarb_ShopView_1.default.instance.updateGold();
-            this.updatePrice(this.index);
-            this.checkClick(); // Gọi lại checkClick để cập nhật trạng thái nút sau khi mua
+            //this.checkClick(); // Gọi lại checkClick để cập nhật trạng thái nút sau khi mua
         }
-        console.log("onbuy");
     };
     __decorate([
         property(cc.Node)
@@ -256,9 +243,6 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], ShuShiCarbItemShop.prototype, "nStateBuy", void 0);
-    __decorate([
-        property(cc.Node)
-    ], ShuShiCarbItemShop.prototype, "nCheckmask", void 0);
     __decorate([
         property(cc.Label)
     ], ShuShiCarbItemShop.prototype, "lbLeverSpeedOld", void 0);

@@ -10,7 +10,7 @@ import Global from "../../../ShuShiCarb.Global";
 import ShuShiCarbShopView from "./ShuShiCarb.ShopView";
 
 
-const {ccclass, property} = cc._decorator;
+const { ccclass, property } = cc._decorator;
 
 @ccclass
 export default class ShuShiCarbItemShop extends cc.Component {
@@ -23,9 +23,7 @@ export default class ShuShiCarbItemShop extends cc.Component {
     nBtnBuy: cc.Node = null;
     @property(cc.Node)
     nStateBuy: cc.Node = null;
-    @property(cc.Node)
-    nCheckmask: cc.Node = null;
-
+   
     @property(cc.Label)
     lbLeverSpeedOld: cc.Label = null;
     @property(cc.Label)
@@ -39,126 +37,118 @@ export default class ShuShiCarbItemShop extends cc.Component {
     itemId = 0;
 
     onLoad() {
-        this.loadPurchaseState();
-        this.checkClick();
+        //this.checkClick();
     }
 
     setData(id) {
         this.itemId = id;
         switch (id) {
             case 0: // hook
-                this._data = Global.dataHook;
+                this.index = Global.hookIndex;
+                this._data = Global.dataHook[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
+                console.log(this._data,this.index);
                 break;
             case 1: // Bag money
-                this._data = Global.dataBagMoney;
+                this.index = Global.bagIndex;
+                this._data = Global.dataBagMoney[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
                 this.lbLeverSpeedOld.node.active = false;
                 break;
             case 2: // time Happy
-                this._data = Global.dataTimeHappy;
+                this._data = Global.dataTimeHappy[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
                 this.lbLeverSpeedOld.node.active = false;
+                this.index = Global.timeIndex;
+
                 break;
             default:
                 break;
         }
         this.updatePrice(this.index);
+
     }
 
     updatePrice(index) {
-        if (index < this._data.length) {
-            this.lbPrice.string = this._data[index].price + ' ';
+        if (index < 4) {
+            this.lbPrice.string = this._data.price + ' ';
             this.lbLeverSpeedOld.string = "0";
-            this.lbLeverSpeedNew.string = this._data[index].gold ? this._data[index].gold + ' ' : this._data[index].time + ' ';
+            //this.lbLeverSpeedNew.string = this._data[index].gold ? this._data[index].gold + ' ' : this._data[index].time + ' ';
+            this.nBtnBuy.getComponent(cc.Button).interactable = true;
+            console.log("Vao If ")
         } else {
             this.lbPrice.string = "Max";
             this.lbLeverSpeedNew.string = "Max";
             this.lbLeverSpeedOld.string = "Max";
+            this.nBtnBuy.getComponent(cc.Button).interactable = false;
+            console.log("vao Else");
         }
-    }
 
-    loadPurchaseState() {
-        const purchaseData = JSON.parse(cc.sys.localStorage.getItem("itemShopData")) || {
-            dataHook: Global.dataHook,
-            dataBagMoney: Global.dataBagMoney,
-            dataTimeHappy: Global.dataTimeHappy
-        };
-
-        Global.dataHook = purchaseData.dataHook;
-        Global.dataBagMoney = purchaseData.dataBagMoney;
-        Global.dataTimeHappy = purchaseData.dataTimeHappy;
-
-        // Kiểm tra trạng thái mua của item hiện tại
-        this.index = 0;
-        while (this.index < this._data.length && this._data[this.index].isBuy) {
-            this.nStateBuy.children[this.index].active = true;
-            this.index++;
-        }
-        this.checkClick();
+        this.updatePurchaseState();
     }
 
     savePurchaseState() {
-        const purchaseData = {
+        let purchaseData = {
             dataHook: Global.dataHook,
             dataBagMoney: Global.dataBagMoney,
             dataTimeHappy: Global.dataTimeHappy,
+            activeIndexHook: Global.hookIndex,
         };
         cc.sys.localStorage.setItem('itemShopData', JSON.stringify(purchaseData));
+        
+    
+
     }
 
-    checkClick() {
-        if (this.index < this._data.length) {
-            if (Global.totalGold >= this._data[this.index].price) {
-                this.nCheckmask.active = false;
-                this.isCheck = true;
-                this.nBtnBuy.getComponent(cc.Button).interactable = true;  // Nút "Mua" sáng lên
-            } else {
-                this.nCheckmask.active = true;
-                this.isCheck = false;
-                this.nBtnBuy.getComponent(cc.Button).interactable = false; // Nút "Mua" bị tắt
-            }
+    updatePurchaseState() {
+        for (let i = 0; i <= this.index; i++) {
+            this.nStateBuy.children[i].active = true;
         }
     }
 
     checkBuy(): boolean {
-        return Global.totalGold >= this._data[this.index].price;
+        return Global.totalGold >= this._data.price;
     }
 
     onBuy() {
-        if (this.checkBuy() && this.index < this._data.length) {
-            this._data[this.index].isBuy = true;
-            Global.totalGold -= this._data[this.index].price;
-            this.nStateBuy.children[this.index].active = this._data[this.index].isBuy;
+        if ( this.index < 4) {
+            this.nStateBuy.children[this.index].active = true;
+            Global.totalGold -= this._data.price;
 
             switch (this.itemId) {
                 case 0:
-                    Global.activeIndex = this.index;
-                    Global.speedHook += this._data[this.index].speed;
+                    this.index++;
+                    Global.hookIndex = this.index;
+                    this._data = Global.dataHook[this.index];
+                    cc.sys.localStorage.setItem("hookIndex", this.index)
                     break;
                 case 1:
-                    Global.activeIndexMoneyBag = this.index;
-                    Global.moneyBag += this._data[this.index].gold;
+                    this.index++;
+                    Global.checkBagMoney = true;
+                    Global.bagIndex = this.index;
+                    this._data = Global.dataBagMoney[this.index];
+                    cc.sys.localStorage.setItem("bagIndex",this.index);
+                    cc.sys.localStorage.setItem("checkBagMoney", JSON.stringify(Global.checkBagMoney));
                     break;
                 case 2:
-                    Global.activeIndexTimeHappy = this.index;
-                    Global.timeHappy += this._data[this.index].time;
+                    this.index++
+                    Global.timeIndex = this.index;
+                    this._data = Global.dataTimeHappy[this.index];
+                    cc.sys.localStorage.setItem("timeIndex", this.index);
+                    //console.log("Index ", this.index);
                     break;
             }
-
-            this.savePurchaseState();
-            this.index++;
+            this.updatePrice(this.index);
             this.savePurchaseState();
             ShuShiCarbGameManager.instance.updateTotalGold();
             ShuShiCarbShopView.instance.updateGold();
-            this.updatePrice(this.index);
-            this.checkClick(); // Gọi lại checkClick để cập nhật trạng thái nút sau khi mua
+            
+            //this.checkClick(); // Gọi lại checkClick để cập nhật trạng thái nút sau khi mua
         }
-        console.log("onbuy");
     }
     // LIFE-CYCLE CALLBACKS:
 
-    
+
     // onLoad () {
     //     this.index = JSON.parse(cc.sys.localStorage.getItem("itemIndex")) || 0;
     //     this.loadPurchaseState();
@@ -188,8 +178,8 @@ export default class ShuShiCarbItemShop extends cc.Component {
     //     cc.sys.localStorage.setItem('speedHook', JSON.stringify(Global.speedHook));
     //     cc.sys.localStorage.setItem('lengthHook', JSON.stringify(Global.lengthHook));
     // }
-    
-    
+
+
     // checkClick() {
     //     // if(this.index < Global.dataHook.length) {
     //     //     if(Global.totalGold >= Global.dataHook[this.index].price) {
@@ -211,7 +201,7 @@ export default class ShuShiCarbItemShop extends cc.Component {
     //         this.nBtnBuy.getComponent(cc.Toggle).interactable = false;
     //     }
     //     console.log(this.index);
-      
+
     // }
 
     // onClickBuy() {
@@ -220,10 +210,10 @@ export default class ShuShiCarbItemShop extends cc.Component {
     //         Global.totalGold -= Global.dataHook[this.index].price;
     //         Global.speedHook += Global.dataHook[this.index].speed;
     //         Global.lengthHook += Global.dataHook[this.index].widthHook;
-          
+
     //         this.nStateBuy.children[this.index].active = Global.dataHook[this.index].isBuy;
     //         Global.activeIndex = this.index;
-            
+
     //         this.index++;
     //         this.checkClick();
     //         this.savePurchaseState();
@@ -235,7 +225,7 @@ export default class ShuShiCarbItemShop extends cc.Component {
     //         this.nCheckmask.active = true;
     //         this.nBtnBuy.getComponent(cc.Toggle).interactable = false;
     //     }
-       
+
     // }
 
     // updatePrice(index) {
@@ -248,7 +238,7 @@ export default class ShuShiCarbItemShop extends cc.Component {
     //         this.lbLeverSpeedNew.string = "Max";
     //         this.lbLeverSpeedOld.string = "Max";
     //     }
-       
+
     // }
     // start () {
 

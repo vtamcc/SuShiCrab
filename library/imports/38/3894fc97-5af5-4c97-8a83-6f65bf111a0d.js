@@ -59,7 +59,9 @@ var ShuShiCarbPlayer = /** @class */ (function (_super) {
     // foodItem3: cc.Node = null;
     ShuShiCarbPlayer.prototype.onLoad = function () {
         ShuShiCarbPlayer_1.instace = this;
-        ShuShiCarb_Global_1.default.timeHappy = JSON.parse(cc.sys.localStorage.getItem("timeHappy")) || ShuShiCarb_Global_1.default.timeHappy;
+        var timeIndex = cc.sys.localStorage.getItem("timeIndex") || 0;
+        var timeUpdate = ShuShiCarb_Global_1.default.dataTimeHappy[timeIndex].time;
+        ShuShiCarb_Global_1.default.timeHappy += timeUpdate;
         console.log("Time vua duoc update ", ShuShiCarb_Global_1.default.timeHappy);
     };
     ShuShiCarbPlayer.prototype.setData = function (index) {
