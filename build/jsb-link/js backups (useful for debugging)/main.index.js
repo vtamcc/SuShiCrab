@@ -1,33 +1,33 @@
 window.__require = function t(e, o, n) {
-function i(a, c) {
-if (!o[a]) {
-if (!e[a]) {
-var s = a.split("/");
+function a(r, c) {
+if (!o[r]) {
+if (!e[r]) {
+var s = r.split("/");
 s = s[s.length - 1];
 if (!e[s]) {
 var l = "function" == typeof __require && __require;
 if (!c && l) return l(s, !0);
-if (r) return r(s, !0);
-throw new Error("Cannot find module '" + a + "'");
+if (i) return i(s, !0);
+throw new Error("Cannot find module '" + r + "'");
 }
-a = s;
+r = s;
 }
-var u = o[a] = {
+var p = o[r] = {
 exports: {}
 };
-e[a][0].call(u.exports, function(t) {
-return i(e[a][1][t] || t);
-}, u, u.exports, t, e, o, n);
+e[r][0].call(p.exports, function(t) {
+return a(e[r][1][t] || t);
+}, p, p.exports, t, e, o, n);
 }
-return o[a].exports;
+return o[r].exports;
 }
-for (var r = "function" == typeof __require && __require, a = 0; a < n.length; a++) i(n[a]);
-return i;
+for (var i = "function" == typeof __require && __require, r = 0; r < n.length; r++) a(n[r]);
+return a;
 }({
 "ShuShiCarb.Conveyor": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "feab3o200JDbYSI7NRNPnpz", "ShuShiCarb.Conveyor");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -41,16 +41,16 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = cc._decorator, c = a.ccclass, s = a.property, l = function(t) {
-i(e, t);
+var r = cc._decorator, c = r.ccclass, s = r.property, l = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.idFood = 0;
@@ -87,8 +87,8 @@ e.prototype.resetSate = function(t) {
 this.node.getComponent(cc.Sprite).enabled = t;
 this.node.getComponent(cc.BoxCollider).enabled = t;
 };
-r([ s ], e.prototype, "idFood", void 0);
-return r([ c ], e);
+i([ s ], e.prototype, "idFood", void 0);
+return i([ c ], e);
 }(cc.Component);
 o.default = l;
 cc._RF.pop();
@@ -96,7 +96,7 @@ cc._RF.pop();
 "ShuShiCarb.Food": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "1814d5TiQlDEohqTgqXx2zV", "ShuShiCarb.Food");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -110,16 +110,16 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("../ShuShiCarb.Game"), c = cc._decorator, s = c.ccclass, l = c.property, u = function(t) {
-i(e, t);
+var r = t("../ShuShiCarb.Game"), c = cc._decorator, s = c.ccclass, l = c.property, p = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.nFood = null;
@@ -131,13 +131,13 @@ e.prototype.onLoad = function() {};
 e.prototype.start = function() {};
 e.prototype.setData = function(t) {
 this.id = t;
-this.nFood.getComponent(cc.Sprite).spriteFrame = 999 === t ? a.default.instance.listSpfFood[6] : a.default.instance.listSpfFood[t];
+this.nFood.getComponent(cc.Sprite).spriteFrame = 999 === t ? r.default.instance.listSpfFood[6] : r.default.instance.listSpfFood[t];
 };
 e.prototype.update = function() {};
-r([ l(cc.Node) ], e.prototype, "nFood", void 0);
-return r([ s ], e);
+i([ l(cc.Node) ], e.prototype, "nFood", void 0);
+return i([ s ], e);
 }(cc.Component);
-o.default = u;
+o.default = p;
 cc._RF.pop();
 }, {
 "../ShuShiCarb.Game": "ShuShiCarb.Game"
@@ -145,7 +145,7 @@ cc._RF.pop();
 "ShuShiCarb.GameManager": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "b4f8btwtChDJ7eWDTDf8uUO", "ShuShiCarb.GameManager");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -159,20 +159,21 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("./Game/Ui_Popup/Shop/ShuShiCarb.ShopView"), c = t("./ShuShiCarb.Game"), s = t("./ShuShiCarb.Global"), l = cc._decorator, u = l.ccclass, p = l.property, d = function(t) {
-i(e, t);
+var r = t("./Game/Ui_Popup/Shop/ShuShiCarb.ShopView"), c = t("./ShuShiCarb.Game"), s = t("./ShuShiCarb.Global"), l = cc._decorator, p = l.ccclass, u = l.property, d = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.nHome = null;
 e.prfGame = null;
+e.nPlay = null;
 e.prfShopView = null;
 e.lbTotalGold = null;
 e.prfSetting = null;
@@ -183,9 +184,11 @@ e.prototype.onLoad = function() {
 o.instance = this;
 s.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 500;
 this.updateTotalGold();
+this.effectPlay();
 };
 e.prototype.start = function() {};
 e.prototype.onClickPlay = function() {
+s.default.soundManager && s.default.soundManager.playSoundClick();
 var t = cc.instantiate(this.prfGame).getComponent(c.default);
 this.node.addChild(t.node);
 this.nHome.getChildByName("playbtn").getComponent(cc.Button).interactable = !1;
@@ -193,25 +196,39 @@ this.nHome.getChildByName("shop").getComponent(cc.Button).interactable = !1;
 this.nHome.getChildByName("setting").getComponent(cc.Button).interactable = !1;
 };
 e.prototype.onClickShopView = function() {
-var t = cc.instantiate(this.prfShopView).getComponent(a.default);
+s.default.soundManager && s.default.soundManager.playSoundClick();
+var t = cc.instantiate(this.prfShopView).getComponent(r.default);
 this.node.addChild(t.node);
 };
 e.prototype.updateTotalGold = function() {
-this.lbTotalGold.string = s.default.totalGold + " ";
+this.lbTotalGold.string = s.default.formatNumber(s.default.totalGold);
 cc.sys.localStorage.setItem("totalGold", JSON.stringify(s.default.totalGold));
+console.log("Tong tien ", s.default.totalGold);
+};
+e.prototype.effectPlay = function() {
+cc.tween(this.nPlay).repeatForever(cc.tween().to(.8, {
+scale: .8
+}).to(.8, {
+scale: 1
+}).start()).start();
 };
 e.prototype.onClickSettingView = function() {
+s.default.soundManager && s.default.soundManager.playSoundClick();
 var t = cc.instantiate(this.prfSetting);
 this.node.addChild(t);
 };
+e.prototype.clickTest = function() {
+cc.sys.localStorage.clear();
+};
 var o;
 e.instance = null;
-r([ p(cc.Node) ], e.prototype, "nHome", void 0);
-r([ p(cc.Prefab) ], e.prototype, "prfGame", void 0);
-r([ p(cc.Prefab) ], e.prototype, "prfShopView", void 0);
-r([ p(cc.Label) ], e.prototype, "lbTotalGold", void 0);
-r([ p(cc.Prefab) ], e.prototype, "prfSetting", void 0);
-return o = r([ u ], e);
+i([ u(cc.Node) ], e.prototype, "nHome", void 0);
+i([ u(cc.Prefab) ], e.prototype, "prfGame", void 0);
+i([ u(cc.Node) ], e.prototype, "nPlay", void 0);
+i([ u(cc.Prefab) ], e.prototype, "prfShopView", void 0);
+i([ u(cc.Label) ], e.prototype, "lbTotalGold", void 0);
+i([ u(cc.Prefab) ], e.prototype, "prfSetting", void 0);
+return o = i([ p ], e);
 }(cc.Component);
 o.default = d;
 cc._RF.pop();
@@ -223,7 +240,7 @@ cc._RF.pop();
 "ShuShiCarb.Game": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "57e45IlTRNBoJ26llVySEfH", "ShuShiCarb.Game");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -237,16 +254,16 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("./Game/ShuShiCarb.Food"), c = t("./Game/ShuShiCarb.Player"), s = t("./Game/Ui_Popup/ShuShiCrab.GameOver"), l = t("./ShuShiCarb.GameManager"), u = t("./ShuShiCarb.Global"), p = t("./ShuShiCarb.GoldFly"), d = cc._decorator, h = d.ccclass, f = d.property, y = function(t) {
-i(e, t);
+var r = t("./Game/ShuShiCarb.Food"), c = t("./Game/ShuShiCarb.Player"), s = t("./Game/Ui_Popup/ShuShiCrab.GameOver"), l = t("./ShuShiCarb.GameManager"), p = t("./ShuShiCarb.Global"), u = t("./ShuShiCarb.GoldFly"), d = cc._decorator, h = d.ccclass, f = d.property, y = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.prfOrder = null;
@@ -266,6 +283,8 @@ e.nEffectGold = null;
 e.nEffecBagMoneyFly = null;
 e.nEndEffect = null;
 e.nCheckFalse = null;
+e.nCheckTrue = null;
+e.lbBagMoneyEffect = null;
 e.data = [ 0, 1, 2, 3, 4, 5 ];
 e.playOrders = [];
 e.hookObjects = [];
@@ -284,10 +303,11 @@ o = e;
 e.prototype.onLoad = function() {
 o.instance = this;
 var t = JSON.parse(cc.sys.localStorage.getItem("checkBagMoney"));
-u.default.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || u.default.moneyBag;
+p.default.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || p.default.moneyBag;
+console.log(p.default.moneyBag);
 if (null !== t) {
-u.default.checkBagMoney = t;
-console.log(u.default.checkBagMoney);
+p.default.checkBagMoney = t;
+console.log(p.default.checkBagMoney);
 }
 this.randomOrderFood();
 console.log(this.playOrders);
@@ -296,7 +316,6 @@ this.conveyor(this.conveyor_2);
 this.conveyor(this.conveyor_3);
 this.renderOrderFood();
 this.startCountDown();
-console.log(u.default.checkBagMoney);
 };
 e.prototype.randomOrderFood = function() {
 this.playOrders = [];
@@ -338,38 +357,51 @@ this.nPlayer.addChild(this.player.node);
 e.prototype.checkCorrect = function() {
 var t = this;
 if (0 !== this.hookObjects.length) {
-var e = this.hookObjects[0].id;
+var e = this.hookObjects[0].id, o = !1;
 if (999 === e) {
-this.gold += u.default.moneyBag;
-this.updateGold(u.default.moneyBag);
-p.default.instance.playAnim(this.nEffecBagMoneyFly, this.nEndEffect, this.nEffecBagMoneyFly);
-} else for (var o = function(o) {
-if (n.playOrders[o] === e && !n.player.listFood[o].getChildByName("tick").active) {
-n.player.listFood[o].getChildByName("tick").active = !0;
-n.scheduleOnce(function() {
-t.lsFoodTable[o].getComponent(cc.Sprite).spriteFrame = t.listSpfFood[e];
-t.lsFoodTable[o].active = !0;
+this.gold += p.default.moneyBag;
+this.updateGold(p.default.moneyBag);
+o = !0;
+this.lbBagMoneyEffect.string = "+" + p.default.moneyBag;
+u.default.instance.playAnim(this.nEffecBagMoneyFly, this.nEndEffect, this.nEffecBagMoneyFly);
+} else for (var n = function(n) {
+if (a.playOrders[n] === e && !a.player.listFood[n].getChildByName("tick").active) {
+a.player.listFood[n].getChildByName("tick").active = !0;
+a.scheduleOnce(function() {
+t.lsFoodTable[n].getComponent(cc.Sprite).spriteFrame = t.listSpfFood[e];
+t.lsFoodTable[n].active = !0;
 }, .2);
-p.default.instance.playAnim(n.nEffectGold, n.nEndEffect, n.nEffectGold);
-n.gold += 5;
-n.updateGold(5);
-n.countCorrect++;
+u.default.instance.playAnim(a.nEffectGold, a.nEndEffect, a.nEffectGold);
+a.gold += 5;
+a.updateGold(5);
+o = !0;
+a.nCheckTrue.active = !0;
+setTimeout(function() {
+t.nCheckTrue.active = !1;
+}, 500);
+a.countCorrect++;
 return "break";
 }
-}, n = this, i = 0; i < this.playOrders.length && "break" !== o(i); i++) ;
+}, a = this, i = 0; i < this.playOrders.length && "break" !== n(i); i++) ;
 this.lbGold.string = this.gold + " ";
+if (!o) {
+this.nCheckFalse.active = !0;
+setTimeout(function() {
+t.nCheckFalse.active = !1;
+}, 500);
+}
 this.countCorrect >= 3 && this.resetGame(!0);
 }
 };
 e.prototype.updateGold = function(t) {
-u.default.totalGold += t;
-console.log("Tong tien ", u.default.totalGold);
-cc.sys.localStorage.setItem("totalGold", JSON.stringify(u.default.totalGold));
+p.default.totalGold += t;
+console.log("Tong tien ", p.default.totalGold);
+cc.sys.localStorage.setItem("totalGold", JSON.stringify(p.default.totalGold));
 };
 e.prototype.conveyor = function(t) {
 for (var e = 0; e < t.childrenCount; e++) {
-var o = t.children[e].getComponent(a.default);
-if (!0 === u.default.checkBagMoney && 5 === e) o.setData(999); else {
+var o = t.children[e].getComponent(r.default);
+if (!0 === p.default.checkBagMoney && 5 === e) o.setData(999); else {
 var n = Math.floor(Math.random() * this.data.length);
 o.setData(this.data[n]);
 }
@@ -395,6 +427,7 @@ e.resetFoodTable();
 t ? this.player.happyEffectPlayerMoveOut(o) : this.player.sadEffectPlayerMoveOut(o);
 };
 e.prototype.onclickBack = function() {
+p.default.soundManager && p.default.soundManager.playSoundClick();
 l.default.instance.updateTotalGold();
 this.node.destroy();
 l.default.instance.nHome.getChildByName("playbtn").getComponent(cc.Button).interactable = !0;
@@ -404,24 +437,26 @@ l.default.instance.nHome.getChildByName("setting").getComponent(cc.Button).inter
 e.prototype.start = function() {};
 var o;
 e.instance = null;
-r([ f(cc.Prefab) ], e.prototype, "prfOrder", void 0);
-r([ f(cc.Node) ], e.prototype, "nHome", void 0);
-r([ f(cc.SpriteFrame) ], e.prototype, "listSpfFood", void 0);
-r([ f(cc.Node) ], e.prototype, "nPlayer", void 0);
-r([ f(cc.Node) ], e.prototype, "conveyor_1", void 0);
-r([ f(cc.Node) ], e.prototype, "conveyor_2", void 0);
-r([ f(cc.Node) ], e.prototype, "conveyor_3", void 0);
-r([ f(cc.Prefab) ], e.prototype, "prfFood", void 0);
-r([ f(cc.Node) ], e.prototype, "lsFoodTable", void 0);
-r([ f(cc.Label) ], e.prototype, "lbGold", void 0);
-r([ f(cc.Prefab) ], e.prototype, "prfGameOver", void 0);
-r([ f(cc.ProgressBar) ], e.prototype, "prgTime", void 0);
-r([ f(cc.Label) ], e.prototype, "lbCountDown", void 0);
-r([ f(cc.Node) ], e.prototype, "nEffectGold", void 0);
-r([ f(cc.Node) ], e.prototype, "nEffecBagMoneyFly", void 0);
-r([ f(cc.Node) ], e.prototype, "nEndEffect", void 0);
-r([ f(cc.Node) ], e.prototype, "nCheckFalse", void 0);
-return o = r([ h ], e);
+i([ f(cc.Prefab) ], e.prototype, "prfOrder", void 0);
+i([ f(cc.Node) ], e.prototype, "nHome", void 0);
+i([ f(cc.SpriteFrame) ], e.prototype, "listSpfFood", void 0);
+i([ f(cc.Node) ], e.prototype, "nPlayer", void 0);
+i([ f(cc.Node) ], e.prototype, "conveyor_1", void 0);
+i([ f(cc.Node) ], e.prototype, "conveyor_2", void 0);
+i([ f(cc.Node) ], e.prototype, "conveyor_3", void 0);
+i([ f(cc.Prefab) ], e.prototype, "prfFood", void 0);
+i([ f(cc.Node) ], e.prototype, "lsFoodTable", void 0);
+i([ f(cc.Label) ], e.prototype, "lbGold", void 0);
+i([ f(cc.Prefab) ], e.prototype, "prfGameOver", void 0);
+i([ f(cc.ProgressBar) ], e.prototype, "prgTime", void 0);
+i([ f(cc.Label) ], e.prototype, "lbCountDown", void 0);
+i([ f(cc.Node) ], e.prototype, "nEffectGold", void 0);
+i([ f(cc.Node) ], e.prototype, "nEffecBagMoneyFly", void 0);
+i([ f(cc.Node) ], e.prototype, "nEndEffect", void 0);
+i([ f(cc.Node) ], e.prototype, "nCheckFalse", void 0);
+i([ f(cc.Node) ], e.prototype, "nCheckTrue", void 0);
+i([ f(cc.Label) ], e.prototype, "lbBagMoneyEffect", void 0);
+return o = i([ h ], e);
 }(cc.Component);
 o.default = y;
 cc._RF.pop();
@@ -441,63 +476,76 @@ value: !0
 });
 var n = function() {
 function t() {}
+t.formatNumber = function(t, e) {
+void 0 === e && (e = 0);
+return 0 == t ? "0" : 0 != e ? t.toFixed(e).replace(/(\d)(?=(\d{3})+\.)/g, "$1,") : t.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+};
 t.soundManager = null;
 t.totalGold = 0;
 t.dataHook = [ {
 price: 150,
 speed: 1.5,
-widthHook: 3,
-isBuy: !1
+widthHook: 3
 }, {
 price: 300,
-speed: 2.5,
-widthHook: 5,
-isBuy: !1
+speed: 1.5,
+widthHook: 4
 }, {
 price: 450,
-speed: 3.5,
-widthHook: 7,
-isBuy: !1
+speed: 1.5,
+widthHook: 4
 }, {
 price: 600,
-speed: 4.5,
-widthHook: 9,
-isBuy: !1
+speed: 1.5,
+widthHook: 4
 }, {
 price: 750,
-speed: 5.5,
-widthHook: 11,
-isBuy: !1
+speed: 2.5,
+widthHook: 6
 } ];
 t.dataBagMoney = [ {
 price: 120,
-gold: 3,
-isBuy: !1
+gold: 1
 }, {
 price: 250,
-gold: 5,
-isBuy: !1
+gold: 2
 }, {
 price: 320,
-gold: 7,
-isBuy: !1
+gold: 2
 }, {
 price: 450,
-gold: 9,
-isBuy: !1
+gold: 2
 }, {
 price: 750,
-gold: 11,
-isBuy: !1
+gold: 4
 } ];
+t.dataTimeHappy = [ {
+price: 120,
+time: 2
+}, {
+price: 250,
+time: 2
+}, {
+price: 320,
+time: 2
+}, {
+price: 450,
+time: 2
+}, {
+price: 750,
+time: 4
+} ];
+t.timeHappy = 10;
 t.checkBagMoney = !1;
 t.speedHook = 20;
-t.moneyBag = 20;
-t.lengthHook = 35;
+t.moneyBag = 10;
+t.lengthHook = 40;
 t.isMusicOn = !0;
 t.isSoundOn = !0;
-t.activeIndex = 0;
-t.activeIndexMoneyBag = 0;
+t.hookIndex = 0;
+t.bagIndex = 0;
+t.timeIndex = 0;
+t.timeHappyUpdated = !1;
 return t;
 }();
 o.default = n;
@@ -506,7 +554,7 @@ cc._RF.pop();
 "ShuShiCarb.GoldFly": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "c2cbe1ypNFMMKbHC8zXu7Db", "ShuShiCarb.GoldFly");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -520,16 +568,16 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = cc._decorator, c = a.ccclass, s = a.property, l = function(t) {
-i(e, t);
+var r = cc._decorator, c = r.ccclass, s = r.property, l = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.coinPrefab = null;
@@ -550,25 +598,25 @@ this.coinPool.put(o);
 }
 };
 e.prototype.playAnim = function(t, e, o) {
-var n = t.getPosition(), i = e.getPosition();
-this.playCoinFlyAnim(5, n, i);
+var n = t.getPosition(), a = e.getPosition();
+this.playCoinFlyAnim(5, n, a);
 o.active = !0;
-cc.tween(o).to(.8, {
-y: i.y
+cc.tween(o).to(1.2, {
+y: a.y
 }).call(function() {
 o.y = 0;
 o.active = !1;
 }).start();
 };
 e.prototype.playCoinFlyAnim = function(t, e, o, n) {
-var i = this;
+var a = this;
 void 0 === n && (n = 130);
-var r = this.coinPool.size(), a = r > t ? 0 : t - r;
-this.initCoinPool(a);
+var i = this.coinPool.size(), r = i > t ? 0 : t - i;
+this.initCoinPool(r);
 var c = this.getCirclePoints(n, e, t).map(function(t) {
-var n = i.coinPool.get();
+var n = a.coinPool.get();
 n.setPosition(e);
-i.node.addChild(n);
+a.node.addChild(n);
 return {
 node: n,
 stPos: e,
@@ -581,22 +629,22 @@ dis: t.sub(o).mag()
 return t.dis - e.dis > 0 ? 1 : t.dis - e.dis < 0 ? -1 : 0;
 })).forEach(function(t, e) {
 t.node.runAction(cc.sequence(cc.moveTo(.3, t.mdPos), cc.delayTime(.01 * e), cc.moveTo(.5, t.edPos), cc.callFunc(function() {
-i.coinPool.put(t.node);
+a.coinPool.put(t.node);
 })));
 });
 };
 e.prototype.getCirclePoints = function(t, e, o, n) {
 void 0 === n && (n = 60);
-for (var i = [], r = Math.PI / 180 * Math.round(360 / o), a = 0; a < o; a++) {
-var c = e.x + t * Math.sin(r * a), s = e.y + t * Math.cos(r * a);
-i.unshift(cc.v3(c + Math.random() * n, s + Math.random() * n, 0));
+for (var a = [], i = Math.PI / 180 * Math.round(360 / o), r = 0; r < o; r++) {
+var c = e.x + t * Math.sin(i * r), s = e.y + t * Math.cos(i * r);
+a.unshift(cc.v3(c + Math.random() * n, s + Math.random() * n, 0));
 }
-return i;
+return a;
 };
 var o;
 e.instance = null;
-r([ s(cc.Prefab) ], e.prototype, "coinPrefab", void 0);
-return o = r([ c ], e);
+i([ s(cc.Prefab) ], e.prototype, "coinPrefab", void 0);
+return o = i([ c ], e);
 }(cc.Component);
 o.default = l;
 cc._RF.pop();
@@ -604,7 +652,7 @@ cc._RF.pop();
 "ShuShiCarb.Hook": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "bd3e4+aHHVDjZsBsncFNldv", "ShuShiCarb.Hook");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -618,16 +666,16 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("../ShuShiCarb.Global"), c = t("./ShuShiCarb.Player"), s = cc._decorator, l = s.ccclass, u = s.property, p = function(t) {
-i(e, t);
+var r = t("../ShuShiCarb.Global"), c = t("./ShuShiCarb.Player"), s = cc._decorator, l = s.ccclass, p = s.property, u = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.hookRope = null;
@@ -645,8 +693,9 @@ o = e;
 e.prototype.onLoad = function() {
 o.instance = this;
 cc.Canvas.instance.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this);
-a.default.speedHook = JSON.parse(cc.sys.localStorage.getItem("speedHook")) || a.default.speedHook;
-a.default.lengthHook = JSON.parse(cc.sys.localStorage.getItem("lengthHook")) || a.default.lengthHook;
+r.default.speedHook = JSON.parse(cc.sys.localStorage.getItem("speedHook")) || r.default.speedHook;
+r.default.lengthHook = JSON.parse(cc.sys.localStorage.getItem("lengthHook")) || r.default.lengthHook;
+console.log("Speed ne ", r.default.speedHook);
 };
 e.prototype.initHook = function() {
 this.hookHead.y = this.hookHeadBaseY;
@@ -670,8 +719,8 @@ this.node.setPosition(this.mousePos);
 }
 };
 e.prototype.moveHookHead = function(t) {
-this.hookHead.y += t * a.default.speedHook;
-this.hookRope.width += t * a.default.lengthHook;
+this.hookHead.y += t * r.default.speedHook;
+this.hookRope.width += t * r.default.lengthHook;
 };
 e.prototype.onDestroy = function() {
 cc.Canvas.instance.node.off(cc.Node.EventType.MOUSE_DOWN, this.onTouchEnd, this);
@@ -681,18 +730,18 @@ this.setHookSprite(!0);
 switch (this.hookState) {
 case 1:
 if (this.hookHead.y) {
-this.moveHookHead(a.default.speedHook * t);
+this.moveHookHead(r.default.speedHook * t);
 this.hookHead.y >= 600 && (this.hookState = 2);
 }
 break;
 
 case 2:
 if (this.hookHead.y) {
-this.moveHookHead(-a.default.speedHook * t);
+this.moveHookHead(-r.default.speedHook * t);
 this.hookHead.getComponent(cc.BoxCollider).enabled = !1;
 if (this.hookHead.y < 0) {
-this.hookHead.y = 100;
-this.hookRope.width = 100;
+this.hookHead.y = 130;
+this.hookRope.width = 130;
 this.hookState = 0;
 this.hookHead.getComponent(cc.BoxCollider).enabled = !0;
 this.disableClickTemporarily(.2);
@@ -710,22 +759,22 @@ e.isClickable = !0;
 };
 var o;
 e.instance = null;
-r([ u(cc.Node) ], e.prototype, "hookRope", void 0);
-r([ u(cc.Node) ], e.prototype, "hookSpriteOpen", void 0);
-r([ u(cc.Node) ], e.prototype, "hookSpriteClose", void 0);
-r([ u(cc.Node) ], e.prototype, "hookHead", void 0);
-return o = r([ l ], e);
+i([ p(cc.Node) ], e.prototype, "hookRope", void 0);
+i([ p(cc.Node) ], e.prototype, "hookSpriteOpen", void 0);
+i([ p(cc.Node) ], e.prototype, "hookSpriteClose", void 0);
+i([ p(cc.Node) ], e.prototype, "hookHead", void 0);
+return o = i([ l ], e);
 }(cc.Component);
-o.default = p;
+o.default = u;
 cc._RF.pop();
 }, {
 "../ShuShiCarb.Global": "ShuShiCarb.Global",
 "./ShuShiCarb.Player": "ShuShiCarb.Player"
 } ],
-"ShuShiCarb.ItemHook": [ function(t, e, o) {
+"ShuShiCarb.ItemShop": [ function(t, e, o) {
 "use strict";
-cc._RF.push(e, "dc267ASAKxLjZBm3npC1v+1", "ShuShiCarb.ItemHook");
-var n, i = this && this.__extends || (n = function(t, e) {
+cc._RF.push(e, "dc267ASAKxLjZBm3npC1v+1", "ShuShiCarb.ItemShop");
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -739,228 +788,128 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("../../../ShuShiCarb.GameManager"), c = t("../../../ShuShiCarb.Global"), s = t("./ShuShiCarb.ShopView"), l = cc._decorator, u = l.ccclass, p = l.property, d = function(t) {
-i(e, t);
+var r = t("../../../ShuShiCarb.GameManager"), c = t("../../../ShuShiCarb.Global"), s = t("./ShuShiCarb.ShopView"), l = cc._decorator, p = l.ccclass, u = l.property, d = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
+e.nItemShop = null;
 e.lbPrice = null;
 e.nBtnBuy = null;
 e.nStateBuy = null;
-e.nCheckmask = null;
-e.lbLeverSpeedOld = null;
-e.lbLeverSpeedNew = null;
+e.lsSpFItemShop = [];
 e.index = 0;
 e.isCheck = !1;
 e._data = null;
+e._data2 = null;
+e._data3 = null;
+e.itemId = 0;
 return e;
 }
+e.prototype.onLoad = function() {};
 e.prototype.setData = function(t) {
-this._data = t;
-this.nStateBuy.active = t.isBuy;
-console.log("data ", t);
-};
-e.prototype.onLoad = function() {
-this.index = JSON.parse(cc.sys.localStorage.getItem("itemIndex")) || 0;
-this.loadPurchaseState();
-this.checkClick();
-this.updatePrice(this.index);
-};
-e.prototype.loadPurchaseState = function() {
-for (var t = JSON.parse(cc.sys.localStorage.getItem("purchaseData")) || [], e = 0; e < c.default.dataHook.length; e++) if (t[e]) {
-c.default.dataHook[e].isBuy = t[e].isBuy;
-c.default.dataHook[e].speed = t[e].speed;
-this.nStateBuy.children[e].active = t[e].isBuy;
+this.itemId = t;
+switch (t) {
+case 0:
+this.index = c.default.hookIndex;
+this._data = c.default.dataHook[this.index];
+this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[t];
+console.log(this._data, this.index);
+break;
+
+case 1:
+this.index = c.default.bagIndex;
+this._data = c.default.dataBagMoney[this.index];
+this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[t];
+break;
+
+case 2:
+this._data = c.default.dataTimeHappy[this.index];
+this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[t];
+this.index = c.default.timeIndex;
+this.nStateBuy.x = -115;
+this.nStateBuy.y = -28;
 }
+this.updatePrice(this.index, c.default.totalGold);
 };
-e.prototype.savePurchaseState = function() {
-var t = c.default.dataHook.map(function(t) {
-return {
-isBuy: t.isBuy,
-speed: t.speed
-};
-});
-cc.sys.localStorage.setItem("purchaseData", JSON.stringify(t));
-cc.sys.localStorage.setItem("activeIndex", JSON.stringify(c.default.activeIndex));
-cc.sys.localStorage.setItem("itemIndex", this.index.toString());
-cc.sys.localStorage.setItem("speedHook", JSON.stringify(c.default.speedHook));
-cc.sys.localStorage.setItem("lengthHook", JSON.stringify(c.default.lengthHook));
-};
-e.prototype.checkClick = function() {
-if (this.index < c.default.dataHook.length) if (c.default.totalGold >= c.default.dataHook[this.index].price) {
-this.nCheckmask.active = !1;
-this.isCheck = !0;
-} else {
-this.nCheckmask.active = !0;
-this.nBtnBuy.getComponent(cc.Toggle).interactable = !1;
-}
-};
-e.prototype.onClickBuy = function() {
-if (this.isCheck && this.index < c.default.dataHook.length) {
-c.default.dataHook[this.index].isBuy = !0;
-c.default.totalGold -= c.default.dataHook[this.index].price;
-c.default.speedHook += c.default.dataHook[this.index].speed;
-c.default.lengthHook += c.default.dataHook[this.index].widthHook;
-this.nStateBuy.children[this.index].active = c.default.dataHook[this.index].isBuy;
-c.default.activeIndex = this.index;
-this.savePurchaseState();
-this.index++;
-this.savePurchaseState();
-console.log(this.index);
-this.checkClick();
-s.default.instace.updateGold();
-a.default.instance.updateTotalGold();
-this.updatePrice(this.index);
-console.log("data Hoook ", c.default.dataHook);
-} else {
-this.nCheckmask.active = !0;
-this.nBtnBuy.getComponent(cc.Toggle).interactable = !1;
-}
-};
-e.prototype.updatePrice = function(t) {
-if (t < c.default.dataHook.length) {
-this.lbPrice.string = c.default.dataHook[t].price + " ";
-this.lbLeverSpeedNew.string = c.default.dataHook[t].speed + 1 + " ";
-this.lbLeverSpeedOld.string = c.default.dataHook[t].speed + "  -> ";
+e.prototype.updatePrice = function(t, e) {
+if (t < 4) {
+this.lbPrice.string = this._data.price + " ";
+e >= this._data.price ? this.nBtnBuy.getComponent(cc.Button).interactable = !0 : this.nBtnBuy.getComponent(cc.Button).interactable = !1;
 } else {
 this.lbPrice.string = "Max";
-this.lbLeverSpeedNew.string = "Max";
-this.lbLeverSpeedOld.string = "Max";
+this.nBtnBuy.getComponent(cc.Button).interactable = !1;
 }
-};
-e.prototype.start = function() {};
-r([ p(cc.Label) ], e.prototype, "lbPrice", void 0);
-r([ p(cc.Node) ], e.prototype, "nBtnBuy", void 0);
-r([ p(cc.Node) ], e.prototype, "nStateBuy", void 0);
-r([ p(cc.Node) ], e.prototype, "nCheckmask", void 0);
-r([ p(cc.Label) ], e.prototype, "lbLeverSpeedOld", void 0);
-r([ p(cc.Label) ], e.prototype, "lbLeverSpeedNew", void 0);
-return r([ u ], e);
-}(cc.Component);
-o.default = d;
-cc._RF.pop();
-}, {
-"../../../ShuShiCarb.GameManager": "ShuShiCarb.GameManager",
-"../../../ShuShiCarb.Global": "ShuShiCarb.Global",
-"./ShuShiCarb.ShopView": "ShuShiCarb.ShopView"
-} ],
-"ShuShiCarb.ItemMoneyBag": [ function(t, e, o) {
-"use strict";
-cc._RF.push(e, "75348lwHFBBC6JT2XEAoYwZ", "ShuShiCarb.ItemMoneyBag");
-var n, i = this && this.__extends || (n = function(t, e) {
-return (n = Object.setPrototypeOf || {
-__proto__: []
-} instanceof Array && function(t, e) {
-t.__proto__ = e;
-} || function(t, e) {
-for (var o in e) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
-})(t, e);
-}, function(t, e) {
-n(t, e);
-function o() {
-this.constructor = t;
-}
-t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
-};
-Object.defineProperty(o, "__esModule", {
-value: !0
-});
-var a = t("../../../ShuShiCarb.GameManager"), c = t("../../../ShuShiCarb.Global"), s = t("./ShuShiCarb.ShopView"), l = cc._decorator, u = l.ccclass, p = l.property, d = function(t) {
-i(e, t);
-function e() {
-var e = null !== t && t.apply(this, arguments) || this;
-e.lbPrice = null;
-e.nBtnBuy = null;
-e.nStateBuy = null;
-e.nCheckmask = null;
-e.lbLeverSpeedOld = null;
-e.lbLeverSpeedNew = null;
-e.index = 0;
-e.isCheck = !1;
-e._data = null;
-e.isClick = !1;
-return e;
-}
-e.prototype.onLoad = function() {
-this.index = JSON.parse(cc.sys.localStorage.getItem("itemIndexMoneyBag")) || 0;
-this.loadPurchaseState();
-this.checkClick();
-this.updatePrice(this.index);
-};
-e.prototype.loadPurchaseState = function() {
-for (var t = JSON.parse(cc.sys.localStorage.getItem("itemMoneyBag")) || [], e = 0; e < c.default.dataBagMoney.length; e++) if (t[e]) {
-c.default.dataBagMoney[e].isBuy = t[e].isBuy;
-c.default.dataBagMoney[e].gold = t[e].gold;
-this.nStateBuy.children[e].active = t[e].isBuy;
-}
+this.updatePurchaseState();
 };
 e.prototype.savePurchaseState = function() {
-var t = c.default.dataBagMoney.map(function(t) {
-return {
-isBuy: t.isBuy,
-gold: t.gold
+var t = {
+dataHook: c.default.dataHook,
+dataBagMoney: c.default.dataBagMoney,
+dataTimeHappy: c.default.dataTimeHappy,
+activeIndexHook: c.default.hookIndex
 };
-});
-cc.sys.localStorage.setItem("itemMoneyBag", JSON.stringify(t));
-cc.sys.localStorage.setItem("activeIndexMoneyBag", JSON.stringify(c.default.activeIndex));
-cc.sys.localStorage.setItem("itemIndexMoneyBag", this.index.toString());
-cc.sys.localStorage.setItem("moneyBag", JSON.stringify(c.default.moneyBag));
-cc.sys.localStorage.setItem("checkBagMoney", JSON.stringify(c.default.checkBagMoney));
+cc.sys.localStorage.setItem("itemShopData", JSON.stringify(t));
 };
-e.prototype.checkClick = function() {
-if (this.index < c.default.dataBagMoney.length) if (c.default.totalGold >= c.default.dataBagMoney[this.index].price) {
-this.nCheckmask.active = !1;
-this.isCheck = !0;
-} else {
-this.nCheckmask.active = !0;
-this.nBtnBuy.getComponent(cc.Toggle).interactable = !1;
-}
+e.prototype.updatePurchaseState = function() {
+for (var t = 0; t <= this.index; t++) this.nStateBuy.children[t].active = !0;
 };
 e.prototype.onBuy = function() {
-if (this.isCheck && this.index < c.default.dataBagMoney.length) {
-c.default.checkBagMoney = !0;
-c.default.dataBagMoney[this.index].isBuy = !0;
-c.default.totalGold -= c.default.dataBagMoney[this.index].price;
-c.default.moneyBag += c.default.dataBagMoney[this.index].gold;
-this.nStateBuy.children[this.index].active = c.default.dataBagMoney[this.index].isBuy;
-c.default.activeIndexMoneyBag = this.index;
-this.savePurchaseState();
+c.default.soundManager && c.default.soundManager.playSoundClick();
+if (this.index < 4) {
+this.nStateBuy.children[this.index].active = !0;
+c.default.totalGold -= this._data.price;
+switch (this.itemId) {
+case 0:
 this.index++;
-this.checkClick();
-a.default.instance.updateTotalGold();
-s.default.instace.updateGold();
-this.updatePrice(this.index);
+c.default.hookIndex = this.index;
+this._data = c.default.dataHook[this.index];
+c.default.speedHook += this._data.speed;
+c.default.lengthHook += this._data.widthHook;
+cc.sys.localStorage.setItem("speedHook", JSON.stringify(c.default.speedHook));
+cc.sys.localStorage.setItem("lengthHook", JSON.stringify(c.default.lengthHook));
+cc.sys.localStorage.setItem("hookIndex", this.index);
+break;
+
+case 1:
+this.index++;
+c.default.checkBagMoney = !0;
+c.default.bagIndex = this.index;
+this._data = c.default.dataBagMoney[this.index];
+c.default.moneyBag += this._data.gold;
+cc.sys.localStorage.setItem("moneyBag", JSON.stringify(c.default.moneyBag));
+cc.sys.localStorage.setItem("bagIndex", this.index);
+cc.sys.localStorage.setItem("checkBagMoney", JSON.stringify(c.default.checkBagMoney));
+break;
+
+case 2:
+this.index++;
+c.default.timeIndex = this.index;
+this._data = c.default.dataTimeHappy[this.index];
+cc.sys.localStorage.setItem("timeIndex", this.index);
+c.default.timeHappy += this._data.time;
+cc.sys.localStorage.setItem("timeHappy", JSON.stringify(c.default.timeHappy));
 }
-console.log("onbuy");
-};
-e.prototype.updatePrice = function(t) {
-if (t < c.default.dataBagMoney.length) {
-this.lbPrice.string = c.default.dataBagMoney[t].price + " ";
-this.lbLeverSpeedNew.string = "+" + c.default.dataBagMoney[t].gold + "$";
-} else {
-this.lbPrice.string = "Max";
-this.lbLeverSpeedNew.string = "Max";
+this.savePurchaseState();
+this.updatePrice(this.index, c.default.totalGold);
+r.default.instance.updateTotalGold();
+s.default.instance.updateGold();
+s.default.instance.updateItemsState(c.default.totalGold);
 }
 };
-e.prototype.start = function() {};
-r([ p(cc.Label) ], e.prototype, "lbPrice", void 0);
-r([ p(cc.Node) ], e.prototype, "nBtnBuy", void 0);
-r([ p(cc.Node) ], e.prototype, "nStateBuy", void 0);
-r([ p(cc.Node) ], e.prototype, "nCheckmask", void 0);
-r([ p(cc.Label) ], e.prototype, "lbLeverSpeedOld", void 0);
-r([ p(cc.Label) ], e.prototype, "lbLeverSpeedNew", void 0);
-return r([ u ], e);
+i([ u(cc.Node) ], e.prototype, "nItemShop", void 0);
+i([ u(cc.Label) ], e.prototype, "lbPrice", void 0);
+i([ u(cc.Node) ], e.prototype, "nBtnBuy", void 0);
+i([ u(cc.Node) ], e.prototype, "nStateBuy", void 0);
+i([ u(cc.SpriteFrame) ], e.prototype, "lsSpFItemShop", void 0);
+return i([ p ], e);
 }(cc.Component);
 o.default = d;
 cc._RF.pop();
@@ -969,51 +918,10 @@ cc._RF.pop();
 "../../../ShuShiCarb.Global": "ShuShiCarb.Global",
 "./ShuShiCarb.ShopView": "ShuShiCarb.ShopView"
 } ],
-"ShuShiCarb.ItemTimeHappy": [ function(t, e, o) {
-"use strict";
-cc._RF.push(e, "b9fc5Cq+UtP4LOPNNdAnR++", "ShuShiCarb.ItemTimeHappy");
-var n, i = this && this.__extends || (n = function(t, e) {
-return (n = Object.setPrototypeOf || {
-__proto__: []
-} instanceof Array && function(t, e) {
-t.__proto__ = e;
-} || function(t, e) {
-for (var o in e) Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
-})(t, e);
-}, function(t, e) {
-n(t, e);
-function o() {
-this.constructor = t;
-}
-t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
-};
-Object.defineProperty(o, "__esModule", {
-value: !0
-});
-var a = cc._decorator, c = a.ccclass, s = a.property, l = function(t) {
-i(e, t);
-function e() {
-var e = null !== t && t.apply(this, arguments) || this;
-e.label = null;
-e.text = "hello";
-return e;
-}
-e.prototype.start = function() {};
-r([ s(cc.Label) ], e.prototype, "label", void 0);
-r([ s ], e.prototype, "text", void 0);
-return r([ c ], e);
-}(cc.Component);
-o.default = l;
-cc._RF.pop();
-}, {} ],
 "ShuShiCarb.Player": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "3894fyXWvVMl4qDb2W/ERoN", "ShuShiCarb.Player");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -1027,16 +935,16 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("../ShuShiCarb.Game"), c = cc._decorator, s = c.ccclass, l = c.property, u = function(t) {
-i(e, t);
+var r = t("../ShuShiCarb.Game"), c = t("../ShuShiCarb.Global"), s = cc._decorator, l = s.ccclass, p = s.property, u = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.char = null;
@@ -1046,7 +954,6 @@ e.listCharacter = [];
 e.prgBarCountDown = null;
 e.lbCountDown = null;
 e.nTime = null;
-e.duration = 10;
 e.numberCountDown = 0;
 e.isCountDown = !1;
 e.isMove = !1;
@@ -1056,13 +963,15 @@ return e;
 o = e;
 e.prototype.onLoad = function() {
 o.instace = this;
+c.default.timeHappy = JSON.parse(cc.sys.localStorage.getItem("timeHappy")) || c.default.timeHappy;
+console.log("Time vua duoc update ", c.default.timeHappy);
 };
 e.prototype.setData = function(t) {
 this.char.skeletonData = this.listCharacter[t];
 };
 e.prototype.startCountDown = function() {
 this.isCountDown = !0;
-this.numberCountDown = this.duration;
+this.numberCountDown = c.default.timeHappy;
 this.schedule(this.updateCountDown, 1);
 };
 e.prototype.updateCountDown = function() {
@@ -1072,12 +981,12 @@ this.updateProgressBar();
 this.lbCountDown.string = this.numberCountDown + "";
 } else {
 this.isCountDown = !1;
-a.default.instance.resetGame(!1);
+r.default.instance.resetGame(!1);
 console.log("Thua");
 }
 };
 e.prototype.updateProgressBar = function() {
-this.prgBarCountDown && (this.prgBarCountDown.progress -= .1);
+this.prgBarCountDown && (this.prgBarCountDown.progress -= 1 / c.default.timeHappy);
 };
 e.prototype.effectShow = function() {
 var t = this;
@@ -1122,24 +1031,25 @@ this.effectShow();
 };
 var o;
 e.instace = null;
-r([ l(sp.Skeleton) ], e.prototype, "char", void 0);
-r([ l(cc.Node) ], e.prototype, "listFood", void 0);
-r([ l(cc.Node) ], e.prototype, "nchat", void 0);
-r([ l(sp.SkeletonData) ], e.prototype, "listCharacter", void 0);
-r([ l(cc.ProgressBar) ], e.prototype, "prgBarCountDown", void 0);
-r([ l(cc.Label) ], e.prototype, "lbCountDown", void 0);
-r([ l(cc.Node) ], e.prototype, "nTime", void 0);
-return o = r([ s ], e);
+i([ p(sp.Skeleton) ], e.prototype, "char", void 0);
+i([ p(cc.Node) ], e.prototype, "listFood", void 0);
+i([ p(cc.Node) ], e.prototype, "nchat", void 0);
+i([ p(sp.SkeletonData) ], e.prototype, "listCharacter", void 0);
+i([ p(cc.ProgressBar) ], e.prototype, "prgBarCountDown", void 0);
+i([ p(cc.Label) ], e.prototype, "lbCountDown", void 0);
+i([ p(cc.Node) ], e.prototype, "nTime", void 0);
+return o = i([ l ], e);
 }(cc.Component);
 o.default = u;
 cc._RF.pop();
 }, {
-"../ShuShiCarb.Game": "ShuShiCarb.Game"
+"../ShuShiCarb.Game": "ShuShiCarb.Game",
+"../ShuShiCarb.Global": "ShuShiCarb.Global"
 } ],
 "ShuShiCarb.SettingView": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "2f0fd3epKRG7byTyvDHzrTW", "ShuShiCarb.SettingView");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -1153,16 +1063,16 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("../../ShuShiCarb.Global"), c = cc._decorator, s = c.ccclass, l = c.property, u = function(t) {
-i(e, t);
+var r = t("../../ShuShiCarb.Global"), c = cc._decorator, s = c.ccclass, l = c.property, p = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.sfMusic = [];
@@ -1174,29 +1084,30 @@ e.prototype.start = function() {
 this.updateStatus();
 };
 e.prototype.updateStatus = function() {
-a.default.isSoundOn ? this.spSound.spriteFrame = this.sfMusic[0] : this.spSound.spriteFrame = this.sfMusic[1];
-a.default.isMusicOn ? this.spMusic.spriteFrame = this.sfMusic[0] : this.spMusic.spriteFrame = this.sfMusic[1];
+r.default.isSoundOn ? this.spSound.spriteFrame = this.sfMusic[0] : this.spSound.spriteFrame = this.sfMusic[1];
+r.default.isMusicOn ? this.spMusic.spriteFrame = this.sfMusic[0] : this.spMusic.spriteFrame = this.sfMusic[1];
 };
 e.prototype.onClickSound = function() {
-a.default.soundManager && a.default.soundManager.playSoundClick();
-a.default.isSoundOn = !a.default.isSoundOn;
+r.default.soundManager && r.default.soundManager.playSoundClick();
+r.default.isSoundOn = !r.default.isSoundOn;
 this.updateStatus();
 };
 e.prototype.onClickMusic = function() {
-a.default.soundManager && a.default.soundManager.playSoundClick();
-a.default.isMusicOn = !a.default.isMusicOn;
+r.default.soundManager && r.default.soundManager.playSoundClick();
+r.default.isMusicOn = !r.default.isMusicOn;
 this.updateStatus();
-a.default.soundManager.updateMusicState();
+r.default.soundManager.updateMusicState();
 };
 e.prototype.onClickClose = function() {
+r.default.soundManager && r.default.soundManager.playSoundClick();
 this.node.destroy();
 };
-r([ l(cc.SpriteFrame) ], e.prototype, "sfMusic", void 0);
-r([ l(cc.Sprite) ], e.prototype, "spMusic", void 0);
-r([ l(cc.Sprite) ], e.prototype, "spSound", void 0);
-return r([ s ], e);
+i([ l(cc.SpriteFrame) ], e.prototype, "sfMusic", void 0);
+i([ l(cc.Sprite) ], e.prototype, "spMusic", void 0);
+i([ l(cc.Sprite) ], e.prototype, "spSound", void 0);
+return i([ s ], e);
 }(cc.Component);
-o.default = u;
+o.default = p;
 cc._RF.pop();
 }, {
 "../../ShuShiCarb.Global": "ShuShiCarb.Global"
@@ -1204,7 +1115,7 @@ cc._RF.pop();
 "ShuShiCarb.ShopView": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "7e44aVyW49Ht7kWO/WUQKjk", "ShuShiCarb.ShopView");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -1218,74 +1129,83 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("../../../ShuShiCarb.Global"), c = t("./ShuShiCarb.ItemHook"), s = t("./ShuShiCarb.ItemMoneyBag"), l = t("./ShuShiCarb.ItemTimeHappy"), u = cc._decorator, p = u.ccclass, d = u.property, h = function(t) {
-i(e, t);
+var r = t("../../../ShuShiCarb.Global"), c = t("./ShuShiCarb.ItemShop"), s = cc._decorator, l = s.ccclass, p = s.property, u = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.lbGold = null;
 e.nlistItem = null;
-e.prfItemSpeedHook = null;
-e.prfItemTimeHapy = null;
-e.prfItemMoney = null;
+e.prfItem = null;
+e.test = 0;
 e.listDataHook = [];
 return e;
 }
 o = e;
 e.prototype.onLoad = function() {
-o.instace = this;
-this.itemSpeedHook();
+o.instance = this;
+var t = JSON.parse(cc.sys.localStorage.getItem("itemShopData")) || {
+dataHook: r.default.dataHook,
+dataBagMoney: r.default.dataBagMoney,
+dataTimeHappy: r.default.dataTimeHappy
+}, e = parseInt(cc.sys.localStorage.getItem("hookIndex")) || 0;
+r.default.hookIndex = e;
+var n = parseInt(cc.sys.localStorage.getItem("bagIndex")) || 0;
+r.default.bagIndex = n;
+var a = parseInt(cc.sys.localStorage.getItem("timeIndex")) || 0;
+r.default.timeIndex = a;
+r.default.dataHook = t.dataHook;
+r.default.dataBagMoney = t.dataBagMoney;
+r.default.dataTimeHappy = t.dataTimeHappy;
 this.updateGold();
-this.itemMoney();
-this.itemTimeHappy();
+this.itemShop();
 };
 e.prototype.start = function() {};
-e.prototype.itemSpeedHook = function() {
-var t = cc.instantiate(this.prfItemSpeedHook).getComponent(c.default);
-this.nlistItem.addChild(t.node);
-};
-e.prototype.itemMoney = function() {
-var t = cc.instantiate(this.prfItemMoney).getComponent(s.default);
-this.nlistItem.addChild(t.node);
-};
-e.prototype.itemTimeHappy = function() {
-var t = cc.instantiate(this.prfItemTimeHapy).getComponent(l.default);
-this.nlistItem.addChild(t.node);
-};
+e.prototype.updateShop = function() {};
 e.prototype.updateGold = function() {
-this.lbGold.string = a.default.totalGold + " ";
+this.lbGold.string = r.default.totalGold + " ";
+};
+e.prototype.updateItemsState = function(t) {
+for (var e = this.nlistItem.children, o = 0; o < e.length; o++) {
+var n = e[o].getComponent(c.default);
+n.updatePrice(n.index, t);
+}
+};
+e.prototype.itemShop = function() {
+for (var t = 0; t < 3; t++) {
+var e = cc.instantiate(this.prfItem).getComponent(c.default);
+e.setData(t);
+this.nlistItem.addChild(e.node);
+}
 };
 e.prototype.onClickClose = function() {
+r.default.soundManager && r.default.soundManager.playSoundClick();
 this.node.destroy();
 };
 var o;
-e.instace = null;
-r([ d(cc.Label) ], e.prototype, "lbGold", void 0);
-r([ d(cc.Node) ], e.prototype, "nlistItem", void 0);
-r([ d(cc.Prefab) ], e.prototype, "prfItemSpeedHook", void 0);
-r([ d(cc.Prefab) ], e.prototype, "prfItemTimeHapy", void 0);
-r([ d(cc.Prefab) ], e.prototype, "prfItemMoney", void 0);
-return o = r([ p ], e);
+e.instance = null;
+i([ p(cc.Label) ], e.prototype, "lbGold", void 0);
+i([ p(cc.Node) ], e.prototype, "nlistItem", void 0);
+i([ p(cc.Prefab) ], e.prototype, "prfItem", void 0);
+return o = i([ l ], e);
 }(cc.Component);
-o.default = h;
+o.default = u;
 cc._RF.pop();
 }, {
 "../../../ShuShiCarb.Global": "ShuShiCarb.Global",
-"./ShuShiCarb.ItemHook": "ShuShiCarb.ItemHook",
-"./ShuShiCarb.ItemMoneyBag": "ShuShiCarb.ItemMoneyBag",
-"./ShuShiCarb.ItemTimeHappy": "ShuShiCarb.ItemTimeHappy"
+"./ShuShiCarb.ItemShop": "ShuShiCarb.ItemShop"
 } ],
 "ShuShiCarb.SoundManager": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "e37ca0PmppMTZq2Fx30je4G", "ShuShiCarb.SoundManager");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -1299,16 +1219,16 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("./ShuShiCarb.Global"), c = cc._decorator, s = c.ccclass, l = c.property, u = function(t) {
-i(e, t);
+var r = t("./ShuShiCarb.Global"), c = cc._decorator, s = c.ccclass, l = c.property, p = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.music_background = null;
@@ -1324,7 +1244,7 @@ e.ball_break = null;
 return e;
 }
 e.prototype.onLoad = function() {
-a.default.soundManager = this;
+r.default.soundManager = this;
 };
 e.prototype.playSoundClick = function() {
 this.playSoundSFX(this.sound_click);
@@ -1348,47 +1268,47 @@ e.prototype.playSoundGameOver = function() {
 this.playSoundSFX(this.game_over);
 };
 e.prototype.playSoundSFX = function(t) {
-if (a.default.isSoundOn) {
+if (r.default.isSoundOn) {
 this.audio_sfx.clip = t;
 this.audio_sfx.play();
 }
 };
 e.prototype.playSoundScore = function(t) {
-if (a.default.isSoundOn) {
+if (r.default.isSoundOn) {
 this.audio_score.clip = t;
 this.audio_score.play();
 }
 };
 e.prototype.updateMusicState = function() {
-a.default.isMusicOn ? this.music_background.play() : this.music_background.stop();
+r.default.isMusicOn ? this.music_background.play() : this.music_background.stop();
 };
-r([ l(cc.AudioSource) ], e.prototype, "music_background", void 0);
-r([ l(cc.AudioSource) ], e.prototype, "audio_sfx", void 0);
-r([ l(cc.AudioSource) ], e.prototype, "audio_score", void 0);
-r([ l({
+i([ l(cc.AudioSource) ], e.prototype, "music_background", void 0);
+i([ l(cc.AudioSource) ], e.prototype, "audio_sfx", void 0);
+i([ l(cc.AudioSource) ], e.prototype, "audio_score", void 0);
+i([ l({
 type: cc.AudioClip
 }) ], e.prototype, "sound_click", void 0);
-r([ l({
+i([ l({
 type: cc.AudioClip
 }) ], e.prototype, "sound_bomb", void 0);
-r([ l({
+i([ l({
 type: cc.AudioClip
 }) ], e.prototype, "add_score", void 0);
-r([ l({
+i([ l({
 type: cc.AudioClip
 }) ], e.prototype, "add_star", void 0);
-r([ l({
+i([ l({
 type: cc.AudioClip
 }) ], e.prototype, "game_over", void 0);
-r([ l({
+i([ l({
 type: cc.AudioClip
 }) ], e.prototype, "pass_level", void 0);
-r([ l({
+i([ l({
 type: cc.AudioClip
 }) ], e.prototype, "ball_break", void 0);
-return r([ s ], e);
+return i([ s ], e);
 }(cc.Component);
-o.default = u;
+o.default = p;
 cc._RF.pop();
 }, {
 "./ShuShiCarb.Global": "ShuShiCarb.Global"
@@ -1396,7 +1316,7 @@ cc._RF.pop();
 "ShuShiCard.CollierManager": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "07571YrTBpHQZ4RW7KNcoYv", "ShuShiCard.CollierManager");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -1410,17 +1330,17 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("../ShuShiCarb.Game"), c = t("./ShuShiCarb.Conveyor"), s = t("./ShuShiCarb.Food"), l = t("./ShuShiCarb.Hook"), u = cc._decorator, p = u.ccclass, d = (u.property, 
+var r = t("../ShuShiCarb.Game"), c = t("./ShuShiCarb.Conveyor"), s = t("./ShuShiCarb.Food"), l = t("./ShuShiCarb.Hook"), p = cc._decorator, u = p.ccclass, d = (p.property, 
 function(t) {
-i(e, t);
+a(e, t);
 function e() {
 return null !== t && t.apply(this, arguments) || this;
 }
@@ -1433,24 +1353,24 @@ n.parent = this.node.parent;
 n.scale = .4;
 if (999 === o) {
 n.scale = 1;
-n.addComponent(cc.Sprite).spriteFrame = a.default.instance.listSpfFood[6];
+n.addComponent(cc.Sprite).spriteFrame = r.default.instance.listSpfFood[6];
 n.setParent(l.default.instance.hookHead);
-n.setPosition(cc.v2(0, -25));
+n.setPosition(cc.v2(0, 25));
 } else {
-n.addComponent(cc.Sprite).spriteFrame = a.default.instance.listSpfFood[o];
+n.addComponent(cc.Sprite).spriteFrame = r.default.instance.listSpfFood[o];
 n.setParent(l.default.instance.hookHead);
-n.setPosition(cc.v2(0, -25));
+n.setPosition(cc.v2(0, 25));
 }
-a.default.instance.hookObjects.push({
+r.default.instance.hookObjects.push({
 node: n,
 id: o
 });
 l.default.instance.setHookState(2);
 e.isCheck = 1;
-a.default.instance.checkCorrect();
+r.default.instance.checkCorrect();
 this.node.getComponent(c.default).resetSate(!1);
 this.scheduleOnce(function() {
-a.default.instance.hookObjects = a.default.instance.hookObjects.filter(function(t) {
+r.default.instance.hookObjects = r.default.instance.hookObjects.filter(function(t) {
 return t.node !== n;
 });
 n.destroy();
@@ -1461,7 +1381,7 @@ e.prototype.onLoad = function() {
 cc.director.getCollisionManager().enabled = !0;
 };
 e.prototype.start = function() {};
-return r([ p ], e);
+return i([ u ], e);
 }(cc.Component));
 o.default = d;
 cc._RF.pop();
@@ -1474,7 +1394,7 @@ cc._RF.pop();
 "ShuShiCrab.GameOver": [ function(t, e, o) {
 "use strict";
 cc._RF.push(e, "44367/LVl9AqbqS+KLuBWW4", "ShuShiCrab.GameOver");
-var n, i = this && this.__extends || (n = function(t, e) {
+var n, a = this && this.__extends || (n = function(t, e) {
 return (n = Object.setPrototypeOf || {
 __proto__: []
 } instanceof Array && function(t, e) {
@@ -1488,16 +1408,16 @@ function o() {
 this.constructor = t;
 }
 t.prototype = null === e ? Object.create(e) : (o.prototype = e.prototype, new o());
-}), r = this && this.__decorate || function(t, e, o, n) {
-var i, r = arguments.length, a = r < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
-if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) a = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (i = t[c]) && (a = (r < 3 ? i(a) : r > 3 ? i(e, o, a) : i(e, o)) || a);
-return r > 3 && a && Object.defineProperty(e, o, a), a;
+}), i = this && this.__decorate || function(t, e, o, n) {
+var a, i = arguments.length, r = i < 3 ? e : null === n ? n = Object.getOwnPropertyDescriptor(e, o) : n;
+if ("object" == typeof Reflect && "function" == typeof Reflect.decorate) r = Reflect.decorate(t, e, o, n); else for (var c = t.length - 1; c >= 0; c--) (a = t[c]) && (r = (i < 3 ? a(r) : i > 3 ? a(e, o, r) : a(e, o)) || r);
+return i > 3 && r && Object.defineProperty(e, o, r), r;
 };
 Object.defineProperty(o, "__esModule", {
 value: !0
 });
-var a = t("../../ShuShiCarb.Game"), c = t("../../ShuShiCarb.GameManager"), s = cc._decorator, l = s.ccclass, u = s.property, p = function(t) {
-i(e, t);
+var r = t("../../ShuShiCarb.Game"), c = t("../../ShuShiCarb.GameManager"), s = t("../../ShuShiCarb.Global"), l = cc._decorator, p = l.ccclass, u = l.property, d = function(t) {
+a(e, t);
 function e() {
 var e = null !== t && t.apply(this, arguments) || this;
 e.lbGold = null;
@@ -1509,11 +1429,12 @@ scale: 1
 }).start();
 };
 e.prototype.onHome = function() {
+s.default.soundManager && s.default.soundManager.playSoundClick();
 c.default.instance.updateTotalGold();
 this.stopGamePlay();
 };
 e.prototype.goldEnd = function() {
-this.lbGold.string = a.default.instance.gold + " ";
+this.lbGold.string = r.default.instance.gold + " ";
 };
 e.prototype.stopGamePlay = function() {
 var t = cc.Canvas.instance.node.getChildByName("Main");
@@ -1526,13 +1447,14 @@ e.prototype.onLoad = function() {
 this.open();
 this.goldEnd();
 };
-r([ u(cc.Label) ], e.prototype, "lbGold", void 0);
-return r([ l ], e);
+i([ u(cc.Label) ], e.prototype, "lbGold", void 0);
+return i([ p ], e);
 }(cc.Component);
-o.default = p;
+o.default = d;
 cc._RF.pop();
 }, {
 "../../ShuShiCarb.Game": "ShuShiCarb.Game",
-"../../ShuShiCarb.GameManager": "ShuShiCarb.GameManager"
+"../../ShuShiCarb.GameManager": "ShuShiCarb.GameManager",
+"../../ShuShiCarb.Global": "ShuShiCarb.Global"
 } ]
-}, {}, [ "ShuShiCarb.Conveyor", "ShuShiCarb.Food", "ShuShiCarb.Hook", "ShuShiCarb.Player", "ShuShiCard.CollierManager", "ShuShiCarb.ItemHook", "ShuShiCarb.ItemMoneyBag", "ShuShiCarb.ItemTimeHappy", "ShuShiCarb.ShopView", "ShuShiCarb.SettingView", "ShuShiCrab.GameOver", "ShuShiCarb.Game", "ShuShiCarb.GameManager", "ShuShiCarb.Global", "ShuShiCarb.GoldFly", "ShuShiCarb.SoundManager" ]);
+}, {}, [ "ShuShiCarb.Conveyor", "ShuShiCarb.Food", "ShuShiCarb.Hook", "ShuShiCarb.Player", "ShuShiCard.CollierManager", "ShuShiCarb.ItemShop", "ShuShiCarb.ShopView", "ShuShiCarb.SettingView", "ShuShiCrab.GameOver", "ShuShiCarb.Game", "ShuShiCarb.GameManager", "ShuShiCarb.Global", "ShuShiCarb.GoldFly", "ShuShiCarb.SoundManager" ]);

@@ -51,12 +51,8 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
     ShuShiCarbHook.prototype.onLoad = function () {
         ShuShiCarbHook_1.instance = this;
         cc.Canvas.instance.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this);
-        var hookIndex = parseInt(cc.sys.localStorage.getItem("hookIndex")) || 0;
-        var speed = ShuShiCarb_Global_1.default.dataHook[hookIndex].speed;
-        var widtHook = ShuShiCarb_Global_1.default.dataHook[hookIndex].widthHook;
-        ShuShiCarb_Global_1.default.lengthHook += widtHook;
-        console.log("speed ", speed);
-        ShuShiCarb_Global_1.default.speedHook += speed;
+        ShuShiCarb_Global_1.default.speedHook = JSON.parse(cc.sys.localStorage.getItem("speedHook")) || ShuShiCarb_Global_1.default.speedHook;
+        ShuShiCarb_Global_1.default.lengthHook = JSON.parse(cc.sys.localStorage.getItem("lengthHook")) || ShuShiCarb_Global_1.default.lengthHook;
         console.log("Speed ne ", ShuShiCarb_Global_1.default.speedHook);
     };
     ShuShiCarbHook.prototype.initHook = function () {
@@ -104,8 +100,8 @@ var ShuShiCarbHook = /** @class */ (function (_super) {
                     this.moveHookHead(-ShuShiCarb_Global_1.default.speedHook * dt);
                     this.hookHead.getComponent(cc.BoxCollider).enabled = false;
                     if (this.hookHead.y < 0) {
-                        this.hookHead.y = 100;
-                        this.hookRope.width = 100;
+                        this.hookHead.y = 130;
+                        this.hookRope.width = 130;
                         this.hookState = 0;
                         this.hookHead.getComponent(cc.BoxCollider).enabled = true;
                         this.disableClickTemporarily(0.2);

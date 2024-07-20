@@ -754,8 +754,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 0,
-      "height": 25.2
+      "width": 16.2,
+      "height": 37.8
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -806,10 +806,10 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "",
-    "_N$string": "",
+    "_string": "0",
+    "_N$string": "0",
     "_fontSize": 25,
-    "_lineHeight": 20,
+    "_lineHeight": 30,
     "_enableWrapText": true,
     "_N$file": {
       "__uuid__": "ead2eb60-ab88-45ea-9f85-e3c256291320"
@@ -1963,6 +1963,9 @@
     },
     "prfGame": {
       "__uuid__": "37f96d5b-afe1-4d6a-bef2-042be1745237"
+    },
+    "nPlay": {
+      "__id__": 20
     },
     "prfShopView": {
       "__uuid__": "ba5e2f98-4512-4d07-a0a3-7a4c6bd0f426"

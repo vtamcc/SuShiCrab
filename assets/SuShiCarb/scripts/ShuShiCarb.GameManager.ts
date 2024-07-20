@@ -20,6 +20,8 @@ export default class ShuShiCarbGameManager extends cc.Component {
    @property(cc.Prefab)
    prfGame: cc.Prefab = null;
 
+   @property(cc.Node)
+   nPlay: cc.Node = null;
    @property(cc.Prefab)
    prfShopView: cc.Prefab = null;
    @property(cc.Label) 
@@ -30,14 +32,15 @@ export default class ShuShiCarbGameManager extends cc.Component {
 
    onLoad () {
       ShuShiCarbGameManager.instance = this;
-      Global.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 250;
+      Global.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 500;
      
       this.updateTotalGold();
+      this.effectPlay();
    }
 
    start () {
 
-    }
+   }
    onClickPlay() {
       if(Global.soundManager) {
          Global.soundManager.playSoundClick();
@@ -61,9 +64,19 @@ export default class ShuShiCarbGameManager extends cc.Component {
       this.node.addChild(shopView.node);
    }
    updateTotalGold() {
-      this.lbTotalGold.string = Global.totalGold + " ";
+      this.lbTotalGold.string = Global.formatNumber(Global.totalGold);
       cc.sys.localStorage.setItem('totalGold',JSON.stringify(Global.totalGold));
       console.log("Tong tien ", Global.totalGold);
+   }
+
+   effectPlay() {
+      cc.tween(this.nPlay)
+      .repeatForever(
+         cc.tween()
+         .to(0.8,{scale:0.8})
+         .to(0.8,{scale: 1})
+         .start()
+      ).start();
    }
 
    onClickSettingView() {

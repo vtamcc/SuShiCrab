@@ -82,9 +82,7 @@ export default class ShuShiCarbGame extends cc.Component {
     onLoad () {
         ShuShiCarbGame.instance = this;
         const checkBagMoney = JSON.parse(cc.sys.localStorage.getItem("checkBagMoney"));
-        let bagIndex = parseInt(cc.sys.localStorage.getItem("bagIndex")) || 0;
-        let moneyBag = Global.dataBagMoney[bagIndex].gold;
-        Global.moneyBag += moneyBag;
+        Global.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || Global.moneyBag;
         console.log(Global.moneyBag);
         if (checkBagMoney !== null) {
             Global.checkBagMoney = checkBagMoney;

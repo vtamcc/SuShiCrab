@@ -80,9 +80,7 @@ var ShuShiCarbGame = /** @class */ (function (_super) {
     ShuShiCarbGame.prototype.onLoad = function () {
         ShuShiCarbGame_1.instance = this;
         var checkBagMoney = JSON.parse(cc.sys.localStorage.getItem("checkBagMoney"));
-        var bagIndex = parseInt(cc.sys.localStorage.getItem("bagIndex")) || 0;
-        var moneyBag = ShuShiCarb_Global_1.default.dataBagMoney[bagIndex].gold;
-        ShuShiCarb_Global_1.default.moneyBag += moneyBag;
+        ShuShiCarb_Global_1.default.moneyBag = JSON.parse(cc.sys.localStorage.getItem("moneyBag")) || ShuShiCarb_Global_1.default.moneyBag;
         console.log(ShuShiCarb_Global_1.default.moneyBag);
         if (checkBagMoney !== null) {
             ShuShiCarb_Global_1.default.checkBagMoney = checkBagMoney;

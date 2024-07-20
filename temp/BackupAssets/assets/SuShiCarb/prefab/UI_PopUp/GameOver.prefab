@@ -58,8 +58,8 @@
       "__type__": "TypedArray",
       "ctor": "Float64Array",
       "array": [
-        3.891,
-        7.781,
+        0,
+        0,
         0,
         0,
         0,
@@ -270,8 +270,8 @@
         0,
         0,
         1,
-        1,
-        1,
+        0.98,
+        0.98,
         1
       ]
     },
@@ -1839,7 +1839,7 @@
     "_lineHeight": 20,
     "_enableWrapText": true,
     "_N$file": {
-      "__uuid__": "bbc0c664-e2a5-4a0c-9962-52386623d370"
+      "__uuid__": "ead2eb60-ab88-45ea-9f85-e3c256291320"
     },
     "_isSystemFontUsed": false,
     "_spacingX": 0,

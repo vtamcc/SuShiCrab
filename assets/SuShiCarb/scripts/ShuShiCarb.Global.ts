@@ -11,37 +11,60 @@ export default class Global {
     static soundManager: SoundManager = null
     static totalGold: number = 0;
     static dataHook = [{price: 150,speed: 1.5, widthHook: 3}, // id 0
-        {price: 300,speed: 2.5, widthHook: 5}, 
-        {price: 450,speed: 3.5, widthHook: 7},
-        {price: 600,speed: 4.5, widthHook: 9},
-        {price: 750,speed: 5.5, widthHook: 11,}];
+        {price: 300,speed: 1.5, widthHook: 4}, 
+        {price: 450,speed: 1.5, widthHook: 4},
+        {price: 600,speed: 1.5, widthHook: 4},
+        {price: 750,speed: 2.5, widthHook: 6,}];
 
     static dataBagMoney = [{price: 120, gold: 1}, // id 1
         {price: 250, gold: 2},
-        {price: 320, gold: 3},
-        {price: 450,gold: 4},
-        {price: 750,gold: 5}
+        {price: 320, gold: 2},
+        {price: 450,gold: 2},
+        {price: 750,gold: 4}
     ]
 
     static dataTimeHappy = [{price: 120, time: 2}, //id 2
-        {price: 250, time: 3},
-        {price: 320, time: 4},
-        {price: 450, time: 5},
-        {price: 750, time: 6}
+        {price: 250, time: 2},
+        {price: 320, time: 2},
+        {price: 450, time: 2},
+        {price: 750, time: 4}
     ]
     
     static timeHappy = 10;
     static checkBagMoney = false;
     static speedHook = 20;
     static moneyBag = 10;
-    static lengthHook = 35;
+    static lengthHook = 40;
     static isMusicOn = true;
     static isSoundOn = true;
     static hookIndex: number = 0;
     static bagIndex: number = 0;
     static timeIndex: number = 0;
+    
+    static timeHappyUpdated = false; // Thêm biến cờ
 
+    // static formatNumber(mo) {
+    //     let format = "";
 
+    //     if (mo >= 1000000) {
+    //         mo /= 1000000;
+    //         format = " M";
+    //     } else if (mo >= 1000) {
+    //         mo /= 1000;
+    //         format = " K";
+    //     }
+
+    //     return Math.floor(mo) + format;
+    // }
+
+    public static formatNumber(num: number, digits: number = 0): string { 
+        if (num == 0) 
+            return "0"; 
+        if (digits != 0) { 
+            return num.toFixed(digits).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'); 
+        } 
+        return num.toFixed().replace(/\B(?=(\d{3})+(?!\d))/g, "."); 
+    }
     // static dataHook = [1,23];
     
 }

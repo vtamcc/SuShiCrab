@@ -41,8 +41,10 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
         _this.lbPrice = null;
         _this.nBtnBuy = null;
         _this.nStateBuy = null;
-        _this.lbLeverSpeedOld = null;
-        _this.lbLeverSpeedNew = null;
+        // @property(cc.Label)
+        // lbLeverSpeedOld: cc.Label = null;
+        // @property(cc.Label)
+        // lbLeverSpeedNew: cc.Label = null;
         _this.lsSpFItemShop = [];
         _this.index = 0;
         _this.isCheck = false;
@@ -68,16 +70,16 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
                 this.index = ShuShiCarb_Global_1.default.bagIndex;
                 this._data = ShuShiCarb_Global_1.default.dataBagMoney[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
-                this.lbLeverSpeedOld.node.active = false;
-                this.lbLeverSpeedNew.node.x = 27;
-                this.lbLeverSpeedNew.node.y = 5;
+                // this.lbLeverSpeedOld.node.active = false;
+                // this.lbLeverSpeedNew.node.x = 27;
+                // this.lbLeverSpeedNew.node.y = 5;
                 break;
             case 2: // time Happy
                 this._data = ShuShiCarb_Global_1.default.dataTimeHappy[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
-                this.lbLeverSpeedOld.node.active = false;
-                this.lbLeverSpeedNew.node.x = 25;
-                this.lbLeverSpeedNew.node.y = 6;
+                // this.lbLeverSpeedOld.node.active = false;
+                // this.lbLeverSpeedNew.node.x = 25;
+                // this.lbLeverSpeedNew.node.y = 6;
                 this.index = ShuShiCarb_Global_1.default.timeIndex;
                 this.nStateBuy.x = -115;
                 this.nStateBuy.y = -28;
@@ -91,23 +93,48 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
         if (index < 4) {
             this.lbPrice.string = this._data.price + ' ';
             if (totalGold >= this._data.price) {
-                this.lbLeverSpeedOld.string = "0";
+                //this.lbLeverSpeedOld.string = "0";
                 this.nBtnBuy.getComponent(cc.Button).interactable = true;
             }
             else {
-                this.lbLeverSpeedNew.string = this._data.price + ' ';
-                this.lbLeverSpeedOld.string = this._data.price + ' ';
+                //this.lbLeverSpeedNew.string = this._data.price + ' ';
+                //this.lbLeverSpeedOld.string = this._data.price + ' ';
                 this.nBtnBuy.getComponent(cc.Button).interactable = false;
             }
         }
         else {
             this.lbPrice.string = "Max";
-            this.lbLeverSpeedNew.string = "Max";
-            this.lbLeverSpeedOld.string = "Max";
+            //this.lbLeverSpeedNew.string = "Max";
+            //this.lbLeverSpeedOld.string = "Max";
             this.nBtnBuy.getComponent(cc.Button).interactable = false;
         }
         this.updatePurchaseState();
     };
+    // updatePrice(index, totalGold) {
+    //     if (index < 4) {
+    //         this.lbPrice.string = this._data.price + ' ';
+    //         if (totalGold >= this._data.price) {
+    //             switch (this.itemId) {
+    //                 case 0:
+    //                     break;
+    //                 default:
+    //                     break;
+    //             }
+    //             this.lbLeverSpeedOld.string = "0";
+    //             this.nBtnBuy.getComponent(cc.Button).interactable = true;
+    //         } else {
+    //             this.lbLeverSpeedNew.string = this._data.price + ' ';
+    //             this.lbLeverSpeedOld.string = this._data.price + ' ';
+    //             this.nBtnBuy.getComponent(cc.Button).interactable = false;
+    //         }
+    //     } else {
+    //         this.lbPrice.string = "Max";
+    //         this.lbLeverSpeedNew.string = "Max";
+    //         this.lbLeverSpeedOld.string = "Max";
+    //         this.nBtnBuy.getComponent(cc.Button).interactable = false;
+    //     }
+    //     this.updatePurchaseState();
+    // }
     ShuShiCarbItemShop.prototype.savePurchaseState = function () {
         var purchaseData = {
             dataHook: ShuShiCarb_Global_1.default.dataHook,
@@ -123,6 +150,9 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
         }
     };
     ShuShiCarbItemShop.prototype.onBuy = function () {
+        if (ShuShiCarb_Global_1.default.soundManager) {
+            ShuShiCarb_Global_1.default.soundManager.playSoundClick();
+        }
         if (this.index < 4) {
             this.nStateBuy.children[this.index].active = true;
             ShuShiCarb_Global_1.default.totalGold -= this._data.price;
@@ -131,6 +161,10 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
                     this.index++;
                     ShuShiCarb_Global_1.default.hookIndex = this.index;
                     this._data = ShuShiCarb_Global_1.default.dataHook[this.index];
+                    ShuShiCarb_Global_1.default.speedHook += this._data.speed;
+                    ShuShiCarb_Global_1.default.lengthHook += this._data.widthHook;
+                    cc.sys.localStorage.setItem("speedHook", JSON.stringify(ShuShiCarb_Global_1.default.speedHook));
+                    cc.sys.localStorage.setItem("lengthHook", JSON.stringify(ShuShiCarb_Global_1.default.lengthHook));
                     cc.sys.localStorage.setItem("hookIndex", this.index);
                     break;
                 case 1:
@@ -138,6 +172,8 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
                     ShuShiCarb_Global_1.default.checkBagMoney = true;
                     ShuShiCarb_Global_1.default.bagIndex = this.index;
                     this._data = ShuShiCarb_Global_1.default.dataBagMoney[this.index];
+                    ShuShiCarb_Global_1.default.moneyBag += this._data.gold;
+                    cc.sys.localStorage.setItem("moneyBag", JSON.stringify(ShuShiCarb_Global_1.default.moneyBag));
                     cc.sys.localStorage.setItem("bagIndex", this.index);
                     cc.sys.localStorage.setItem("checkBagMoney", JSON.stringify(ShuShiCarb_Global_1.default.checkBagMoney));
                     break;
@@ -146,6 +182,8 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
                     ShuShiCarb_Global_1.default.timeIndex = this.index;
                     this._data = ShuShiCarb_Global_1.default.dataTimeHappy[this.index];
                     cc.sys.localStorage.setItem("timeIndex", this.index);
+                    ShuShiCarb_Global_1.default.timeHappy += this._data.time;
+                    cc.sys.localStorage.setItem("timeHappy", JSON.stringify(ShuShiCarb_Global_1.default.timeHappy));
                     //console.log("Index ", this.index);
                     break;
             }
@@ -168,12 +206,6 @@ var ShuShiCarbItemShop = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], ShuShiCarbItemShop.prototype, "nStateBuy", void 0);
-    __decorate([
-        property(cc.Label)
-    ], ShuShiCarbItemShop.prototype, "lbLeverSpeedOld", void 0);
-    __decorate([
-        property(cc.Label)
-    ], ShuShiCarbItemShop.prototype, "lbLeverSpeedNew", void 0);
     __decorate([
         property(cc.SpriteFrame)
     ], ShuShiCarbItemShop.prototype, "lsSpFItemShop", void 0);

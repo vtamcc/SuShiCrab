@@ -39,6 +39,7 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.nHome = null;
         _this.prfGame = null;
+        _this.nPlay = null;
         _this.prfShopView = null;
         _this.lbTotalGold = null;
         _this.prfSetting = null;
@@ -49,8 +50,9 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
     // LIFE-CYCLE CALLBACKS:
     ShuShiCarbGameManager.prototype.onLoad = function () {
         ShuShiCarbGameManager_1.instance = this;
-        ShuShiCarb_Global_1.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 250;
+        ShuShiCarb_Global_1.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 500;
         this.updateTotalGold();
+        this.effectPlay();
     };
     ShuShiCarbGameManager.prototype.start = function () {
     };
@@ -75,9 +77,16 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
         this.node.addChild(shopView.node);
     };
     ShuShiCarbGameManager.prototype.updateTotalGold = function () {
-        this.lbTotalGold.string = ShuShiCarb_Global_1.default.totalGold + " ";
+        this.lbTotalGold.string = ShuShiCarb_Global_1.default.formatNumber(ShuShiCarb_Global_1.default.totalGold);
         cc.sys.localStorage.setItem('totalGold', JSON.stringify(ShuShiCarb_Global_1.default.totalGold));
         console.log("Tong tien ", ShuShiCarb_Global_1.default.totalGold);
+    };
+    ShuShiCarbGameManager.prototype.effectPlay = function () {
+        cc.tween(this.nPlay)
+            .repeatForever(cc.tween()
+            .to(0.8, { scale: 0.8 })
+            .to(0.8, { scale: 1 })
+            .start()).start();
     };
     ShuShiCarbGameManager.prototype.onClickSettingView = function () {
         if (ShuShiCarb_Global_1.default.soundManager) {
@@ -97,6 +106,9 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
     __decorate([
         property(cc.Prefab)
     ], ShuShiCarbGameManager.prototype, "prfGame", void 0);
+    __decorate([
+        property(cc.Node)
+    ], ShuShiCarbGameManager.prototype, "nPlay", void 0);
     __decorate([
         property(cc.Prefab)
     ], ShuShiCarbGameManager.prototype, "prfShopView", void 0);

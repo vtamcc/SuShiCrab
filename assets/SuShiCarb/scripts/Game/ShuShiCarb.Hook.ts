@@ -37,12 +37,8 @@ export default class ShuShiCarbHook extends cc.Component {
     onLoad() {
         ShuShiCarbHook.instance = this;
         cc.Canvas.instance.node.on(cc.Node.EventType.TOUCH_END, this.onTouchEnd, this);
-        let hookIndex = parseInt(cc.sys.localStorage.getItem("hookIndex")) || 0;
-        let speed = Global.dataHook[hookIndex].speed;
-        let widtHook = Global.dataHook[hookIndex].widthHook;
-        Global.lengthHook += widtHook;
-        console.log("speed ", speed);
-        Global.speedHook += speed;
+        Global.speedHook = JSON.parse(cc.sys.localStorage.getItem("speedHook")) || Global.speedHook;
+        Global.lengthHook = JSON.parse(cc.sys.localStorage.getItem("lengthHook")) || Global.lengthHook;
         console.log("Speed ne ",Global.speedHook);
     }
 
@@ -99,8 +95,8 @@ export default class ShuShiCarbHook extends cc.Component {
                     this.moveHookHead(-Global.speedHook  * dt);
                     this.hookHead.getComponent(cc.BoxCollider).enabled = false;
                     if(this.hookHead.y  < 0) {
-                        this.hookHead.y = 100;
-                        this.hookRope.width = 100;
+                        this.hookHead.y = 130;
+                        this.hookRope.width = 130;
                         this.hookState = 0;
                         this.hookHead.getComponent(cc.BoxCollider).enabled = true;
                         this.disableClickTemporarily(0.2);

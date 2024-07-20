@@ -24,10 +24,10 @@ export default class ShuShiCarbItemShop extends cc.Component {
     @property(cc.Node)
     nStateBuy: cc.Node = null;
    
-    @property(cc.Label)
-    lbLeverSpeedOld: cc.Label = null;
-    @property(cc.Label)
-    lbLeverSpeedNew: cc.Label = null;
+    // @property(cc.Label)
+    // lbLeverSpeedOld: cc.Label = null;
+    // @property(cc.Label)
+    // lbLeverSpeedNew: cc.Label = null;
 
     @property(cc.SpriteFrame)
     lsSpFItemShop: cc.SpriteFrame[] = [];
@@ -55,16 +55,16 @@ export default class ShuShiCarbItemShop extends cc.Component {
                 this.index = Global.bagIndex;
                 this._data = Global.dataBagMoney[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
-                this.lbLeverSpeedOld.node.active = false;
-                this.lbLeverSpeedNew.node.x = 27;
-                this.lbLeverSpeedNew.node.y = 5;
+                // this.lbLeverSpeedOld.node.active = false;
+                // this.lbLeverSpeedNew.node.x = 27;
+                // this.lbLeverSpeedNew.node.y = 5;
                 break;
             case 2: // time Happy
                 this._data = Global.dataTimeHappy[this.index];
                 this.nItemShop.getComponent(cc.Sprite).spriteFrame = this.lsSpFItemShop[id];
-                this.lbLeverSpeedOld.node.active = false;
-                this.lbLeverSpeedNew.node.x = 25;
-                this.lbLeverSpeedNew.node.y = 6;
+                // this.lbLeverSpeedOld.node.active = false;
+                // this.lbLeverSpeedNew.node.x = 25;
+                // this.lbLeverSpeedNew.node.y = 6;
                 this.index = Global.timeIndex;
                 this.nStateBuy.x = -115;
                 this.nStateBuy.y = -28;
@@ -79,21 +79,48 @@ export default class ShuShiCarbItemShop extends cc.Component {
         if (index < 4) {
             this.lbPrice.string = this._data.price + ' ';
             if (totalGold >= this._data.price) {
-                this.lbLeverSpeedOld.string = "0";
+                //this.lbLeverSpeedOld.string = "0";
                 this.nBtnBuy.getComponent(cc.Button).interactable = true;
             } else {
-                this.lbLeverSpeedNew.string = this._data.price + ' ';
-                this.lbLeverSpeedOld.string = this._data.price + ' ';
+                //this.lbLeverSpeedNew.string = this._data.price + ' ';
+                //this.lbLeverSpeedOld.string = this._data.price + ' ';
                 this.nBtnBuy.getComponent(cc.Button).interactable = false;
             }
         } else {
             this.lbPrice.string = "Max";
-            this.lbLeverSpeedNew.string = "Max";
-            this.lbLeverSpeedOld.string = "Max";
+            //this.lbLeverSpeedNew.string = "Max";
+            //this.lbLeverSpeedOld.string = "Max";
             this.nBtnBuy.getComponent(cc.Button).interactable = false;
         }
         this.updatePurchaseState();
     }
+    // updatePrice(index, totalGold) {
+    //     if (index < 4) {
+    //         this.lbPrice.string = this._data.price + ' ';
+    //         if (totalGold >= this._data.price) {
+    //             switch (this.itemId) {
+    //                 case 0:
+                        
+    //                     break;
+                
+    //                 default:
+    //                     break;
+    //             }
+    //             this.lbLeverSpeedOld.string = "0";
+    //             this.nBtnBuy.getComponent(cc.Button).interactable = true;
+    //         } else {
+    //             this.lbLeverSpeedNew.string = this._data.price + ' ';
+    //             this.lbLeverSpeedOld.string = this._data.price + ' ';
+    //             this.nBtnBuy.getComponent(cc.Button).interactable = false;
+    //         }
+    //     } else {
+    //         this.lbPrice.string = "Max";
+    //         this.lbLeverSpeedNew.string = "Max";
+    //         this.lbLeverSpeedOld.string = "Max";
+    //         this.nBtnBuy.getComponent(cc.Button).interactable = false;
+    //     }
+    //     this.updatePurchaseState();
+    // }
    
 
     savePurchaseState() {
@@ -115,6 +142,10 @@ export default class ShuShiCarbItemShop extends cc.Component {
     }
 
     onBuy() {
+        if (Global.soundManager) {
+            Global.soundManager.playSoundClick();
+        }
+
         if ( this.index < 4) {
             this.nStateBuy.children[this.index].active = true;
             Global.totalGold -= this._data.price;
@@ -124,6 +155,10 @@ export default class ShuShiCarbItemShop extends cc.Component {
                     this.index++;
                     Global.hookIndex = this.index;
                     this._data = Global.dataHook[this.index];
+                    Global.speedHook += this._data.speed;
+                    Global.lengthHook += this._data.widthHook;
+                    cc.sys.localStorage.setItem("speedHook",JSON.stringify(Global.speedHook));
+                    cc.sys.localStorage.setItem("lengthHook",JSON.stringify(Global.lengthHook));
                     cc.sys.localStorage.setItem("hookIndex", this.index)
                     break;
                 case 1:
@@ -131,6 +166,8 @@ export default class ShuShiCarbItemShop extends cc.Component {
                     Global.checkBagMoney = true;
                     Global.bagIndex = this.index;
                     this._data = Global.dataBagMoney[this.index];
+                    Global.moneyBag += this._data.gold;
+                    cc.sys.localStorage.setItem("moneyBag",JSON.stringify(Global.moneyBag));
                     cc.sys.localStorage.setItem("bagIndex",this.index);
                     cc.sys.localStorage.setItem("checkBagMoney", JSON.stringify(Global.checkBagMoney));
                     break;
@@ -139,6 +176,8 @@ export default class ShuShiCarbItemShop extends cc.Component {
                     Global.timeIndex = this.index;
                     this._data = Global.dataTimeHappy[this.index];
                     cc.sys.localStorage.setItem("timeIndex", this.index);
+                    Global.timeHappy += this._data.time;
+                    cc.sys.localStorage.setItem("timeHappy",JSON.stringify(Global.timeHappy));
                     //console.log("Index ", this.index);
                     break;
             }
