@@ -36,6 +36,8 @@ export default class ShuShiCarbGameManager extends cc.Component {
      
       this.updateTotalGold();
       this.effectPlay();
+      if (Global.soundManager)
+         Global.soundManager.music_background.play();
    }
 
    start () {

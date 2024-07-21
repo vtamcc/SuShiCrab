@@ -53,6 +53,8 @@ var ShuShiCarbGameManager = /** @class */ (function (_super) {
         ShuShiCarb_Global_1.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 500;
         this.updateTotalGold();
         this.effectPlay();
+        if (ShuShiCarb_Global_1.default.soundManager)
+            ShuShiCarb_Global_1.default.soundManager.music_background.play();
     };
     ShuShiCarbGameManager.prototype.start = function () {
     };

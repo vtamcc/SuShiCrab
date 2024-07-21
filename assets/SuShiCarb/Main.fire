@@ -325,7 +325,7 @@
     "_mute": false,
     "_loop": true,
     "_firstlyEnabled": true,
-    "playOnLoad": false,
+    "playOnLoad": true,
     "preload": true,
     "_id": "d5+JSXVRlMg7+LMMfhOGvv"
   },
