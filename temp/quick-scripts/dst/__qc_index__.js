@@ -10,20 +10,20 @@
                     };
                     function __define (exports, require, module) {
                         if (!nodeEnv) {__quick_compile_project__.registerModule(__filename, module);}
-require('./assets/SuShiCarb/scripts/Game/ShuShiCarb.Conveyor');
-require('./assets/SuShiCarb/scripts/Game/ShuShiCarb.Food');
-require('./assets/SuShiCarb/scripts/Game/ShuShiCarb.Hook');
-require('./assets/SuShiCarb/scripts/Game/ShuShiCarb.Player');
-require('./assets/SuShiCarb/scripts/Game/ShuShiCard.CollierManager');
-require('./assets/SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ItemShop');
-require('./assets/SuShiCarb/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ShopView');
-require('./assets/SuShiCarb/scripts/Game/Ui_Popup/ShuShiCarb.SettingView');
-require('./assets/SuShiCarb/scripts/Game/Ui_Popup/ShuShiCrab.GameOver');
-require('./assets/SuShiCarb/scripts/ShuShiCarb.Game');
-require('./assets/SuShiCarb/scripts/ShuShiCarb.GameManager');
-require('./assets/SuShiCarb/scripts/ShuShiCarb.Global');
-require('./assets/SuShiCarb/scripts/ShuShiCarb.GoldFly');
-require('./assets/SuShiCarb/scripts/ShuShiCarb.SoundManager');
+require('./assets/ShuShiCrab/scripts/Game/ShuShiCarb.Conveyor');
+require('./assets/ShuShiCrab/scripts/Game/ShuShiCarb.Food');
+require('./assets/ShuShiCrab/scripts/Game/ShuShiCarb.Hook');
+require('./assets/ShuShiCrab/scripts/Game/ShuShiCarb.Player');
+require('./assets/ShuShiCrab/scripts/Game/ShuShiCard.CollierManager');
+require('./assets/ShuShiCrab/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ItemShop');
+require('./assets/ShuShiCrab/scripts/Game/Ui_Popup/Shop/ShuShiCarb.ShopView');
+require('./assets/ShuShiCrab/scripts/Game/Ui_Popup/ShuShiCarb.SettingView');
+require('./assets/ShuShiCrab/scripts/Game/Ui_Popup/ShuShiCrab.GameOver');
+require('./assets/ShuShiCrab/scripts/ShuShiCarb.Game');
+require('./assets/ShuShiCrab/scripts/ShuShiCarb.GameManager');
+require('./assets/ShuShiCrab/scripts/ShuShiCarb.Global');
+require('./assets/ShuShiCrab/scripts/ShuShiCarb.GoldFly');
+require('./assets/ShuShiCrab/scripts/ShuShiCarb.SoundManager');
 
                     }
                     if (nodeEnv) {

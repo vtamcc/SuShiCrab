@@ -185,6 +185,7 @@ o.instance = this;
 s.default.totalGold = JSON.parse(cc.sys.localStorage.getItem("totalGold")) || 500;
 this.updateTotalGold();
 this.effectPlay();
+s.default.soundManager && s.default.soundManager.music_background.play();
 };
 e.prototype.start = function() {};
 e.prototype.onClickPlay = function() {

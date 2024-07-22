@@ -1,0 +1,1 @@
+{"platform":"web-mobile","groupList":["default"],"collisionMatrix":[[true]],"hasResourcesBundle":false,"hasStartSceneBundle":false,"remoteBundles":false,"subpackages":[],"launchScene":"db://assets/ShuShiCrab/MainBuild.fire","orientation":"","jsList":[],"bundleVers":{"internal":"1b082","ShuShiCrab":"24ef9","main":"a3c5b"}}

@@ -1,0 +1,21 @@
+{
+  "ver": "1.1.3",
+  "uuid": "7c78ca51-bbc3-4964-82bb-47bb79d84d8d",
+  "importer": "folder",
+  "isBundle": true,
+  "bundleName": "ShuShiCrab",
+  "priority": 1,
+  "compressionType": {
+    "android": "merge_all_json"
+  },
+  "optimizeHotUpdate": {
+    "android": false
+  },
+  "inlineSpriteFrames": {
+    "android": false
+  },
+  "isRemoteBundle": {
+    "android": true
+  },
+  "subMetas": {}
+}
